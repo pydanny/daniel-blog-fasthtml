@@ -1,5 +1,6 @@
 import functools
 import pathlib
+from datetime import datetime
 from dataclasses import dataclass
 from typing import Callable
 
@@ -94,6 +95,11 @@ class BlogFooter():
         P('All rights reserved 2024, Daniel Roy Greenfeld')
     )
 
+@dataclass
+class Tag():
+    slug: str
+    def __xt__(self):
+        return A(self.slug, href=f"/tags/{self.slug}")
 
 @functools.lru_cache
 def list_posts(published: bool = True, posts_dirname="posts") -> list[dict]:
@@ -108,9 +114,9 @@ def list_posts(published: bool = True, posts_dirname="posts") -> list[dict]:
     posts.sort(key=lambda x: x["date"], reverse=True)
     return [x for x in filter(lambda x: x["published"] is published, posts)]
 
-def Time(time: str) -> str:
+def Time(timestamp: str) -> str:
     """Placeholder"""
-    return Small(f"<time>{time}</time>")
+    return Small(timestamp)
 
 
 @app.get("/")
@@ -130,6 +136,19 @@ def index():
     ), BlogFooter()
 
 
+# This doesn't work the way it does in Django or FastAPI. No matter the positioning it is revaluated.
+# @app.get("/{slug}")
+# def markdown_page(slug: str):
+#     content = pathlib.Path(f"{slug}.md").read_text().split("---")[2]
+#     metadata = yaml.safe_load(pathlib.Path(f"{slug}.md").read_text().split("---")[1])
+#     return Title(metadata.get('Title', slug)), BlogHeader(), Main(
+#         A("Back to all articles", href="/"),
+#         Section(
+#             Div(content,cls="marked")
+#         )
+#     ), BlogFooter()
+
+
 @app.get("/posts/")
 def articles():
     posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
@@ -145,13 +164,18 @@ def articles():
 def article(slug: str):
     post = [x for x in filter(lambda x: x["slug"] == slug, list_posts())][0]
     content = pathlib.Path(f"posts/{slug}.md").read_text().split("---")[2]
+    metadata = yaml.safe_load(pathlib.Path(f"posts/{slug}.md").read_text().split("---")[1])
+    tags = [Tag(slug=x) for x in metadata.get("tags", [])]
     return Title(post["title"]), BlogHeader(), Main(
         A("Back to all articles", href="/"),
         Section(
             H1(post["title"]),
-            Div(content,cls="marked")
+            Div(content,cls="marked"),
+            P(Span("Tags: "), *tags)
         )
     ), BlogFooter()
+
+
     
 
 if __name__ == '__main__':
