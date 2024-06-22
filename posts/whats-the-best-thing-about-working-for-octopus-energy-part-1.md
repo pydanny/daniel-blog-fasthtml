@@ -13,6 +13,7 @@ tags:
 time_to_read: 5
 title: What's the Best Thing about Working for Octopus Energy?
 description: An in-depth discussion about my employment at Octopus Energy.
+popular: true
 ---
 
 On November 16, 2020, I started my first day of employment at [Octopus Energy](https://octopusenergy.com/). Here's why I love working there.
