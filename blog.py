@@ -7,13 +7,6 @@ from fasthtml.common import *
 import yaml
 import uvicorn
 
-
-markdown_js = """
-import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-import { proc_htmx} from "https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js/fasthtml.js";
-proc_htmx('.markdown', e => e.innerHTML = marked.parse(e.textContent));
-"""
-
 # app = FastHTML()
 app = FastHTMLWithLiveReload(hdrs=(
     MarkdownJS(),
