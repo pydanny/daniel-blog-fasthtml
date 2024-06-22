@@ -38,11 +38,6 @@ class BlogPost():
                 Small(
                     Time(self.timestamp))
                 )
-@dataclass
-class Layout():
-
-    def __xt__(self):
-        return "TODO"
 
 
 @functools.lru_cache
