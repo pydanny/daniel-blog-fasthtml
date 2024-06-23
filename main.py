@@ -88,7 +88,7 @@ class BlogHeader():
 @dataclass
 class BlogFooter():
     def __xt__(self):
-        return Footer(P(
+        return Footer(Hr(), P(
             A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), '|',
             A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), '|',
             A('Twitter', href='https://twitter.com/pydanny'), '|',
@@ -231,14 +231,21 @@ def search(request: Request):
 
 
     q = request.query_params.get("q", "")
+    posts = []
     if q:
         posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
                     any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
+        
+    if posts:
+        messages = [H1(f"Search results on '{q}'"), P(f"Found {len(posts)} results")]
+    elif q and messages:
+        messages = [P("No results found")]
+    else:
+        messages = []
     return Title("Search"), BlogHeader(), Main(
         Form(Input(name="q", value=q), Button("Search")),
         Section(
-            H1(f"Search results on '{q}'"),
-            P(f"Found {len(posts)} results"),
+            *messages,
             *posts,
             A("← Back home", href="/"),
         )
