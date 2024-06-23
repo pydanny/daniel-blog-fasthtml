@@ -225,15 +225,14 @@ def article(slug: str):
 
 
 @app.get("/search")
-def search(request: Request):
+def search(q: str = ""):
     def _s(obj: dict, name: str, q: str):
         content =  obj.get(name, "")
         if isinstance(content, list):
             content = " ".join(content)
         return q.lower().strip() in content.lower().strip()
 
-
-    q = request.query_params.get("q", "")
+    # q = request.query_params.get("q", "")
     posts = []
     if q:
         posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
