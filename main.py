@@ -79,7 +79,7 @@ class BlogHeader():
             cls='borderCircle', alt='Daniel Roy Greenfeld', src='https://daniel.feldroy.com/_next/image?url=%2Fimages%2Fprofile.jpg&w=256&q=75', width='108', height='108')
             , href='/'),
         A(H2('Daniel Roy Greenfeld')),
-        P(A('About', href='/about'), '|', A('Articles', href='/posts'), '|', A('Books', href='/books'), '|', A('Jobs', href='/jobs'), '|', A('Tags', href='/tags')
+        P(A('About', href='/about'), '|', A('Articles', href='/posts'), '|', A('Books', href='/books'), '|', A('Jobs', href='/jobs'), '|', A('Tags', href='/tags'), '|', A('Search', href='/search')
         
         )
     )
@@ -220,6 +220,27 @@ def article(slug: str):
             Div(content,cls="marked"),
             P(Span("Tags: "), *tags),
             A("← Back to all articles", href="/"),
+        )
+    ), BlogFooter()
+
+
+@app.get("/search")
+def search(request: Request):
+    def _s(obj: dict, name: str, q: str):
+        return q.lower().strip() in obj.get(name.lower().strip(), "")
+
+
+    q = request.query_params.get("q", "")
+    if q:
+        posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
+                    any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
+    return Title("Search"), BlogHeader(), Main(
+        Form(Input(name="q", value=q), Button("Search")),
+        Section(
+            H1(f"Search results on '{q}'"),
+            P(f"Found {len(posts)} results"),
+            *posts,
+            A("← Back home", href="/"),
         )
     ), BlogFooter()
 
