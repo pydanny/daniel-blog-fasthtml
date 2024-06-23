@@ -148,6 +148,8 @@ def list_tags() -> dict[str, int]:
     return tags
 
 
+# Views start here
+
 @app.get("/tags/")
 def tags():
     tags = [TagWithCount(slug=x[0], count=x[1]) for x in list_tags().items()]
@@ -187,19 +189,6 @@ def index():
     ), BlogFooter()
 
 
-# This doesn't work the way it does in Django or FastAPI. No matter the positioning it is revaluated.
-# @app.get("/{slug}")
-# def markdown_page(slug: str):
-#     content = pathlib.Path(f"{slug}.md").read_text().split("---")[2]
-#     metadata = yaml.safe_load(pathlib.Path(f"{slug}.md").read_text().split("---")[1])
-#     return Title(metadata.get('Title', slug)), BlogHeader(), Main(
-#         A("Back to all articles", href="/"),
-#         Section(
-#             Div(content,cls="marked")
-#         )
-#     ), BlogFooter()
-
-
 @app.get("/posts/")
 def articles():
     posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
@@ -207,7 +196,8 @@ def articles():
         Section(
             H1(f'All Articles ({len(posts)})'),
             P('Everything written by Daniel Roy Greenfeld for the past 19 years'),
-            *posts
+            *posts,
+            A("← Back to home", href="/"),
         )
     ), BlogFooter()
 
@@ -218,11 +208,29 @@ def article(slug: str):
     metadata = yaml.safe_load(pathlib.Path(f"posts/{slug}.md").read_text().split("---")[1])
     tags = [Tag(slug=x) for x in metadata.get("tags", [])]
     return Title(post["title"]), BlogHeader(), Main(
-        A("Back to all articles", href="/"),
         Section(
             H1(post["title"]),
             Div(content,cls="marked"),
-            P(Span("Tags: "), *tags)
+            P(Span("Tags: "), *tags),
+            A("← Back to all articles", href="/"),
+        )
+    ), BlogFooter()
+
+
+class MarkdownPage():
+    def __init__(self, slug: str):
+        self.slug = slug
+        self.content = pathlib.Path(f"{slug}.md").read_text().split("---")[2]
+        self.metadata = yaml.safe_load(pathlib.Path(f"{slug}.md").read_text().split("---")[1])        
+
+
+@app.get("/about")
+def about():
+    page = MarkdownPage("about")
+    return Title(page.metadata.get('Title', page.slug)), BlogHeader(), Main(
+        A("← Back to home", href="/"),
+        Section(
+            Div(page.content,cls="marked")
         )
     ), BlogFooter()
 

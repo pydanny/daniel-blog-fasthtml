@@ -18,9 +18,7 @@ I love to hang out with my [wife](https://audrey.feldroy.com/), play with my [da
 
 ## About this site
 
-This site is written mostly using NextJS. This is my first React project, which I learned in May 2021 to build out [Octopus Energy US](https://octopusenergy.com). There are a number of Python scripts that support it.
-
-The source code is on [github](https://github.com/pydanny/daniel.feldroy.com).
+This site is written using FastHTML. The source code is on [github](https://github.com/pydanny/playground).
 
 ## What about pydanny.com?
 
