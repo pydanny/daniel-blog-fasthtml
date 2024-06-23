@@ -227,7 +227,10 @@ def article(slug: str):
 @app.get("/search")
 def search(request: Request):
     def _s(obj: dict, name: str, q: str):
-        return q.lower().strip() in obj.get(name.lower().strip(), "")
+        content =  obj.get(name, "")
+        if isinstance(content, list):
+            content = " ".join(content)
+        return q.lower().strip() in content.lower().strip()
 
 
     q = request.query_params.get("q", "")
