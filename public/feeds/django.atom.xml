@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://daniel.feldroy.com/</id>
+    <title>Daniel Roy Greenfeld</title>
+    <updated>2024-06-11T17:05:52.549Z</updated>
+    <generator>Next.js using Feed for Node.js</generator>
+    <author>
+        <name>Daniel Roy Greenfeld</name>
+        <email>daniel@feldroy.com</email>
+        <uri>https://daniel.feldroy.com</uri>
+    </author>
+    <link rel="alternate" href="https://daniel.feldroy.com"/>
+    <subtitle>Inside the head of Daniel Roy Greenfeld</subtitle>
+    <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+    <icon>https://daniel.feldroy.com/favicon.ico</icon>
+    <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+</feed>

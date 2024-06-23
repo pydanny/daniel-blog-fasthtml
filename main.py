@@ -55,6 +55,7 @@ app = FastHTMLWithLiveReload(hdrs=(
     Style(css_text)
     )
 )
+rt = app.route
 
 @dataclass
 class BlogPost():
@@ -146,6 +147,12 @@ def list_tags() -> dict[str, int]:
         )      
 
     return tags
+
+
+# Static files
+@rt("/{fname:path}.{ext:static}")
+async def get(fname:str, ext:str): return FileResponse(f'public/{fname}.{ext}')
+
 
 
 # Views start here
