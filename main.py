@@ -79,7 +79,7 @@ class BlogHeader():
             cls='borderCircle', alt='Daniel Roy Greenfeld', src='https://daniel.feldroy.com/_next/image?url=%2Fimages%2Fprofile.jpg&w=256&q=75', width='108', height='108')
             , href='/'),
         A(H2('Daniel Roy Greenfeld')),
-        P(A('About', href='/about'), '|', A('Articles', href='/posts'), '|', A('Books', href='/books'), '|', A('Jobs', href='/jobs'), '|', A('News', href='/news'), '|', A('Tags', href='/tags')
+        P(A('About', href='/about'), '|', A('Articles', href='/posts'), '|', A('Books', href='/books'), '|', A('Jobs', href='/jobs'), '|', A('Tags', href='/tags')
         
         )
     )
@@ -224,11 +224,13 @@ def article(slug: str):
     ), BlogFooter()
 
 
+# Markdown views
 class MarkdownPage():
     def __init__(self, slug: str):
         self.slug = slug
-        self.content = pathlib.Path(f"{slug}.md").read_text().split("---")[2]
-        self.metadata = yaml.safe_load(pathlib.Path(f"{slug}.md").read_text().split("---")[1])        
+        text = pathlib.Path(f"pages/{slug}.md").read_text()
+        self.content = ''.join(text.split("---")[2:])
+        self.metadata = yaml.safe_load(text.split("---")[1])
 
 
 @app.get("/about")
@@ -241,7 +243,47 @@ def about():
         )
     ), BlogFooter()
 
+@app.get("/books")
+def about():
+    page = MarkdownPage("books")
+    return Title(page.metadata.get('Title', page.slug)), BlogHeader(), Main(
+        A("← Back to home", href="/"),
+        Section(
+            Div(page.content,cls="marked")
+        )
+    ), BlogFooter()
 
+@app.get("/books/tech")
+def about():
+    page = MarkdownPage("tech")
+    return Title(page.metadata.get('Title', page.slug)), BlogHeader(), Main(
+        A("← Back to home", href="/"),
+        Section(
+            Div(page.content,cls="marked")
+        )
+    ), BlogFooter()
+
+
+@app.get("/books/fiction")
+def about():
+    page = MarkdownPage("fiction")
+    return Title(page.metadata.get('Title', page.slug)), BlogHeader(), Main(
+        A("← Back to home", href="/"),
+        Section(
+            Div(page.content,cls="marked")
+        )
+    ), BlogFooter()
+
+
+@app.get("/jobs")
+def about():
+    page = MarkdownPage("jobs")
+    return Title(page.metadata.get('Title', page.slug)), BlogHeader(), Main(
+        A("← Back to home", href="/"),
+        Section(
+            Div(page.content,cls="marked")
+        )
+    ), BlogFooter()
     
 
 if __name__ == '__main__':
