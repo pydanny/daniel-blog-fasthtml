@@ -1,8 +1,7 @@
+import collections
 import functools
 import pathlib
-from datetime import datetime
 from dataclasses import dataclass
-from typing import Callable
 
 from fasthtml.common import *
 import yaml
@@ -78,7 +77,7 @@ class BlogHeader():
         A(Img(
             cls='borderCircle', alt='Daniel Roy Greenfeld', src='https://daniel.feldroy.com/_next/image?url=%2Fimages%2Fprofile.jpg&w=256&q=75', width='108', height='108')
             , href='/'),
-        A(H2('Daniel Roy Greenfeld'), href='/'),
+        A(H2('Daniel Roy Greenfeld')),
         P(A('About', href='/about'), '|', A('Articles', href='/posts'), '|', A('Books', href='/books'), '|', A('Jobs', href='/jobs'), '|', A('News', href='/news'), '|', A('Tags', href='/tags')
         
         )
@@ -97,11 +96,6 @@ class BlogFooter():
         P('All rights reserved 2024, Daniel Roy Greenfeld')
     )
 
-@dataclass
-class Tag():
-    slug: str
-    def __xt__(self):
-        return A(self.slug, href=f"/tags/{self.slug}")
 
 @functools.lru_cache
 def list_posts(published: bool = True, posts_dirname="posts") -> list[dict]:
@@ -116,9 +110,64 @@ def list_posts(published: bool = True, posts_dirname="posts") -> list[dict]:
     posts.sort(key=lambda x: x["date"], reverse=True)
     return [x for x in filter(lambda x: x["published"] is published, posts)]
 
+
 def Time(timestamp: str) -> str:
     """Placeholder"""
     return Small(timestamp)
+
+
+@dataclass
+class Tag():
+    slug: str
+    def __xt__(self):
+        return A(self.slug, href=f"/tags/{self.slug}")
+    
+@dataclass
+class TagWithCount():
+    slug: str
+    count: int
+    def __xt__(self):
+        return A(Span(self.slug), Small(f"({self.count})"), href=f"/tags/{self.slug}")
+
+
+@functools.lru_cache
+def list_tags() -> dict[str, int]:
+    unsorted_tags = {}
+    for post in list_posts():
+        page_tags = post.get("tags", [])
+        for tag in page_tags:
+            if tag in unsorted_tags:
+                unsorted_tags[tag] += 1
+            else:
+                unsorted_tags[tag] = 1  
+
+    tags: dict = collections.OrderedDict(
+            sorted(unsorted_tags.items(), key=lambda x: x[1], reverse=True)
+        )      
+
+    return tags
+
+
+@app.get("/tags/")
+def tags():
+    tags = [TagWithCount(slug=x[0], count=x[1]) for x in list_tags().items()]
+    return Title("Tags"), BlogHeader(), Main(
+        Section(
+            H1('Tags'),
+            P('All tags used in the blog'),
+            *tags
+        )
+    ), BlogFooter()
+
+@app.get("/tags/{slug}")
+def tag(slug: str):
+    posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
+    return Title(f"Tag: {slug}"), BlogHeader(), Main(
+        Section(
+            H1(f'Posts tagged with "{slug}" ({len(posts)})'),
+            *posts
+        )
+    ), BlogFooter()
 
 
 @app.get("/")
