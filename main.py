@@ -52,7 +52,7 @@ app = FastHTMLWithLiveReload(hdrs=(
     HighlightJS(langs=['python', 'javascript', 'html', 'css']),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),
-    Style(css_text)
+    Style(css_text),
     )
 )
 rt = app.route
@@ -239,13 +239,13 @@ def search(q: str = ""):
                     any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
         
     if posts:
-        messages = [H1(f"Search results on '{q}'"), P(f"Found {len(posts)} results")]
-    elif q and messages:
+        messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} results")]
+    elif q:
         messages = [P("No results found")]
     else:
         messages = []
     return Title("Search"), BlogHeader(), Main(
-        Form(Input(name="q", value=q), Button("Search")),
+        Form(Input(name="q", value=q, id="search", type="search"), Button("Search")),
         Section(
             *messages,
             *posts,
