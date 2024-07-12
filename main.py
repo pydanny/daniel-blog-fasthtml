@@ -244,14 +244,14 @@ def search(q: str = ""):
         messages = [P("No results found")]
     else:
         messages = []
-    return Title("Search"), BlogHeader(), Main(
-        Form(Input(name="q", value=q, id="search", type="search"), Button("Search")),
+    return Title("Search"), BlogHeader(), Body(Main(
+        Form(Input(name="q", value=q, id="search", type="search"), Button("Search"), style="text-align: center;"),
         Section(
             *messages,
             *posts,
-            A("← Back home", href="/"),
+            # A("← Back home", href="/"),
         )
-    ), BlogFooter()
+    ), onload="document.getElementById('search').focus()"), BlogFooter()
 
 
 # Markdown views
