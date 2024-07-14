@@ -11,7 +11,6 @@ time_to_read: 3
 title: The Thirty Minute Rule
 image: /images/6933443849_51316a7cb7.jpg
 twitter_image: /images/6933443849_51316a7cb7.jpg
-popular: true
 ---
 
 When it comes to coding (or anything related to it) there's a rule I believe in with all my heart. It's the **Thirty Minute Rule**.

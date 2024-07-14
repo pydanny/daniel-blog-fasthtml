@@ -10,8 +10,6 @@ import uvicorn
 css_text = """
 a {color: #0070f3 !important;}
 
-header {text-align: center;}
-
 h1 {
     font-size: 2.5rem;
     line-height: 1.2;
@@ -81,7 +79,7 @@ class BlogHeader():
         A(H2('Daniel Roy Greenfeld')),
         P(A('About', href='/about'), '|', A('Articles', href='/posts'), '|', A('Books', href='/books'), '|', A('Jobs', href='/jobs'), '|', A('Tags', href='/tags'), '|', A('Search', href='/search')
         
-        )
+        ), style="text-align: center;"
     )
 
 
@@ -167,6 +165,7 @@ def tags():
             *tags
         )
     ), BlogFooter()
+
 
 @app.get("/tags/{slug}")
 def tag(slug: str):
