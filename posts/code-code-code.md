@@ -1,6 +1,7 @@
 ---
 date: "2016-05-28"
 published: true
+popular: true
 slug: code-code-code
 tags:
   - django

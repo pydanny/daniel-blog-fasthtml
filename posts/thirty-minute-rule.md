@@ -2,6 +2,7 @@
 date: "2021-08-18"
 description: What to do when you get stuck on a coding issue for more than 30 minutes.
 published: true
+popular: true
 slug: thirty-minute-rule
 tags:
   - rant
