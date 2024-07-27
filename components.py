@@ -46,7 +46,10 @@ def tag_with_count(slug: str, count: int):
     return A(Span(slug), Small(f"({count})"), href=f"/tags/{slug}")
 
 def markdown_page(slug: str):
-    text = pathlib.Path(f"pages/{slug}.md").read_text()
+    try:
+        text = pathlib.Path(f"pages/{slug}.md").read_text()
+    except FileNotFoundError:
+        return Response("Page not found", status_code=404) 
     content = ''.join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
     return Title(metadata.get('Title', slug)), blog_header(), Main(

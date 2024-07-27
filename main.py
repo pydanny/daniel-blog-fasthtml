@@ -117,16 +117,10 @@ def get(q: str = ""):
 
 @rt("/{slug}")
 def get(request, slug: str):
-    try:
-        return markdown_page(slug)
-    except FileNotFoundError:
-        return Response("Page not found", status_code=404)
+    return markdown_page(slug)
     
 @rt("/{slug_1}/{slug_2}")
 def get(slug_1: str, slug_2: str):
-    try:
-        return markdown_page(slug_1 + "/" + slug_2)
-    except FileNotFoundError:
-        return Response("Page not found", status_code=404)    
+    return markdown_page(slug_1 + "/" + slug_2)
 
 run_uv()
