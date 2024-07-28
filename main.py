@@ -16,56 +16,59 @@ hdrs = (
 app, rt = fast_app(hdrs=hdrs, default_hdrs=False)
 
 @rt("/")
+@layout
 def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
-    return (Title("Daniel Roy Greenfeld"), blog_header(),
-    Section(
-            H2(f'Recent Writings'),
-            *posts[:3]
+    return (
+        Section(
+                H2('Recent Writings'),
+                *posts[:3]
+            ),
+        Hr(),
+        Section(
+                H2('Popular Writings'),
+                *popular
         ),
-    Hr(),
-    Section(
-            H2(f'Popular Writings'),
-            *popular
-    ),
-    blog_footer()
     )
 
 @rt("/posts")
+@layout
 def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
-
-    return Title("Daniel Roy Greenfeld"), blog_header(), Main(
-        Section(
+    return (
+            Title("All posts by Daniel Roy Greenfeld"),
+            Section(
             H1(f'All Articles ({len(posts)})'),
             P(f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'),
             *posts,
             A("← Back to home", href="/"),
-        )
-    ), blog_footer()
+        ),)
 
 @rt("/posts/{slug}")
+@layout
 def get(slug: str):
     # post = [x for x in filter(lambda x: x["slug"] == slug, list_posts())][0]
     content, metadata = get_post(slug)
     # content = pathlib.Path(f"posts/{slug}.md").read_text().split("---")[2]
     # metadata = yaml.safe_load(pathlib.Path(f"posts/{slug}.md").read_text().split("---")[1])    
     tags = [tag(slug=x) for x in metadata.get("tags", [])]
-    return Title(metadata["title"]), blog_header(), Main(
+    return (
+        Title(metadata['title']),
         Section(
             H1(metadata["title"]),
             Div(content,cls="marked"),
             P(Span("Tags: "), *tags),
             A("← Back to all articles", href="/"),
-        )
-    ), blog_footer()
+        ),
+    )
 
 @rt("/tags")
+@layout
 def get():
     tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items()]
-    return Title("Tags"), blog_header(), Main(
+    return (Title("Tags"),
         Section(
             H1('Tags'),
             P('All tags used in the blog'),
@@ -73,18 +76,19 @@ def get():
             Br(), Br(),
             A("← Back home", href="/"),
         )
-    ), blog_footer()
+    )
 
 @rt("/tags/{slug}")
+@layout
 def get(slug: str):
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
-    return Title(f"Tag: {slug}"), blog_header(), Main(
+    return (Title(f"Tag: {slug}"),
         Section(
             H1(f'Posts tagged with "{slug}" ({len(posts)})'),
             *posts,
             A("← Back home", href="/"),
         )
-    ), blog_footer()
+    )
 
 @rt("/search")
 def get(q: str = ""):
@@ -116,10 +120,12 @@ def get(q: str = ""):
 
 
 @rt("/{slug}")
+@layout
 def get(request, slug: str):
     return markdown_page(slug)
     
 @rt("/{slug_1}/{slug_2}")
+@layout
 def get(slug_1: str, slug_2: str):
     return markdown_page(slug_1 + "/" + slug_2)
 
