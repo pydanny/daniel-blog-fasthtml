@@ -129,4 +129,4 @@ def get(request, slug: str):
 def get(slug_1: str, slug_2: str):
     return markdown_page(slug_1 + "/" + slug_2)
 
-run_uv()
+serve()

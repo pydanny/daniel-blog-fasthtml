@@ -33,7 +33,7 @@ def blog_header():
 def blog_post(title: str, slug: str, timestamp: str, description: str):
     return Span(
                 H2(A(title, href=f"/posts/{slug}")),
-                P(description, Small(Time(timestamp))),
+                P(description, Br(), Small(Time(timestamp))),
         )
 
 def blog_footer():
@@ -65,7 +65,6 @@ def markdown_page(slug: str):
             Div(content,cls="marked")
         )
     )
-
 
 def Layout(title: str, *args, **kwargs):
     """Layout for the blog, but can be adapted to anything"""
