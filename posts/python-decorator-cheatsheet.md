@@ -158,4 +158,4 @@ References:
   article on decorators for concerns about `functools.wraps`)
 - <https://wiki.python.org/moin/PythonDecoratorLibrary>
 
-![image](/images/sample-rst.png)
+![image](/public/images/sample-rst.png)

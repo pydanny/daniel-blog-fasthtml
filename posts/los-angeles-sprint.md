@@ -12,7 +12,7 @@ time_to_read: 2
 title: Los Angeles Open Source Sprint on May 12th!
 ---
 
-[![Los Angeles Open Source Sprint](/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)
+[![Los Angeles Open Source Sprint](/public/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)
 
 This is a day long coding event in Los Angeles for Open Source
 developers of all languages and skill levels to come and code like

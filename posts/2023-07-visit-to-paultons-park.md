@@ -43,4 +43,4 @@ This weekend we took 4.5-year-old Uma to [Paultons Park amusement park](https://
 - Excellent park, would visit again. Next time we'll take into account that the last available bus leaves an hour before the park closes
 - The venue should  provide a shuttle to-and-from the train station for people coming from London without cars
 
-![Uma enjoying the splash area](/images/uma-waterpark-summer-2023-40.jpg)
+![Uma enjoying the splash area](/public/images/uma-waterpark-summer-2023-40.jpg)

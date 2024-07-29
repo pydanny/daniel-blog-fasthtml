@@ -115,4 +115,4 @@ Uma
 
 What I like about Kotlin is that it follows pretty standard syntactic patterns, there's no wheels being reinvented. Even the [when](#when-instead-of-switch-case) statement is pretty straightforward. While there's quirks such as the use of [single quotes with the Char type](#char-vs-string-single-quotes-vs-double-quotes), nothing makes me want to bang my head against the wall. Instead, I was productive in minutes upon first looking at the language.
 
-[![image](/images/thoughts-on-kotlin.png)](/thoughts-on-kotlin.html)
+[![image](/public/images/thoughts-on-kotlin.png)](/thoughts-on-kotlin.html)

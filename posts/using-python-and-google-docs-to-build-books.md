@@ -15,7 +15,7 @@ image: /images/python-tip-from-pydanny.png
 ---
 
 
-[![Python tips and tricks](/images/python-tip-from-pydanny.png)](/using-google-docs-and-python-to-assemble-fiction-books.html)
+[![Python tips and tricks](/public/images/python-tip-from-pydanny.png)](/using-google-docs-and-python-to-assemble-fiction-books.html)
 
 When I started my latest fiction book, [The Darkest
 Autumn](https://www.roygreenfeld.com/products/darkest-autumn-ambria-book-1), I
@@ -63,7 +63,7 @@ one master file which can be converted to epub, mobi (kindle), or PDF.
 
 First, I download all the files in the book's Google Docs directory.
 
-![Selecting Files With Google Docs](/images/selecting-files.png?12346)
+![Selecting Files With Google Docs](/public/images/selecting-files.png?12346)
 
 This generates and downloads a zip file called something like
 drive-download-20170505T230011Z-001.zip. I use `unzip to open it`:

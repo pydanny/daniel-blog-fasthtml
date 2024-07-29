@@ -54,4 +54,4 @@ While I'm at it, I'm going to poke any prospective conference goers to
 submit their own talks. I love attending conference talks and at PyCon
 US this year I barely got to see any. Show me what you got!
 
-[![image](/images/1614703646_2e2610162a.jpg)](https://www.flickr.com/photos/pydanny/1614703646/)
+[![image](/public/images/1614703646_2e2610162a.jpg)](https://www.flickr.com/photos/pydanny/1614703646/)

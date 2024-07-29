@@ -13,7 +13,7 @@ title: Sunday Funday
 
 _This was originally posted on blogger [here](https://dannygreenfeld.blogspot.com/2007/10/sunday-funday.html)_.
 
-![](/2007-italy/IMG_4843.jpg)
+![](/public/2007-italy/IMG_4843.jpg)
 
 Another lovely day in Italia! Well, it would have been lovely but the temperature was rather low. Foolishly I just work a t-shirt and short pants to the City of Science. Which meant I was freezing all day. Oh well...
 

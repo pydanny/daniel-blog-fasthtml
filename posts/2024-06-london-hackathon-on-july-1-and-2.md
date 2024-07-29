@@ -45,4 +45,4 @@ Schedule:
 Space is limited, register your interest [here](https://octopus.typeform.com/hackTZ-interest).
 
 
-[![London Tech Zero Hackathon](/images/tech-zero-hackathon-square.png)](https://octopus.typeform.com/hackTZ-interest)
+[![London Tech Zero Hackathon](/public/images/tech-zero-hackathon-square.png)](https://octopus.typeform.com/hackTZ-interest)

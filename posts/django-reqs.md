@@ -115,4 +115,4 @@ Now that I have all this, it's time to code!
 
 ---
 
-[![2010 Snowstorm!](/images/4358842735_38991c0944.jpg)](https://www.flickr.com/photos/pydanny/4358842735/)
+[![2010 Snowstorm!](/public/images/4358842735_38991c0944.jpg)](https://www.flickr.com/photos/pydanny/4358842735/)

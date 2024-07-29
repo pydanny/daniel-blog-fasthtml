@@ -164,4 +164,4 @@ contribution to the effort has been merely the encapsulation of the
 code, it's nice to know I may have some small part in the development
 of the language.
 
-![image](/images/directions_med.png)
+![image](/public/images/directions_med.png)

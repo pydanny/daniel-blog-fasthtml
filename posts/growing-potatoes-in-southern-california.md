@@ -15,7 +15,7 @@ Southern California is known for its mediterranean-style climate. That means a f
 
 Look, we grew these!
 
-![Harvest from July 3rd, 2021](/images/potato-harvest-2021-07-03.jpg)
+![Harvest from July 3rd, 2021](/public/images/potato-harvest-2021-07-03.jpg)
 
 Here's what we've learned:
 

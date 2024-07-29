@@ -50,4 +50,4 @@ Professionally my career has gone well. I've freelanced, worked for startups, an
 - Surround yourself with people who reinforce your best qualities.
 - Take more pictures. Below is the only photo I have of the Arlington, Virginia bicycle trails that I loved to ride to and from work. Missing is the Potomac river, cherry blossoms in spring, snow in winter, autumn leaves, and so much more.
 
-[![image](/images/arlington-trail.jpg)](https://parks.arlingtonva.us/off-street-trails/)
+[![image](/public/images/arlington-trail.jpg)](https://parks.arlingtonva.us/off-street-trails/)

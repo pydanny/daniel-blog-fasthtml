@@ -78,4 +78,4 @@ path.
 
 Practice makes perfect, right?
 
-[![Code, Code, Code](/images/code-code-code.png)](/code-code-code.html)
+[![Code, Code, Code](/public/images/code-code-code.png)](/code-code-code.html)

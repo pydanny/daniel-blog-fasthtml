@@ -65,4 +65,4 @@ If you want to sponsor or volunteer, email me at pydanny (at)
 cartwheelweb.com or audreyr (at) cartwheelweb.com. We go out of our way
 to ensure that sponsors and volunteers feel appreciated.
 
-[![Los Angeles Open Source Sprint](/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)
+[![Los Angeles Open Source Sprint](/public/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)

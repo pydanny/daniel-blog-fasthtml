@@ -16,7 +16,7 @@ Naturally, many interpreted this as an April Fool's Day prank. Also
 naturally, I didn't agree or disagree with this interpretation of my
 blog post.
 
-[![image](/images/two-scoops-of-goblins.png)](/two-scoops-of-goblins.html)
+[![image](/public/images/two-scoops-of-goblins.png)](/two-scoops-of-goblins.html)
 
 _Image from blog post last year_
 
@@ -27,7 +27,7 @@ The punchline is that blog post wasn't a joke or prank. Indeed,
 yesterday I released my first fiction book, a dark fantasy novel with
 goblins in it.
 
-[![Into the Brambles Cover](/images/itb.png)](https://www.amazon.com/into-the-brambles-ebook/dp/B00VC5UQHO/?tag=the-brambles-20)
+[![Into the Brambles Cover](/public/images/itb.png)](https://www.amazon.com/into-the-brambles-ebook/dp/B00VC5UQHO/?tag=the-brambles-20)
 
 Description:
 

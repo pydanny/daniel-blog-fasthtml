@@ -16,7 +16,7 @@ time_to_read: 3
 title: Los Angeles Open Source Sprint on Nov 4th!
 ---
 
-[![Hacking awayyy!!](/images/la_hackathons.jpeg)](https://www.meetup.com/LA-Hackathons/events/85658952/)
+[![Hacking awayyy!!](/public/images/la_hackathons.jpeg)](https://www.meetup.com/LA-Hackathons/events/85658952/)
 
 Yet again, myself, Audrey Roy, and a small but elite cadre of volunteers
 are feverishly at work putting together another Los Angeles open source
@@ -133,4 +133,4 @@ bring a power strip labeled with your name.
 The event is $10, covers food and drink for the day, and you can RSVP
 by clicking on the image below
 
-[![Los Angeles Open Source Sprint](/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)
+[![Los Angeles Open Source Sprint](/public/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)

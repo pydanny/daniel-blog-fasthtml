@@ -250,6 +250,6 @@ Jinja2's `{% raw %}` template tag:
 {% endraw %}
 ```
 
-[![Cookiecutter logo](/images/cookiecutter_medium.png)](https://github.com/audreyr/cookiecutter)
+[![Cookiecutter logo](/public/images/cookiecutter_medium.png)](https://github.com/audreyr/cookiecutter)
 
 - **Update 09/20/2013**: Test coverage increased to 98% from 91%.

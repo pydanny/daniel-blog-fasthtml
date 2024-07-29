@@ -51,6 +51,6 @@ Yet when I think about it, the business isn't the best thing of working for Octo
 
 If you want to know the the ultimate reason I work for Octopus Energy, [read what I wrote here](https://daniel.feldroy.com/posts/whats-the-ultimate-reason-for-working-at-octopus-energy-part-2).
 
-[![Image used with permission by Octopus Energy](/images/constantine-curious.png)](https://octopusenergy.com)
+[![Image used with permission by Octopus Energy](/public/images/constantine-curious.png)](https://octopusenergy.com)
 
 _Image used with permission by Octopus Energy_

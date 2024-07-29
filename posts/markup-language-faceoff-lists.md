@@ -17,7 +17,7 @@ Today I want to talk about lists. Not for shopping, not the programming
 data type, but the display of items in both unordered and ordered
 fashion.
 
-[![Bullets faceoff](/images/bullets.png)](/markup-language-faceoff-lists.html)
+[![Bullets faceoff](/public/images/bullets.png)](/markup-language-faceoff-lists.html)
 
 Specifically this:
 

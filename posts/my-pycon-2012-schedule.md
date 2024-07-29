@@ -94,4 +94,4 @@ Sprints! Nothing set in stone yet, but some ideas I've had include:
 - Hack on Mongo related technologies such as django-mongonaut and some
   other planned projects.
 
-![PyCon 2012 Logo](/images/pycon2012.png)
+![PyCon 2012 Logo](/public/images/pycon2012.png)

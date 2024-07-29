@@ -13,7 +13,7 @@ time_to_read: 5
 title: Two Scoops of Django FAQ
 ---
 
-[![Frontispiece for TSD 1.5](/images/tsd15-frontispiece.png)](https://roygreenfeld.com/products/two-scoops-of-django-1-5/)
+[![Frontispiece for TSD 1.5](/public/images/tsd15-frontispiece.png)](https://roygreenfeld.com/products/two-scoops-of-django-1-5/)
 
 The launch of the [Two Scoops of Django: Best Practices for Django
 1.5](https://roygreenfeld.com/products/two-scoops-of-django-1-5) book has gone pretty well. The response

@@ -10,7 +10,7 @@ title: Crusty European Bread
 description: A recipe to make tasty bread with a crust.
 ---
 
-![Crusty European Bread!](/images/crusty-european-bread.png)
+![Crusty European Bread!](/public/images/crusty-european-bread.png)
 
 I was inspired to make crusty European bread from our travels in Italy and Spain. My first attempt didn't have an enjoyable crust because I relied on butter. It turns out the secret ingredient is steam in the oven followed by letting it cool in the oven.
 

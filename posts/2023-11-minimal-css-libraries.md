@@ -26,13 +26,13 @@ As for how it looks, check out the before and after images below:
 
 I was never happy with the spacing between elements, and struggled with all the CSS bits to make it work.
 
-![Old custom CSS](/images/css-before.png)
+![Old custom CSS](/public/images/css-before.png)
 
 **Minimal CSS library + a few custom classes**
 
 In the new version the default spacing is really nice, and my only challenge was getting my avatar image to come down `2.5 rem`.
 
-![New CSS](/images/css-after.png)
+![New CSS](/public/images/css-after.png)
 
 ## Resources:
 

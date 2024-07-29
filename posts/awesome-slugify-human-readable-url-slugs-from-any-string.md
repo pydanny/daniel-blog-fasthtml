@@ -69,7 +69,7 @@ there was a nicely packaged/tested solution?
 Fortunately, such a nicely packaged/tested solution exists, and it's
 awesome!
 
-![An Awesome Django slug](/images/awesome_slugify_django.jpg)
+![An Awesome Django slug](/public/images/awesome_slugify_django.jpg)
 
 ## Introducing awesome-slugify
 

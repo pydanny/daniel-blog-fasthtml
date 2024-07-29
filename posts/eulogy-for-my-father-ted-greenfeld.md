@@ -77,12 +77,12 @@ Perhaps it was my father having one last word with us. I would like to think it 
 
 ## Photos
 
-[![Dad by the water he loved so much](/images/dad-water-480.jpg)](/images/dad-water.jpg)
+[![Dad by the water he loved so much](/public/images/dad-water-480.jpg)](/public/images/dad-water.jpg)
 
 My father loved the beach. I think if  employment were close to the sea, he would have moved my family to the shore. In his sixties(?) he lived on Salisbury island in the Chesapeake Bay.
 
 
-[![Dad in a business suit](/images/dad-business-480.jpg)](/images/dad-business.jpg)
+[![Dad in a business suit](/public/images/dad-business-480.jpg)](/public/images/dad-business.jpg)
 
 My father was a dreamer. To support the family, he bought a campground, later trading it for an ice cream store. He followed his heart. He was a restless spirit who chased after big dreams. When he grew old and didn't have the energy to run around, his creativity flowed out even more through his pen on paper, through drawings and writing.
 
@@ -91,11 +91,11 @@ My father often worked for himself. When he worked for others he would start a n
 
 Now I believe he just wanted to write. -->
 
-[![Dad and me talking the last time I visited him in Washington, DC](/images/dad-me-talk.jpg)](/images/dad-me-talk.jpg)
+[![Dad and me talking the last time I visited him in Washington, DC](/public/images/dad-me-talk.jpg)](/public/images/dad-me-talk.jpg)
 
 This was taken in 2010, the last time I visited my father when he lived in Washington, DC. He was giving me advice about my big move across the USA to California to be with Audrey. 
 
-![Dad and me smiling together the last time I visited him in Washington, DC](/images/dad-me-smile.jpg)
+![Dad and me smiling together the last time I visited him in Washington, DC](/public/images/dad-me-smile.jpg)
 
 Me and my father.
 

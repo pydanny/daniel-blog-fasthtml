@@ -13,11 +13,11 @@ def blog_header():
                 title="Daniel Roy Greenfeld",
                 description="Daniel Roy Greenfeld's personal blog",
                 url="https://daniel.feldroy.com",
-                image="/images/profile.jpg",
+                image="/public/images/profile.jpg",
                 ),
         Header(
             A(Img(
-                cls='borderCircle', alt='Daniel Roy Greenfeld', src='https://daniel.feldroy.com/_next/image?url=%2Fimages%2Fprofile.jpg&w=256&q=75', width='108', height='108')
+                cls='borderCircle', alt='Daniel Roy Greenfeld', src='/public/images/profile.jpg', width='108', height='108')
                 , href='/'),
             A(H2('Daniel Roy Greenfeld'), href="/"),
             P(

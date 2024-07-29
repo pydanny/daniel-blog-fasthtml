@@ -18,7 +18,7 @@ Django: Best Practices for Django
 1.8](https://roygreenfeld.com/products/two-scoops-of-django-1-8)
 **PDF** ebook.
 
-[![Two Scoops of Django 1.u](/images/two-scoops-1.8-ebook-S.jpg)](https://roygreenfeld.com/products/two-scoops-of-django-1-8)
+[![Two Scoops of Django 1.u](/public/images/two-scoops-1.8-ebook-S.jpg)](https://roygreenfeld.com/products/two-scoops-of-django-1-8)
 
 Co-authored with [Audrey Roy Greenfeld](audrey.roygreenfeld.com),
 the [1.8

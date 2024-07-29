@@ -15,7 +15,7 @@ time_to_read: 2
 title: Our Django Book Has Launched
 ---
 
-[![Original TSD Book Cover](/images/tsd15-alpha.png)](https://roygreenfeld.com/products/two-scoops-of-django-1-5/)
+[![Original TSD Book Cover](/public/images/tsd15-alpha.png)](https://roygreenfeld.com/products/two-scoops-of-django-1-5/)
 
 We ([Audrey Roy](https://audrey.roygreenfeld.com/) and I) wrote a
 [book](https://roygreenfeld.com/products/two-scoops-of-django-1-5) on Django! It's called **Two Scoops

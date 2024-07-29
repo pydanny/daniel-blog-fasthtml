@@ -64,4 +64,4 @@ Results:
 
 Use this little script to impress the special person in your life!
 
-![](/images/2022-02-14-hearts-a.png)
+![](/public/images/2022-02-14-hearts-a.png)

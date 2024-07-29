@@ -13,7 +13,7 @@ title: Danny the Tourist
 
 _This was originally posted on blogger [here](https://dannygreenfeld.blogspot.com/2007/10/danny-tourist.html)_.
 
-![](/2007-italy/IMG_4904.jpg)
+![](/public/2007-italy/IMG_4904.jpg)
 
 Thanks to being ill, I only spent about an hour or so being a tourist in Italy. I did take lots of pictures, so if you want to see some of what I saw, you can go here:
 

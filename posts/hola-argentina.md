@@ -31,4 +31,4 @@ over the internet.
 
 Hasta pronto!
 
-[![image](/images/800px-Flag_of_Argentina.png)](https://en.wikipedia.org/wiki/Argentina)
+[![image](/public/images/800px-Flag_of_Argentina.png)](https://en.wikipedia.org/wiki/Argentina)

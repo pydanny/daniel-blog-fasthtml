@@ -11,7 +11,7 @@ time_to_read: 3
 title: Announcing Two Scoops of Django 1.6!
 ---
 
-[![image](/images/two-scoops-django-co-authors-M.jpg)](https://feldroy.com/products/two-scoops-of-django-1-6)
+[![image](/public/images/two-scoops-django-co-authors-M.jpg)](https://feldroy.com/products/two-scoops-of-django-1-6)
 
 We (Audrey Roy and I) just released the **revised**, **expanded**, and
 **slightly renamed** second edition of our book on Django. It's called
@@ -81,7 +81,7 @@ In fact...
 
 ### We expanded the book so much that **3 > 4**:
 
-[![image](/images/3vs4-M.jpg)](https://feldroy.com/products/two-scoops-of-django-1-6)
+[![image](/public/images/3vs4-M.jpg)](https://feldroy.com/products/two-scoops-of-django-1-6)
 
 This isn't to say that we padded the book. Not at all. The new material
 is packed with our loud volume of code examples and concise

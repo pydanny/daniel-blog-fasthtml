@@ -17,7 +17,7 @@ description: The story of one of the best days of my life.
 In a small, private family ceremony on December 27th, 2013 I exchanged
 wedding vows with [Audrey Roy](https://audrey.roygreenfeld.com).
 
-![image](/images/vows.jpg)
+![image](/public/images/vows.jpg)
 
 It was an incredible day. I'll savor the moment we promised ourselves
 to each other in matrimony forever. She is the other half of my soul,
@@ -48,4 +48,4 @@ could be fun...
 This image is a link to a short collection of photos from the incredible
 photographer, Lindy DiMaio. More to come:
 
-![Married couple sitting together](/images/couple.jpg)
+![Married couple sitting together](/public/images/couple.jpg)

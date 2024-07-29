@@ -48,4 +48,4 @@ such a big deal. I've made it to the Longest Streak list!
 We'll see what happens now. I just feel happy that I've captured the
 moment and made my mark on the board. I invite you to do the same.
 
-[![image](/images/6216/7024690837_0974c93f63_o.png)](https://www.flickr.com/photos/pydanny/7024690837/in/photostream/)
+[![image](/public/images/6216/7024690837_0974c93f63_o.png)](https://www.flickr.com/photos/pydanny/7024690837/in/photostream/)

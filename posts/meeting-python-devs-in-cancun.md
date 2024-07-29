@@ -14,4 +14,4 @@ On Saturday, October 26th Audrey, Uma, and I had the pleasure of attending the s
 
 It was amazing to meet other engineers and developers in such a lovely beach town.
 
-[![image](/images/pycun.jpeg)](https://www.meetup.com/Py-Cun/)
+[![image](/public/images/pycun.jpeg)](https://www.meetup.com/Py-Cun/)

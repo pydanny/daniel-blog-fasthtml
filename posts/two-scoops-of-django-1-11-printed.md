@@ -13,7 +13,7 @@ time_to_read: 1
 title: Two Scoops of Django 1.11 Is Printed!
 ---
 
-[![Two Scoops of Django](/images/danny-and-audrey-tsd111.jpg)](https://roygreenfeld.com/products/two-scoops-of-django-1-11)
+[![Two Scoops of Django](/public/images/danny-and-audrey-tsd111.jpg)](https://roygreenfeld.com/products/two-scoops-of-django-1-11)
 
 After longer than we expected, the shiny new print copies of [Two Scoops
 of Django

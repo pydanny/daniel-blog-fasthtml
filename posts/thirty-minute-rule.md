@@ -59,7 +59,7 @@ Gently guide the person to others who can help them, or to online help methods. 
 
 Adjust the duration to best suit your team. A common variation is to increase it to 60 minutes.
 
-![Sitting at my first computer](/images/6933443849_51316a7cb7.jpg)
+![Sitting at my first computer](/public/images/6933443849_51316a7cb7.jpg)
 
 _Sitting at my first computer._
 

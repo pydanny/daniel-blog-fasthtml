@@ -167,4 +167,4 @@ if __name__ == "__main__":
     typer.run(main)
 ```
 
-![](/images/2022-02-old-blog-archive.png)
+![](/public/images/2022-02-old-blog-archive.png)

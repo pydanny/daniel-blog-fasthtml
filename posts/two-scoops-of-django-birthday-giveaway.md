@@ -13,7 +13,7 @@ title: Two Scoops of Django Birthday Giveaway
 description: My 2017 birthday giveaway contest.
 ---
 
-[![Coldest Spring](/images/51hVFnWbG7L.jpg)](https://www.amazon.com/Coldest-Spring/dp/B071P74C8Z/?tag=ihpydanny-20)
+[![Coldest Spring](/public/images/51hVFnWbG7L.jpg)](https://www.amazon.com/Coldest-Spring/dp/B071P74C8Z/?tag=ihpydanny-20)
 
 Today is a special day. You see, the latest fantasy book I co-authored,
 [Coldest Spring (3rd in the Ambria

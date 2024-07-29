@@ -14,7 +14,7 @@ During the week of March 21-25 at [Python Web Conf](https://2022.pythonwebconf.c
 
 To me, public speaking is like a roller coaster ride. The climb up the first hill (or minute when it comes to speaking) is absolutely terrifying. Then as soon as the car accelerates (or I begin to speak), endorphins kick in. I go from struggling not to visibly tremble from fear to shaking with excitement.
 
-[![](/images/PWC2022-daniel-roy-greenfeld.png)](https://2022.pythonwebconf.com/presentations/confessions-of-joe-developer)
+[![](/public/images/PWC2022-daniel-roy-greenfeld.png)](https://2022.pythonwebconf.com/presentations/confessions-of-joe-developer)
 
 *Hint: Use code **Speaker15@PWC2022** to get 15% off your ticket costs.*
 
@@ -32,4 +32,4 @@ It was at NASA that I learned Python and started with Django. All because of tha
 
 See you at [Python Web Conf](https://2022.pythonwebconf.com)! 
 
-[![](/images/2022.pythonwebconf.png)](https://2022.pythonwebconf.com)
+[![](/public/images/2022.pythonwebconf.png)](https://2022.pythonwebconf.com)

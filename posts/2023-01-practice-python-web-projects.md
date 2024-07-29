@@ -96,4 +96,4 @@ This is a great project to practice with Django, Flask, or FastAPI.
 
 Bonus points: Package can be used with all three web frameworks: Django, Flask, and FastAPI.
 
-![https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects](/images/Practice-Python-Web-Projects.png)
+![https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects](/public/images/Practice-Python-Web-Projects.png)

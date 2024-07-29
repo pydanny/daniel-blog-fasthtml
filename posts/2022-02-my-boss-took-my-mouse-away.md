@@ -45,4 +45,4 @@ So rather than take away mice, I encourage people to learn keyboard shortcuts. W
 - [VS Code hotkey reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference)
 - [PyCharm hotkey reference](https://www.jetbrains.com/help/pycharm/mastering-keyboard-shortcuts.html)
 
-![](/images/mybosstookmykeyboardaway.png)
+![](/public/images/mybosstookmykeyboardaway.png)

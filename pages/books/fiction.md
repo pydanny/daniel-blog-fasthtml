@@ -8,7 +8,7 @@ og_url: https://daniel.feldroy.com/books/fiction
 
 # Shadowfall
 
-[![](/images/shadowfall_abyssia_square.png)](https://www.amazon.com/Shadowfall-A-Dark-Fantasy-Epic/dp/B0BRBR78N2?tag=mlinar-20)
+[![](/public/images/shadowfall_abyssia_square.png)](https://www.amazon.com/Shadowfall-A-Dark-Fantasy-Epic/dp/B0BRBR78N2?tag=mlinar-20)
 
 Shadowfall: A dark fantasy epic by Daniel and Audrey Roy Greenfeld
 
@@ -18,7 +18,7 @@ In a world shrouded in darkness and danger, Vorath must rise to the challenge as
 
 <!-- # Necropolis
 
-[![](/images/2022-12-29-necropolis.jpg)](https://www.amazon.com/kindle-vella/story/B09P5C9V2F?tag=mlinar-20) 
+[![](/public/images/2022-12-29-necropolis.jpg)](https://www.amazon.com/kindle-vella/story/B09P5C9V2F?tag=mlinar-20) 
 
 
 Necropolis is a dystopian horror story where an undead ruler dominates the land. Against her, a rebellion has risen, people fighting against the current order willing to commit the greatest evils in their attempts to win. Thrown into this fight is a young woman named Toma, winning impossible battles thanks to a combination of courage and a destiny she does not want to serve.

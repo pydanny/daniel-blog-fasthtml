@@ -78,7 +78,7 @@ admin.site.register(APIData, APIDataAdmin)
 The field remains the same, but we also get a display of nicely
 formatted data:
 
-![Admin Pretty JSON](/images/admin-pretty-json.png)]
+![Admin Pretty JSON](/public/images/admin-pretty-json.png)]
 
 Much better!
 

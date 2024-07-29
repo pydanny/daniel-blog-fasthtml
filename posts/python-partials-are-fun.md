@@ -15,7 +15,7 @@ Python's
 [functools.partial](https://docs.python.org/2.7/library/functools.html#functools.partial)
 function, which I've found can help facilitate writing reusable code.
 
-[![image](/images/partials.png)](/python-partials-are-fun.html)
+[![image](/public/images/partials.png)](/python-partials-are-fun.html)
 
 While the documentation has a nice explanation and demonstration of
 `functools.partial`, it's very serious. I've got my own internal

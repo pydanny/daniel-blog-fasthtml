@@ -47,22 +47,22 @@ This was the official history of the company:
 
 _If anyone has photos or other media related to Aaron & Company, share and I'll add them below._
 
-![](/aaronco/logo.png)
+![](/public/aaronco/logo.png)
 
 _The logo was designed by my grandmother. It was the official company logo. It was on all signs and trucks at all the locations. It was a source of pride for my mother and I that her effort was used for decades._
 
-![](/aaronco/History1.png)
+![](/public/aaronco/History1.png)
 
 _This photo of the company catalog taken in autumn of 1958 features my grandfather._
 
-![](/aaronco/History2.jpg)
+![](/public/aaronco/History2.jpg)
 
 _This photo was probably taken in 1979, during the move from downtown New Bruinswick to Piscataway. The sign mentions "solar", meaning my family has been into renewable energy for decades._
 
-![](/aaronco/aeriel-new-bruinswick-with-arrow.png)
+![](/public/aaronco/aeriel-new-bruinswick-with-arrow.png)
 
 _The HQ marked by the arrow opened in 1950 and closed when Johnson & Johnson bought the site for its headquarters in the late 1970s. I have faint memories of visiting there as a child._
 
-![](/aaronco/aeriel-new-bruinswick-no-arrow.png)
+![](/public/aaronco/aeriel-new-bruinswick-no-arrow.png)
 
 _Another aeriel shot, but no arrow. What's striking is the massive town gas container in the upper left of the neighborhood, something that was common in the older era for cities all over the world._

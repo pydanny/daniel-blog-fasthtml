@@ -49,4 +49,4 @@ I'm of the opinion that if you're not learning, you're career is ending. I want 
 
 Going into my daughter's 4th year I rededicate myself toward being a good father.
 
-![2023 resolutions](/images/Resolutions-2023.png)
+![2023 resolutions](/public/images/Resolutions-2023.png)

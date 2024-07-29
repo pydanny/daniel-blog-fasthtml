@@ -16,7 +16,7 @@ Employers that focus in particular on decarbonization and other aspects of clima
 
 This is my employer, providing renewable energy and fighting against climate change. How awesome is that? Inside of Octopus Energy group, I work for the Kraken Tech corporation, which focuses on delivering energy retail solutions for Octopus Energy and licensees.
 
-[![](/images/2022_KrakenV2_stacked_Transparent.png)](https://octopusenergy.group/kraken-technologies)
+[![](/public/images/2022_KrakenV2_stacked_Transparent.png)](https://octopusenergy.group/kraken-technologies)
 
 We do Python on the backend, React on the frontend, and host on AWS. [Read why I love working here](/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1). We have positions [open all over the planet](https://octopus.energy/careers/join-us).
 
@@ -28,11 +28,11 @@ Sorry, we're only hiring from the countries listed on our [open roles page](http
 
 I appreciate the pledge they make to treat staff in a humane way and use their talents to help the world. They are repositioning themselves to support decarbonization and other positive aspects of fighting climate change.
 
-[![](/images/SFU-Logo.png)](https://sixfeetup.com/company/careers) 
+[![](/public/images/SFU-Logo.png)](https://sixfeetup.com/company/careers) 
 
 In fact, Six Feet Up has a formal initiative they call [IMPACTFUL](https://sixfeetup.com/company/our-mission#objective) that is inspirational. More organizations should choose to take positive action in this manner.
 
-[![](/images/SFU-impact.png)](https://sixfeetup.com/company/our-mission#objective)
+[![](/public/images/SFU-impact.png)](https://sixfeetup.com/company/our-mission#objective)
 
 Six Feet Up is based in Indiana, USA but allows [remote work](https://sixfeetup.com/company/careers) from pretty much anywhere.
 
@@ -54,4 +54,4 @@ Another consultancy who does right by their people and does no harm to the world
 
 Climate Base is a site helping developers to discover jobs at thousands of organizations working on climate solutions. Unfortunately I can't vette them for how they take care of their people, but the jobs will focus on addressing climate change.
 
-[![Climate Base logo](/images/climatebase.jpeg)](https://climatebase.org) {% .jobImage %}
+[![Climate Base logo](/public/images/climatebase.jpeg)](https://climatebase.org) {% .jobImage %}

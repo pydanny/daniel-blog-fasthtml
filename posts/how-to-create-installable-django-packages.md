@@ -13,7 +13,7 @@ title: How To Create Installable, Reusable Django Packages
 images: /images/django-package-470x246.png
 ---
 
-[![image](/images/django-package-470x246.png)](/how-to-create-installable-django-packages.html)
+[![image](/public/images/django-package-470x246.png)](/how-to-create-installable-django-packages.html)
 
 What I mean by an "installable Django package": a reusable component
 that can be shared across Django projects, allowing us to combine our

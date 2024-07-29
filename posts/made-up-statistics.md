@@ -43,7 +43,7 @@ of view and your own opinion of my opinions.
 With that out of the way, here's a bar graph created from the fictional
 data I presented with Miguel back in 2011:
 
-![image](/images/made-up-statistics.png)
+![image](/public/images/made-up-statistics.png)
 
 You'll notice that my bar titles could be stronger. I actually did that
 on purpose in case anyone tries to use that chart in real life. In any
@@ -73,7 +73,7 @@ This time, because I'm worried about the data being taken seriously,
 I've titled the bar chart in such a way that no one will reference it
 in anything important:
 
-![image](/images/devops.png)
+![image](/public/images/devops.png)
 
 # Pydanny Made Up Python Enviroment Statistics
 
@@ -95,7 +95,7 @@ up to an even 100% (making it good pie chart material):
   to invite you into their fortified compounds. **We hate you that
   much.**
 
-![image](/images/environment.png)
+![image](/public/images/environment.png)
 
 # Pydanny Made Up Template Debate Statistics
 
@@ -115,7 +115,7 @@ ending template debate in Python:
 The display for this data is a lovely pie chart as seen below. In order
 to make it appear more useful, I made it a 3-D pie chart:
 
-![image](/images/templates.png)
+![image](/public/images/templates.png)
 
 # Pydanny Made Up Python Web Optimization Statistics
 
@@ -130,7 +130,7 @@ thing happens with other frameworks such as Flask and Pyramid.
 - 100% Django/Pyramid/Flask/etc core developers argue using caching
   and load balancing.
 
-![image](/images/optimization.png)
+![image](/public/images/optimization.png)
 
 Of all the made up statistics in this blog post, I suspect this is the
 one closest to the truth of things.

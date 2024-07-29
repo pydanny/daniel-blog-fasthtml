@@ -34,7 +34,7 @@ For years I've been concerned about the [changing climate](https://en.wikipedia.
 
 It's all about this little girl.
 
-![Uma and me playing in the spring sunshine](/images/uma-daniel-sun.jpg)
+![Uma and me playing in the spring sunshine](/public/images/uma-daniel-sun.jpg)
 
 I want to give my daughter a better planet. She and her generation deserve to live in the same kind of world I had growing up.
 
@@ -48,7 +48,7 @@ By selling huge volumes of renewable electricity, providing services that encour
 
 To put it as simply as possible, Octopus Energy has turned me into a superhero. How awesome is that?
 
-![/images/super_octo.png](/images/super_octo.png)
+![/images/super_octo.png](/public/images/super_octo.png)
 
 ## Links
 

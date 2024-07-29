@@ -180,4 +180,4 @@ Theory](/fixing-pythons-string-class.html). ;-)
 **Resource**: The entire `test_docstrings.py` module:
 <https://gist.github.com/pydanny/9373279>
 
-![image](/images/lambda_scoops.png)
+![image](/public/images/lambda_scoops.png)

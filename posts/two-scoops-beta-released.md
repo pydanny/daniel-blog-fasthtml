@@ -32,7 +32,7 @@ experts from around the world. Reader contributions from advanced and
 beginning developers have also shaped the book, and we can't thank
 enough those who gave us their insights.
 
-[![Beta launch image for TSD 1.5](/images/tsd15-beta.png)](https://roygreenfeld.com/products/two-scoops-of-django-1-5/)
+[![Beta launch image for TSD 1.5](/public/images/tsd15-beta.png)](https://roygreenfeld.com/products/two-scoops-of-django-1-5/)
 
 [None](None)
 What is different about the beta release?

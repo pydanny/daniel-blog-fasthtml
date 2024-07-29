@@ -110,4 +110,4 @@ run:  ## Start the dev server
 	python manage.py runserver    
 
 ``` 
-![Autodocumenting Makefiles](/images/autodocumenting-makefiles.png)
+![Autodocumenting Makefiles](/public/images/autodocumenting-makefiles.png)

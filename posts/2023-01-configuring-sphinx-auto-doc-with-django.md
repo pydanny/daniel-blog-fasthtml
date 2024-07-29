@@ -91,4 +91,4 @@ Or if you are using [myst-parser](https://myst-parser.readthedocs.io/) to use Ma
 
 My employer is hiring! We've got dozens of roles and hundreds of positions open across multiple fields in several countries (USA, UK, Germany, France, Australia, Japan, Italy, Spain, and more). Our mission is to address climate change through decarbonization, electrification, and being good citizens. We're a growing group of companies with a big mission, and we're looking for people who want to make a difference. Check out our [careers page](https://octopus.energy/careers/) to see if what we do excites you and our [open roles page](https://octopus.energy/careers/join-us/) to discover if there's a role that you find interesting.
 
-[![](/images/cute-octo-plushie-200x200.png)](https://octopus.energy/careers/)
+[![](/public/images/cute-octo-plushie-200x200.png)](https://octopus.energy/careers/)

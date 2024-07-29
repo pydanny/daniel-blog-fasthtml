@@ -18,7 +18,7 @@ Squadron](https://en.wikipedia.org/wiki/91st_Cyberspace_Operations_Squadron)
 the finer details of how to build, test, and deploy
 [Django](https://djangoproject.com) web applications.
 
-[![Two Scoops Academy 91st COS Django Training](/images/two-scoops-academy-91cos-django-training.png)](/intensive-django-training-us-air-force.html)
+[![Two Scoops Academy 91st COS Django Training](/public/images/two-scoops-academy-91cos-django-training.png)](/intensive-django-training-us-air-force.html)
 
 It was a challenging, exciting experience for us as instructors. We've
 taught numerous Python and Django trainings over the years under

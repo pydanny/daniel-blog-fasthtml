@@ -16,7 +16,7 @@ On April 26th I had a live discussion with [Sebastián Ramírez](https://tiangol
 
 To watch the video click [here](https://www.youtube.com/watch?v=8IJkSs9Dvjo) or on the image below.
 
-[![Live Discussion with Sebastián Ramírez (Tiangolo)](/images/code-code-code-02.png)](https://www.youtube.com/watch?v=8IJkSs9Dvjo)
+[![Live Discussion with Sebastián Ramírez (Tiangolo)](/public/images/code-code-code-02.png)](https://www.youtube.com/watch?v=8IJkSs9Dvjo)
 
 LINKS:
 
