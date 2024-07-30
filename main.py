@@ -1,3 +1,5 @@
+import pathlib
+
 from fasthtml.common import *
 from components import *
 from content import *
@@ -13,7 +15,7 @@ hdrs = (
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),    
 )
 
-app, rt = fast_app(hdrs=hdrs, default_hdrs=False)
+app, rt = fast_app(hdrs=hdrs, default_hdrs=False, debug=True)
 
 @rt("/")
 @layout
@@ -118,7 +120,6 @@ def get(q: str = ""):
         )
     ), onload="document.getElementById('search').focus()"), blog_footer()
 
-
 @rt("/{slug}")
 @layout
 def get(request, slug: str):
@@ -128,5 +129,11 @@ def get(request, slug: str):
 @layout
 def get(slug_1: str, slug_2: str):
     return markdown_page(slug_1 + "/" + slug_2)
+
+@app.get("/{fname:path}.{ext:static}")
+def static(fname: str, ext: str):
+  print(f'public/{fname}.{ext}')
+  return FileResponse(f'public/{fname}.{ext}')
+
 
 serve()
