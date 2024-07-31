@@ -42,7 +42,5 @@ Schedule:
 - July 1: Event begins at 10am, venue closes at 10pm
 - July 2: Judging at 3pm
 
-Space is limited, register your interest [here](https://octopus.typeform.com/hackTZ-interest).
 
-
-[![London Tech Zero Hackathon](/public/images/tech-zero-hackathon-square.png)](https://octopus.typeform.com/hackTZ-interest)
+![London Tech Zero Hackathon](/public/images/tech-zero-hackathon-square.png)
