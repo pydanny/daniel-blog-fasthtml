@@ -130,10 +130,4 @@ def get(request, slug: str):
 def get(slug_1: str, slug_2: str):
     return markdown_page(slug_1 + "/" + slug_2)
 
-@app.get("/{fname:path}.{ext:static}")
-def static(fname: str, ext: str):
-  print(f'public/{fname}.{ext}')
-  return FileResponse(f'public/{fname}.{ext}')
-
-
 serve()
