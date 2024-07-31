@@ -2,7 +2,6 @@ import collections
 import functools
 import pathlib
 import yaml
-from dataclasses import dataclass
 
 __all__ = ["list_posts", "get_post", "list_tags"]
 

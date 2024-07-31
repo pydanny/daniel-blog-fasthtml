@@ -2,7 +2,7 @@ import pathlib
 
 from fasthtml.common import *
 from components import *
-from content import *
+from contents import *
 
 from datetime import datetime
 
