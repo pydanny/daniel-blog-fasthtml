@@ -15,6 +15,14 @@ hdrs = (
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),    
 )
 
+def not_found(response):
+    response.status = 404
+    return Titled("Not Found", H1("404 Not Found"), P("The page you are looking for does not exist."))
+
+exception_handlers = {
+    404: not_found
+}
+
 app, rt = fast_app(hdrs=hdrs, default_hdrs=False, debug=True)
 
 @rt("/")
@@ -23,13 +31,14 @@ def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
     return (
+        Title("Daniel Roy Greenfeld"),
         Section(
-                H2('Recent Writings'),
+                H1('Recent Writings'),
                 *posts[:3]
             ),
         Hr(),
         Section(
-                H2('Popular Writings'),
+                H1('Popular Writings'),
                 *popular
         ),
     )
