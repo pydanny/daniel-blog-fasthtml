@@ -1,178 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://daniel.feldroy.com/</id>
-    <title>Daniel Roy Greenfeld</title>
-    <updated>2024-06-11T17:05:52.638Z</updated>
-    <generator>Next.js using Feed for Node.js</generator>
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://daniel.feldroy.com</id>
+  <title>Inside the head of Daniel Roy Greenfeld</title>
+  <updated>2024-08-04T21:38:05.739241+00:00</updated>
+  <author>
+    <name>Daniel Roy Greenfeld</name>
+    <email>daniel@feldroy.com</email>
+    <uri>https://daniel.feldroy.com</uri>
+  </author>
+  <link href="https://daniel.feldroy.com" rel="alternate"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+  <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+  <entry>
+    <id>til-2024-06-renaming-git-branches</id>
+    <title>TIL: Renaming git branches</title>
+    <updated>2024-08-04T21:38:06.047866+00:00</updated>
     <author>
-        <name>Daniel Roy Greenfeld</name>
-        <email>daniel@feldroy.com</email>
-        <uri>https://daniel.feldroy.com</uri>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
     </author>
-    <link rel="alternate" href="https://daniel.feldroy.com"/>
-    <subtitle>Inside the head of Daniel Roy Greenfeld</subtitle>
-    <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
-    <icon>https://daniel.feldroy.com/favicon.ico</icon>
-    <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
-    <entry>
-        <title type="html"><![CDATA[TIL: Passing exceptions as arguments in Python]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python"/>
-        <updated>2024-06-07T10:13:05.553Z</updated>
-        <summary type="html"><![CDATA[Mypy needs an extra identifier to not choke on an exception passed as an argument.]]></summary>
-        <content type="html"><![CDATA[<p><em>Mypy needs an extra identifier to not choke on an exception passed as an argument.</em></p>
-<p>This will throw a mypy error:</p>
-<pre><code class="language-python"># code.py
-class MyException(Exception):
-    pass
-
-
-def myfunc(custom_exception: Exception) -> None:
-    try:
-        print('Test')
-    except custom_exception:
-        print('error)
-
-myfunc(MyException)
-</code></pre>
-<p>The error mypy will throw looks something like this:</p>
-<pre><code class="language-bash">$ mypy code.py
-
-code.py:6: error: Exception type must be derived from BaseException (or be a tuple of exception classes)  [misc]
-code.py:9: error: Argument 1 to "custom_exception" has incompatible type "type[MyException]"; expected "Exception"  [arg-type]
-Found 2 errors in 1 file (checked 1 source file)
-</code></pre>
-<p>The solution is to use <code>typing.Type</code>:</p>
-<pre><code class="language-python"># code.py
-from typing import Type
-
-
-class MyException(Exception):
-    pass
-
-
-def myfunc(custom_exception: Type[Exception]) -> None:
-    try:
-        print('Test')
-    except custom_exception:
-        print('error)
-
-myfunc(MyException)
-</code></pre>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Renaming git branches]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches"/>
-        <updated>2024-06-04T08:55:47.055Z</updated>
-        <summary type="html"><![CDATA[Sometimes branches evolve into things that don't match their names.]]></summary>
-        <content type="html"><![CDATA[<p><em>Sometimes branches evolve into things that don't match their names.</em></p>
+    <content type="CDATA"><![CDATA[<p><em>Sometimes branches evolve into things that don't match their names.</em></p>
 <p>To rename the current branch:</p>
-<pre><code>git branch -m NEWNAME
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git branch -m NEWNAME
+</code></pre></div>
+
 <p>To rename a branch while pointed to any branch:</p>
-<pre><code>git branch -m OLDNAME NEWNAME
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git branch -m OLDNAME NEWNAME
+</code></pre></div>
+
 <p>To push the local branch and reset the upstream branch:</p>
-<pre><code>git push origin -u NEWNAME
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git push origin -u NEWNAME
+</code></pre></div>
+
 <p>To cleanup the old branch:</p>
-<pre><code>git push origin --delete OLDNAME
-</code></pre>
-<hr>
-<p>Note: The source of this is this <a href="https://stackoverflow.com/questions/6591213/how-can-i-rename-a-local-git-branch">Stack Overflow post</a>. I wrote this TIL because I look this up about once a week, so decided to add it to the "bookmark" system that is my blog. Also, the use of <code>&#x3C;brackets></code> there for <code>REPLACE_THIS</code> content is unfortunate as it doesn't work well with the options keys.</p>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <category term="howto"/>
-        <category term="git"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rapidly creating smoke tests for Django views]]></title>
-        <id>https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views</id>
-        <link href="https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views"/>
-        <updated>2024-05-25T11:42:48.161Z</updated>
-        <summary type="html"><![CDATA[A management command for quickly generating tests based off Django's URL routing mechanism.]]></summary>
-        <content type="html"><![CDATA[<p><em>A management command for quickly generating tests based off Django's URL routing mechanism.</em></p>
-<p>Recently <a href="https://lincolnloop.com/about/peter-baumgartner/">Peter Baumgartner</a> of <a href="https://lincolnloop.com/">Lincoln Loop</a> wrote a <a href="https://www.linkedin.com/posts/pbaumgartner_ever-pick-up-a-legacy-project-that-has-activity-7186794287362183168-Bpcw">fantastic article</a> about the technique of writing smoke tests for Django views. Go read it, Peter provides really good justification for these smoke tests, especially for taking on legacy project without tests. Heck, the reason why I'm writing this post is so I have it in the bookmark service that is my blog.</p>
-<p>Inspired as I was by Peter's article, I wrote a little management command to help build out smoke tests quickly. It's not perfect, and chances are you'll need to modify the results for the tests to be accurate. Certainly you'll need to add filtering like what I did with the <code>admin</code> to account for third-party packages that already have tests. Nevertheless, I've found it a useful tool for writing out smoke tests quickly.</p>
-<p>In this example, it generates smoke tests to be called by <code>pytest</code> via <a href="https://pypi.org/project/pytest-django/">pytest-django</a>. It can be modified to work with standard Django unit tests.</p>
-<pre><code class="language-python"># myapp/management/commands/make_smoke_tests.py
-from django.core.management.base import BaseCommand
-from django.urls import get_resolver
+<div class="codehilite"><pre><span></span><code>git push origin --delete OLDNAME
+</code></pre></div>]]></content>
+    <link href="til-2024-06-renaming-git-branches"/>
+    <summary>Sometimes branches evolve into things that don't match their names.</summary>
+    <category term="TIL"/>
+    <category term="howto"/>
+    <category term="git"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-06-04T09:55:47.055467+00:00</published>
+  </entry>
+  <entry>
+    <id>til-2024-06-passing-exceptions-as-arguments-in-python</id>
+    <title>TIL: Passing exceptions as arguments in Python</title>
+    <updated>2024-08-04T21:38:06.026309+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>Mypy needs an extra identifier to not choke on an exception passed as an argument.</em></p>
+<p>This will throw a mypy error:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># code.py</span>
+<span class="k">class</span> <span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
 
 
-class Command(BaseCommand):
-    help = 'Generates smoke tests for projects.'
+<span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">custom_exception</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">custom_exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error)</span>
 
-    def handle(self, *args, **options):
-        urlconf = get_resolver(None)
-        self.generate_smoke_tests(urlconf)
+<span class="n">myfunc</span><span class="p">(</span><span class="n">MyException</span><span class="p">)</span>
+</code></pre></div>
 
-    def generate_smoke_tests(self, urlconf, prefix=''):
-        views = []
-        for pattern in urlconf.url_patterns:
-            if hasattr(pattern, 'app_name') and pattern.app_name == 'admin':
-                continue
-            if hasattr(pattern, 'name'):
-                self.stdout.write(f"def test_{pattern.name}(client):")
-                self.stdout.write(f'    response = client.get("/{pattern.pattern}/")')
-                self.stdout.write('    assert response.status_code == 200')
-                self.stdout.write('')
-            if hasattr(pattern, 'url_patterns'):
-                more_views = self.generate_smoke_tests(pattern, prefix + pattern.pattern.regex.pattern)
-                views.extend(more_views)
-        return views
-</code></pre>
-<p>Writing output to the terminal:</p>
-<pre><code class="language-bash">./manage.py make_smoke_tests
-</code></pre>
-<p>Writing output to a file on OSX and Linux:</p>
-<pre><code class="language-bash">./manage.py make_smoke_tests > tests/test_smoke.py
-</code></pre>
-<p>Try it and tell me what you think!</p>
-<h1>Update May 25, 2024</h1>
-<p><a href="https://github.com/aitoehigie">Ejay Aito</a> aka <a href="https://x.com/pystar">pystar</a> made improvements which you can see <a href="https://gist.github.com/aitoehigie/5bff431082b67f52e993465334422e6d">here</a>. He added the features listed below. Check out his work!</p>
-<ol>
-<li>added an argument for the output file path. If no output file is specified, it defaults to <code>smoke_tests.py</code>.</li>
-<li>The script now properly handles URL parameters by extracting them with a regex and replacing them with sample values.</li>
-<li>Tests can also be generated for POST, PUT, and DELETE methods.</li>
-</ol>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="Django"/>
-        <category term="Python"/>
-        <category term="howto"/>
-        <category term="testing"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
+<p>The error mypy will throw looks something like this:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>mypy<span class="w"> </span>code.py
+
+code.py:6:<span class="w"> </span>error:<span class="w"> </span>Exception<span class="w"> </span><span class="nb">type</span><span class="w"> </span>must<span class="w"> </span>be<span class="w"> </span>derived<span class="w"> </span>from<span class="w"> </span>BaseException<span class="w"> </span><span class="o">(</span>or<span class="w"> </span>be<span class="w"> </span>a<span class="w"> </span>tuple<span class="w"> </span>of<span class="w"> </span>exception<span class="w"> </span>classes<span class="o">)</span><span class="w">  </span><span class="o">[</span>misc<span class="o">]</span>
+code.py:9:<span class="w"> </span>error:<span class="w"> </span>Argument<span class="w"> </span><span class="m">1</span><span class="w"> </span>to<span class="w"> </span><span class="s2">&quot;custom_exception&quot;</span><span class="w"> </span>has<span class="w"> </span>incompatible<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="s2">&quot;type[MyException]&quot;</span><span class="p">;</span><span class="w"> </span>expected<span class="w"> </span><span class="s2">&quot;Exception&quot;</span><span class="w">  </span><span class="o">[</span>arg-type<span class="o">]</span>
+Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>errors<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span><span class="o">(</span>checked<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>file<span class="o">)</span>
+</code></pre></div>
+
+<p>The solution is to use <code>typing.Type</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># code.py</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Type</span>
+
+
+<span class="k">class</span> <span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">custom_exception</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="ne">Exception</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">custom_exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error)</span>
+
+<span class="n">myfunc</span><span class="p">(</span><span class="n">MyException</span><span class="p">)</span>
+</code></pre></div>]]></content>
+    <link href="til-2024-06-passing-exceptions-as-arguments-in-python"/>
+    <summary>Mypy needs an extra identifier to not choke on an exception passed as an argument.</summary>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-06-07T11:13:05.553336+00:00</published>
+  </entry>
+  <entry>
+    <id>2024-06-london-hackathon-on-july-1-and-2</id>
+    <title>London Tech Zero Hackathon on July 1 and 2!</title>
+    <updated>2024-08-04T21:38:06.001056+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>On the 1st and 2nd of July is the first-ever <a href="https://octopus.typeform.com/hackTZ-interest">London Tech Zero Hackathon</a>, supported by Kraken Tech.</em></p>
+<p>Taking place in the <a href="https://thevinylfactory.com/venue/">Vinyl Factory in Soho</a>, for two days developers, designers, and others will hack out MVPs of solutions to resolve real-life sustainability and climate problems. APIs and guidance will be provided, and contestants can build out software or hardware solutions. Individuals are welcome to attend and companies are invited to send teams. There will be prizes besides bragging rights - including a £20k mini grant to develop the winning idea.</p>
+<p><em>I'll be there to help! As an employee of the hosts, I can't build your projects for you but I can provide assistance. :-)</em></p>
+<p>The event will provide:</p>
+<ul>
+<li>APIs</li>
+<li><a href="https://thevinylfactory.com/venue/">Venue</a></li>
+<li>Food and drink</li>
+<li>Fast internet and power</li>
+<li>Changes to network and socialize</li>
+<li>Speech by <a href="https://www.linkedin.com/in/gregsjackson/">Greg</a> <a href="https://en.wikipedia.org/wiki/Greg_Jackson_(businessman)">Jackson</a>, CEO of Octopus Energy</li>
+<li>Lots of prizes, first place is a £20K grant to help build out your project</li>
+</ul>
+<p>Contests provide:</p>
+<ul>
+<li>Skills</li>
+<li>Enthusiasm</li>
+<li>Laptop and other hardware</li>
+</ul>
+<p>Schedule:</p>
+<ul>
+<li>July 1: Event begins at 10am, venue closes at 10pm</li>
+<li>July 2: Judging at 3pm</li>
+</ul>
+<p><img alt="London Tech Zero Hackathon" src="/public/images/tech-zero-hackathon-square.png" /></p>]]></content>
+    <link href="2024-06-london-hackathon-on-july-1-and-2"/>
+    <summary>On the 1st and 2nd of July is the first-ever London Tech Zero Hackathon, supported by Kraken Tech.</summary>
+    <category term="python"/>
+    <category term="django"/>
+    <category term="hackathon"/>
+    <category term="kraken"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-06-24T14:28:10.494486+00:00</published>
+  </entry>
 </feed>

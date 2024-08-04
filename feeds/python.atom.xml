@@ -1,17 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://daniel.feldroy.com/</id>
-    <title>Daniel Roy Greenfeld</title>
-    <updated>2024-06-11T17:05:52.574Z</updated>
-    <generator>Next.js using Feed for Node.js</generator>
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://daniel.feldroy.com</id>
+  <title>Inside the head of Daniel Roy Greenfeld</title>
+  <updated>2024-08-04T21:39:27.914663+00:00</updated>
+  <author>
+    <name>Daniel Roy Greenfeld</name>
+    <email>daniel@feldroy.com</email>
+    <uri>https://daniel.feldroy.com</uri>
+  </author>
+  <link href="https://daniel.feldroy.com" rel="alternate"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+  <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+  <entry>
+    <id>2024-pycon-lithuania</id>
+    <title>Keynote at PyCon Lithuania 2024</title>
+    <updated>2024-08-04T21:39:28.149865+00:00</updated>
     <author>
-        <name>Daniel Roy Greenfeld</name>
-        <email>daniel@feldroy.com</email>
-        <uri>https://daniel.feldroy.com</uri>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
     </author>
-    <link rel="alternate" href="https://daniel.feldroy.com"/>
-    <subtitle>Inside the head of Daniel Roy Greenfeld</subtitle>
-    <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
-    <icon>https://daniel.feldroy.com/favicon.ico</icon>
-    <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+    <content type="CDATA"><![CDATA[<p>From April 2nd to April 6th I'll be at <a href="https://pycon.lt/2024">PyCon Lithuania 2024</a> in Vilnius to present a keynote about 25 years of glorious coding mistakes (mostly in Python). Audrey and Uma will be accompanying me, making us the first members of the Lithuanian side of my family to return there in over 100 years! </p>
+<p>At the conference I'll be joined by my old friend Tom Christie, author of <a href="">HTTPX</a>, <a href="https://www.starlette.io">Starlette</a>, and <a href="https://www.django-rest-framework.org/">Django REST Framework</a>. I hope to meet many new friends, specifically everyone there. At the sprints I'll be joined by my awesome wife, Audrey, author of <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a>. </p>
+<p>Come and join us!</p>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171868639774556161" height="686" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></content>
+    <link href="2024-pycon-lithuania"/>
+    <summary>My keynote and the first return to the homeland of Lithuania in over 100 years.</summary>
+    <category term="family"/>
+    <category term="python"/>
+    <category term="django"/>
+    <category term="pycon"/>
+    <category term="sprint"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-03-22T13:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>til-2024-05-running-uv-outside-a-virtualenv</id>
+    <title>TIL: Running UV outside a virtualenv</title>
+    <updated>2024-08-04T21:39:28.139538+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>Breaking the rules to satisfy continuous integration.</em></p>
+<p>A few months ago I blogged about forcing <a href="/posts/til-2023-12-forcing-pip-to-use-virtualenv">pip to require a virtualenv</a>. However, when automating tests and deployments sometimes you work outside of virtualenvs. With <code>pip</code> this isn't a problem, you just don't set what I did in that article. However, what if you are using the rust-based <a href="https://pypi.org/project/uv/">uv</a> where the default is to keep you in a virtualenv?</p>
+<p>The answer is when you install dependencies using <code>uv</code> in this scenario, use the <code>--python</code> flag to specify the interpreter. According to the <a href="https://github.com/astral-sh/uv?tab=readme-ov-file#installing-into-arbitrary-python-environments">uv docs</a>, this flag is intended for use in continuous integration (CI) environments or other automated workflows.</p>
+<p>So without further ado, this is what I did:</p>
+<div class="codehilite"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>uv
+uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-p<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+
+<p>As a bonus, here's the command inside GitHub actions-flavored YAML:</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Dependencies</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">python -m pip install uv</span>
+<span class="w">        </span><span class="no">uv pip install -p 3.12 -r requirements.txt</span>
+</code></pre></div>
+
+<p>Want to know how to handle multiple versions of Python? Here's how use a matrix on GitHub: <a href="github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19">https://github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19</a></p>]]></content>
+    <link href="til-2024-05-running-uv-outside-a-virtualenv"/>
+    <summary>Breaking the rules to satisfy continuous integration.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="howto"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-05-08T15:22:59.338527+00:00</published>
+  </entry>
+  <entry>
+    <id>2024-06-london-hackathon-on-july-1-and-2</id>
+    <title>London Tech Zero Hackathon on July 1 and 2!</title>
+    <updated>2024-08-04T21:39:28.118239+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>On the 1st and 2nd of July is the first-ever <a href="https://octopus.typeform.com/hackTZ-interest">London Tech Zero Hackathon</a>, supported by Kraken Tech.</em></p>
+<p>Taking place in the <a href="https://thevinylfactory.com/venue/">Vinyl Factory in Soho</a>, for two days developers, designers, and others will hack out MVPs of solutions to resolve real-life sustainability and climate problems. APIs and guidance will be provided, and contestants can build out software or hardware solutions. Individuals are welcome to attend and companies are invited to send teams. There will be prizes besides bragging rights - including a £20k mini grant to develop the winning idea.</p>
+<p><em>I'll be there to help! As an employee of the hosts, I can't build your projects for you but I can provide assistance. :-)</em></p>
+<p>The event will provide:</p>
+<ul>
+<li>APIs</li>
+<li><a href="https://thevinylfactory.com/venue/">Venue</a></li>
+<li>Food and drink</li>
+<li>Fast internet and power</li>
+<li>Changes to network and socialize</li>
+<li>Speech by <a href="https://www.linkedin.com/in/gregsjackson/">Greg</a> <a href="https://en.wikipedia.org/wiki/Greg_Jackson_(businessman)">Jackson</a>, CEO of Octopus Energy</li>
+<li>Lots of prizes, first place is a £20K grant to help build out your project</li>
+</ul>
+<p>Contests provide:</p>
+<ul>
+<li>Skills</li>
+<li>Enthusiasm</li>
+<li>Laptop and other hardware</li>
+</ul>
+<p>Schedule:</p>
+<ul>
+<li>July 1: Event begins at 10am, venue closes at 10pm</li>
+<li>July 2: Judging at 3pm</li>
+</ul>
+<p><img alt="London Tech Zero Hackathon" src="/public/images/tech-zero-hackathon-square.png" /></p>]]></content>
+    <link href="2024-06-london-hackathon-on-july-1-and-2"/>
+    <summary>On the 1st and 2nd of July is the first-ever London Tech Zero Hackathon, supported by Kraken Tech.</summary>
+    <category term="python"/>
+    <category term="django"/>
+    <category term="hackathon"/>
+    <category term="kraken"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-06-24T14:28:10.494486+00:00</published>
+  </entry>
 </feed>

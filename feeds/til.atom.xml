@@ -1,111 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://daniel.feldroy.com/</id>
-    <title>Daniel Roy Greenfeld</title>
-    <updated>2024-06-11T17:05:52.603Z</updated>
-    <generator>Next.js using Feed for Node.js</generator>
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://daniel.feldroy.com</id>
+  <title>Inside the head of Daniel Roy Greenfeld</title>
+  <updated>2024-08-04T21:40:47.062151+00:00</updated>
+  <author>
+    <name>Daniel Roy Greenfeld</name>
+    <email>daniel@feldroy.com</email>
+    <uri>https://daniel.feldroy.com</uri>
+  </author>
+  <link href="https://daniel.feldroy.com" rel="alternate"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+  <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+  <entry>
+    <id>til-2024-05-auto-setup-remote-branch-for-git</id>
+    <title>TIL: Auto setup remote branch for git</title>
+    <updated>2024-08-04T21:40:47.580238+00:00</updated>
     <author>
-        <name>Daniel Roy Greenfeld</name>
-        <email>daniel@feldroy.com</email>
-        <uri>https://daniel.feldroy.com</uri>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
     </author>
-    <link rel="alternate" href="https://daniel.feldroy.com"/>
-    <subtitle>Inside the head of Daniel Roy Greenfeld</subtitle>
-    <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
-    <icon>https://daniel.feldroy.com/favicon.ico</icon>
-    <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
-    <entry>
-        <title type="html"><![CDATA[TIL: Passing exceptions as arguments in Python]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python"/>
-        <updated>2024-06-07T10:13:05.553Z</updated>
-        <summary type="html"><![CDATA[Mypy needs an extra identifier to not choke on an exception passed as an argument.]]></summary>
-        <content type="html"><![CDATA[<p><em>Mypy needs an extra identifier to not choke on an exception passed as an argument.</em></p>
-<p>This will throw a mypy error:</p>
-<pre><code class="language-python"># code.py
-class MyException(Exception):
-    pass
+    <content type="CDATA"><![CDATA[<p><em>For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.</em></p>
+<p>Whenever I create a new branch and try to push the new commit then I start seeing this error:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">git</span><span class="w"> </span><span class="nv">push</span><span class="w"> </span><span class="o">--</span><span class="nv">force</span>
+<span class="nv">fatal</span>:<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">branch</span><span class="w"> </span><span class="nv">new</span><span class="o">-</span><span class="nv">awesome</span><span class="o">-</span><span class="nv">feature</span><span class="w"> </span><span class="nv">has</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span><span class="nv">upstream</span><span class="w"> </span><span class="nv">branch</span>.
+<span class="nv">To</span><span class="w"> </span><span class="nv">push</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">branch</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">set</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">upstream</span>,<span class="w"> </span><span class="nv">use</span>
 
+<span class="w">    </span><span class="nv">git</span><span class="w"> </span><span class="nv">push</span><span class="w"> </span><span class="o">--</span><span class="nv">set</span><span class="o">-</span><span class="nv">upstream</span><span class="w"> </span><span class="nv">origin</span><span class="w"> </span><span class="nv">new</span><span class="o">-</span><span class="nv">awesome</span><span class="o">-</span><span class="nv">feature</span>
 
-def myfunc(custom_exception: Exception) -> None:
-    try:
-        print('Test')
-    except custom_exception:
-        print('error)
+<span class="nv">To</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">happen</span><span class="w"> </span><span class="nv">automatically</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">branches</span><span class="w"> </span><span class="nv">without</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">tracking</span>
+<span class="nv">upstream</span>,<span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="s1">&#39;push.autoSetupRemote&#39;</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="s1">&#39;git help config&#39;</span>.
+</code></pre></div>
 
-myfunc(MyException)
-</code></pre>
-<p>The error mypy will throw looks something like this:</p>
-<pre><code class="language-bash">$ mypy code.py
-
-code.py:6: error: Exception type must be derived from BaseException (or be a tuple of exception classes)  [misc]
-code.py:9: error: Argument 1 to "custom_exception" has incompatible type "type[MyException]"; expected "Exception"  [arg-type]
-Found 2 errors in 1 file (checked 1 source file)
-</code></pre>
-<p>The solution is to use <code>typing.Type</code>:</p>
-<pre><code class="language-python"># code.py
-from typing import Type
-
-
-class MyException(Exception):
-    pass
-
-
-def myfunc(custom_exception: Type[Exception]) -> None:
-    try:
-        print('Test')
-    except custom_exception:
-        print('error)
-
-myfunc(MyException)
-</code></pre>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Renaming git branches]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches"/>
-        <updated>2024-06-04T08:55:47.055Z</updated>
-        <summary type="html"><![CDATA[Sometimes branches evolve into things that don't match their names.]]></summary>
-        <content type="html"><![CDATA[<p><em>Sometimes branches evolve into things that don't match their names.</em></p>
+<p>To fix it so git just auto creates the branch, just enter this magic command:</p>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--add<span class="w"> </span>--bool<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>]]></content>
+    <link href="til-2024-05-auto-setup-remote-branch-for-git"/>
+    <summary>For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.</summary>
+    <category term="TIL"/>
+    <category term="git"/>
+    <category term="howto"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-05-21T09:38:05.180325+00:00</published>
+  </entry>
+  <entry>
+    <id>til-2024-06-renaming-git-branches</id>
+    <title>TIL: Renaming git branches</title>
+    <updated>2024-08-04T21:40:47.373892+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>Sometimes branches evolve into things that don't match their names.</em></p>
 <p>To rename the current branch:</p>
-<pre><code>git branch -m NEWNAME
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git branch -m NEWNAME
+</code></pre></div>
+
 <p>To rename a branch while pointed to any branch:</p>
-<pre><code>git branch -m OLDNAME NEWNAME
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git branch -m OLDNAME NEWNAME
+</code></pre></div>
+
 <p>To push the local branch and reset the upstream branch:</p>
-<pre><code>git push origin -u NEWNAME
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git push origin -u NEWNAME
+</code></pre></div>
+
 <p>To cleanup the old branch:</p>
-<pre><code>git push origin --delete OLDNAME
-</code></pre>
-<hr>
-<p>Note: The source of this is this <a href="https://stackoverflow.com/questions/6591213/how-can-i-rename-a-local-git-branch">Stack Overflow post</a>. I wrote this TIL because I look this up about once a week, so decided to add it to the "bookmark" system that is my blog. Also, the use of <code>&#x3C;brackets></code> there for <code>REPLACE_THIS</code> content is unfortunate as it doesn't work well with the options keys.</p>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <category term="howto"/>
-        <category term="git"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
+<div class="codehilite"><pre><span></span><code>git push origin --delete OLDNAME
+</code></pre></div>]]></content>
+    <link href="til-2024-06-renaming-git-branches"/>
+    <summary>Sometimes branches evolve into things that don't match their names.</summary>
+    <category term="TIL"/>
+    <category term="howto"/>
+    <category term="git"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-06-04T09:55:47.055467+00:00</published>
+  </entry>
+  <entry>
+    <id>til-2024-06-passing-exceptions-as-arguments-in-python</id>
+    <title>TIL: Passing exceptions as arguments in Python</title>
+    <updated>2024-08-04T21:40:47.328652+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>Mypy needs an extra identifier to not choke on an exception passed as an argument.</em></p>
+<p>This will throw a mypy error:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># code.py</span>
+<span class="k">class</span> <span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">custom_exception</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">custom_exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error)</span>
+
+<span class="n">myfunc</span><span class="p">(</span><span class="n">MyException</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The error mypy will throw looks something like this:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>mypy<span class="w"> </span>code.py
+
+code.py:6:<span class="w"> </span>error:<span class="w"> </span>Exception<span class="w"> </span><span class="nb">type</span><span class="w"> </span>must<span class="w"> </span>be<span class="w"> </span>derived<span class="w"> </span>from<span class="w"> </span>BaseException<span class="w"> </span><span class="o">(</span>or<span class="w"> </span>be<span class="w"> </span>a<span class="w"> </span>tuple<span class="w"> </span>of<span class="w"> </span>exception<span class="w"> </span>classes<span class="o">)</span><span class="w">  </span><span class="o">[</span>misc<span class="o">]</span>
+code.py:9:<span class="w"> </span>error:<span class="w"> </span>Argument<span class="w"> </span><span class="m">1</span><span class="w"> </span>to<span class="w"> </span><span class="s2">&quot;custom_exception&quot;</span><span class="w"> </span>has<span class="w"> </span>incompatible<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="s2">&quot;type[MyException]&quot;</span><span class="p">;</span><span class="w"> </span>expected<span class="w"> </span><span class="s2">&quot;Exception&quot;</span><span class="w">  </span><span class="o">[</span>arg-type<span class="o">]</span>
+Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>errors<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span><span class="o">(</span>checked<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>file<span class="o">)</span>
+</code></pre></div>
+
+<p>The solution is to use <code>typing.Type</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># code.py</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Type</span>
+
+
+<span class="k">class</span> <span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">custom_exception</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="ne">Exception</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">custom_exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error)</span>
+
+<span class="n">myfunc</span><span class="p">(</span><span class="n">MyException</span><span class="p">)</span>
+</code></pre></div>]]></content>
+    <link href="til-2024-06-passing-exceptions-as-arguments-in-python"/>
+    <summary>Mypy needs an extra identifier to not choke on an exception passed as an argument.</summary>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-06-07T11:13:05.553336+00:00</published>
+  </entry>
 </feed>
