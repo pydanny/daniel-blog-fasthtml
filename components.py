@@ -1,11 +1,43 @@
 from fasthtml.common import *
 import functools
 from datetime import datetime
+from dateutil import parser
+import pytz
 import pathlib
 import yaml
 
 __all__ = ['blog_header', 'blog_post', "blog_footer", "tag",
            "tag_with_count", "markdown_page", "Layout", "layout"]
+
+def convert_dtstr_to_dt(date_str):
+    """
+    Convert a naive or non-naive date/datetime string to a datetime object.
+    Naive datetime strings are assumed to be in GMT (UTC) timezone.
+    
+    Args:
+        date_str (str): The date or datetime string to convert.
+        
+    Returns:
+        datetime: The corresponding datetime object.
+    """
+    try:
+        dt = parser.parse(date_str)
+        if dt.tzinfo is None:
+            # If the datetime object is naive, set it to GMT (UTC)
+            dt = dt.replace(tzinfo=pytz.UTC)
+        return dt
+    except (ValueError, TypeError) as e:
+        print(f"Error parsing date string: {e}")
+        return None
+    
+def format_datetime(dt: datetime):
+    
+    # Format the datetime object
+    formatted_date = dt.strftime("%B %d, %Y")
+    formatted_time = dt.strftime("%I:%M%p").lstrip('0').lower()
+    
+    return f"{formatted_date} at {formatted_time}"
+
 
 def blog_header():
     return (
@@ -33,7 +65,7 @@ def blog_header():
 def blog_post(title: str, slug: str, timestamp: str, description: str):
     return Span(
                 H2(A(title, href=f"/posts/{slug}")),
-                P(description, Br(), Small(Time(timestamp))),
+                P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp))))),
         )
 
 def blog_footer():
