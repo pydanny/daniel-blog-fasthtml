@@ -3,6 +3,7 @@ import pathlib
 from fasthtml.common import *
 from components import *
 from contents import *
+from functools import cache
 
 from datetime import datetime
 
@@ -44,6 +45,7 @@ def get():
     )
 
 @rt("/posts")
+@cache
 @layout
 def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
@@ -58,6 +60,7 @@ def get():
         ),)
 
 @rt("/posts/{slug}")
+@cache
 @layout
 def get(slug: str):
     # post = [x for x in filter(lambda x: x["slug"] == slug, list_posts())][0]
@@ -76,6 +79,7 @@ def get(slug: str):
     )
 
 @rt("/tags")
+@cache
 @layout
 def get():
     tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items()]
@@ -90,6 +94,7 @@ def get():
     )
 
 @rt("/tags/{slug}")
+@cache
 @layout
 def get(slug: str):
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
