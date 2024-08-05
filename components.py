@@ -91,7 +91,7 @@ def markdown_page(slug: str):
         return Response("Page not found", status_code=404) 
     content = ''.join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
-    return (Title(metadata.get('Title', slug)),
+    return (Title(metadata.get('title', slug)),
         A("← Back to home", href="/"),
         Section(
             Div(content,cls="marked")
@@ -108,5 +108,6 @@ def layout(view_function):
     def _wrapper(*args, **kwargs):
         result = view_function(*args, **kwargs)
         # If there's a Title() in the result at the top level, use it, otherwise use the default
-        return Layout(*result)
+        title = next((ele[1] for ele in result if ele[0] == "title"), "Daniel Roy Greenfeld")
+        return Layout(title, *result)
     return _wrapper

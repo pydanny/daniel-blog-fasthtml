@@ -131,7 +131,7 @@ def get(q: str = ""):
 
 @rt("/{slug}")
 @layout
-def get(request, slug: str):
+def get(slug: str):
     return markdown_page(slug)
     
 @rt("/{slug_1}/{slug_2}")
