@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-08-06T09:08:56.586322+00:00</updated>
+  <updated>2024-08-06T14:42:27.834506+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>til-2024-06-passing-exceptions-as-arguments-in-python</id>
     <title>TIL: Passing exceptions as arguments in Python</title>
-    <updated>2024-08-06T09:08:56.863353+00:00</updated>
+    <updated>2024-08-06T14:42:28.173028+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -73,7 +73,7 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
   <entry>
     <id>2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-08-06T09:08:56.861622+00:00</updated>
+    <updated>2024-08-06T14:42:28.171365+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -118,7 +118,7 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
   <entry>
     <id>til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-08-06T09:08:56.805780+00:00</updated>
+    <updated>2024-08-06T14:42:28.106267+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

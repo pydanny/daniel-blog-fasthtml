@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-08-04T21:39:27.914663+00:00</updated>
+  <updated>2024-08-06T14:44:01.981361+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,69 +13,77 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>2024-pycon-lithuania</id>
-    <title>Keynote at PyCon Lithuania 2024</title>
-    <updated>2024-08-04T21:39:28.149865+00:00</updated>
+    <id>2024-05-rapidly-creating-smoke-tests-for-django-views</id>
+    <title>Rapidly creating smoke tests for Django views</title>
+    <updated>2024-08-06T14:44:02.229640+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>From April 2nd to April 6th I'll be at <a href="https://pycon.lt/2024">PyCon Lithuania 2024</a> in Vilnius to present a keynote about 25 years of glorious coding mistakes (mostly in Python). Audrey and Uma will be accompanying me, making us the first members of the Lithuanian side of my family to return there in over 100 years! </p>
-<p>At the conference I'll be joined by my old friend Tom Christie, author of <a href="">HTTPX</a>, <a href="https://www.starlette.io">Starlette</a>, and <a href="https://www.django-rest-framework.org/">Django REST Framework</a>. I hope to meet many new friends, specifically everyone there. At the sprints I'll be joined by my awesome wife, Audrey, author of <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a>. </p>
-<p>Come and join us!</p>
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171868639774556161" height="686" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></content>
-    <link href="2024-pycon-lithuania"/>
-    <summary>My keynote and the first return to the homeland of Lithuania in over 100 years.</summary>
-    <category term="family"/>
-    <category term="python"/>
-    <category term="django"/>
-    <category term="pycon"/>
-    <category term="sprint"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-03-22T13:00:00+00:00</published>
-  </entry>
-  <entry>
-    <id>til-2024-05-running-uv-outside-a-virtualenv</id>
-    <title>TIL: Running UV outside a virtualenv</title>
-    <updated>2024-08-04T21:39:28.139538+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="CDATA"><![CDATA[<p><em>Breaking the rules to satisfy continuous integration.</em></p>
-<p>A few months ago I blogged about forcing <a href="/posts/til-2023-12-forcing-pip-to-use-virtualenv">pip to require a virtualenv</a>. However, when automating tests and deployments sometimes you work outside of virtualenvs. With <code>pip</code> this isn't a problem, you just don't set what I did in that article. However, what if you are using the rust-based <a href="https://pypi.org/project/uv/">uv</a> where the default is to keep you in a virtualenv?</p>
-<p>The answer is when you install dependencies using <code>uv</code> in this scenario, use the <code>--python</code> flag to specify the interpreter. According to the <a href="https://github.com/astral-sh/uv?tab=readme-ov-file#installing-into-arbitrary-python-environments">uv docs</a>, this flag is intended for use in continuous integration (CI) environments or other automated workflows.</p>
-<p>So without further ado, this is what I did:</p>
-<div class="codehilite"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>uv
-uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-p<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+    <content type="CDATA"><![CDATA[<p><em>A management command for quickly generating tests based off Django's URL routing mechanism.</em></p>
+<p>Recently <a href="https://lincolnloop.com/about/peter-baumgartner/">Peter Baumgartner</a> of <a href="https://lincolnloop.com/">Lincoln Loop</a> wrote a <a href="https://www.linkedin.com/posts/pbaumgartner_ever-pick-up-a-legacy-project-that-has-activity-7186794287362183168-Bpcw">fantastic article</a> about the technique of writing smoke tests for Django views. Go read it, Peter provides really good justification for these smoke tests, especially for taking on legacy project without tests. Heck, the reason why I'm writing this post is so I have it in the bookmark service that is my blog.</p>
+<p>Inspired as I was by Peter's article, I wrote a little management command to help build out smoke tests quickly. It's not perfect, and chances are you'll need to modify the results for the tests to be accurate. Certainly you'll need to add filtering like what I did with the <code>admin</code> to account for third-party packages that already have tests. Nevertheless, I've found it a useful tool for writing out smoke tests quickly.</p>
+<p>In this example, it generates smoke tests to be called by <code>pytest</code> via <a href="https://pypi.org/project/pytest-django/">pytest-django</a>. It can be modified to work with standard Django unit tests.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># myapp/management/commands/make_smoke_tests.py</span>
+<span class="kn">from</span> <span class="nn">django.core.management.base</span> <span class="kn">import</span> <span class="n">BaseCommand</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">get_resolver</span>
+
+
+<span class="k">class</span> <span class="nc">Command</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span>
+    <span class="n">help</span> <span class="o">=</span> <span class="s1">&#39;Generates smoke tests for projects.&#39;</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span>
+        <span class="n">urlconf</span> <span class="o">=</span> <span class="n">get_resolver</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generate_smoke_tests</span><span class="p">(</span><span class="n">urlconf</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">generate_smoke_tests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlconf</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="n">views</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">urlconf</span><span class="o">.</span><span class="n">url_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;app_name&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">pattern</span><span class="o">.</span><span class="n">app_name</span> <span class="o">==</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;def test_</span><span class="si">{</span><span class="n">pattern</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">(client):&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    response = client.get(&quot;/</span><span class="si">{</span><span class="n">pattern</span><span class="o">.</span><span class="n">pattern</span><span class="si">}</span><span class="s1">/&quot;)&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;    assert response.status_code == 200&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;url_patterns&#39;</span><span class="p">):</span>
+                <span class="n">more_views</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_smoke_tests</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">pattern</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">regex</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span>
+                <span class="n">views</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">more_views</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">views</span>
 </code></pre></div>
 
-<p>As a bonus, here's the command inside GitHub actions-flavored YAML:</p>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Dependencies</span>
-<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">        </span><span class="no">python -m pip install uv</span>
-<span class="w">        </span><span class="no">uv pip install -p 3.12 -r requirements.txt</span>
+<p>Writing output to the terminal:</p>
+<div class="codehilite"><pre><span></span><code>./manage.py<span class="w"> </span>make_smoke_tests
 </code></pre></div>
 
-<p>Want to know how to handle multiple versions of Python? Here's how use a matrix on GitHub: <a href="github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19">https://github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19</a></p>]]></content>
-    <link href="til-2024-05-running-uv-outside-a-virtualenv"/>
-    <summary>Breaking the rules to satisfy continuous integration.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
+<p>Writing output to a file on OSX and Linux:</p>
+<div class="codehilite"><pre><span></span><code>./manage.py<span class="w"> </span>make_smoke_tests<span class="w"> </span>&gt;<span class="w"> </span>tests/test_smoke.py
+</code></pre></div>
+
+<p>Try it and tell me what you think!</p>
+<h1 id="update-may-25-2024">Update May 25, 2024</h1>
+<p><a href="https://github.com/aitoehigie">Ejay Aito</a> aka <a href="https://x.com/pystar">pystar</a> made improvements which you can see <a href="https://gist.github.com/aitoehigie/5bff431082b67f52e993465334422e6d">here</a>. He added the features listed below. Check out his work!</p>
+<ol>
+<li>added an argument for the output file path. If no output file is specified, it defaults to <code>smoke_tests.py</code>. </li>
+<li>The script now properly handles URL parameters by extracting them with a regex and replacing them with sample values.</li>
+<li>Tests can also be generated for POST, PUT, and DELETE methods.</li>
+</ol>]]></content>
+    <link href="2024-05-rapidly-creating-smoke-tests-for-django-views"/>
+    <summary>A management command for quickly generating tests based off Django's URL routing mechanism.</summary>
+    <category term="Django"/>
+    <category term="Python"/>
     <category term="howto"/>
+    <category term="testing"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2024-05-08T15:22:59.338527+00:00</published>
+    <published>2024-05-25T12:42:48.161069+00:00</published>
   </entry>
   <entry>
     <id>2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-08-04T21:39:28.118239+00:00</updated>
+    <updated>2024-08-06T14:44:02.228016+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -116,5 +124,55 @@ uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </s
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-06-24T14:28:10.494486+00:00</published>
+  </entry>
+  <entry>
+    <id>til-2024-08-parsing-messy-datetimes-strings</id>
+    <title>TIL: Parsing messy datetimes strings</title>
+    <updated>2024-08-06T14:44:02.187634+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>How to convert inconsistent datetime strings into datetime objects.</em></p>
+<p>Recently I've been working on yet another rewrite of my blog, this time to <a href="https://about.fastht.ml/">FastHTML</a>. Thanks to the power and ease of that framework, that took about 45 minutes to replicate all the web pages of my blog. Wahoo!</p>
+<p>Alas, the atom/rss feeds took quite a bit longer. </p>
+<p>For the atom/rss feeds I chose to use the venerable <a href="https://pypi.org/project/feedgen/">Feedgen</a> library. The challenge there is that Feedgen is rightfully particular about the datetime objects it accepts. And over the years as this site has had 650 posts added the timestamps have become rather inconsistent in their format. On that issue I fully blame the author, who unfortunately is me.</p>
+<p>In any case, I wrote a little Python function that handles it in a timezone aware way using the <code>dateutils.parser()</code> functon that I learned.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Python stdlib</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">dateutils</span> <span class="kn">import</span> <span class="n">parser</span>
+
+<span class="c1"># You&#39;ll need to install the pytz dependency</span>
+<span class="kn">import</span> <span class="nn">pytz</span>
+
+<span class="k">def</span> <span class="nf">convert_dtstr_to_dt</span><span class="p">(</span><span class="n">date_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert a naive or non-naive date/datetime string</span>
+<span class="sd">    to a datetime object. Naive datetime strings are</span>
+<span class="sd">    assumed to be in GMT (UTC) timezone.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">date_str</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dt</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># If the datetime object is naive, set it to GMT (UTC)</span>
+            <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">UTC</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dt</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">Raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error parsing date string: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Original source code <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31">here</a>.</p>
+<p><em>Note: As of publishing, this article is still on my old blog. The DNS switchover to the <a href="https://danielfeldroycom-production.up.railway.app/">FastHTML version of my blog</a> happens later this week.</em></p>]]></content>
+    <link href="til-2024-08-parsing-messy-datetimes-strings"/>
+    <summary>How to convert inconsistent datetime strings into datetime objects.</summary>
+    <category term="TIL"/>
+    <category term="howto"/>
+    <category term="python"/>
+    <category term="FastHTML"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-08-06T12:00:00.192810+00:00</published>
   </entry>
 </feed>

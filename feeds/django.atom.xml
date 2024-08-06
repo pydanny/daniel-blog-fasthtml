@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-08-04T21:38:46.837019+00:00</updated>
+  <updated>2024-08-06T14:43:56.598784+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,74 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>2023-11-three-years-at-kraken-tech</id>
-    <title>Three Years at Kraken Tech</title>
-    <updated>2024-08-04T21:38:47.127364+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="CDATA"><![CDATA[<p>A summary of the past year as I finish my third year working for <a href="https://kraken.tech/">Kraken Tech</a>, an <a href="https://octopusenergy.group/">Octopus Energy Group</a> subsidiary.</p>
-<p><em>Note: As I write this I'm recovering from a sprained shoulder I received in a bicycle accident that makes it hard to type. I'm mostly using voice-to-text, so the text might not be in my normal "writing voice".</em></p>
-<h1 id="i-changed-roles">I changed roles</h1>
-<p>I transitioned from leading the tech team for Kraken Tech USA to being an individual contributor for the global team. I do this periodically, cycling between writing code to leading teams, and  back again. </p>
-<p>It is never easy to transition between roles but this time was particularly hard. The US Kraken Tech team is a group of talented, diverse, and passionate people. I'm so honored I had the chance to work with them. I'm constantly amazed by what they have accomplished and what they continue to do. </p>
-<p>In my new role I'm on the "Developer Foundations" team, exploring ways to improve the coding experience at the company. I've enjoyed writing code full-time again, there's a clarity of purpose that's been fun to embrace. Mostly I'm coding in Python with a bit of Django, with short detours into HCL, Rust, and Golang.</p>
-<p>One more thing: For the moment I still have the old management-sounding title, but expect to get something more accurate in the next few months.</p>
-<h1 id="i-blogged-more">I blogged more</h1>
-<p>As I'm coding full-time again, in 2023 I wrote more than double the number of posts I wrote in 2022.</p>
-<h1 id="i-worked-in-the-london-uk-office">I worked in the London, UK Office</h1>
-<p>Audrey and Uma joined me on a move to London, which I documented <a href="https://daniel.feldroy.com/posts/2023-10-we-moved-to-london">here</a>.</p>
-<p>It has been a delight being able to work in-person with my peers, or at least close in timezone. I'm usually in the office about three out of every five days. I would make it five-out-of-five but I do better with deep thinking outside normal office commotion.</p>
-<h1 id="i-attended-large-in-person-tech-events">I attended large in-person tech events</h1>
-<p>After a break of four years I managed to attend the following in chronological order, with transit mode specified:</p>
-<ul>
-<li>Django London (walk or train)</li>
-<li>PyCon Italy (airplane)</li>
-<li>PyCon UK (train)</li>
-<li>Django Paris (train)</li>
-</ul>
-<p>I very much enjoyed meeting old friends and making new ones. Plus, exploring the cities of London, Cardiff, and Paris were adventures of their own.</p>
-<h1 id="helped-scale-up-kraken-tech-to-address-climate-change">Helped scale up Kraken Tech to address climate change</h1>
-<p>As an individual concerned about global climate change I do my part:</p>
-<ul>
-<li>I compost about 80% of my family's food waste</li>
-<li>Do our best to recyle all the family's cardboard and paper products</li>
-<li>We live in a tiny flat with an electric stove</li>
-<li>Am experimenting with using a portable electric heater instead of the methane gas boiler </li>
-<li>Have reduced unnecessary air travel as much as possible (which is hard - I love airplanes and airports)</li>
-</ul>
-<p>That's great, but I have managed to scale that up tens of thousands of times over by working for Kraken Tech.</p>
-<p>As one employee of nine hundred and thirty seven (937) at Kraken Tech, I take payment from a collective of companies whose products are all designed with the purpose of saving the planet. Kraken Tech in particular is responsible for about 55 million people getting onto renewable energy or using non-renewable resources more efficiently.</p>
-<p>Let's math that out, using conservative numbers:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">58</span><span class="p">,</span><span class="mf">697.97</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">55</span><span class="p">,</span><span class="mf">000</span><span class="p">,</span><span class="mf">000</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">937</span>
-</code></pre></div>
-
-<p><strong>Summary: Each employee of Kraken Tech is responsible for 58,698 people contributing significantly less to global climate change.</strong></p>
-<p>So if you are in tech in any capacity (coding, management, etc), consider using your skills to help us in our mission of making a healthier planet.</p>
-<h1 id="come-and-help-me-save-the-planet">Come and help me save the planet</h1>
-<p>I'll be upfront that if you want to make the biggest salary possible in tech, travel a lot, and fly in first place seats, go seek employment with a <a href="https://en.wikipedia.org/wiki/Big_Tech">Big Tech Company</a> or a fintech. Personally, I would rather work toward making the planet better for our descendants. That to me is much more important than helping a billionaire score another billion.</p>
-<p>I invite anyone who is reading this to join me on my mission of saving the planet. Our careers page is <a href="https://octopus.energy/careers">here</a>.</p>
-<p><em>Please understand that Kraken Tech only hires in countries in which we have a legal entity. So if a role isn't listed for the country in which you can legally work, we probably can't hire you.</em></p>
-<p>If for whatever reason you can't get a job working with me, <a href="https://climatebase.org/">apply to work at somewhere else into decarbonization</a>. Let me know where you go and I'll celebrate your joining our shared mission.</p>
-<p><a href="https://kraken.tech"><img alt="Kraken Tech Logo" src="/public/logos/kraken-logo-dark.png" /></a></p>]]></content>
-    <link href="2023-11-three-years-at-kraken-tech"/>
-    <summary>A summary of the past year as I finish my third year working for Kraken Tech, an Octopus Energy Group subsidiary.</summary>
-    <category term="octopus"/>
-    <category term="kraken"/>
-    <category term="climate-change"/>
-    <category term="python"/>
-    <category term="django"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2023-11-23T22:20:50.520000+00:00</published>
-  </entry>
-  <entry>
     <id>2024-pycon-lithuania</id>
     <title>Keynote at PyCon Lithuania 2024</title>
-    <updated>2024-08-04T21:38:47.125977+00:00</updated>
+    <updated>2024-08-06T14:43:56.925058+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -103,9 +38,77 @@
     <published>2024-03-22T13:00:00+00:00</published>
   </entry>
   <entry>
+    <id>2024-05-rapidly-creating-smoke-tests-for-django-views</id>
+    <title>Rapidly creating smoke tests for Django views</title>
+    <updated>2024-08-06T14:43:56.900253+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>A management command for quickly generating tests based off Django's URL routing mechanism.</em></p>
+<p>Recently <a href="https://lincolnloop.com/about/peter-baumgartner/">Peter Baumgartner</a> of <a href="https://lincolnloop.com/">Lincoln Loop</a> wrote a <a href="https://www.linkedin.com/posts/pbaumgartner_ever-pick-up-a-legacy-project-that-has-activity-7186794287362183168-Bpcw">fantastic article</a> about the technique of writing smoke tests for Django views. Go read it, Peter provides really good justification for these smoke tests, especially for taking on legacy project without tests. Heck, the reason why I'm writing this post is so I have it in the bookmark service that is my blog.</p>
+<p>Inspired as I was by Peter's article, I wrote a little management command to help build out smoke tests quickly. It's not perfect, and chances are you'll need to modify the results for the tests to be accurate. Certainly you'll need to add filtering like what I did with the <code>admin</code> to account for third-party packages that already have tests. Nevertheless, I've found it a useful tool for writing out smoke tests quickly.</p>
+<p>In this example, it generates smoke tests to be called by <code>pytest</code> via <a href="https://pypi.org/project/pytest-django/">pytest-django</a>. It can be modified to work with standard Django unit tests.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># myapp/management/commands/make_smoke_tests.py</span>
+<span class="kn">from</span> <span class="nn">django.core.management.base</span> <span class="kn">import</span> <span class="n">BaseCommand</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">get_resolver</span>
+
+
+<span class="k">class</span> <span class="nc">Command</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span>
+    <span class="n">help</span> <span class="o">=</span> <span class="s1">&#39;Generates smoke tests for projects.&#39;</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span>
+        <span class="n">urlconf</span> <span class="o">=</span> <span class="n">get_resolver</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generate_smoke_tests</span><span class="p">(</span><span class="n">urlconf</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">generate_smoke_tests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlconf</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="n">views</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">urlconf</span><span class="o">.</span><span class="n">url_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;app_name&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">pattern</span><span class="o">.</span><span class="n">app_name</span> <span class="o">==</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;def test_</span><span class="si">{</span><span class="n">pattern</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">(client):&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    response = client.get(&quot;/</span><span class="si">{</span><span class="n">pattern</span><span class="o">.</span><span class="n">pattern</span><span class="si">}</span><span class="s1">/&quot;)&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;    assert response.status_code == 200&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;url_patterns&#39;</span><span class="p">):</span>
+                <span class="n">more_views</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_smoke_tests</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">pattern</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">regex</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span>
+                <span class="n">views</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">more_views</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">views</span>
+</code></pre></div>
+
+<p>Writing output to the terminal:</p>
+<div class="codehilite"><pre><span></span><code>./manage.py<span class="w"> </span>make_smoke_tests
+</code></pre></div>
+
+<p>Writing output to a file on OSX and Linux:</p>
+<div class="codehilite"><pre><span></span><code>./manage.py<span class="w"> </span>make_smoke_tests<span class="w"> </span>&gt;<span class="w"> </span>tests/test_smoke.py
+</code></pre></div>
+
+<p>Try it and tell me what you think!</p>
+<h1 id="update-may-25-2024">Update May 25, 2024</h1>
+<p><a href="https://github.com/aitoehigie">Ejay Aito</a> aka <a href="https://x.com/pystar">pystar</a> made improvements which you can see <a href="https://gist.github.com/aitoehigie/5bff431082b67f52e993465334422e6d">here</a>. He added the features listed below. Check out his work!</p>
+<ol>
+<li>added an argument for the output file path. If no output file is specified, it defaults to <code>smoke_tests.py</code>. </li>
+<li>The script now properly handles URL parameters by extracting them with a regex and replacing them with sample values.</li>
+<li>Tests can also be generated for POST, PUT, and DELETE methods.</li>
+</ol>]]></content>
+    <link href="2024-05-rapidly-creating-smoke-tests-for-django-views"/>
+    <summary>A management command for quickly generating tests based off Django's URL routing mechanism.</summary>
+    <category term="Django"/>
+    <category term="Python"/>
+    <category term="howto"/>
+    <category term="testing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-05-25T12:42:48.161069+00:00</published>
+  </entry>
+  <entry>
     <id>2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-08-04T21:38:47.099296+00:00</updated>
+    <updated>2024-08-06T14:43:56.862406+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
