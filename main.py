@@ -1,3 +1,4 @@
+import json
 import pathlib
 
 from fasthtml.common import *
@@ -5,6 +6,11 @@ from components import *
 from contents import *
 
 from datetime import datetime
+
+# This redirects dict is a relic of previous blog migrations.
+# It is used to redirect old URLs embedded in books, presentations,
+# and more to the new locations.
+redirects = json.loads(pathlib.Path(f"redirects.json").read_text())   
 
 hdrs = (
     Script(src="https://unpkg.com/htmx.org@next/dist/htmx.min.js"),
@@ -133,9 +139,21 @@ def get(q: str = ""):
 def get(fname:str, ext:str): 
     return FileResponse(f'feeds/{fname}.{ext}')
 
+reg_re_param("static", "ico|gif|jpg|jpeg|webm|css|js|woff|png|svg|mp4|webp|ttf|otf|eot|woff2|txt")
+
+@rt("/{slug}.html")
+def get(slug: str):
+    url = redirects.get(slug, None) or redirects.get(slug + ".html", None)
+    if url is not None:
+        return RedirectResponse(url=url)
+    return HTTPException(404)
+
 @rt("/{slug}")
 @layout
 def get(slug: str):
+    redirects_url = redirects.get(slug, None)
+    if redirects_url is not None:
+        return RedirectResponse(url=redirects_url)
     return markdown_page(slug)
     
 @rt("/{slug_1}/{slug_2}")
