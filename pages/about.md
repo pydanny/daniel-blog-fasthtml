@@ -10,7 +10,7 @@ I am a [coder](https://github.com/pydanny), [author](/books), and [speaker](/spe
 
 I'm probably best known as "[pydanny](https://www.google.com/search?q=pydanny)", one of the authors of [Two Scoops of Django](/books/tech). 
 
-I love to hang out with my [wife](https://audrey.feldroy.com/), play with my [daughter](/tags/uma), do [Brazilian Jiu-Jitsu](https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu) in London, write [books](/books), and read books. I work at [Kraken Tech](https://kraken.tech/), a company that is part of the sustainable global energy  [Octopus Energy Group](https://octopusenergy.group/) working to address [global climate change](/tags/climate-change).
+I live in London, love to hang out with my [wife](https://audrey.feldroy.com/), play with my [daughter](/tags/uma), do [Brazilian Jiu-Jitsu](https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu), write [books](/books), and read books. I work at [Kraken Tech](https://kraken.tech/), a company that is part of the sustainable global energy  [Octopus Energy Group](https://octopusenergy.group/) working to address [global climate change](/tags/climate-change).
 
 - [Mastodon](https://fosstodon.org/@danielfeldroy)
 - [LinkedIn](https://www.linkedin.com/in/danielfeldroy/)
