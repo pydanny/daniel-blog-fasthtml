@@ -41,12 +41,6 @@ def format_datetime(dt: datetime):
 
 def blog_header():
     return (
-        Socials(site_name="Daniel Roy Greenfeld",
-                title="Daniel Roy Greenfeld",
-                description="Daniel Roy Greenfeld's personal blog",
-                url="https://daniel.feldroy.com",
-                image="/public/images/profile.jpg",
-                ),
         Header(
             A(Img(
                 cls='borderCircle', alt='Daniel Roy Greenfeld', src='/public/images/profile.jpg', width='108', height='108')
@@ -100,7 +94,8 @@ def markdown_page(slug: str):
 
 def Layout(title: str, *args, **kwargs):
     """Layout for the blog, but can be adapted to anything"""
-    return Title(title), blog_header(), Main(*args, **kwargs), blog_footer()
+    return (Title(title), 
+            blog_header(), Main(*args, **kwargs), blog_footer())
 
 def layout(view_function):
     """Decorator to wrap a view function with a layout"""

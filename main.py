@@ -19,6 +19,12 @@ hdrs = (
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),    
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),    
+    Socials(site_name="Daniel Roy Greenfeld",
+                title="Daniel Roy Greenfeld",
+                description="Daniel Roy Greenfeld's personal blog",
+                url="https://daniel.feldroy.com",
+                image="/public/images/profile.jpg",
+                ),    
 )
 
 def not_found(response):
