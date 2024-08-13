@@ -35,7 +35,7 @@ exception_handlers = {
     404: not_found
 }
 
-app, rt = fast_app(hdrs=hdrs, default_hdrs=False, debug=True)
+app, rt = fast_app(hdrs=hdrs, pico=False, debug=True)
 
 @rt("/")
 @layout
