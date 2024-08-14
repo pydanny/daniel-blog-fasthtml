@@ -133,13 +133,13 @@ def get(q: str = ""):
     else:
         messages = []
     return Title("Search"), blog_header(), Body(Main(
-        Form(Input(name="q", value=q, id="search", type="search"), Button("Search"), style="text-align: center;"),
+        Form(Input(name="q", value=q, id="search", type="search", autofocus=True), Button("Search"), style="text-align: center;"),
         Section(
             *messages,
             *posts,
             A("← Back home", href="/"),
         )
-    ), onload="document.getElementById('search').focus()"), blog_footer()
+    )), blog_footer()
 
 @rt("/feeds/{fname:path}.{ext}")
 def get(fname:str, ext:str): 

@@ -4,6 +4,7 @@ import contents
 from dateutil import parser
 import markdown
 import pytz
+from datetime import datetime
 
 def convert_dtstr_to_dt(date_str):
     """
@@ -79,7 +80,7 @@ def build_feed(content_tag: str | None = None):
     fg.link(href='https://daniel.feldroy.com', rel='alternate')
     fg.title('Inside the head of Daniel Roy Greenfeld')
     fg.logo('https://daniel.feldroy.com/images/pydanny-cartwheel.png')
-    fg.rights('All rights reserved 2024, Daniel Roy Greenfeld')
+    fg.rights(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
     fg.language('en') 
 
     posts = contents.list_posts()             

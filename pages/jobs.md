@@ -54,4 +54,4 @@ Another consultancy who does right by their people and does no harm to the world
 
 Climate Base is a site helping developers to discover jobs at thousands of organizations working on climate solutions. Unfortunately I can't vette them for how they take care of their people, but the jobs will focus on addressing climate change.
 
-[![Climate Base logo](/public/images/climatebase.jpeg)](https://climatebase.org) {% .jobImage %}
+[![Climate Base logo](/public/images/climatebase.jpeg)](https://climatebase.org)
