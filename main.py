@@ -13,7 +13,6 @@ from datetime import datetime
 redirects = json.loads(pathlib.Path(f"redirects.json").read_text())   
 
 hdrs = (
-    Script(src="https://unpkg.com/htmx.org@next/dist/htmx.min.js"),
     MarkdownJS(),
     HighlightJS(langs=['python', 'javascript', 'html', 'css']),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
