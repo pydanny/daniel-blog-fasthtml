@@ -17,13 +17,7 @@ hdrs = (
     HighlightJS(langs=['python', 'javascript', 'html', 'css']),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),    
-    Link(rel='stylesheet', href='/public/style.css', type='text/css'),    
-    Socials(site_name="Daniel Roy Greenfeld",
-                title="Daniel Roy Greenfeld",
-                description="Daniel Roy Greenfeld's personal blog",
-                url="https://daniel.feldroy.com",
-                image="/public/images/profile.jpg",
-                ),    
+    Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
 )
 
 def not_found(response):
@@ -42,6 +36,12 @@ def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
     return (
+        Socials(site_name="Daniel Roy Greenfeld",
+                    title="Daniel Roy Greenfeld",
+                    description="Daniel Roy Greenfeld's personal blog",
+                    url="https://daniel.feldroy.com",
+                    image="/public/images/profile.jpg",
+                    ),
         Title("Daniel Roy Greenfeld"),
         Section(
                 H1('Recent Writings'),
@@ -57,13 +57,20 @@ def get():
 @rt("/posts")
 @layout
 def get():
-    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
+    description = f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'
+    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     return (
+            Socials(site_name="Daniel Roy Greenfeld",
+                        title="All posts by Daniel Roy Greenfeld",
+                        description=description,
+                        url="https://daniel.feldroy.com",
+                        image="/public/images/profile.jpg",
+                        ),        
             Title("All posts by Daniel Roy Greenfeld"),
             Section(
             H1(f'All Articles ({len(posts)})'),
-            P(f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'),
+            P(description),
             *posts,
             A("← Back to home", href="/"),
         ),)

@@ -94,7 +94,7 @@ def markdown_page(slug: str):
 
 def Layout(title: str, *args, **kwargs):
     """Layout for the blog, but can be adapted to anything"""
-    return (Title(title), 
+    return (title, 
             blog_header(), Main(*args, **kwargs), blog_footer())
 
 def layout(view_function):
@@ -106,6 +106,6 @@ def layout(view_function):
         if isinstance(result, Response):
             return result
         # If there's a Title() in the result at the top level, use it, otherwise use the default
-        title = next((ele[1] for ele in result if ele[0] == "title"), "Daniel Roy Greenfeld")
-        return Layout(title, *result)
+        # title = next((ele[1] for ele in result if ele[0] == "title"), "Daniel Roy Greenfeld")
+        return Layout(*result)
     return _wrapper
