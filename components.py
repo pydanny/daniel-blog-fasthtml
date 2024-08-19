@@ -92,7 +92,7 @@ def markdown_page(slug: str):
     content = ''.join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
     return (Title(metadata.get('title', slug)),
-        Socials(site_name="Daniel Roy Greenfeld",
+        Socials(site_name="https://daniel.feldroy.com",
                         title=metadata.get('title', slug),
                         description=metadata.get('description', 'slug'),
                         url=f"https://daniel.feldroy.com/{slug}",

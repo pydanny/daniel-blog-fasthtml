@@ -36,11 +36,11 @@ def get():
     popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
     return Layout(
         Title("Daniel Roy Greenfeld"),        
-        Socials(site_name="Daniel Roy Greenfeld",
+        Socials(site_name="https://daniel.feldroy.com",
                     title="Daniel Roy Greenfeld",
                     description="Daniel Roy Greenfeld's personal blog",
                     url="https://daniel.feldroy.com",
-                    image="/public/images/profile.jpg",
+                    image="https://daniel.feldroy.com/public/images/profile.jpg",
                     ),
         Section(
                 H1('Recent Writings'),
@@ -60,11 +60,11 @@ def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     return Layout(
         Title("All posts by Daniel Roy Greenfeld"),
-        Socials(site_name="Daniel Roy Greenfeld",
+        Socials(site_name="https://daniel.feldroy.com",
                         title="All posts by Daniel Roy Greenfeld",
                         description=description,
                         url="https://daniel.feldroy.com/posts/",
-                        image="/public/images/profile.jpg",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),
         Section(
                 H1(f'All Articles ({len(posts)})'),
@@ -89,11 +89,11 @@ def get(slug: str):
         )
     return Layout(
         Title(metadata['title']),
-        Socials(site_name="Daniel Roy Greenfeld",
+        Socials(site_name="https://daniel.feldroy.com",
                         title=metadata["title"],
                         description=metadata.get("description", ""),
                         url=f"https://daniel.feldroy.com/posts/{slug}",
-                        image=metadata.get("image", default_social_image),
+                        image="https://daniel.feldroy.com" + metadata.get("image", default_social_image),
                         ),        
         Section(
             H1(metadata["title"]),
@@ -108,11 +108,11 @@ def get(slug: str):
 def get():
     tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items()]
     return Layout(Title("Tags"),
-        Socials(site_name="Daniel Roy Greenfeld",
+        Socials(site_name="https://daniel.feldroy.com",
                         title="Tags",
                         description="All tags used in the blog",
                         url="https://daniel.feldroy.com/tags/",
-                        image="/public/images/profile.jpg",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),               
         Section(
             H1('Tags'),
@@ -127,11 +127,11 @@ def get():
 def get(slug: str):
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
     return Layout(Title(f"Tag: {slug}"),
-        Socials(site_name="Daniel Roy Greenfeld",
+        Socials(site_name="https://daniel.feldroy.com",
                         title=f"Tag: {slug}",
                         description=f'Posts tagged with "{slug}" ({len(posts)})',
                         url=f"https://daniel.feldroy.com/tags/{slug}",
-                        image="/public/images/profile.jpg",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),                       
         Section(
             H1(f'Posts tagged with "{slug}" ({len(posts)})'),
@@ -160,11 +160,11 @@ def get(q: str = ""):
     else:
         messages = []
     return Layout(Title("Search"), 
-        Socials(site_name="Daniel Roy Greenfeld",
+        Socials(site_name="https://daniel.feldroy.com",
                         title="Search the site",
                         description='Search the site',
                         url="https://daniel.feldroy.com/search",
-                        image="/public/images/profile.jpg",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),                    
         Form(Input(name="q", value=q, id="search", type="search", autofocus=True), Button("Search"), style="text-align: center;"),
         Section(
