@@ -110,7 +110,7 @@ def get():
     return Layout(Title("Tags"),
         Socials(site_name="https://daniel.feldroy.com",
                         title="Tags",
-                        description="All tags used in the blog",
+                        description="All tags used in the site.",
                         url="https://daniel.feldroy.com/tags/",
                         image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),               
@@ -154,15 +154,18 @@ def get(q: str = ""):
                     any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
         
     if posts:
-        messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} results")]
+        messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
+        description = f"Search results on '{q}'. Found {len(posts)} entries"
     elif q:
-        messages = [P("No results found")]
+        messages = [P("No results found for '{q}'")]
+        description = f"No results found for '{q}'"
     else:
         messages = []
+        description = ""
     return Layout(Title("Search"), 
         Socials(site_name="https://daniel.feldroy.com",
                         title="Search the site",
-                        description='Search the site',
+                        description=description,
                         url="https://daniel.feldroy.com/search",
                         image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),                    
