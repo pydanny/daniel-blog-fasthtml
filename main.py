@@ -63,7 +63,7 @@ def get():
         Socials(site_name="Daniel Roy Greenfeld",
                         title="All posts by Daniel Roy Greenfeld",
                         description=description,
-                        url="https://daniel.feldroy.com",
+                        url="https://daniel.feldroy.com/posts/",
                         image="/public/images/profile.jpg",
                         ),
         Section(
@@ -92,7 +92,7 @@ def get(slug: str):
         Socials(site_name="Daniel Roy Greenfeld",
                         title=metadata["title"],
                         description=metadata.get("description", ""),
-                        url="https://daniel.feldroy.com",
+                        url=f"https://daniel.feldroy.com/posts/{slug}",
                         image=metadata.get("image", default_social_image),
                         ),        
         Section(
@@ -111,7 +111,7 @@ def get():
         Socials(site_name="Daniel Roy Greenfeld",
                         title="Tags",
                         description="All tags used in the blog",
-                        url="https://daniel.feldroy.com",
+                        url="https://daniel.feldroy.com/tags/",
                         image="/public/images/profile.jpg",
                         ),               
         Section(
@@ -130,7 +130,7 @@ def get(slug: str):
         Socials(site_name="Daniel Roy Greenfeld",
                         title=f"Tag: {slug}",
                         description=f'Posts tagged with "{slug}" ({len(posts)})',
-                        url="https://daniel.feldroy.com",
+                        url=f"https://daniel.feldroy.com/tags/{slug}",
                         image="/public/images/profile.jpg",
                         ),                       
         Section(
@@ -163,7 +163,7 @@ def get(q: str = ""):
         Socials(site_name="Daniel Roy Greenfeld",
                         title="Search the site",
                         description='Search the site',
-                        url="https://daniel.feldroy.com",
+                        url="https://daniel.feldroy.com/search",
                         image="/public/images/profile.jpg",
                         ),                    
         Form(Input(name="q", value=q, id="search", type="search", autofocus=True), Button("Search"), style="text-align: center;"),

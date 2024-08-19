@@ -95,7 +95,7 @@ def markdown_page(slug: str):
         Socials(site_name="Daniel Roy Greenfeld",
                         title=metadata.get('title', slug),
                         description=metadata.get('description', 'slug'),
-                        url="https://daniel.feldroy.com",
+                        url=f"https://daniel.feldroy.com/{slug}",
                         image=metadata.get("image", default_social_image),
                         ),                
         A("← Back to home", href="/"),
