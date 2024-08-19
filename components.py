@@ -1,13 +1,12 @@
 from fasthtml.common import *
-import functools
 from datetime import datetime
 from dateutil import parser
 import pytz
 import pathlib
 import yaml
 
-__all__ = ['blog_header', 'blog_post', "blog_footer", "tag",
-           "tag_with_count", "markdown_page", "Layout", "layout"]
+__all__ = ['blog_post',"tag", "Layout",
+           "tag_with_count", "markdown_page", "layout"]
 
 def convert_dtstr_to_dt(date_str):
     """
@@ -39,8 +38,8 @@ def format_datetime(dt: datetime):
     return f"{formatted_date} at {formatted_time}"
 
 
-def blog_header():
-    return (
+def Layout(title, socials,*tags):
+    return title, socials, (
         Header(
             A(Img(
                 cls='borderCircle', alt='Daniel Roy Greenfeld', src='/public/images/profile.jpg', width='108', height='108')
@@ -54,7 +53,21 @@ def blog_header():
                 A('Tags', href='/tags'), '|',
                 A('Search', href='/search')
             ), style="text-align: center;"
-        ))
+        ),
+    Main(*tags),
+    Footer(Hr(), P(
+                A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), '|',
+                A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), '|',
+                A('Twitter', href='https://twitter.com/pydanny'), '|',
+                A('Atom Feed', href='/feeds/atom.xml')
+            ),
+            P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
+        )
+    )
+
+
+def blog_footer():
+    return 
 
 def blog_post(title: str, slug: str, timestamp: str, description: str):
     return Span(
@@ -62,15 +75,6 @@ def blog_post(title: str, slug: str, timestamp: str, description: str):
                 P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp))))),
         )
 
-def blog_footer():
-    return Footer(Hr(), P(
-            A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), '|',
-            A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), '|',
-            A('Twitter', href='https://twitter.com/pydanny'), '|',
-            A('Atom Feed', href='/feeds/atom.xml')
-        ),
-        P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
-    )
 
 def tag(slug: str):
     return A(slug, href=f"/tags/{slug}")
@@ -86,26 +90,14 @@ def markdown_page(slug: str):
     content = ''.join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
     return (Title(metadata.get('title', slug)),
+        Socials(site_name="Daniel Roy Greenfeld",
+                        title=metadata.get('title', slug),
+                        description=metadata.get('description', 'slug'),
+                        url="https://daniel.feldroy.com",
+                        image="/public/images/profile.jpg",
+                        ),                
         A("← Back to home", href="/"),
         Section(
             Div(content,cls="marked")
         )
     )
-
-def Layout(title: str, *args, **kwargs):
-    """Layout for the blog, but can be adapted to anything"""
-    return (title, 
-            blog_header(), Main(*args, **kwargs), blog_footer())
-
-def layout(view_function):
-    """Decorator to wrap a view function with a layout"""
-    @functools.wraps(view_function)
-    def _wrapper(*args, **kwargs):
-        result = view_function(*args, **kwargs)
-        # For special media files like static xml
-        if isinstance(result, Response):
-            return result
-        # If there's a Title() in the result at the top level, use it, otherwise use the default
-        # title = next((ele[1] for ele in result if ele[0] == "title"), "Daniel Roy Greenfeld")
-        return Layout(*result)
-    return _wrapper

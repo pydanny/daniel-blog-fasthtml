@@ -31,18 +31,17 @@ exception_handlers = {
 app, rt = fast_app(hdrs=hdrs, pico=False, debug=True)
 
 @rt("/")
-@layout
 def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
-    return (
+    return Layout(
+        Title("Daniel Roy Greenfeld"),        
         Socials(site_name="Daniel Roy Greenfeld",
                     title="Daniel Roy Greenfeld",
                     description="Daniel Roy Greenfeld's personal blog",
                     url="https://daniel.feldroy.com",
                     image="/public/images/profile.jpg",
                     ),
-        Title("Daniel Roy Greenfeld"),
         Section(
                 H1('Recent Writings'),
                 *posts[:3]
@@ -55,36 +54,40 @@ def get():
     )
 
 @rt("/posts")
-@layout
 def get():
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
     description = f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
-    return (
-            Socials(site_name="Daniel Roy Greenfeld",
+    return Layout(
+        Title("All posts by Daniel Roy Greenfeld"),
+        Socials(site_name="Daniel Roy Greenfeld",
                         title="All posts by Daniel Roy Greenfeld",
                         description=description,
                         url="https://daniel.feldroy.com",
                         image="/public/images/profile.jpg",
-                        ),        
-            Title("All posts by Daniel Roy Greenfeld"),
-            Section(
-            H1(f'All Articles ({len(posts)})'),
-            P(description),
-            *posts,
-            A("← Back to home", href="/"),
-        ),)
+                        ),
+        Section(
+                H1(f'All Articles ({len(posts)})'),
+                P(description),
+                *posts,
+                A("← Back to home", href="/"),
+        ))
 
 @rt("/posts/{slug}")
-@layout
 def get(slug: str):
     # post = [x for x in filter(lambda x: x["slug"] == slug, list_posts())][0]
     content, metadata = get_post(slug)
     # content = pathlib.Path(f"posts/{slug}.md").read_text().split("---")[2]
     # metadata = yaml.safe_load(pathlib.Path(f"posts/{slug}.md").read_text().split("---")[1])    
     tags = [tag(slug=x) for x in metadata.get("tags", [])]
-    return (
+    return Layout(
         Title(metadata['title']),
+        Socials(site_name="Daniel Roy Greenfeld",
+                        title=metadata["title"],
+                        description=metadata.get("description", ""),
+                        url="https://daniel.feldroy.com",
+                        image="/public/images/profile.jpg",
+                        ),        
         Section(
             H1(metadata["title"]),
             Div(content,cls="marked"),
@@ -94,10 +97,15 @@ def get(slug: str):
     )
 
 @rt("/tags")
-@layout
 def get():
     tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items()]
-    return (Title("Tags"),
+    return Layout(Title("Tags"),
+        Socials(site_name="Daniel Roy Greenfeld",
+                        title="Tags",
+                        description="All tags used in the blog",
+                        url="https://daniel.feldroy.com",
+                        image="/public/images/profile.jpg",
+                        ),               
         Section(
             H1('Tags'),
             P('All tags used in the blog'),
@@ -108,10 +116,15 @@ def get():
     )
 
 @rt("/tags/{slug}")
-@layout
 def get(slug: str):
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
-    return (Title(f"Tag: {slug}"),
+    return Layout(Title(f"Tag: {slug}"),
+        Socials(site_name="Daniel Roy Greenfeld",
+                        title=f"Tag: {slug}",
+                        description=f'Posts tagged with "{slug}" ({len(posts)})',
+                        url="https://daniel.feldroy.com",
+                        image="/public/images/profile.jpg",
+                        ),                       
         Section(
             H1(f'Posts tagged with "{slug}" ({len(posts)})'),
             *posts,
@@ -138,14 +151,20 @@ def get(q: str = ""):
         messages = [P("No results found")]
     else:
         messages = []
-    return Title("Search"), blog_header(), Body(Main(
+    return Layout(Title("Search"), 
+        Socials(site_name="Daniel Roy Greenfeld",
+                        title="Search the site",
+                        description='Search the site',
+                        url="https://daniel.feldroy.com",
+                        image="/public/images/profile.jpg",
+                        ),                    
         Form(Input(name="q", value=q, id="search", type="search", autofocus=True), Button("Search"), style="text-align: center;"),
         Section(
             *messages,
             *posts,
             A("← Back home", href="/"),
         )
-    )), blog_footer()
+    )
 
 @rt("/feeds/{fname:path}.{ext}")
 def get(fname:str, ext:str): 
@@ -161,16 +180,14 @@ def get(slug: str):
     return HTTPException(404)
 
 @rt("/{slug}")
-@layout
 def get(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
         return RedirectResponse(url=redirects_url)
-    return markdown_page(slug)
+    return Layout(*markdown_page(slug))
     
 @rt("/{slug_1}/{slug_2}")
-@layout
 def get(slug_1: str, slug_2: str):
-    return markdown_page(slug_1 + "/" + slug_2)
+    return Layout(*markdown_page(slug_1 + "/" + slug_2))
 
 serve()
