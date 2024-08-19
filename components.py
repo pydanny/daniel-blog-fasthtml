@@ -6,7 +6,7 @@ import pathlib
 import yaml
 
 __all__ = ['blog_post',"tag", "Layout",
-           "tag_with_count", "markdown_page", "layout"]
+           "tag_with_count", "markdown_page",]
 
 def convert_dtstr_to_dt(date_str):
     """
