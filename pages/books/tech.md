@@ -1,8 +1,8 @@
 ---
 title: Tech Books I have Co-Authored
 author: "Daniel & Audrey Roy Greenfeld"
-image: /images/shadowfall_abyssia_square.png
-twitter_image: /images/shadowfall_abyssia_square.png
+image: /public/images/shadowfall_abyssia_square.png
+twitter_image: /public/images/shadowfall_abyssia_square.png
 og_url: https://daniel.feldroy.com/books/tech
 description: "With Audrey, I co-write dairy-themed technical books."
 ---

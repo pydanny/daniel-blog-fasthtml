@@ -8,7 +8,7 @@ tags:
 time_to_read: 2
 title: My Boss Took My Mouse Away
 description: A useful lesson taught to me at the outset of my career in an unnecessarily abusive way
-image: /images/mybosstookmykeyboardaway.png
+image: /public/images/mybosstookmykeyboardaway.png
 ---
 
 At my first programming job I was given a desktop computer, keyboard, and mouse. One of the senior programmers taught me the fundamentals of professional software development, and the other senior developer took my mouse away to force me to learn keyboard shortcuts (also known as hotkeys).

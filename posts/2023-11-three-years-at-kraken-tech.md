@@ -10,8 +10,8 @@ tags:
 time_to_read: 5
 title: Three Years at Kraken Tech
 description: A summary of the past year as I finish my third year working for Kraken Tech, an Octopus Energy Group subsidiary.
-image: /logos/kraken-logo-dark.png
-twitter_image: /logos/kraken-logo-dark.png
+image: /public/logos/kraken-logo-dark.png
+twitter_image: /public/logos/kraken-logo-dark.png
 og_url: https://daniel.feldroy.com/posts/2023-11-three-years-at-octopus
 ---
 

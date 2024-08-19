@@ -9,8 +9,8 @@ tags:
 time_to_read: 1
 title: "TIL: Change older git commit"
 description: How to change an older git commit rather than the most recent one.
-image: /logos/til-1.png
-twitter_image: /logos/til-1.png
+image: /public/logos/til-1.png
+twitter_image: /public/logos/til-1.png
 ---
 
 Typically I try to avoid changing older commits in a pull request.  My reasoning has a tiny bit to do with preserving history and lots to do with being resistant to trying new things. Finally I got around to looking this up today, it is easy to do.

@@ -11,7 +11,7 @@ tags:
 time_to_read: 7
 title: Using Python and Google Docs to Build Books
 description: Using Python to combine multiple Google docs into one cohesive whole that can be published as a book.
-image: /images/python-tip-from-pydanny.png
+image: /public/images/python-tip-from-pydanny.png
 ---
 
 

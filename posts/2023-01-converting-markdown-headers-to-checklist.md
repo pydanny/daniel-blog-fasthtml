@@ -12,7 +12,7 @@ time_to_read: 5
 title: Converting Markdown Headers to Checklist
 description: For those times when you write out a long markdown document that you want to convert to a checklist.
 type: post
-image: /images/superhero-markdown-checklist.png
+image: /public/images/superhero-markdown-checklist.png
 ---
 
 For those times when you write out a long markdown document that you want to convert to a checklist.

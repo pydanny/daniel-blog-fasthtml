@@ -8,7 +8,7 @@ tags:
   - howto
 time_to_read: 3
 title: Why Doesn't Python Have Switch/Case?
-image: /images/aliens.png
+image: /public/images/aliens.png
 ---
 
 [![Aliens](/public/images/aliens.png)](/public/images/aliens.png)

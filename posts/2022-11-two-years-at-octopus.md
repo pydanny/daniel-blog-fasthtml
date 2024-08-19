@@ -9,8 +9,8 @@ tags:
 time_to_read: 10
 title: Two Years at Octopus Energy Group
 description: Various thoughts about working for a for-profit business with a mission of saving the planet.
-image: /images/octopus-share.jpg
-twitter_image: /images/octopus-share.jpg
+image: /public/images/octopus-share.jpg
+twitter_image: /public/images/octopus-share.jpg
 og_url: https://daniel.feldroy.com/posts/2022-11-two-years-at-octopus
 ---
 

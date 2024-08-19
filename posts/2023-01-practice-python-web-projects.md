@@ -9,7 +9,7 @@ tags:
 time_to_read: 2
 title: Practice Python Web Projects
 description: Python web projects taken from my personal history to practice on to improve your skills.
-image: /images/Practice-Python-Web-Projects.png
+image: /public/images/Practice-Python-Web-Projects.png
 og_url: https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects
 ---
 

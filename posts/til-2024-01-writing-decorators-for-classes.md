@@ -6,8 +6,8 @@ tags:
 - TIL
 - python
 title: 'TIL: Writing decorators for classes'
-image: /logos/til-1.png
-twitter_image: /logos/til-1.png
+image: /public/logos/til-1.png
+twitter_image: /public/logos/til-1.png
 ---
 
 To my surprise writing decorators for classes is easier than for functions. Here's how to do it in annotated fashion with an unnecessary decorator that doesn't accept any additional arguments.

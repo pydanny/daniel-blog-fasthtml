@@ -8,8 +8,8 @@ tags:
   - TIL
 published: true
 title: Blog Revamp 2021
-image: /logos/til-1.png
-twitter_image: /logos/til-1.png
+image: /public/logos/til-1.png
+twitter_image: /public/logos/til-1.png
 ---
 
 Today my wife Audrey and I dug in and learned some of the tools chosen by the [Octopus Energy](https://octopusenergy.com) frontend team. One of our efforts turned into redoing this blog.

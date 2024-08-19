@@ -9,7 +9,7 @@ tags:
   - postgresql
 time_to_read: 2
 title: Pretty Formatting JSON in the Django Admin
-image: /images/admin-pretty-json.png
+image: /public/images/admin-pretty-json.png
 ---
 
 Recently I was writing code to interact with a third-party API. The API

@@ -2,7 +2,7 @@
 date: "2022-01-14T22:20:50.52Z"
 published: true
 slug: whats-the-ultimate-reason-for-working-at-octopus-energy-part-2
-image: /images/autodocumenting-makefiles.png
+image: /public/images/autodocumenting-makefiles.png
 tags:
   - python
   - howto

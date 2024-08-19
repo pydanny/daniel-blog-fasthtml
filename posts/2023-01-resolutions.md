@@ -14,7 +14,7 @@ time_to_read: 5
 title: Resolutions for 2023
 description: My resolutions for 2023
 type: post
-image: /images/Resolutions-2023.png
+image: /public/images/Resolutions-2023.png
 ---
 
 # Resolutions for 2023

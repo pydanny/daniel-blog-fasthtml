@@ -6,7 +6,9 @@ import pathlib
 import yaml
 
 __all__ = ['blog_post',"tag", "Layout",
-           "tag_with_count", "markdown_page",]
+           "tag_with_count", "markdown_page", "default_social_image"]
+
+default_social_image = '/public/images/profile.jpg'
 
 def convert_dtstr_to_dt(date_str):
     """
@@ -94,7 +96,7 @@ def markdown_page(slug: str):
                         title=metadata.get('title', slug),
                         description=metadata.get('description', 'slug'),
                         url="https://daniel.feldroy.com",
-                        image="/public/images/profile.jpg",
+                        image=metadata.get("image", default_social_image),
                         ),                
         A("← Back to home", href="/"),
         Section(

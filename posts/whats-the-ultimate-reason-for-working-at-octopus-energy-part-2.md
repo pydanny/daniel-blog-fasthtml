@@ -2,7 +2,7 @@
 date: "2021-06-24T22:20:50.52Z"
 published: true
 slug: whats-the-ultimate-reason-for-working-at-octopus-energy-part-2
-image: /images/uma-daniel-sun.jpg
+image: /public/images/uma-daniel-sun.jpg
 tags:
   - python
   - django

@@ -12,7 +12,7 @@ tags:
 time_to_read: 3
 title: I'm Teaching A Live Online Django Crash Course
 type: post
-image: /images/dcc-online-training.png
+image: /public/images/dcc-online-training.png
 ---
 
 [![Live Online Django Training](https://daniel.feldroy.com/images/dcc-online-training.png)](https://www.feldroy.com/products/django-crash-course?variant=32232086175831)

@@ -2,7 +2,7 @@
 title: "Jobs at daniel.feldroy.com"
 description: "These are employers who I can confirm are good to work for, who take care of their people. They are lead by people with a strong sense of ethics and try to do good for the world. To be more succinct: these are places I would consider working for."
 author: "Daniel Roy Greenfeld"
-image: /images/future-office.png
+image: /public/images/future-office.png
 og_url: https://daniel.feldroy.com/jobs
 ---
 

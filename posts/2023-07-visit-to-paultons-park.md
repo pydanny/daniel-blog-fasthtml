@@ -11,7 +11,7 @@ time_to_read: 3
 title: Review of Paultons Park
 description: A quick review of Paultons Park Amusement World near Southhamption from the vantage point of a parent of a four year old child.
 type: post
-image: /images/uma-waterpark-summer-2023-40.jpg
+image: /public/images/uma-waterpark-summer-2023-40.jpg
 ---
 
 This weekend we took 4.5-year-old Uma to [Paultons Park amusement park](https://paultonspark.co.uk/) near Southhamption, UK. It was her first real amusement park experience, and she had a grand time.

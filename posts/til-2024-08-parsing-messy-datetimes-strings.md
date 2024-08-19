@@ -1,7 +1,7 @@
 ---
 date: '2024-08-06T12:00:00.192810'
 description: How to convert inconsistent datetime strings into datetime objects.
-image: /logos/til-1.png
+image: /public/logos/til-1.png
 published: true
 tags:
 - TIL
@@ -9,7 +9,7 @@ tags:
 - python
 - FastHTML
 title: 'TIL: Parsing messy datetimes strings'
-twitter_image: /logos/til-1.png
+twitter_image: /public/logos/til-1.png
 ---
 
 *How to convert inconsistent datetime strings into datetime objects.*

@@ -10,7 +10,7 @@ tags:
   - django
 time_to_read: 6
 title: "Markup Language Faceoff: Lists"
-image: /images/bullets.png
+image: /public/images/bullets.png
 ---
 
 Today I want to talk about lists. Not for shopping, not the programming

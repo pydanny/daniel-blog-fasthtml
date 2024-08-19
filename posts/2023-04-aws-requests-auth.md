@@ -11,8 +11,8 @@ time_to_read: 1
 title: AWS Requests Auth
 description: AWS signature version 4 signing process for the python requests module.
 type: post
-image: /logos/til-1.png
-twitter_image: /logos/til-1.png
+image: /public/logos/til-1.png
+twitter_image: /public/logos/til-1.png
 ---
 
 David Muller, the author of [Intuitive Python](https://pragprog.com/titles/dmpython/intuitive-python/) pointed me at this [handy snippet of code](https://github.com/boto/botocore/issues/1784#issuecomment-659132830). Thanks [Richard Boyd](https://github.com/richardhboyd)!

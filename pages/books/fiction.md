@@ -1,8 +1,8 @@
 ---
 title: Fiction Books by Daniel & Audrey Roy Greenfeld
 author: "Daniel & Audrey Roy Greenfeld"
-image: /images/shadowfall_abyssia_square.png
-twitter_image: /images/shadowfall_abyssia_square.png
+image: /public/images/shadowfall_abyssia_square.png
+twitter_image: /public/images/shadowfall_abyssia_square.png
 og_url: https://daniel.feldroy.com/books/fiction
 ---
 

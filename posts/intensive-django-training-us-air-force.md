@@ -8,7 +8,7 @@ tags:
 - Cartwheel Web
 time_to_read: 3
 title: Intensive Django Training with the US Air Force
-image: /images/two-scoops-academy-91cos-django-training.png
+image: /public/images/two-scoops-academy-91cos-django-training.png
 ---
 
 Last week [Audrey Roy Greenfeld](https://audrey.feldroy.com) and I

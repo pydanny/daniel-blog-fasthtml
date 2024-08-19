@@ -7,7 +7,7 @@ tags:
 time_to_read: 2
 title: Blogger to Markdown Script
 description: Converting hundreds of posts from blogger to markdown
-image: /images/2022-02-old-blog-archive.png
+image: /public/images/2022-02-old-blog-archive.png
 ---
 
 I started writing blog posts on [Blogger](https://www.blogger.com/) in 2007. I did so on multiple accounts. On one blog I wrote about software programming, on another I wrote about fiction, and on yet another I wrote about personal things. The HTML form interface was convienant and as the years went by I wrote hundreds of articles.

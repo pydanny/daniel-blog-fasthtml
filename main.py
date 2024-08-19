@@ -80,17 +80,25 @@ def get(slug: str):
     # content = pathlib.Path(f"posts/{slug}.md").read_text().split("---")[2]
     # metadata = yaml.safe_load(pathlib.Path(f"posts/{slug}.md").read_text().split("---")[1])    
     tags = [tag(slug=x) for x in metadata.get("tags", [])]
+    specials = ()
+    if 'TIL' in metadata['tags']:
+        specials = (
+            A(href="/tags/TIL")(
+                Img(src="/public/logos/til-1.png", alt="Today I Learned", width="200", height="200", cls="center"),
+            )
+        )
     return Layout(
         Title(metadata['title']),
         Socials(site_name="Daniel Roy Greenfeld",
                         title=metadata["title"],
                         description=metadata.get("description", ""),
                         url="https://daniel.feldroy.com",
-                        image="/public/images/profile.jpg",
+                        image=metadata.get("image", default_social_image),
                         ),        
         Section(
             H1(metadata["title"]),
             Div(content,cls="marked"),
+            Div(style="width: 200px; margin: auto; display: block;")(*specials),
             P(Span("Tags: "), *tags),
             A("← Back to all articles", href="/"),
         ),

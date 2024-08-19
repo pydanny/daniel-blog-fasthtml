@@ -12,7 +12,7 @@ tags:
 time_to_read: 5
 title: Our New Django Book Has Launched!
 type: post
-image: /images/Django_Crash_Course_3_E-Book_Download_740x.jpg
+image: /public/images/Django_Crash_Course_3_E-Book_Download_740x.jpg
 ---
 
 Audrey and I wrote a new book titled [Django Crash Course](https://feldroy.com/books/a-wedge-of-django). You can get it right now on [our website](https://www.feldroy.com/books/a-wedge-of-django). Right now it's in **alpha**, which means only the e-book is available. Later we'll produce it in print formats (perfect bound, spiral, and hardcover).

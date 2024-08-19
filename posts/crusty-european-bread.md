@@ -2,7 +2,7 @@
 date: "2021-08-08"
 published: true
 slug: crust-european-bread
-image: /images/crusty-european-bread.png
+image: /public/images/crusty-european-bread.png
 tags:
   - recipe
 time_to_read: 5

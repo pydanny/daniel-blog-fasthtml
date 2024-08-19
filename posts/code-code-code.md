@@ -9,8 +9,8 @@ tags:
   - foxpro
 time_to_read: 3
 title: Code, Code, Code
-image: /images/code-code-code.png
-twitter_image: /images/code-code-code.png
+image: /public/images/code-code-code.png
+twitter_image: /public/images/code-code-code.png
 description: I'm often asked by new programmers how they can forge a path into using their skills professionally. Or how they can get better at writing software. In this article I share the secret master-level method to improvement.
 ---
 

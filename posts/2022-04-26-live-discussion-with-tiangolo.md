@@ -9,7 +9,7 @@ tags:
 time_to_read: 60
 title: Live Discussion with Sebastián Ramírez (Tiangolo)
 description: I have a friendly live discussion with Sebastián Ramírez, creator of FastAPI, Typer, SQL Model, and more.
-image: /images/code-code-code-02.png
+image: /public/images/code-code-code-02.png
 ---
 
 On April 26th I had a live discussion with [Sebastián Ramírez](https://tiangolo.com/), creator of FastAPI, Typer, SQL Model, and more.
