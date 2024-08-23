@@ -3,3 +3,4 @@ pyyaml
 pytz
 feedgen
 markdown
+rich

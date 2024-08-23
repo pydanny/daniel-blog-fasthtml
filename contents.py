@@ -6,12 +6,14 @@ import yaml
 __all__ = ["list_posts", "get_post", "list_tags"]
 
 @functools.lru_cache
-def list_posts(published: bool = True, posts_dirname="posts") -> list[dict]:
+def list_posts(published: bool = True, posts_dirname="posts", content=False) -> list[dict]:
     posts: list[dict] = []
-    for post in pathlib.Path(".").glob(f"{posts_dirname}/*.md"):
+    for post in pathlib.Path(".").glob(f"{posts_dirname}/**/*.md"):
         raw: str = post.read_text().split("---")[1]
         data: dict = yaml.safe_load(raw)
         data["slug"] = post.stem
+        if content:
+            data["content"] = post.read_text().split("---")[2]
         posts.append(data)
 
     posts = [x for x in filter(lambda x: x["published"] is True, posts)]
@@ -19,12 +21,10 @@ def list_posts(published: bool = True, posts_dirname="posts") -> list[dict]:
     return [x for x in filter(lambda x: x["published"] is published, posts)]
 
 
-def get_post(slug: str, posts_dirname="posts"):
-    # post = [x for x in filter(lambda x: x["slug"] == slug, list_posts())][0]
-    raw = pathlib.Path(f"{posts_dirname}/{slug}.md").read_text()
-    content = raw.split("---")[2]
-    metadata = yaml.safe_load(raw.split("---")[1])
-    return (content, metadata)
+def get_post(slug: str):
+    posts = list_posts(content=True)
+    post = next((x for x in posts if x["slug"] == slug), None)
+    return (post['content'], post)
 
 
 @functools.lru_cache

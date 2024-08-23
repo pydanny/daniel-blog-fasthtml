@@ -12,10 +12,11 @@ tags:
 time_to_read: 1
 title: I Married Audrey Roy
 description: The story of one of the best days of my life.
+image: /public/images/couple.jpg
 ---
 
 In a small, private family ceremony on December 27th, 2013 I exchanged
-wedding vows with [Audrey Roy](https://audrey.roygreenfeld.com).
+wedding vows with [Audrey Roy](https://audrey.feldroy.com).
 
 ![image](/public/images/vows.jpg)
 
