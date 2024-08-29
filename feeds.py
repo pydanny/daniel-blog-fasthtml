@@ -83,7 +83,7 @@ def build_feed(content_tag: str | None = None):
     fg.rights(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
     fg.language('en') 
 
-    posts = contents.list_posts()             
+    posts = contents.list_posts(published=True)             
 
     if content_tag is not None:
         posts = list(filter_posts_by_tag(posts, content_tag))
