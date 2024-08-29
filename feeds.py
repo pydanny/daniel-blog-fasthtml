@@ -1,4 +1,3 @@
-
 from feedgen.feed import FeedGenerator
 import contents
 from dateutil import parser

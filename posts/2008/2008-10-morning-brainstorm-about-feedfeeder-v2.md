@@ -22,55 +22,40 @@ Sure, the Van Rees brothers had agreed that a future stage would correct the pro
 Well, this morning the answer came to me.  The solution to the problem was rather clear and simple.  Rather than a sophisticated plug-in system what about a definition system?  Currently FeedFeeder provides two content types:
  
 
-- <span style="font-weight: bold;">FeedFolder</span>:
-         
+- **FeedFolder**
+     - includes a field listing the feeds consumed by this folder
+     - and is a container for holding feed definitions and feed items
+- **FeedItem**
+     - individual feed content items provided by the feeds defined in the FeedFolder
 
-- includes a field listing the feeds consumed by this folder</li>            <li>and is a container for holding feed definitions and feed items</li>        </ul>    </li>
- <li><span style="font-weight: bold;">FeedItem</span>:
-         
-
-- individual feed content items provided by the feeds defined in the FeedFolder</li>        </ul>    
-
-My solution proposes adding a third content type called '<span style="font-weight: bold;">FeedDefinition</span>' to handle defining of feeds:
+My solution proposes adding a third content type called '**FeedDefinition**' to handle defining of feeds:
  
 
-- <span style="font-weight: bold;">FeedFolder</span>:
-         
-
-- a container for holding feed definitions and feed items</li>
-     </ul>            </li>    <li><span style="font-weight: bold;">FeedItem</span>:
-         
-
-- individual feed content items provided by the feeds defined in the FeedFolder's FeedDefinitions</li>
-     </ul>    </li>    <li><span style="font-weight: bold;">FeedDefinition</span>:
-         
-
-- Defines the source of a feed and how to handle the feed</li>        </ul>    
+- **FeedFolder**
+     - includes a field listing the feeds consumed by this folder
+     - and is a container for holding feed definitions and feed items
+- **FeedItem**
+     - individual feed content items provided by the feeds defined in the FeedFolder
+- **FeedDefinition**
+     - Defines the source of a feed and how to handle the feed
 
 A FeedDefinition would likely include the following fields in addition to the defaults:
  
 
-- <span style="font-weight: bold;">Source</span>:
-         
-
-- URI of the feed source</li>
-     </ul>    </li>    <li><span style="font-weight: bold;">FeedTitle</span>:
-         
-
-- default: standard
-- otherwise define location of feed title based on FeedParser output</li>        </ul>    </li>
- <li><span style="font-weight: bold;">FeedDescription</span>:
-         
-
-- default: standard</li>            <li>otherwise define location of feed description based on FeedParser output</li>        </ul>                </li>
- <li><span style="font-weight: bold;">ItemTitle</span>:
-         
-
-- default: standard</li>            <li>otherwise define location of item title based on FeedParser output</li>        </ul>    </li>
- <li><span style="font-weight: bold;">ItemDescription</span>:
-         
-
-- default: standard</li>            <li>otherwise define location of item description based on FeedParser output</li>        </ul>                </li>
+- **Source**
+     - URI of the feed source
+- **FeedTitle**
+     - default: standard
+     - otherwise define location of feed title based on FeedParser output
+- **FeedDescription**
+     - default: standard
+     - otherwise define location of feed description based on FeedParser output
+- **ItemTitle**
+     - default: standard
+     - otherwise define location of item title based on FeedParser output
+- **ItemDescription**
+     - default: standard
+     - otherwise define location of item description based on FeedParser output</li>        </ul>                </li>
  <li><span style="font-weight: bold;">Replacements</span>:
          
 
