@@ -157,7 +157,7 @@ def get(q: str = ""):
         messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
         description = f"Search results on '{q}'. Found {len(posts)} entries"
     elif q:
-        messages = [P("No results found for '{q}'")]
+        messages = [P(f"No results found for '{q}'")]
         description = f"No results found for '{q}'"
     else:
         messages = []
