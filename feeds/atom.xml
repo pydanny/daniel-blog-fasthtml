@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-08-06T14:42:27.834506+00:00</updated>
+  <updated>2024-09-03T09:12:53.878816+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,67 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>til-2024-06-passing-exceptions-as-arguments-in-python</id>
-    <title>TIL: Passing exceptions as arguments in Python</title>
-    <updated>2024-08-06T14:42:28.173028+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="CDATA"><![CDATA[<p><em>Mypy needs an extra identifier to not choke on an exception passed as an argument.</em></p>
-<p>This will throw a mypy error:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># code.py</span>
-<span class="k">class</span> <span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-
-<span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">custom_exception</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test&#39;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">custom_exception</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error)</span>
-
-<span class="n">myfunc</span><span class="p">(</span><span class="n">MyException</span><span class="p">)</span>
-</code></pre></div>
-
-<p>The error mypy will throw looks something like this:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>mypy<span class="w"> </span>code.py
-
-code.py:6:<span class="w"> </span>error:<span class="w"> </span>Exception<span class="w"> </span><span class="nb">type</span><span class="w"> </span>must<span class="w"> </span>be<span class="w"> </span>derived<span class="w"> </span>from<span class="w"> </span>BaseException<span class="w"> </span><span class="o">(</span>or<span class="w"> </span>be<span class="w"> </span>a<span class="w"> </span>tuple<span class="w"> </span>of<span class="w"> </span>exception<span class="w"> </span>classes<span class="o">)</span><span class="w">  </span><span class="o">[</span>misc<span class="o">]</span>
-code.py:9:<span class="w"> </span>error:<span class="w"> </span>Argument<span class="w"> </span><span class="m">1</span><span class="w"> </span>to<span class="w"> </span><span class="s2">&quot;custom_exception&quot;</span><span class="w"> </span>has<span class="w"> </span>incompatible<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="s2">&quot;type[MyException]&quot;</span><span class="p">;</span><span class="w"> </span>expected<span class="w"> </span><span class="s2">&quot;Exception&quot;</span><span class="w">  </span><span class="o">[</span>arg-type<span class="o">]</span>
-Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>errors<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span><span class="o">(</span>checked<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>file<span class="o">)</span>
-</code></pre></div>
-
-<p>The solution is to use <code>typing.Type</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># code.py</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Type</span>
-
-
-<span class="k">class</span> <span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-
-<span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">custom_exception</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="ne">Exception</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test&#39;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">custom_exception</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error)</span>
-
-<span class="n">myfunc</span><span class="p">(</span><span class="n">MyException</span><span class="p">)</span>
-</code></pre></div>]]></content>
-    <link href="til-2024-06-passing-exceptions-as-arguments-in-python"/>
-    <summary>Mypy needs an extra identifier to not choke on an exception passed as an argument.</summary>
-    <category term="TIL"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-06-07T11:13:05.553336+00:00</published>
-  </entry>
-  <entry>
     <id>2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-08-06T14:42:28.171365+00:00</updated>
+    <updated>2024-09-03T09:12:54.455266+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -118,7 +60,7 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
   <entry>
     <id>til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-08-06T14:42:28.106267+00:00</updated>
+    <updated>2024-09-03T09:12:54.438068+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -151,8 +93,7 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
         <span class="n">Raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error parsing date string: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p>Original source code <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31">here</a>.</p>
-<p><em>Note: As of publishing, this article is still on my old blog. The DNS switchover to the <a href="https://danielfeldroycom-production.up.railway.app/">FastHTML version of my blog</a> happens later this week.</em></p>]]></content>
+<p>Original source code <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31">here</a>.</p>]]></content>
     <link href="til-2024-08-parsing-messy-datetimes-strings"/>
     <summary>How to convert inconsistent datetime strings into datetime objects.</summary>
     <category term="TIL"/>
@@ -164,5 +105,44 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-08-06T12:00:00.192810+00:00</published>
+  </entry>
+  <entry>
+    <id>2024-09-tmux-cheatsheet</id>
+    <title>tmux cheatsheet</title>
+    <updated>2024-09-03T09:12:54.389851+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>My list of tmux commands with minimal flavor text.</em></p>
+<p>The tmux terminal utility allows for splitting terminal into multiple window panes. The splits can be vertical or horizontal. Installation instructions are <a href="https://github.com/tmux/tmux/wiki/Installing">here</a>.</p>
+<h2 id="creating-a-new-tmux-session">Creating a new tmux session</h2>
+<div class="codehilite"><pre><span></span><code>tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>SessionName
+</code></pre></div>
+
+<h2 id="creating-new-panes">Creating new panes</h2>
+<p>Horizontal panes</p>
+<p><code>Ctrl+B "</code></p>
+<p>Vertical panes</p>
+<p><code>Ctrl+B %</code></p>
+<h2 id="scrolling">Scrolling</h2>
+<p><code>Ctrl+B [</code></p>
+<p>Then use arrow keys or pageup and pagedown. Press <code>q</code> to quit.</p>
+<h2 id="moving-between-panes">Moving between panes</h2>
+<p><code>Ctrl+B</code> plus arrow keys</p>
+<h2 id="closing-the-current-pane">Closing the current pane</h2>
+<p><code>Ctrl+b+x</code></p>
+<h2 id="_1"></h2>
+<p>More to come as I </p>
+<p><img alt="" src="/public/images/tmux-logo-medium.png" /></p>]]></content>
+    <link href="2024-09-tmux-cheatsheet"/>
+    <summary>My list of tmux commands with minimal flavor text.</summary>
+    <category term="cheatsheet"/>
+    <category term="howto"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-09-03T08:33:14.926680+00:00</published>
   </entry>
 </feed>
