@@ -56,7 +56,7 @@ def github_markdown_to_html(markdown_str):
 def add_entry(fg, raw):
     content, metadata = contents.get_post(raw['slug'])
     fe = fg.add_entry()
-    linker = f'posts/{raw["slug"]}'
+    linker = f'https://daniel.feldroy.com/posts/{raw["slug"]}'
     fe.id(linker)
     fe.link(href=linker)
     fe.title(metadata['title'])

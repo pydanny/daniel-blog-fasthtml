@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-09-03T10:54:11.220245+00:00</updated>
+  <updated>2024-09-03T18:56:43.321714+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,9 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>posts/2024-06-london-hackathon-on-july-1-and-2</id>
+    <id>https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-09-03T10:54:11.798120+00:00</updated>
+    <updated>2024-09-03T18:56:43.789267+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -45,7 +45,7 @@
 <li>July 2: Judging at 3pm</li>
 </ul>
 <p><img alt="London Tech Zero Hackathon" src="/public/images/tech-zero-hackathon-square.png" /></p>]]></content>
-    <link href="posts/2024-06-london-hackathon-on-july-1-and-2"/>
+    <link href="https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2"/>
     <summary>On the 1st and 2nd of July is the first-ever London Tech Zero Hackathon, supported by Kraken Tech.</summary>
     <category term="python"/>
     <category term="django"/>
@@ -58,9 +58,9 @@
     <published>2024-06-24T14:28:10.494486+00:00</published>
   </entry>
   <entry>
-    <id>posts/til-2024-08-parsing-messy-datetimes-strings</id>
+    <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-09-03T10:54:11.781118+00:00</updated>
+    <updated>2024-09-03T18:56:43.772891+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -94,7 +94,7 @@
 </code></pre></div>
 
 <p>Original source code <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31">here</a>.</p>]]></content>
-    <link href="posts/til-2024-08-parsing-messy-datetimes-strings"/>
+    <link href="https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings"/>
     <summary>How to convert inconsistent datetime strings into datetime objects.</summary>
     <category term="TIL"/>
     <category term="howto"/>
@@ -107,9 +107,9 @@
     <published>2024-08-06T12:00:00.192810+00:00</published>
   </entry>
   <entry>
-    <id>posts/2024-09-tmux-cheatsheet</id>
+    <id>https://daniel.feldroy.com/posts/2024-09-tmux-cheatsheet</id>
     <title>tmux cheatsheet</title>
-    <updated>2024-09-03T10:54:11.742260+00:00</updated>
+    <updated>2024-09-03T18:56:43.748093+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -122,7 +122,7 @@
 
 <h2 id="creating-new-panes">Creating new panes</h2>
 <p>Horizontal panes</p>
-<p><code>Ctrl+B "</code></p>
+<p><code>Ctrl+B "</code> </p>
 <p>Vertical panes</p>
 <p><code>Ctrl+B %</code></p>
 <h2 id="scrolling">Scrolling</h2>
@@ -135,7 +135,7 @@
 <h2 id="not-yet-finished">Not yet finished</h2>
 <p>More to come!</p>
 <p><img alt="" src="/public/images/tmux-logo-medium.png" /></p>]]></content>
-    <link href="posts/2024-09-tmux-cheatsheet"/>
+    <link href="https://daniel.feldroy.com/posts/2024-09-tmux-cheatsheet"/>
     <summary>My list of tmux commands with minimal flavor text.</summary>
     <category term="cheatsheet"/>
     <category term="howto"/>

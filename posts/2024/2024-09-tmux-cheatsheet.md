@@ -25,7 +25,7 @@ tmux new -s SessionName
 Horizontal panes
 
 
-`Ctrl+B "`
+`Ctrl+B "` 
 
 
 Vertical panes
