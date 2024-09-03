@@ -56,9 +56,9 @@ def github_markdown_to_html(markdown_str):
 def add_entry(fg, raw):
     content, metadata = contents.get_post(raw['slug'])
     fe = fg.add_entry()
-    uri = f'https://daniel.feldroy.com/posts/{raw["slug"]}'
-    fe.id(raw['slug'])
-    fe.link(href=raw['slug'])
+    linker = f'posts/{raw["slug"]}'
+    fe.id(linker)
+    fe.link(href=linker)
     fe.title(metadata['title'])
     fe.summary(metadata['description'] or '')    
     fe.content(content=github_markdown_to_html(content), type='CDATA')  
