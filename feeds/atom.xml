@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-09-03T09:12:53.878816+00:00</updated>
+  <updated>2024-09-03T09:13:50.254816+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-09-03T09:12:54.455266+00:00</updated>
+    <updated>2024-09-03T09:13:50.753045+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -60,7 +60,7 @@
   <entry>
     <id>til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-09-03T09:12:54.438068+00:00</updated>
+    <updated>2024-09-03T09:13:50.736267+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -109,7 +109,7 @@
   <entry>
     <id>2024-09-tmux-cheatsheet</id>
     <title>tmux cheatsheet</title>
-    <updated>2024-09-03T09:12:54.389851+00:00</updated>
+    <updated>2024-09-03T09:13:50.711670+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -132,8 +132,8 @@
 <p><code>Ctrl+B</code> plus arrow keys</p>
 <h2 id="closing-the-current-pane">Closing the current pane</h2>
 <p><code>Ctrl+b+x</code></p>
-<h2 id="_1"></h2>
-<p>More to come as I </p>
+<h2 id="not-yet-finished">Not yet finished</h2>
+<p>More to come!</p>
 <p><img alt="" src="/public/images/tmux-logo-medium.png" /></p>]]></content>
     <link href="2024-09-tmux-cheatsheet"/>
     <summary>My list of tmux commands with minimal flavor text.</summary>
