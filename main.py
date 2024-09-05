@@ -20,15 +20,25 @@ hdrs = (
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
 )
 
-def not_found(response):
-    response.status = 404
-    return Titled("Not Found", H1("404 Not Found"), P("The page you are looking for does not exist."))
+def Page404():
+    return Layout(Title("404 Not Found"),
+        Socials(site_name="https://daniel.feldroy.com",
+                    title="Daniel Roy Greenfeld",
+                    description="Daniel Roy Greenfeld's personal blog",
+                    url="https://daniel.feldroy.com",
+                    image="https://daniel.feldroy.com/public/images/profile.jpg",
+                    ),                  
+        H1("404 Not Found"), P("The page you are looking for does not exist."))
+
+def not_found(req, res):
+    res.status = 404
+    return Page404()
 
 exception_handlers = {
     404: not_found
 }
 
-app, rt = fast_app(hdrs=hdrs, pico=False, debug=True)
+app, rt = fast_app(hdrs=hdrs, pico=False, debug=True, exception_handlers=exception_handlers)
 
 @rt("/")
 def get():
@@ -188,17 +198,24 @@ def get(slug: str):
     url = redirects.get(slug, None) or redirects.get(slug + ".html", None)
     if url is not None:
         return RedirectResponse(url=url)
-    return HTTPException(404)
+    return Page404()
 
 @rt("/{slug}")
 def get(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
         return RedirectResponse(url=redirects_url)
-    return Layout(*markdown_page(slug))
+    try:
+        return Layout(*markdown_page(slug))
+    except TypeError:
+        return Page404()
+
     
 @rt("/{slug_1}/{slug_2}")
 def get(slug_1: str, slug_2: str):
-    return Layout(*markdown_page(slug_1 + "/" + slug_2))
+    try:
+        return Layout(*markdown_page(slug_1 + "/" + slug_2))
+    except TypeError:
+        return Page404()
 
 serve()
