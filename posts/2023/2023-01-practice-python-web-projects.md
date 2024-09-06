@@ -6,6 +6,7 @@ tags:
   - django
   - fastapi
   - flask
+  - FastHTML
 time_to_read: 2
 title: Practice Python Web Projects
 description: Python web projects taken from my personal history to practice on to improve your skills.
@@ -15,13 +16,13 @@ og_url: https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects
 
 I firmly believe that substantial improvement in any skill can only be achieved through [practice](https://daniel.feldroy.com/posts/code-code-code). With that in mind, I have compiled a list of projects I have built over the years to practice my skills with web frameworks. I hope that these projects, which have proven effective for me in learning frameworks, will also assist you in your growth.
 
-These projects are framework-agnostic and can be implemented using [Django](https://djangoproject.com), [Flask](https://flask.palletsprojects.com/), [FastAPI](https://fastapi.tiangolo.com/), or any other framework of your choice. While some projects may be better suited for certain frameworks, all of them provide valuable practice. All of these projects can be completed using either the default frontend templating system or a frontend framework like React or Vue.
+These projects are framework-agnostic and can be implemented using [FastHTML](https://fastht.ml), [Django](https://djangoproject.com), [Flask](https://flask.palletsprojects.com/), [FastAPI](https://fastapi.tiangolo.com/), or any other framework of your choice. While some projects may be better suited for certain frameworks, all of them provide valuable practice. All of these projects can be completed using either the default frontend templating system or a frontend framework like React or Vue.
 
 # The Projects
 
 ## 1. API to Data
 
-Creating a web application to present data can be a lot of work. An alternative option is to build an API that returns the data in a well-structured format. This project is a great opportunity to practice using Django REST Framework, Flask, or FastAPI. In fact, it is my understanding that FastAPI was specifically designed for this purpose. Nevertheless, this project can be implemented using any framework and is a valuable practice.
+Creating a web application to present data can be a lot of work. An alternative option is to build an API that returns the data in a well-structured format. This project is a great opportunity to practice using FastHTML, Django REST Framework, Flask, or FastAPI. In fact, it is my understanding that FastAPI was specifically designed for this purpose. Nevertheless, this project can be implemented using any framework and is a valuable practice.
 
 Bonus points: Don't create the data that you are working with. Instead, request for data from someone else. This will not only give you practice in creating an API but also in working with data provided by others, which is an important skill to have.
 
@@ -88,12 +89,12 @@ Bonus points: Provide ability for users to upload images for recipes. These imag
 Requirements:
 
 - Must be installable via pip
-- Must be usable with Django, Flask, or FastAPI
+- Must be usable with FastHTML, Django, Flask, or FastAPI
 - Includes extensive documentation
 - Docs hosted on Read the Docs or other documentation hosting service
 
-This is a great project to practice with Django, Flask, or FastAPI.
+This is a great project to practice with FastHTML, Django, Flask, or FastAPI.
 
-Bonus points: Package can be used with all three web frameworks: Django, Flask, and FastAPI.
+Bonus points: Package can be used with all four web frameworks: FastHTML, Django, Flask, and FastAPI.
 
 ![https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects](/public/images/Practice-Python-Web-Projects.png)
