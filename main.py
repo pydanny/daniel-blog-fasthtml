@@ -188,11 +188,13 @@ def get(q: str = ""):
         )
     )
 
+
+def SearchLink(q, text):
+    return A(href=f'/search?q={q}')(text)
+
 @rt("/specials/word-analysis")
 def get():
-    import json
-
-    word_list = [k for k, v in word_counter(limit=10).items()]
+    word_list = [to_xml(SearchLink(k, k)) for k, v in word_counter(limit=10).items()]
     count_list = [v for k, v in word_counter(limit=10).items()]
 
     data = json.dumps([
@@ -203,7 +205,7 @@ def get():
         }
     ])
 
-    rows = [Tr(scope="row")(Td(style="text-align: right")(k[:10]), Td(v)) for k,v in word_counter().items() if v > 49]
+    rows = [Tr(scope="row")(Td(style="text-align: right")(SearchLink(k, k)), Td(v)) for k,v in word_counter().items() if v > 49]
     return Layout(Title("Word use analysis"),
         Socials(site_name="https://daniel.feldroy.com",
                         title="Word analysis",
