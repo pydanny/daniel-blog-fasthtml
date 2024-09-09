@@ -50,6 +50,14 @@ Then use arrow keys or pageup and pagedown. Press `q` to quit.
 
 `Ctrl+b+x`
 
+## Killing the current session
+
+Sometimes you want to end the current session.
+
+`Ctrl+b`
+
+`:kill-session`
+
 ## Not yet finished
 
 More to come!
