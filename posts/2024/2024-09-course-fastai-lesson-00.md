@@ -68,10 +68,10 @@ My methodology for learning and teaching is similar, but Jeremy's approach is to
 1. After you see a demo, you try it out yourself. 
 2. You experiment, then you start from scratch and try to do that yourself as well. 
 3. You go over the lesson again, this time with only titles and code examples. 
-4. Finally, you use the questionnaire to confirm if you missed a topic
+4. Finally, you use the questionnaire to confirm if you missed a topic.
 
 Classes I've constructed are different. They focus on repetition, but not on different versions of the lesson. Also they don't cover experimentation and play starting with lesson 1. That typically happens far into the class. 
 
-Why I find this interesting is Jeremy's approach closely matches how any decent martial art class with contact sparring works (Muay Thai, BJJ, fencing, kendo, HEMA, Tae Kwon Do, etc). Typically in a class you'll learn or polish 1-2 moves, then be given specific drills to use to practice it. Then finally you might have free sparring where if you can land the move(s) of the class it feels awesome.
+What I find interesting is that Jeremy's approach closely matches how any decent martial art class with contact sparring works (Muay Thai, BJJ, fencing, kendo, HEMA, Tae Kwon Do, etc.). Typically in a class you'll learn or polish 1-2 moves, then be given specific drills to use to practice them. Then finally you might have free sparring, where if you can land the move(s) of the class it feels awesome.
 
 I'm excited to dig into lesson 1!
