@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-09-18T15:20:56.663386+00:00</updated>
+  <updated>2024-09-18T15:24:27.914568+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-09-18T15:20:57.393221+00:00</updated>
+    <updated>2024-09-18T15:24:28.643944+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -64,7 +64,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-09-tmux-cheatsheet</id>
     <title>tmux cheatsheet</title>
-    <updated>2024-09-18T15:20:57.384362+00:00</updated>
+    <updated>2024-09-18T15:24:28.636914+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -107,7 +107,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-00</id>
     <title>Practical Deep Learning for Coders: Lesson 0</title>
-    <updated>2024-09-18T15:20:57.349892+00:00</updated>
+    <updated>2024-09-18T15:24:28.596125+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -172,6 +172,6 @@
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2024-09-18T15:30:00.926680+00:00</published>
+    <published>2024-09-18T16:30:00.926680+00:00</published>
   </entry>
 </feed>
