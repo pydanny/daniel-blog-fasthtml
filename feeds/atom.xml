@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-09-18T15:24:27.914568+00:00</updated>
+  <updated>2024-09-18T15:44:17.241221+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-09-18T15:24:28.643944+00:00</updated>
+    <updated>2024-09-18T15:44:17.985809+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -64,7 +64,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-09-tmux-cheatsheet</id>
     <title>tmux cheatsheet</title>
-    <updated>2024-09-18T15:24:28.636914+00:00</updated>
+    <updated>2024-09-18T15:44:17.977804+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -107,7 +107,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-00</id>
     <title>Practical Deep Learning for Coders: Lesson 0</title>
-    <updated>2024-09-18T15:24:28.596125+00:00</updated>
+    <updated>2024-09-18T15:44:17.926283+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -143,7 +143,7 @@
 <li>Read forums every day  </li>
 <li>Make improvements to your competition set each day, this iterative process will serve as practice. <a href="https://daniel.feldroy.com/posts/code-code-code">Code, code, code</a>!</li>
 <li>Rinse and repeat: Early losses will serve as practice for when you are able to try to win  </li>
-<li><strong>Document process of learning in blogs, videos, and social media.</strong> Just like any skill, including other types of coding, sets up the public footprint that you are skilled in your craft. So when people look you up, they identify you with your skills.</li>
+<li><strong>Document process of learning in blogs, videos, and social media.</strong> Just like any skill, including other types of coding, documenting your learning socially sets up the public footprint that you are skilled in your craft. So when people look you up, they identify you with your skills.</li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
