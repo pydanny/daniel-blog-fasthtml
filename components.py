@@ -40,7 +40,7 @@ def format_datetime(dt: datetime):
     return f"{formatted_date} at {formatted_time}"
 
 
-def Layout(title, socials,*tags):
+def Layout(title, socials, *tags):
     return title, socials, (
         Header(
             A(Img(
@@ -67,10 +67,6 @@ def Layout(title, socials,*tags):
         )
     )
 
-
-def blog_footer():
-    return 
-
 def blog_post(title: str, slug: str, timestamp: str, description: str):
     return Span(
                 H2(A(title, href=f"/posts/{slug}")),
@@ -79,10 +75,10 @@ def blog_post(title: str, slug: str, timestamp: str, description: str):
 
 
 def tag(slug: str):
-    return A(slug, href=f"/tags/{slug}")
+    return Span(A(slug, href=f"/tags/{slug}"), " ")
 
 def tag_with_count(slug: str, count: int):
-    return A(Span(slug), Small(f"({count})"), href=f"/tags/{slug}")
+    return Span(A(Span(slug), Small(f" ({count})"), href=f"/tags/{slug}"), " ")
 
 def markdown_page(slug: str):
     try:
