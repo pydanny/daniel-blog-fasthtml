@@ -4,7 +4,6 @@ published: true
 tags:
   - python
   - fast.ai
-  - classes
   - courses
 time_to_read: 5
 title: "Practical Deep Learning for Coders: Lesson 0"
