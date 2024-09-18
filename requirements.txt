@@ -1,4 +1,4 @@
-python-fasthtml
+python-fasthtml==0.5.3
 pyyaml
 pytz
 feedgen

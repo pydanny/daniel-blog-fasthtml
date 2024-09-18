@@ -48,19 +48,19 @@ def Layout(title, socials,*tags):
                 , href='/'),
             A(H2('Daniel Roy Greenfeld'), href="/"),
             P(
-                A('About', href='/about'),'|', 
-                A('Articles', href='/posts'), '|',
-                A('Books', href='/books'), '|',
-                A('Jobs', href='/jobs'), '|',
-                A('Tags', href='/tags'), '|',
+                A('About', href='/about'),' | ', 
+                A('Articles', href='/posts'), ' | ',
+                A('Books', href='/books'), ' | ',
+                A('Jobs', href='/jobs'), ' | ',
+                A('Tags', href='/tags'), ' | ',
                 A('Search', href='/search')
             ), style="text-align: center;"
         ),
     Main(*tags),
     Footer(Hr(), P(
-                A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), '|',
-                A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), '|',
-                A('Twitter', href='https://twitter.com/pydanny'), '|',
+                A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), ' | ',
+                A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), ' | ',
+                A('Twitter', href='https://twitter.com/pydanny'), ' | ',
                 A('Atom Feed', href='/feeds/atom.xml')
             ),
             P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
