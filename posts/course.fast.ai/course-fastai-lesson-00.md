@@ -15,7 +15,7 @@ I'm going through the [Practical Deep Learning for Coders](http://course.fast.ai
 
 ## About Lesson 0
 
-This lesson is where [Jeremy Howard(https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)) explains how to get the most out of his classes. He references [Meta-learning](https://rosmulski.gumroad.com/l/learn_machine_learning/blog) by [Radek Osmulski](https://radekosmulski.com/) frequently.
+This lesson is where [Jeremy Howard](https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)) explains how to get the most out of his classes. He references [Meta-learning](https://rosmulski.gumroad.com/l/learn_machine_learning/blog) by [Radek Osmulski](https://radekosmulski.com/) frequently.
 
 
 ## How to take lessons
