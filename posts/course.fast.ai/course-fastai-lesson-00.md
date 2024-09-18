@@ -51,7 +51,7 @@ These are from Jeremy Howard and Radek Osmulski.
   * Read forums every day  
   * Make improvements to your competition set each day, this iterative process will serve as practice. [Code, code, code](https://daniel.feldroy.com/posts/code-code-code)!
   * Rinse and repeat: Early losses will serve as practice for when you are able to try to win  
-* **Document process of learning in blogs, videos, and social media.** Just like any skill, including other types of coding, sets up the public footprint that you are skilled in your craft. So when people look you up, they identify you with your skills.
+* **Document process of learning in blogs, videos, and social media.** Just like any skill, including other types of coding, documenting your learning socially sets up the public footprint that you are skilled in your craft. So when people look you up, they identify you with your skills.
 
 ## References
 
