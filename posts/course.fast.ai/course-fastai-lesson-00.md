@@ -56,7 +56,7 @@ These are from Jeremy Howard and Radek Osmulski.
 
 ## References
 
-* [Video lecture](https://www.youtube.com/watch?v=gGxe2mN3kAg&t=1838s&ab_channel=JeremyHoward) - Where these notes are taken from
+* [Video lecture](https://www.youtube.com/watch?v=gGxe2mN3kAg&ab_channel=JeremyHoward) - Where these notes are taken from
 * [course.fast.ai](http://course.fast.ai) - Lessons 1 onward
 * [Book: "Meta-learning" by Radek Osmulski](https://rosmulski.gumroad.com/l/learn_machine_learning/blog)  
 * [Book: "Deep Learning for Coders with fastai and PyTorch" by Jeremy Howard and Sylvain Gugger](https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527?tag=mlinar-20)
