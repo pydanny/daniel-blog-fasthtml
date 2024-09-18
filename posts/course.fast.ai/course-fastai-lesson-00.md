@@ -8,10 +8,10 @@ tags:
   - courses
 time_to_read: 5
 title: "Practical Deep Learning for Coders: Lesson 0"
-description: I'm going through the fast.ai course by Jeremy Howard. I’ll be sharing some of my notes here.
+description: I'm going through the fast.ai course by Jeremy Howard. I’ll be sharing my notes on my site.
 ---
 
-I'm going through the [Practical Deep Learning for Coders](http://course.fast.ai) course by Jeremy Howard. I’ll be sharing notes here on my blog, all tagged with [fast.ai](https://daniel.feldroy.com/tags/fast.ai).
+I'm going through the [Practical Deep Learning for Coders](http://course.fast.ai) course by Jeremy Howard. I’ll be sharing notes here on my site, all tagged with [fast.ai](https://daniel.feldroy.com/tags/fast.ai).
 
 ## About Lesson 0
 
