@@ -5,7 +5,6 @@ published: true
 slug: 2015-07-my-birthday-gift-to-you
 tags:
 - Into the Brambles
-- free
 - gift
 - birthday
 - The Brambles

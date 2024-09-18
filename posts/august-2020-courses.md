@@ -8,7 +8,6 @@ tags:
   - django
   - course  
   - django-crash-course
-  - two-scoops
 time_to_read: 1
 title: August 2020 Courses
 type: post

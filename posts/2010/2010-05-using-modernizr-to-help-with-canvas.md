@@ -4,7 +4,6 @@ description: ''
 published: true
 slug: 2010-05-using-modernizr-to-help-with-canvas
 tags:
-- canvas
 - javascript
 - HTML5
 - legacy-blogger
