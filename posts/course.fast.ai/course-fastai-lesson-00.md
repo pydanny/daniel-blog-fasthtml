@@ -1,6 +1,6 @@
 ---
-date: "2024-09-18T12:00:00.00Z"
-published: false
+date: '2024-09-18T15:30:00.926680'
+published: true
 tags:
   - python
   - fast.ai
@@ -11,16 +11,16 @@ title: "Practical Deep Learning for Coders: Lesson 0"
 description: I'm going through the fast.ai course by Jeremy Howard. I’ll be sharing some of my notes here.
 ---
 
-I'm going through the [Practical Deep Learning for Coders](http://course.fast.ai) course by Jeremy Howard. I’ll be sharing notes here on my blog, all tagged with fastai.
+I'm going through the [Practical Deep Learning for Coders](http://course.fast.ai) course by Jeremy Howard. I’ll be sharing notes here on my blog, all tagged with [fast.ai](https://daniel.feldroy.com/tags/fast.ai).
 
 ## About Lesson 0
 
-This lesson is where Jeremy Howard explains how to get the most out of his classes. He references [Meta-learning](https://rosmulski.gumroad.com/l/learn_machine_learning/blog) by Radek Osmulski frequently.
+This lesson is where [Jeremy Howard(https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)) explains how to get the most out of his classes. He references [Meta-learning](https://rosmulski.gumroad.com/l/learn_machine_learning/blog) by [Radek Osmulski](https://radekosmulski.com/) frequently.
 
 
-## How to take classes
+## How to take lessons
 
-Do this with each lesson of the [Practical Deep Learning for Coders](http://course.fast.ai) course:
+Follow these steps with each lesson of the [Practical Deep Learning for Coders](http://course.fast.ai) course:
 
 1. **Watch lecture**
 2. **Run notebook & experiment with the results**
@@ -38,9 +38,9 @@ After that, complete the questionnaire. Use the questions to confirm you know ev
 
 When a lesson is 100% complete and you actually understand everyting, go to [forums.fast.ai](https://forums.fast.ai/) and announce your efforts in “share your work” section.
 
-## Notes
+## Tips and Tricks
 
-Tips and tricks from Jeremy Howard and Radek Osmulski.
+These are from Jeremy Howard and Radek Osmulski.
 
 * **The math in Deep Learning is matrix multiplication**. Where you multiply things together, then add them up.   
 * **To get better at ML, like anything else: Practice!** Theory requires practice, practice provides context for understanding theory. So practice early and practice often. A few years ago I wrote about this concept [here](https://daniel.feldroy.com/posts/code-code-code)
@@ -50,7 +50,7 @@ Tips and tricks from Jeremy Howard and Radek Osmulski.
 * **Best path for winning at [Kaggle](https://www.kaggle.com/):**  
   * Start a competition early  
   * Read forums every day  
-  * Make improvements to your competition set each day, this will serve as practice. [Code, code, code](https://daniel.feldroy.com/posts/code-code-code)!
+  * Make improvements to your competition set each day, this iterative process will serve as practice. [Code, code, code](https://daniel.feldroy.com/posts/code-code-code)!
   * Rinse and repeat: Early losses will serve as practice for when you are able to try to win  
 * **Document process of learning in blogs, videos, and social media.** Just like any skill, including other types of coding, sets up the public footprint that you are skilled in your craft. So when people look you up, they identify you with your skills.
 
@@ -66,12 +66,12 @@ Tips and tricks from Jeremy Howard and Radek Osmulski.
 My methodology for learning and teaching is similar, but Jeremy's approach is to focus on repetition of coding and questioning.
 
 1. After you see a demo, you try it out yourself. 
-2. You experiment, then you start from scratch and try to do that yourself as well. 
+2. You experiment, then you start from scratch and try to implement that yourself as well. 
 3. You go over the lesson again, this time with only titles and code examples. 
 4. Finally, you use the questionnaire to confirm if you missed a topic.
 
 Classes I've constructed are different. They focus on repetition, but not on different versions of the lesson. Also they don't cover experimentation and play starting with lesson 1. That typically happens far into the class. 
 
-What I find interesting is that Jeremy's approach closely matches how any decent martial art class with contact sparring works (Muay Thai, BJJ, fencing, kendo, HEMA, Tae Kwon Do, etc.). Typically in a class you'll learn or polish 1-2 moves, then be given specific drills to use to practice them. Then finally you might have free sparring, where if you can land the move(s) of the class it feels awesome.
+What I find interesting is that Jeremy's approach closely matches how any decent martial art class with sparring works (Muay Thai, BJJ, fencing, kendo, HEMA, Tae Kwon Do, etc.). Typically in a class you'll learn or polish 1-2 moves, then be given specific drills to use to practice them. Then finally you might have free sparring, where if you can land the move(s) of the class it feels awesome.
 
-I'm excited to dig into lesson 1!
+I'm excited to dig into [lesson 1](https://course.fast.ai/Lessons/lesson1.html)!
