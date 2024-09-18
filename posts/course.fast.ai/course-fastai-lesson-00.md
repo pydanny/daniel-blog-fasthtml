@@ -62,7 +62,7 @@ These are from Jeremy Howard and Radek Osmulski.
 
 ## Summary / Takeaway
 
-My methodology for learning and teaching is similar, but Jeremy's approach is to focus on repetition of coding and questioning.
+My methodology for learning and teaching is similar, but Jeremy's approach focuses much more on repetition and questioning:
 
 1. After you see a demo, you try it out yourself. 
 2. You experiment, then you start from scratch and try to implement that yourself as well. 
