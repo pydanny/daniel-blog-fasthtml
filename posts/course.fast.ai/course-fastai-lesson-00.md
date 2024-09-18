@@ -36,7 +36,7 @@ Once you think you understand a lesson, go through the `clean/` version of the n
 
 After that, complete the questionnaire. Use the questions to confirm you know every concept. If you can't answer a question, go back and learn it. 
 
-When a lesson is 100% complete and you actually understand everyting, go to [forums.fast.ai](https://forums.fast.ai/) and announce your efforts in “share your work” section.
+When a lesson is 100% complete and you actually understand everyting, go to [forums.fast.ai](https://forums.fast.ai/) and announce your efforts in the "share your work" section.
 
 ## Tips and Tricks
 
