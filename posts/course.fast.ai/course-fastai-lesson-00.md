@@ -69,10 +69,10 @@ These are from Jeremy Howard and Radek Osmulski.
 
 My methodology for learning and teaching is similar, but Jeremy's approach focuses much more on repetition and questioning:
 
-1. After you see a demo, you try it out yourself. 
+1. After you watch the video and the demo, you try it out yourself. 
 2. You experiment, then you start from scratch and try to implement that yourself as well. 
-3. You go over the lesson again, this time with only titles and code examples. 
-4. Finally, you use the questionnaire to confirm if you missed a topic.
+3. Repeat 2 with less help
+4. Validate your work several times, including sharing it with others because amongst other things people will point out your mistakes
 
 Classes I've constructed are different. They focus on repetition, but not on different versions of the lesson. Also they don't cover experimentation and play starting with lesson 1. That typically happens far into the class. 
 
