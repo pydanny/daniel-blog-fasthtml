@@ -28,14 +28,19 @@ Follow these steps with each lesson of the [Practical Deep Learning for Coders](
    1. Reproduce from scratch. With a fresh new notebook, can I recreate some of the models?  
 4. **Repeat with a different dataset**
    1. Get own dataset and try it from scratch
+5. **Once you understand a lesson, confirm it**
+   1. Go through the `clean/` version of the notebooks and figure out each cell again, this time without prose or rendered outputs
+6. **Once you confirm your understanding, question it**
+   1. Complete the lesson questionnaire
+   2. Use the questions to confirm you know every concept
+   3. If you can't answer a question, go back and learn it 
+7. **Share your accomplishments**
+   1. When a lesson is 100% complete and you actually understand everyting, go to [forums.fast.ai](https://forums.fast.ai/) and announce your efforts in the "share your work" section.
 
 Some people go through each lesson 2-3 times. It might be hard to do it the first time. That’s okay.
 
-Once you think you understand a lesson, go through the `clean/` version of the notebooks and figure out each cell again, this time without prose or rendered outputs.
 
-After that, complete the questionnaire. Use the questions to confirm you know every concept. If you can't answer a question, go back and learn it. 
 
-When a lesson is 100% complete and you actually understand everyting, go to [forums.fast.ai](https://forums.fast.ai/) and announce your efforts in the "share your work" section.
 
 ## Tips and Tricks
 
