@@ -15,7 +15,7 @@ redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
 
 hdrs = (
     MarkdownJS(),
-    HighlightJS(langs=['python', 'javascript', 'html', 'css']),
+    HighlightJS(langs=['python', 'javascript', 'html', 'css',]),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),    
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),        

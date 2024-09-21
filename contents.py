@@ -13,7 +13,7 @@ def list_posts(published: bool = True, posts_dirname="posts", content=False) -> 
         data: dict = yaml.safe_load(raw)
         data["slug"] = post.stem
         if content:
-            data["content"] = post.read_text().split("---")[2]
+            data["content"] = '\n'.join(post.read_text().split("---")[2:])
         posts.append(data)
 
     posts = [x for x in filter(lambda x: x["published"] is True, posts)]
