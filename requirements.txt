@@ -4,3 +4,7 @@ pytz
 feedgen
 markdown
 rich
+
+# Specials
+nb2fasthtml
+fh-frankenui # To be made optional

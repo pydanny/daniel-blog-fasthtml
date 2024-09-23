@@ -14,6 +14,7 @@ from datetime import datetime
 redirects = json.loads(pathlib.Path(f"redirects.json").read_text())   
 
 hdrs = (
+    Script(type="module", src="https://cdn.jsdelivr.net/npm/zero-md@3?register"),
     MarkdownJS(),
     HighlightJS(langs=['python', 'javascript', 'html', 'css',]),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
@@ -236,6 +237,21 @@ def get(slug: str):
     if url is not None:
         return RedirectResponse(url=url)
     return Page404()
+
+@rt("/{slug}.ipynb")
+def get(slug: str):
+    from nb2fasthtml.core import render_nb
+    try:
+        return Layout(slug,
+        Socials(site_name="https://daniel.feldroy.com",
+                        title="Word analysis",
+                        description="Analysis of word use in the site",
+                        url="https://daniel.feldroy.com/special/word-counter",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
+                        ),                        
+        render_nb(f'{slug}.ipynb'))
+    except TypeError:
+        return Page404()
 
 @rt("/{slug}")
 def get(slug: str):
