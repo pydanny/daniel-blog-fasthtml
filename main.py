@@ -22,17 +22,19 @@ hdrs = (
 )
 
 def Page404():
-    return Layout(Title("404 Not Found"),
+    return FtResponse(Layout(Title("404 Not Found"),
         Socials(site_name="https://daniel.feldroy.com",
                     title="Daniel Roy Greenfeld",
                     description="Daniel Roy Greenfeld's personal blog",
                     url="https://daniel.feldroy.com",
                     image="https://daniel.feldroy.com/public/images/profile.jpg",
                     ),                  
-        H1("404 Not Found"), P("The page you are looking for does not exist."))
+        H1("404 Not Found"), P("The page you are looking for does not exist.")),
 
-def not_found(req, res):
-    res.status = 404
+        status_code=404
+        )
+
+def not_found():
     return Page404()
 
 exception_handlers = {
