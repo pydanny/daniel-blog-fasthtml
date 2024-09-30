@@ -1,6 +1,6 @@
 ---
 date: '2024-10-01T10:38:23.690964'
-published: false
+published: true
 tags:
 - FastHTML
 - python
@@ -19,7 +19,7 @@ FastHTML is a compact ASGI framework leveraging Starlette that runs fast. It esc
 
 ### Content
 
-All my articles were brought over, as well as the Atom feeds. And the design. 
+All my articles were brought over, as well as the Atom feeds. And the design. From a user's perspective, there is no difference between the old and new site.
 
 ## Changes 
 
@@ -28,6 +28,87 @@ All my articles were brought over, as well as the Atom feeds. And the design.
 React and Next.js were okay, but the pure Python style (no templates!) of FastHTML is more enjoyable to me. Also, the stampede of the Node.js community to TypeScript turned me off to React. TypeScript has all the things I don't like about Python type hints and almost none of the things I enjoy.
 
 _My love/hate for Python type hints is something I may write about in the future._
+
+### FT Components instead of React
+
+FastHTML uses [FT Components](https://docs.fastht.ml/explains/explaining_xt_components.html) to generate HTML. Here's the current home page, wrapped in a custom `Layout` component.
+
+```python 
+return Layout(
+    Title("Daniel Roy Greenfeld"),        
+    Socials(site_name="https://daniel.feldroy.com",
+                title="Daniel Roy Greenfeld",
+                description="Daniel Roy Greenfeld's personal blog",
+                url="https://daniel.feldroy.com",
+                image="https://daniel.feldroy.com/public/images/profile.jpg",
+                ),
+    Section(
+            H1('Recent Writings'),
+            *posts[:3]
+        ),
+    Hr(),
+    Section(
+            H1('Popular Writings'),
+            *popular
+    ),
+)
+```
+
+In comparison, this is what the old React-powered has for an HTML generator. You can't see it, but all views are wrapped in a `Layout` component.
+
+```jsx
+export default function Home({ mostRecentPosts, topPosts }) {
+  return <>
+    <section>
+      <h1>Recent Writings</h1>
+      {mostRecentPosts.map(({ id, date, title, description }) => (
+        <span key={id}>
+          <h2>
+            <Link href={`/posts/${id}`}>
+              {title}
+            </Link>            
+          </h2>
+          <p>{description}
+          <br />
+            <small>
+              <MyDate dateString={date} />
+            </small>
+          </p>
+        </span>
+      ))}
+    </section>
+    <hr />
+    <section>
+      <h1>Popular Articles</h1>
+      {topPosts.map(({ id, date, title, description }) => (
+        <span key={id}>
+          <h2>
+            <Link href={`/posts/${id}`}>
+              {title}
+            </Link>            
+          </h2>
+          <p>{description}
+          <br />
+            <small>
+              <MyDate dateString={date} />
+            </small>
+          </p>
+        </span>
+      ))}
+    </section>
+    <hr />
+    <section>
+      <h2>
+        <Link href="/posts">
+          Full Archive →
+        </Link>
+      </h2>
+    </section>
+  </>;
+}
+```
+
+And 
 
 ### Pretty HTML Source
 

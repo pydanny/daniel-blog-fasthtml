@@ -5,8 +5,8 @@ import pytz
 import pathlib
 import yaml
 
-__all__ = ['blog_post',"tag", "Layout",
-           "tag_with_count", "markdown_page", "default_social_image"]
+__all__ = ['BlogPost',"Tag", "Layout",
+           "TagWithCount", "MarkdownPage", "default_social_image"]
 
 default_social_image = '/public/images/profile.jpg'
 
@@ -67,20 +67,20 @@ def Layout(title, socials, *tags):
         )
     )
 
-def blog_post(title: str, slug: str, timestamp: str, description: str):
+def BlogPost(title: str, slug: str, timestamp: str, description: str):
     return Span(
                 H2(A(title, href=f"/posts/{slug}")),
                 P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp))))),
         )
 
 
-def tag(slug: str):
+def Tag(slug: str):
     return Span(A(slug, href=f"/tags/{slug}"), " ")
 
-def tag_with_count(slug: str, count: int):
+def TagWithCount(slug: str, count: int):
     return Span(A(Span(slug), Small(f" ({count})"), href=f"/tags/{slug}"), " ")
 
-def markdown_page(slug: str):
+def MarkdownPage(slug: str):
     try:
         text = pathlib.Path(f"pages/{slug}.md").read_text()
     except FileNotFoundError:

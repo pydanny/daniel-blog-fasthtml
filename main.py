@@ -44,8 +44,8 @@ app, rt = fast_app(hdrs=hdrs, pico=False, debug=True, exception_handlers=excepti
 
 @rt("/")
 def get():
-    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
-    popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
+    posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
+    popular = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
     return Layout(
         Title("Daniel Roy Greenfeld"),        
         Socials(site_name="https://daniel.feldroy.com",
@@ -69,7 +69,7 @@ def get():
 def get():
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
     description = f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'
-    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
+    posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     return Layout(
         Title("All posts by Daniel Roy Greenfeld"),
         Socials(site_name="https://daniel.feldroy.com",
@@ -91,7 +91,7 @@ def get(slug: str):
     content, metadata = get_post(slug)
     # content = pathlib.Path(f"posts/{slug}.md").read_text().split("---")[2]
     # metadata = yaml.safe_load(pathlib.Path(f"posts/{slug}.md").read_text().split("---")[1])    
-    tags = [tag(slug=x) for x in metadata.get("tags", [])]
+    tags = [Tag(slug=x) for x in metadata.get("tags", [])]
     specials = ()
     if 'TIL' in metadata['tags']:
         specials = (
@@ -118,7 +118,7 @@ def get(slug: str):
 
 @rt("/tags")
 def get():
-    tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items()]
+    tags = [TagWithCount(slug=x[0], count=x[1]) for x in list_tags().items()]
     return Layout(Title("Tags"),
         Socials(site_name="https://daniel.feldroy.com",
                         title="Tags",
@@ -137,7 +137,7 @@ def get():
 
 @rt("/tags/{slug}")
 def get(slug: str):
-    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
+    posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
     return Layout(Title(f"Tag: {slug}"),
         Socials(site_name="https://daniel.feldroy.com",
                         title=f"Tag: {slug}",
@@ -163,7 +163,7 @@ def _search(q: str=''):
     posts = []
     description = f"No results found for '{q}'"
     if q.strip():
-        posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
+        posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
                     any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
     if posts:
         messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
@@ -229,7 +229,7 @@ def get(slug: str):
     if redirects_url is not None:
         return RedirectResponse(url=redirects_url)
     try:
-        return Layout(*markdown_page(slug))
+        return Layout(*MarkdownPage(slug))
     except TypeError:
         return Page404()
 
@@ -237,7 +237,7 @@ def get(slug: str):
 @rt("/{slug_1}/{slug_2}")
 def get(slug_1: str, slug_2: str):
     try:
-        return Layout(*markdown_page(slug_1 + "/" + slug_2))
+        return Layout(*MarkdownPage(slug_1 + "/" + slug_2))
     except TypeError:
         return Page404()
 

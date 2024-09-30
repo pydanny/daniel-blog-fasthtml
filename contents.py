@@ -5,7 +5,7 @@ import yaml
 
 __all__ = ["list_posts", "get_post", "list_tags"]
 
-@functools.lru_cache
+@functools.cache
 def list_posts(published: bool = True, posts_dirname="posts", content=False) -> list[dict]:
     posts: list[dict] = []
     for post in pathlib.Path(".").glob(f"{posts_dirname}/**/*.md"):
@@ -27,7 +27,7 @@ def get_post(slug: str):
     return (post['content'], post)
 
 
-@functools.lru_cache
+@functools.cache
 def list_tags() -> dict[str, int]:
     unsorted_tags = {}
     for post in list_posts():
