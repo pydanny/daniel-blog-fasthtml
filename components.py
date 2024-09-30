@@ -28,7 +28,6 @@ def convert_dtstr_to_dt(date_str):
             dt = dt.replace(tzinfo=pytz.UTC)
         return dt
     except (ValueError, TypeError) as e:
-        print(f"Error parsing date string: {e}")
         return None
     
 def format_datetime(dt: datetime):

@@ -1,6 +1,6 @@
 ---
 date: '2024-10-01T10:38:23.690964'
-published: true
+published: false
 tags:
 - FastHTML
 - python
@@ -62,38 +62,14 @@ export default function Home({ mostRecentPosts, topPosts }) {
     <section>
       <h1>Recent Writings</h1>
       {mostRecentPosts.map(({ id, date, title, description }) => (
-        <span key={id}>
-          <h2>
-            <Link href={`/posts/${id}`}>
-              {title}
-            </Link>            
-          </h2>
-          <p>{description}
-          <br />
-            <small>
-              <MyDate dateString={date} />
-            </small>
-          </p>
-        </span>
+        <BlogPost(id, date, title, description)>
       ))}
     </section>
     <hr />
     <section>
       <h1>Popular Articles</h1>
       {topPosts.map(({ id, date, title, description }) => (
-        <span key={id}>
-          <h2>
-            <Link href={`/posts/${id}`}>
-              {title}
-            </Link>            
-          </h2>
-          <p>{description}
-          <br />
-            <small>
-              <MyDate dateString={date} />
-            </small>
-          </p>
-        </span>
+        <BlogPost(id, date, title, description)>
       ))}
     </section>
     <hr />
