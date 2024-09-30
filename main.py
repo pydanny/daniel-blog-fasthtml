@@ -4,7 +4,6 @@ import pathlib
 from fasthtml.common import *
 from components import *
 from contents import *
-from specials import *
 
 from datetime import datetime
 
@@ -210,42 +209,6 @@ def get(q: str|None = None):
 @rt('/search-results')
 def get(q: str):
     return _search(q)
-
-
-def SearchLink(q, text):
-    return A(href=f'/search?q={q}')(text)
-
-@rt("/specials/word-analysis")
-def get():
-    word_list = [to_xml(SearchLink(k, k)) for k, v in word_counter(limit=10).items()]
-    count_list = [v for k, v in word_counter(limit=10).items()]
-
-    data = json.dumps([
-        {
-            "x": word_list,
-            "y": count_list,
-            'type': 'bar'
-        }
-    ])
-
-    rows = [Tr(scope="row")(Td(style="text-align: right")(SearchLink(k, k)), Td(v)) for k,v in word_counter().items() if v > 49]
-    return Layout(Title("Word use analysis"),
-        Socials(site_name="https://daniel.feldroy.com",
-                        title="Word analysis",
-                        description="Analysis of word use in the site",
-                        url="https://daniel.feldroy.com/special/word-counter",
-                        image="https://daniel.feldroy.com/public/images/profile.jpg",
-                        ),   
-        Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
-        Style("td:nth-child(1) { width: 100px; }"), 
-        H1("Word use analysis"),
-            P("Stop words and false positives are removed from the analysis."),
-            Div(id="myDiv"),
-            Script(f"Plotly.newPlot('myDiv', {data});"),
-            Table(cls="striped", width="25%")(
-                Thead(Tr(Th(scope="col", style="text-align: right")("Word"), Th(scope="col")("Count"))),
-                Tbody(*rows))
-    )
 
 @rt("/feeds/{fname:path}.{ext}")
 def get(fname:str, ext:str): 
