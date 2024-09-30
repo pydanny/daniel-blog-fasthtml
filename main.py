@@ -151,44 +151,60 @@ def get(slug: str):
             *posts,
             A("← Back home", href="/"),
         )
-    )
+    )    
 
-@rt("/search")
-def get(q: str = ""):
+
+def _search(q: str=''):
     def _s(obj: dict, name: str, q: str):
         content =  obj.get(name, "")
         if isinstance(content, list):
             content = " ".join(content)
-        return q.lower().strip() in content.lower().strip()
-
+        return q.lower().strip() in content.lower().strip()    
+    messages = []
     posts = []
-    if q:
+    if q.strip():
         posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
                     any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
-        
     if posts:
         messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
-        description = f"Search results on '{q}'. Found {len(posts)} entries"
-    elif q:
+    elif q.strip():
         messages = [P(f"No results found for '{q}'")]
-        description = f"No results found for '{q}'"
-    else:
-        messages = []
-        description = ""
+    return Div(
+        *messages,
+        *posts
+    )
+
+@rt("/search")
+def get(q: str|None = None):
+    result = []
+    if q is not None:
+        result.append(_search(q))
     return Layout(Title("Search"), 
+        Script("""function updateQinURL() {
+            let url = new URL(window.location);
+            const value = document.getElementById('q').value
+            url.searchParams.set('q', value);
+            window.history.pushState({}, '', url);            
+        }"""),   
         Socials(site_name="https://daniel.feldroy.com",
                         title="Search the site",
-                        description=description,
+                        description='',
                         url="https://daniel.feldroy.com/search",
                         image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),                    
-        Form(Input(name="q", value=q, id="search", type="search", autofocus=True), Button("Search"), style="text-align: center;"),
+        Form(style="text-align: center;")(
+            Input(name="q", id='q', value=q, type="search", autofocus=True),
+            Button("Search", hx_get="/search-results", hx_target='#search-results', hx_include='#q', onclick="updateQinURL()")
+        ),
         Section(
-            *messages,
-            *posts,
+            Div(id='search-results')(*result),
             A("← Back home", href="/"),
         )
     )
+
+@rt('/search-results')
+def get(q: str):
+    return _search(q)
 
 
 def SearchLink(q, text):
