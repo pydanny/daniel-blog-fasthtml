@@ -41,16 +41,16 @@ While I could have implemented this search in Node.js, it wasn't added until rig
 
 ### Brings in HTMX
 
-The search feature uses HTMX to improve the experience. Yes, I am an HTMX hipster.
+The search feature uses [HTMX](https://htmx.org/) to improve the experience. Yes, I am an HTMX hipster.
 
 ### Uses CDN for non-custom CSS and JS
 
 The old site stored and served all the CSS and JS. I've gone back to using CDNs. Yes, I know there are ways to do injection attacks, but this is a READ-only site serving blog content.
 
-### 85% less code
+### 61% less code
 
-The new site is only 1,596 lines of code wheras the old site clocked in at 10,612 lines of code. Compared to Next.js, FastHTML is a very concise framework. 
+The new site is only 532 lines of Python wheras the old site clocked in at 1,364 lines of code (1309 Javascript, 55 Python). Compared to Next.js, FastHTML is a very concise framework. 
 
 ## Summary
 
-While any blog rewrite I've done has been fun, this iteration was especially enjoyable. It provided the means to practice on a new tool (FastHTML) and methodology (writing HTML in Python rather than templates). Keeping the same performance was rather nice, as is the 85% reduction in lines of code.
+While any blog rewrite I've done has been fun, this iteration was especially enjoyable. It provided the means to practice on a new tool (FastHTML) and methodology (writing HTML in Python rather than templates). Keeping the same performance is rather nice, as is the 61% reduction in lines of code.
