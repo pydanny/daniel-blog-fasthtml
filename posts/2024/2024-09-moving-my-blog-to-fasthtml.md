@@ -15,7 +15,7 @@ Recently I've been using and contributing to [FastHTML](https://fastht.ml/). I'v
 
 ### Performance
 
-FastHTML is a compact ASGI framework leveraging Starlette that runs fast. It eschews templates and JSON for lean Python functions, making render times fast. I also use an in-memory cache for the content. The result is my FastHTML blog on a minimal Railway instance runs about as fast as my old Next.js blog on Vercel.
+FastHTML is a compact ASGI framework leveraging Starlette that runs fast. It eschews templates and JSON for lean Python functions, reducing render time. I also use an in-memory cache for the content. The result is my FastHTML blog on a minimal Railway instance runs about as fast as my old Next.js blog on Vercel.
 
 ### Content
 
