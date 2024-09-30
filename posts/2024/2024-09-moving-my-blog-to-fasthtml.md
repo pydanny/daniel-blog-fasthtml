@@ -9,7 +9,18 @@ title: Moving my blog to FastHTML
 description: All the details of moving my blog from Next.js to FastHTML.
 ---
 
-What you did, why you did it, and what you found from the experience.
+## Notes
+
+This is my interpretation of feedback
+
+- Alexis: Show the magnitude of what is happening
+- Alexis: Be a bit more clear in the LOC 
+
+- Jeremy: Needs more of a background section to explain what's going on and just more words in general to tie things together -- what are you talking about, and how does it fit in? 
+
+
+
+## Blog post from here on
 
 Recently I've been using and contributing to [FastHTML](https://fastht.ml/). I've enjoyed the clarity and speed of the framework, finding its design intuitive yet concise. In fact, my first test project with FastHTML was this blog - I had about 80% of the functionality of the site done in 45 minutes. 
 
