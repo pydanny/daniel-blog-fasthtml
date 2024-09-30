@@ -162,14 +162,19 @@ def _search(q: str=''):
         return q.lower().strip() in content.lower().strip()    
     messages = []
     posts = []
+    description = f"No results found for '{q}'"
     if q.strip():
         posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
                     any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
     if posts:
         messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
+        description = f"Search results on '{q}'"
     elif q.strip():
         messages = [P(f"No results found for '{q}'")]
     return Div(
+        Meta(property='description', content=description),
+        Meta(property='og:description', content=description),        
+        Meta(name='twitter:description', content=description),
         *messages,
         *posts
     )
@@ -180,12 +185,6 @@ def get(q: str|None = None):
     if q is not None:
         result.append(_search(q))
     return Layout(Title("Search"), 
-        Script("""function updateQinURL() {
-            let url = new URL(window.location);
-            const value = document.getElementById('q').value
-            url.searchParams.set('q', value);
-            window.history.pushState({}, '', url);            
-        }"""),   
         Socials(site_name="https://daniel.feldroy.com",
                         title="Search the site",
                         description='',
@@ -199,7 +198,13 @@ def get(q: str|None = None):
         Section(
             Div(id='search-results')(*result),
             A("← Back home", href="/"),
-        )
+        ),
+        Script("""function updateQinURL() {
+            let url = new URL(window.location);
+            const value = document.getElementById('q').value
+            url.searchParams.set('q', value);
+            window.history.pushState({}, '', url);            
+        }"""),           
     )
 
 @rt('/search-results')
