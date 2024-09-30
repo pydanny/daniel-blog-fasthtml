@@ -31,7 +31,7 @@ _My love/hate for Python type hints is something I may write about in the future
 
 ### Pretty HTML Source
 
-FastHTML doesn't minimize or uglify HTML source code. This makes debugging layout problems a bit easier due to reduced friction in debugging.
+FastHTML doesn't minimize or uglify HTML source code. This makes debugging layout problems a bit easier due to reduced friction.
 
 ### Adds Search
 
