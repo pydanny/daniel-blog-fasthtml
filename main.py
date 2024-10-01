@@ -127,22 +127,19 @@ def Layout(title, socials, *tags):
         )
     )
 
-def BlogPost(title: str, slug: str, timestamp: str, description: str):
+def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
     """
     This renders a blog posts short display used for the index, article list, and tags.
-    TODO: Rename to BlogPostPreview
     """
     return Span(
                 H2(A(title, href=f"/posts/{slug}")),
                 P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp))))),
         )
 
-def Tag(slug: str):
-    """TODO: Rename to TagLink"""
+def TagLink(slug: str):
     return Span(A(slug, href=f"/tags/{slug}"), " ")
 
-def TagWithCount(slug: str, count: int):
-    """TODO: Rename to TagLinkWithCount"""
+def TagLinkWithCount(slug: str, count: int):
     return Span(A(Span(slug), Small(f" ({count})"), href=f"/tags/{slug}"), " ")
 
 def MarkdownPage(slug: str):
@@ -193,8 +190,8 @@ app, rt = fast_app(hdrs=hdrs, pico=False, debug=True, exception_handlers=excepti
 
 @rt
 def index():
-    posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
-    popular = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
+    posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
+    popular = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
     return Layout(
         Title("Daniel Roy Greenfeld"),        
         Socials(site_name="https://daniel.feldroy.com",
@@ -218,7 +215,7 @@ def index():
 def get():
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
     description = f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'
-    posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
+    posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     return Layout(
         Title("All posts by Daniel Roy Greenfeld"),
         Socials(site_name="https://daniel.feldroy.com",
@@ -240,7 +237,7 @@ def get(slug: str):
         content, metadata = get_post(slug)
     except ContentNotFound:
         return Page404()
-    tags = [Tag(slug=x) for x in metadata.get("tags", [])]
+    tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
     specials = ()
     if 'TIL' in metadata['tags']:
         specials = (
@@ -267,7 +264,7 @@ def get(slug: str):
 
 @rt("/tags")
 def get():
-    tags = [TagWithCount(slug=x[0], count=x[1]) for x in list_tags().items()]
+    tags = [TagLinkWithCount(slug=x[0], count=x[1]) for x in list_tags().items()]
     return Layout(Title("Tags"),
         Socials(site_name="https://daniel.feldroy.com",
                         title="Tags",
@@ -286,7 +283,7 @@ def get():
 
 @rt("/tags/{slug}")
 def get(slug: str):
-    posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
+    posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
     return Layout(Title(f"Tag: {slug}"),
         Socials(site_name="https://daniel.feldroy.com",
                         title=f"Tag: {slug}",
@@ -312,7 +309,7 @@ def _search(q: str=''):
     posts = []
     description = f"No results found for '{q}'"
     if q.strip():
-        posts = [BlogPost(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
+        posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
                     any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
     if posts:
         messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
