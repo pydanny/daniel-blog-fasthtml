@@ -25,6 +25,8 @@ hdrs = (
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
 )
 
+class ContentNotFound(Exception): pass
+
 # The following functions are three content loading. They are cached in
 # memory to boost the speed of the site. In production at a minumum the
 # app is restarted every time the project is deployed.
@@ -47,9 +49,10 @@ def list_posts(published: bool = True, posts_dirname="posts", content=False) -> 
     return [x for x in filter(lambda x: x["published"] is published, posts)]
 
 @functools.lru_cache
-def get_post(slug: str):
+def get_post(slug: str) -> tuple|None:
     posts = list_posts(content=True)
     post = next((x for x in posts if x["slug"] == slug), None)
+    if post is None: raise ContentNotFound
     return (post['content'], post)
 
 @functools.cache
@@ -147,7 +150,7 @@ def MarkdownPage(slug: str):
     try:
         text = pathlib.Path(f"pages/{slug}.md").read_text()
     except FileNotFoundError:
-        return Response("Page not found", status_code=404) 
+        return Page404()
     content = ''.join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
     return (Title(metadata.get('title', slug)),
@@ -233,7 +236,10 @@ def get():
 
 @rt("/posts/{slug}")
 def get(slug: str):
-    content, metadata = get_post(slug)
+    try:
+        content, metadata = get_post(slug)
+    except ContentNotFound:
+        return Page404()
     tags = [Tag(slug=x) for x in metadata.get("tags", [])]
     specials = ()
     if 'TIL' in metadata['tags']:
@@ -384,4 +390,4 @@ def get(slug_1: str, slug_2: str):
     except TypeError:
         return Page404()
 
-serve(reload_includes="*.md")
+serve(reload_includes="*.md", port=3000)
