@@ -15,7 +15,32 @@ default_social_image = '/public/images/profile.jpg'
 # This redirects dict is a relic of previous blog migrations.
 # It is used to redirect old URLs embedded in books, presentations,
 # and more to the new locations.
-redirects = json.loads(pathlib.Path(f"redirects.json").read_text())  
+redirects = json.loads(pathlib.Path(f"redirects.json").read_text()) 
+
+search_modal_css = Style("""
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #f9f9f9;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+#search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+""")
 
 hdrs = (
     MarkdownJS(),
@@ -23,6 +48,7 @@ hdrs = (
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),    
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
+    search_modal_css
 )
 
 class ContentNotFound(Exception): pass
@@ -124,8 +150,36 @@ def Layout(title, socials, *tags):
                 A('Atom Feed', href='/feeds/atom.xml')
             ),
             P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
-        )
-    )
+        ),
+    Div(
+        Div(
+            H2('Search'),
+            Input(name='q', type='text', id='search-input', hx_trigger="keyup", placeholder='Enter your search query...', hx_get='/search-results', hx_target='#search-results'),
+            Div(id='search-results'),
+            cls='modal-content'
+        ),
+        id='search-modal',
+        style='display:none;',
+        cls='modal'
+    ),
+    Div(hx_trigger="keyup[key=='/'] from:body"),
+    Script("""
+    document.body.addEventListener('keydown', e => {
+    if (e.key === '/' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        document.getElementById('search-modal').style.display = 'block';
+        document.getElementById('search-input').focus();
+    }
+    if (e.key === 'Escape') {
+        document.getElementById('search-modal').style.display = 'none';
+    }
+    });
+
+    document.getElementById('search-input').addEventListener('input', e => {
+    htmx.trigger('#search-results', 'htmx:trigger', {value: e.target.value});
+    });
+    """)
+)
 
 def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
     """
@@ -163,7 +217,7 @@ def MarkdownPage(slug: str):
         )
     )
 
-
+### Going forwards everything is mostly a view
 
 def Page404():
     """404 view"""
