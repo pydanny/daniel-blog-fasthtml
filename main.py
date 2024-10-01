@@ -390,4 +390,4 @@ def get(slug_1: str, slug_2: str):
     except TypeError:
         return Page404()
 
-serve(reload_includes="*.md", port=3000)
+serve(reload_includes="*.md")
