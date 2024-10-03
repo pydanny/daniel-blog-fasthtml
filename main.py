@@ -144,9 +144,9 @@ def Layout(title, socials, *tags):
         ),
     Main(*tags),
     Footer(Hr(), P(
-                A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), ' | ',
-                A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), ' | ',
+                A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), ' | ',        
                 A('Twitter', href='https://twitter.com/pydanny'), ' | ',
+                A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), ' | ',                
                 A('Atom Feed', href='/feeds/atom.xml')
             ),
             P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
