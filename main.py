@@ -423,6 +423,25 @@ def get(slug: str):
         return RedirectResponse(url=url)
     return Page404()
 
+@rt("/{slug}.ipynb")
+def get(slug: str):
+    try: from nb2fasthtml.core import render_nb
+    except ImportError: return Page404()
+
+    try: nb = render_nb(f'nbs/{slug}.ipynb', wrapper=Div, cls='')
+    except: return Page404()
+    return Layout(
+        Title("Demo JupyterA"),
+        Socials(site_name="https://daniel.feldroy.com",
+                        title="Demo Jupyter",
+                        description='Demo Jupyter',
+                        url=f"https://daniel.feldroy.com/{slug}.ipynb",
+                        image=default_social_image,
+                        ),  
+        nb
+    ) 
+
+
 @rt("/{slug}")
 def get(slug: str):
     redirects_url = redirects.get(slug, None)
