@@ -4,3 +4,4 @@ pytz
 feedgen
 markdown
 rich
+nb2fasthtml @ git+https://github.com/answerdotai/nb2fasthtml@aad171b320bbdecc191f7de434ba9c6b3abb3706
