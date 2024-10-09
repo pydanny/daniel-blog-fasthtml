@@ -11,4 +11,4 @@ title: 'TIL: Using FastHTML in Jupyter notebooks plus websockets'
 twitter_image: /logos/til-1.png
 ---
 
-A simple websockets example hosted in a Jupyter notebook! Check it out [here](https://gist.github.com/pydanny/1eee38ceec17a915a67f1c382d3387ea).
+A simple websockets example hosted in a Jupyter notebook! Check it out [here](https://daniel.feldroy.com/fh-jupy-websockets.ipynb).
