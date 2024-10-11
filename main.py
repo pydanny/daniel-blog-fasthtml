@@ -9,6 +9,7 @@ import json
 import pytz
 import yaml
 from fasthtml.common import *
+from nb2fasthtml.core import render_nb, read_nb, get_frontmatter_raw
 
 default_social_image = '/public/images/profile.jpg'
 
@@ -63,10 +64,25 @@ def list_posts(published: bool = True, posts_dirname="posts", content=False) -> 
     Note: Could use pathlib better
     """
     posts: list[dict] = []
+    # Fetch notebooks
+    for post in pathlib.Path('.').glob(f"{posts_dirname}/**/*.ipynb"):
+        if '.ipynb_checkpoints' in str(post): continue
+        nb = read_nb(post)
+        data: dict = get_frontmatter_raw(nb.cells[0]) 
+        data["slug"] = post.stem
+        data['cls'] = 'notebook'
+        if content:
+            data["content"] = render_nb(post,
+                                cls='',
+                                fm_fn=lambda x: '',
+                                )
+        posts.append(data)   
+    # Fetch markdown
     for post in pathlib.Path('.').glob(f"{posts_dirname}/**/*.md"):
         raw: str = post.read_text().split("---")[1]
         data: dict = yaml.safe_load(raw)
         data["slug"] = post.stem
+        data['cls'] = 'marked'
         if content:
             data["content"] = '\n'.join(post.read_text().split("---")[2:])
         posts.append(data)
@@ -309,7 +325,7 @@ def get(slug: str):
                         ),        
         Section(
             H1(metadata["title"]),
-            Div(content,cls="marked"),
+            Div(content,cls=metadata['cls']),
             Div(style="width: 200px; margin: auto; display: block;")(*specials),
             P(Span("Tags: "), *tags),
             A("← Back to all articles", href="/"),
@@ -426,10 +442,6 @@ def get(slug: str):
 @rt("/{slug}.ipynb")
 def get(slug: str):
     try:
-        from nb2fasthtml.core import render_nb
-    except ImportError:
-        return Page404()
-    try:
         nb = render_nb(f'nbs/{slug}.ipynb', wrapper=Div, cls='', fm_fn=None)
     except:
         return Page404()
@@ -463,4 +475,4 @@ def get(slug_1: str, slug_2: str):
     except TypeError:
         return Page404()
 
-serve(reload_includes="*.md")
+serve(reload_includes="*.md,*.ipynb")

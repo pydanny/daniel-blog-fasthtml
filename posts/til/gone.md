@@ -2,7 +2,7 @@
 date: '2024-09-23T14:13:34.609190'
 description: A simple websockets example hosted in a Jupyter notebook!
 image: /logos/til-1.png
-published: true
+published: false
 tags:
 - TIL
 - FastHTML
