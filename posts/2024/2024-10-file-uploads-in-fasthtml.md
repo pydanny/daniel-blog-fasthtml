@@ -1,7 +1,7 @@
 ---
 date: '2024-10-11T10:20:33.471691'
 description: A reference for handling single and multiple file uploads in FastHTML. 
-published: true
+published: false
 tags:
 - python
 - FastHTML
