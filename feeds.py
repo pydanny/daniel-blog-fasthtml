@@ -1,5 +1,5 @@
 from feedgen.feed import FeedGenerator
-import contents
+import main as contents
 from dateutil import parser
 import markdown
 import pytz
