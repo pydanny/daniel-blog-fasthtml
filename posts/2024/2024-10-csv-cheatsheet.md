@@ -3,7 +3,7 @@ date: '2024-10-12T19:30:31.796570'
 description: Here's a quick reference guide for Python's csv module. I use it periodicially, but not enough that I memorize the API. 
 published: true
 tags:
-- howo
+- howto
 - python
 - cheatsheet
 title: Python CSV Cheatsheet
