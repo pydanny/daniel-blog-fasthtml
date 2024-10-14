@@ -9,7 +9,10 @@ import json
 import pytz
 import yaml
 from fasthtml.common import *
-from nb2fasthtml.core import render_nb, read_nb, get_frontmatter_raw
+from nb2fasthtml.core import (
+    render_nb, read_nb, get_frontmatter_raw,render_md,
+    strip_list
+)
 
 default_social_image = '/public/images/profile.jpg'
 
@@ -63,6 +66,21 @@ hdrs = (
 
 class ContentNotFound(Exception): pass
 
+def render_code_output(cell,lang='python', render_md=render_md):
+    res = []
+    if len(cell['outputs'])==0: ''
+    for output in cell['outputs']:
+        print(output['output_type'])
+        if output['output_type'] == 'execute_result':
+            data = output['data']
+            if 'text/markdown' in data.keys(): 
+                res.append(NotStr(''.join(strip_list(data['text/markdown'][1:-1]))))
+            elif 'text/plain' in data.keys(): 
+                res.append(''.join(strip_list(data['text/plain'])))
+        if output['output_type'] == 'stream':
+            res.append(''.join(strip_list(output['text'])))
+    if res: return render_md(*res, container=Pre)
+
 # The following functions are three content loading. They are cached in
 # memory to boost the speed of the site. In production at a minumum the
 # app is restarted every time the project is deployed.
@@ -84,6 +102,7 @@ def list_posts(published: bool = True, posts_dirname="posts", content=False) -> 
             data["content"] = render_nb(post,
                                 cls='',
                                 fm_fn=lambda x: '',
+                                out_fn=render_code_output
                                 )
         posts.append(data)   
     # Fetch markdown
