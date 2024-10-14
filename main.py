@@ -43,13 +43,22 @@ search_modal_css = Style("""
 }
 """)
 
+def MermaidJS(
+        sel='.language-mermaid',  # CSS selector for mermaid elements
+        theme='base',  # Mermaid theme to use
+        delay=500  # Delay in milliseconds before rendering
+    ):
+    "Implements browser-based Mermaid diagram rendering."
+    return Script(src='/mermaid.js', type='module')    
+
 hdrs = (
     MarkdownJS(),
     HighlightJS(langs=['python', 'javascript', 'html', 'css',]),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),    
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
-    search_modal_css
+    search_modal_css,
+    MermaidJS()
 )
 
 class ContentNotFound(Exception): pass
