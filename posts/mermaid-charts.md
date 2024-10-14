@@ -12,9 +12,9 @@ title: Mermaid charts!
 description: My site now has mermaid charts! Many thanks to Imtiaz Khan!
 ---
 
-MermaidJS is a JavaScript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically. I've been a fan of tools like it (which includes Graphviz) for years. 
+[MermaidJS](https://mermaid.js.org/) is a JavaScript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically. I've been a fan of tools like it (which includes [Graphviz]()) for years. 
 
-Many thanks to [Imtiaz Khan](https://github.com/ImtiazKhanDS) for sharing with me how to implement it. 
+Many thanks to [Imtiaz Khan](https://github.com/ImtiazKhanDS) for [sharing with me how to implement it](https://github.com/pydanny/daniel-blog-fasthtml/issues/8). 
 
 ```mermaid
 flowchart LR
