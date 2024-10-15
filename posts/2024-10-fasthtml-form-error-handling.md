@@ -58,7 +58,7 @@ For projects using other design frameworks, we may need to define a different er
 ```python
 def mk_profile_form(errors: dict|None = None):
     # If no errors, we default to {}
-    # Loop through the errors, rewriting strings into Small(str) elements
+    # Loop through the errors, turning strings into Small(str)
     d = {k:Small(v, style='font-color: red')
          for k,v in (errors or {}).items()}
     # Set the default value of errors to empty NotStr() objs
@@ -156,6 +156,7 @@ Some ideas for improvements:
 ## All the code at once
 
 ```python
+from collections import defaultdict
 from dataclasses import dataclass, fields
 from types import NoneType
 from typing import get_args
@@ -174,7 +175,7 @@ class Profile:
 
 def mk_profile_form(errors: dict|None = None):
     # If no errors, we default to {}
-    # Loop through the errors, rewriting strings into Small(str) elements
+    # Loop through the errors, turning strings into Small(str)
     d = {k:Small(v, style='font-color: red')
          for k,v in (errors or {}).items()}
     # Set the default value of errors to empty NotStr() objs
