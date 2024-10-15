@@ -151,3 +151,87 @@ Some ideas for improvements:
 3. Include toasts or some other means to notify that the data has been accepted
 4. Implement the pattern for single form input elements, rather than the whole form. This would apply when a field's value changes. Then, validation and saving would happen without touching the rest of the form.
 
+## All the code at once
+
+```python
+from dataclasses import dataclass, fields
+from types import NoneType
+from typing import get_args
+
+# FastHTML curates what is in common via __all__, 
+# so is safe to use with '*' import
+from fasthtml.common import *
+
+app, rt = fast_app()
+
+@dataclass
+class Profile:
+    name: str
+    email: str
+    age: int|None
+
+def mk_profile_form(errors: dict|None = None):
+    # If no errors, we default to {}
+    if errors is None: errors = {}
+    # Loop through the errors, rewriting strings into Small(str) elements
+    for k,v in errors.items():
+        errors[k] = Small(v, style='font-color: red')
+    # Return the form
+    return Form(
+        Fieldset(
+            Label(
+                'First name (required)',
+                Input(name='name'),
+                # Get the name error or a blank string
+                errors.get('name', NotStr(''))
+            ),
+            Label(
+                'Email (required)',
+                Input(type='email', name='email'),
+                # Get the email error or a blank string
+                errors.get('email', NotStr(''))
+            ),
+            Label(
+                'Age',
+                Input(type='number', name='age'),
+                # Get the age error or a blank string
+                errors.get('age', NotStr(''))
+            )
+        ),
+        Input(type='submit', value='Subscribe'),
+        # Use HTMX to post the form and upon response
+        # update the form
+        hx_post=update_profile
+    )      
+
+@rt
+def update_profile(profile: Profile): 
+    # Create the errors dict
+    errors = {}
+    # Use dataclasses.fields to iterate through the values
+    # in our Profile dataclass
+    for field in fields(profile):
+        # Get the value from the field, with None if no
+        # field is found
+        value = getattr(profile, field.name)
+        # If the value is not Truthy, which is either that no
+        # value was specified or there was a zero-length string,
+        # then check if NoneType was in the dataclass field types
+        if not value and NoneType not in get_args(field.type):
+            # Set the error string here
+            errors[field.name] = f'Missing {field.name}'
+    # Make the form using the mk_profile_form function,
+    # passing in the errors dict 
+    form = mk_profile_form(errors)
+    # Using FastHTML's fill_form function to add the data submitted
+    # by the user then return it back as an HTMX fragment
+    return fill_form(form, profile)
+
+@rt
+def index():
+    return Titled("Form error handling",
+        mk_profile_form()
+    )
+
+serve()
+```
