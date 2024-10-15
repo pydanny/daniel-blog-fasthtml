@@ -22,7 +22,7 @@ I have found this pattern supports reporting form errors in a maintainable way. 
 The pattern relies on Python dataclasses and type hints:
 
 - Dataclasses provide a mechanism to store and later retrieve type hints at runtime. 
-- Tpe hints determine whether or not a value can be null
+- Type hints determine whether or not a value can be null
 
 ```python
 from dataclasses import dataclass, fields
