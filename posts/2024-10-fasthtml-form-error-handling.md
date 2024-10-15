@@ -25,6 +25,7 @@ The pattern relies on Python dataclasses and type hints:
 - Type hints determine whether or not a value can be null
 
 ```python
+from collections import defaultdict
 from dataclasses import dataclass, fields
 from types import NoneType
 from typing import get_args
@@ -50,43 +51,44 @@ class Profile:
 
 Some Fast HTML example apps from the core repo have functions prefixed with `mk_`. They define forms and other elements. We use the same technique here. It lets us use our form in several places. It also works well with FastHTML's [fill_form](https://docs.fastht.ml/api/components.html#fill_form) function.
 
-We differ in the first few lines of code. They manage the `errors` dict. If needed, they set errors to be the `Small` FT component, which renders to `<small style="font-color: red"></small>`. This HTML element [is used by Pico for form helper text elements](https://picocss.com/docs/forms#helper-text).
+We differ in the first few lines of code. They manage the `errors` dict. If needed, they set errors to be the `Small(v, style='font-color: red')` FT component, which renders to `<small style="font-color: red"></small>`. This HTML element [is used by Pico for form helper text elements](https://picocss.com/docs/forms#helper-text).
 
 For projects using other design frameworks, we may need to define a different error element in a different location. Nevertheless, this can serve as an example of how to build a form generator function that can handle blank and errored forms. 
 
 ```python
 def mk_profile_form(errors: dict|None = None):
     # If no errors, we default to {}
-    if errors is None: errors = {}
     # Loop through the errors, rewriting strings into Small(str) elements
-    for k,v in errors.items():
-        errors[k] = Small(v, style='font-color: red')
+    d = {k:Small(v, style='font-color: red')
+         for k,v in (errors or {}).items()}
+    # Set the default value of errors to empty NotStr() objs
+    errors = defaultdict(lambda: NotStr(''), d)    
     # Return the form
     return Form(
         Fieldset(
             Label(
                 'First name (required)',
                 Input(name='name'),
-                # Get the name error or a blank string
-                errors.get('name', NotStr(''))
+                # Display name key in error dict
+                errors['name']
             ),
             Label(
                 'Email (required)',
                 Input(type='email', name='email'),
-                # Get the email error or a blank string
-                errors.get('email', NotStr(''))
+                # Display email key in error dict
+                errors['email']
             ),
             Label(
                 'Age',
                 Input(type='number', name='age'),
-                # Get the age error or a blank string
-                errors.get('age', NotStr(''))
+                # Display age key in error dict
+                errors['age']
             )
         ),
         Input(type='submit', value='Subscribe'),
         # Use HTMX to post the form and upon response update the form
         hx_post=update_profile
-    )    
+    )
 ```
 
 ## Setting up the routes
@@ -172,37 +174,37 @@ class Profile:
 
 def mk_profile_form(errors: dict|None = None):
     # If no errors, we default to {}
-    if errors is None: errors = {}
     # Loop through the errors, rewriting strings into Small(str) elements
-    for k,v in errors.items():
-        errors[k] = Small(v, style='font-color: red')
+    d = {k:Small(v, style='font-color: red')
+         for k,v in (errors or {}).items()}
+    # Set the default value of errors to empty NotStr() objs
+    errors = defaultdict(lambda: NotStr(''), d)    
     # Return the form
     return Form(
         Fieldset(
             Label(
                 'First name (required)',
                 Input(name='name'),
-                # Get the name error or a blank string
-                errors.get('name', NotStr(''))
+                # Display name key in error dict
+                errors['name']
             ),
             Label(
                 'Email (required)',
                 Input(type='email', name='email'),
-                # Get the email error or a blank string
-                errors.get('email', NotStr(''))
+                # Display email key in error dict
+                errors['email']
             ),
             Label(
                 'Age',
                 Input(type='number', name='age'),
-                # Get the age error or a blank string
-                errors.get('age', NotStr(''))
+                # Display age key in error dict
+                errors['age']
             )
         ),
         Input(type='submit', value='Subscribe'),
-        # Use HTMX to post the form and upon response
-        # update the form
+        # Use HTMX to post the form and upon response update the form
         hx_post=update_profile
-    )      
+    )        
 
 @rt
 def update_profile(profile: Profile): 
@@ -235,3 +237,10 @@ def index():
 
 serve()
 ```
+
+---
+
+## Updates
+
+- 2024-10-16 Philip Nuzhnyi: Typo fix
+- 2024-10-16 Jeremy Howard: Use of defaultdict for cleaner UI
