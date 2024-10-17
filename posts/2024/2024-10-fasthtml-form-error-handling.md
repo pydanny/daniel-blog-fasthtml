@@ -87,7 +87,7 @@ def mk_profile_form(errors: dict|None = None):
         ),
         Input(type='submit', value='Subscribe'),
         # Use HTMX to post the form and upon response update the form
-        hx_post=update_profile
+        hx_post=update_profile, hx_swap="outerHTML"
     )
 ```
 
@@ -204,7 +204,7 @@ def mk_profile_form(errors: dict|None = None):
         ),
         Input(type='submit', value='Subscribe'),
         # Use HTMX to post the form and upon response update the form
-        hx_post=update_profile
+        hx_post=update_profile, hx_swap="outerHTML"
     )        
 
 @rt
@@ -243,5 +243,6 @@ serve()
 
 ## Updates
 
+- 2024-10-17 78wesley: Added `hx_swap="outHTML"`
 - 2024-10-16 Philip Nuzhnyi: Typo fix
 - 2024-10-16 Jeremy Howard: Use of defaultdict for cleaner UI
