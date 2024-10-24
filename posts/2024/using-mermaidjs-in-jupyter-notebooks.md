@@ -50,4 +50,6 @@ graph LR;
 
 ## Notes
 
-This is actually covered in the mermaid docs [here](https://mermaid.js.org/ecosystem/tutorials.html?#jupyter-integration-with-mermaid-js), albeit with an unnecessary import from matplotlib that I removed in this example. I discovered this trick back in 2023 while working on the [dj-notebook](https://github.com/pydanny/dj-notebook) library.
+- This is actually covered in the mermaid docs [here](https://mermaid.js.org/ecosystem/tutorials.html?#jupyter-integration-with-mermaid-js), albeit with an unnecessary import from matplotlib that I removed in this example
+- I discovered this trick back in 2023 while working on the [dj-notebook](https://github.com/pydanny/dj-notebook) library
+- Amusingly enough, [this article is written in pure markdown](https://github.com/pydanny/daniel-blog-fasthtml/blob/main/posts/2024/using-mermaidjs-in-jupyter-notebooks.md) because as of October 24th, 2024 I haven't yet gotten the function to work yet with nb2fasthtml.
