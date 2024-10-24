@@ -1,5 +1,5 @@
 ---
-date: '2024-10-24T15:52:16.836698'
+date: '2024-10-24T16:15:16.836698'
 description: Useful for adding charts in Jupyter notebooks.
 published: true
 tags: 
