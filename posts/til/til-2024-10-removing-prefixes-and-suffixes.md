@@ -1,7 +1,7 @@
 ---
 date: '2024-11-01T12:00:00.235742'
 description: How did I miss these functions getting added to Python?
-image: /logos/til-1.png
+image: /public/logos/til-1.png
 published: true
 tags:
 - TIL
