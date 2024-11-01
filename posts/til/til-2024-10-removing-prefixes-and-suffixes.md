@@ -7,7 +7,7 @@ tags:
 - TIL
 - python
 title: 'TIL: Using Python to removing prefixes and suffixes'
-twitter_image: /logos/til-1.png
+twitter_image: /public/logos/til-1.png
 ---
 
 _How did I miss these functions getting added to Python?_

@@ -26,8 +26,8 @@ def main() -> None:
         data['title'] = f"TIL: {title}"
         slug = f"til-{slug}"
         data['tags'] = ['TIL', ]
-        data["image"] = "/logos/til-1.png"
-        data["twitter_image"] = "/logos/til-1.png"
+        data["image"] = "/public/logos/til-1.png"
+        data["twitter_image"] = "/public/logos/til-1.png"
     path = Path(f"posts/{slug}.md")
     text = f"---\n{safe_dump(data)}---\n"
     if description:
