@@ -243,6 +243,6 @@ serve()
 
 ## Updates
 
-- 2024-10-17 78wesley: Added `hx_swap="outHTML"`
+- 2024-10-17 78wesley: Added `hx_swap="outerHTML"`
 - 2024-10-16 Philip Nuzhnyi: Typo fix
 - 2024-10-16 Jeremy Howard: Use of defaultdict for cleaner UI
