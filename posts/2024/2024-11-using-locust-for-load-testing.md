@@ -1,7 +1,7 @@
 ---
-date: '2024-11-06T12:00:00.490082'
+date: '2024-11-06T17:30:00.490082'
 description: Quickstart guide for doing web application load testing with the Python powered locust library.
-published: false
+published: true
 tags:
   - python
   - howto
@@ -20,6 +20,8 @@ _Quickstart guide for doing web application load testing with the Python powered
 
 ```python
 # locustfile.py
+# For more options read the following
+#   https://docs.locust.io/en/stable/writing-a-locustfile.html
 
 # Import Locust basics
 from locust import HttpUser, task, between
@@ -36,38 +38,48 @@ def namer():
 
 class CatsiteUser(HttpUser):
     """
-    This class represents users interacting with a website.
+    This class represents simulated users interacting with
+    a website.
     """
     # how long between clicks a user should take
     wait_time = between(2, 5)
-    # The default host of the target client. THis can be changed at any time
+    # The default host of the target client. This can be changed
+    # at any time
     host = 'http://localhost:5001/'
 
     def on_start(self):
-        # TODO explanation      
+        # Methods with the on_start name will be called for each
+        # simulated user when they start. Useful for logins and
+        # other 'do before doing other things'.
         pass
 
     def on_stop(self):
-        # TODO explanation
+        # Methods with the on_stop name will be called for each
+        # simulated user when they stop. Useful for logouts and
+        # possibly data cleanup.
         pass    
 
-    # Methods marked with the `@task` decorator is an action taken by a user
-    # This example focuses on changes to a database, but provides a foundation
-    # for creating tests on a more read-focused site
+    # TASKS!
+    # Methods marked with the `@task` decorator is an action
+    # taken by a user This example focuses on changes to a 
+    # database, but provides a foundation for creating tests on
+    # a more read-focused site
 
     @task
     def index(self):
-        "User goes to the root of the project"
+        # User goes to the root of the project
         self.client.get('/')
 
     @task
     def create(self):
-        "User posts a create form with the fields 'name' and 'age'"
+        # User posts a create form with the fields 'name'
+        # and 'age'
         self.client.post('/create', dict(name=namer(), age=randint(1,35)))
 
     @task
     def update(self):
-      "User posts an update form with the fields 'name' and 'age'"
+        # User posts an update form with the fields 'name'
+        # and 'age'"
         with self.client.get('/random') as resp:
             pk = resp.text
             form_data = dict(id=pk, name=namer(), age=randint(1,35))
@@ -75,7 +87,8 @@ class CatsiteUser(HttpUser):
 
     @task
     def delete(self):
-        "Represents the user getting a random ID and then going to the delete page for it."
+        # Represents the user getting a random ID and then
+        # going to the delete page for it.
         with self.client.get('/random') as resp:
             pk = resp.text
             self.client.get(f'/{pk}/delete')
@@ -104,24 +117,27 @@ app, rt = fast_app()
 
 def mk_form(target: str):
     return Form(
-            P(A('Home', href=index)),
-            Fieldset(
-                Input(name='name'),
-                Input(name='age', type='number'),
-            ),
-            Input(type='submit', value='submit'),
-            hx_post=target, hx_swap="outerHTML"
-        )
+        P(A('Home', href=index)),
+        Fieldset(
+            Input(name='name'),
+            Input(name='age', type='number'),
+
+        ),
+        Input(type='submit', value='submit'),
+        hx_post=target, hx_swap="outerHTML"
+    )
 
 def cat_count():
     query = """select count(id) from cat;"""
     result = db.execute(query)
-    return result.fetchone()
+    return result.fetchone()[0]
 
 @rt
 def index():
     return Titled('Cats',
-        P(A('Create cat', href='/create'), NotStr(' '), A('Random ID', href=random)),
+        P(
+            A('Create cat', href='/create'), NotStr(' '),
+            A('Random ID', href=random)),
         P(f'Number of cats: {cat_count()}'),        
         Ol(
             *[Li(A(f'{d.name}:{d.age}', href=f'/{d.id}')) for d in cats()]
@@ -130,10 +146,10 @@ def index():
 
 @rt
 def random():
-    # Small datasets so we can get away with using the RANDOM() function here
+    # Small dataset, we can get away with using the RANDOM() function
     query = """SELECT id FROM cat ORDER BY RANDOM() LIMIT 1;"""
     result = db.execute(query)
-    return result.fetchone()
+    return result.fetchone()[0]
 
 @rt('/create')
 def get():
@@ -179,7 +195,9 @@ def post(cat: Cat, id: int):
 def cat(id: int):
     if id not in cats:
         RedirectResponse(url=index)
+    # db.begin()
     cats.delete(id)
+    # db.commit()
     return RedirectResponse(url=index)
 
 serve()
