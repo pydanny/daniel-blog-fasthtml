@@ -4,8 +4,6 @@ from pathlib import Path
 from rich.prompt import Prompt, Confirm
 from yaml import safe_dump
 
-
-
 def main() -> None:
     while True:
         title: str = Prompt.ask("Title")
@@ -16,6 +14,7 @@ def main() -> None:
         if description:
             break
     timestamp: str = Prompt.ask("Timestamp", default=datetime.now().isoformat()) 
+    prefix: str = timestamp[:4]
     til: str = Confirm.ask("TIL")
     slug: str = Prompt.ask("Slug", default=f"{timestamp[:7]}-{title.lower().replace(' ', '-')}")
 
@@ -28,12 +27,12 @@ def main() -> None:
         data['tags'] = ['TIL', ]
         data["image"] = "/public/logos/til-1.png"
         data["twitter_image"] = "/public/logos/til-1.png"
-    path = Path(f"posts/{slug}.md")
+        prefix = 'til'
+    path = Path(f"posts/{prefix}/{slug}.md")
     text = f"---\n{safe_dump(data)}---\n"
     if description:
-        text += f"\n\n{description}"
+        text += f"\n\n_{description}_"
     path.write_text(text)
-
 
 if __name__ == '__main__':
     main()
