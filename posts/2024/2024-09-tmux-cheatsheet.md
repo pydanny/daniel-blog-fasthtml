@@ -10,8 +10,6 @@ image: /public/images/tmux-logo-medium.png
 twitter_image: /public/images/tmux-logo-medium.png
 ---
 
-_My list of tmux commands with minimal flavor text._
-
 The tmux terminal utility allows for splitting terminal into multiple window panes. The splits can be vertical or horizontal. Installation instructions are [here](https://github.com/tmux/tmux/wiki/Installing).
 
 ## Creating a new tmux session

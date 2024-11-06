@@ -1,6 +1,6 @@
 ---
 date: '2024-10-24T16:15:16.836698'
-description: Useful for adding charts in Jupyter notebooks.
+description: Useful for adding Mermaid charts of various types to Jupyter notebooks.
 published: true
 tags: 
     - jupyter
@@ -8,8 +8,6 @@ tags:
     - howto
 title: Using Mermaid JS in Jupyter notebook
 ---
-
-_Useful for adding Mermaid charts of various types to Jupyter notebooks._
 
 
 ## The code

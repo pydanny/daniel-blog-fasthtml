@@ -10,8 +10,6 @@ title: 'TIL: Using Python to removing prefixes and suffixes'
 twitter_image: /public/logos/til-1.png
 ---
 
-_How did I miss these functions getting added to Python?_
-
 Starting in Python 3.9, `s.removeprefix()` and `s.removesuffix()` were added as `str` built-ins. Which easily covers all the versions of Python I currently support.
 
 ## Usage for `removeprefix()`:

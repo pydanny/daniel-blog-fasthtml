@@ -15,8 +15,6 @@ twitter_image: /public/logos/kraken-logo-dark.png
 og_url: https://daniel.feldroy.com/posts/2023-11-three-years-at-octopus
 ---
 
-A summary of the past year as I finish my third year working for [Kraken Tech](https://kraken.tech/), an [Octopus Energy Group](https://octopusenergy.group/) subsidiary.
-
 _Note: As I write this I'm recovering from a sprained shoulder I received in a bicycle accident that makes it hard to type. I'm mostly using voice-to-text, so the text might not be in my normal "writing voice"._
 
 # I changed roles

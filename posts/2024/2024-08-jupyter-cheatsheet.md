@@ -10,8 +10,6 @@ tags:
 title: Jupyter Cheatsheet
 ---
 
-_A list of tips and tricks for working with Jupyter Notebooks._
-
 ## Debug with the %debug magic command
 
 If you have an error that's challenging to debug, activate debugger in post-mortem mode. In the cell underneath the error, create a new cell with this error

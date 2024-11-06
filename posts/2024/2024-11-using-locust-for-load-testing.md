@@ -9,8 +9,6 @@ tags:
 title: Using locust for load testing
 ---
 
-_Quickstart guide for doing web application load testing with the Python powered locust library._
-
 [Locust](https://locust.io/) is a Python library that makes it relatively straightforward to write Python tests. This heavily commented code example explains each section of code. To use locust:
 
 1. Install locust: `pip install locust`

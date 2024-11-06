@@ -9,8 +9,6 @@ tags:
 title: FastHTML form error handling
 ---
 
-_A pattern I have been exploring for handling form errors in FastHTML._
-
 [FastHTML](https://fastht.ml/) has useful tools for handling forms. Every HTML form input field has a value attribute that we can use tools like [fill_form](https://docs.fastht.ml/api/components.html#fill_form) to hang data onto.
 
 However, form designs are often too different to apply any universals from a framework like FastHTML. For example, one library might place errors in divs, another in paragraphs. The DOM identifiers can't be guaranteed to match.

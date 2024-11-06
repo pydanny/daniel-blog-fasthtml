@@ -353,6 +353,7 @@ def get(slug: str):
                         ),        
         Section(
             H1(metadata["title"]),
+            P(I(metadata['description'])),
             P(Small(Time(format_datetime(convert_dtstr_to_dt(metadata['date']))))),
             Div(content,cls=metadata['cls']),
             Div(style="width: 200px; margin: auto; display: block;")(*specials),
