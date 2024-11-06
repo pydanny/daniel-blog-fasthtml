@@ -6,6 +6,7 @@ slug: 2008-02-funkload-charting-woes
 tags:
   - plone
   - python
+  - load testing
   - legacy-blogger
 time_to_read: 5
 title: Funkload Charting woes

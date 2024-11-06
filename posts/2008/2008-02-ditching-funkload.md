@@ -6,6 +6,7 @@ slug: 2008-02-ditching-funkload
 tags:
   - plone
   - legacy-blogger
+  - load testing
 time_to_read: 5
 title: Ditching Funkload
 ---
