@@ -1,17 +1,17 @@
 ---
 date: '2024-11-06T12:00:00.490082'
-description: This is a quickstart guide for doing web application load testing with lthe Python powered
-  locust library.
+description: Quickstart guide for doing web application load testing with the Python powered locust library.
 published: false
 tags:
   - python
   - howto
+  - load testing
 title: Using locust for load testing
 ---
 
-_This is a quickstart guide for doing web application load testing with the Python powered locust library._
+_Quickstart guide for doing web application load testing with the Python powered locust library._
 
-[Locust](https://locust.io/) is a Python library that makes it relatively straightforward to write Python tests. This heavily commented code example explains each section of code. To use it:
+[Locust](https://locust.io/) is a Python library that makes it relatively straightforward to write Python tests. This heavily commented code example explains each section of code. To use locust:
 
 1. Install locust: `pip install locust`
 2. Copy the file below into the directory where you want to run locust
@@ -81,15 +81,17 @@ class CatsiteUser(HttpUser):
             self.client.get(f'/{pk}/delete')
 ```
 
-For reference, this is the target site used to create the above locustfile. To run it:
+## Sample test site
+
+For reference, this is the test site used to create the above locustfile. I'll admit that the above test is incomplete, a lot more tasks could be added to hit web routes. To use it:
 
 1. Install FastHTML: `pip install python-fasthtml`
 2. Copy the file into the directory you want to run it
-3. In that directory, at the command-line, type: `python main.py`
+3. In that directory, at the command-line, type: `python cats.py`
 4. Open [http://localhost:5001/](localhost:5001)
 
 ```python
-# main.py
+# cats.py
 from fasthtml.common import *
 
 # Set up the database and table

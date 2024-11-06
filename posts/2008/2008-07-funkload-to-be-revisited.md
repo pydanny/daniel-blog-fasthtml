@@ -4,7 +4,7 @@ description: ""
 published: true
 slug: 2008-07-funkload-to-be-revisited
 tags:
-  - funkload
+  - load testing
   - Linux
   - python
   - MacOS
