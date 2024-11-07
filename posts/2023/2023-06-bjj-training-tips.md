@@ -10,8 +10,6 @@ title: BJJ Training Tips
 description: I started Brazilian Jiu-Jitsu up again in early November 2022. Against most other white belts I usually can't be submitted and have landed a few submissions of my own. I'm not big or strong so I use these rules given by my coaches.
 ---
 
-*I started Brazilian Jiu-Jitsu up again in early November 2022. Against most other white belts I usually can't be submitted and have landed a few submissions of my own. I'm not big or strong so I use these rules given by my coaches.*
-
 - Tap early and tap often. Better to train tomorrow then get hurt and be out for a month
 - Before you spar with someone, tell your opponent about any injuries
 - Go for position and transition instead of submission
