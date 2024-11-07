@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-08-06T14:44:06.250963+00:00</updated>
+  <updated>2024-11-07T10:38:51.474239+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,9 +13,257 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>til-2024-06-renaming-git-branches</id>
+    <id>https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv</id>
+    <title>TIL: Forcing pip to use virtualenv</title>
+    <updated>2024-11-07T10:38:51.528531+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p>Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.</p>
+<p>Set this environment variable, preferably in your rc file:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># ~/.zshrc </span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PIP_REQUIRE_VIRTUALENV</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+
+<p>Now if I try to use pip outside a virtualenv:</p>
+<div class="codehilite"><pre><span></span><code>dj-notebook<span class="w"> </span>on<span class="w"> </span><span class="w"> </span>main<span class="w"> </span><span class="o">[</span>$<span class="o">]</span><span class="w"> </span>is<span class="w"> </span>📦<span class="w"> </span>v0.6.1<span class="w"> </span>via<span class="w"> </span>🐍<span class="w"> </span>v3.10.6<span class="w"> </span>
+❯<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>ruff<span class="w"> </span>
+ERROR:<span class="w"> </span>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>an<span class="w"> </span>activated<span class="w"> </span>virtualenv<span class="w"> </span><span class="o">(</span>required<span class="o">)</span>.
+</code></pre></div>
+
+<p>This TIL is thanks to David Winterbottom.</p>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv"/>
+    <summary>Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.</summary>
+    <category term="howto"/>
+    <category term="python"/>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2023-12-04T15:30:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit</id>
+    <title>TIL: Change older git commit</title>
+    <updated>2024-11-07T10:38:51.527057+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p>Typically I try to avoid changing older commits in a pull request.  My reasoning has a tiny bit to do with preserving history and lots to do with being resistant to trying new things. Finally I got around to looking this up today, it is easy to do.</p>
+<p>WARNING: Do this on branches of main, not on the main branch itself. More on that at the end.</p>
+<h1 id="find-the-commit">Find the commit</h1>
+<p>In our example the change we want to amend is 3 commits back, do this to find it:</p>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~3
+</code></pre></div>
+
+<p>That will bring up a screen that looks like this in your text editor:</p>
+<div class="codehilite"><pre><span></span><code>pick<span class="w"> </span>ec0fb5e0333c<span class="w"> </span>Configure<span class="w"> </span>omnitron<span class="w"> </span>galactic<span class="w"> </span>retroverter
+pick<span class="w"> </span>6e7f323681f1<span class="w"> </span>Activate<span class="w"> </span>the<span class="w"> </span>anvil<span class="w"> </span>generator
+pick<span class="w"> </span>0001757cea8f<span class="w"> </span>Wind<span class="w"> </span>up<span class="w"> </span>clockwork<span class="w"> </span>battery
+pick<span class="w"> </span>849f7c453458<span class="w"> </span>Solidify<span class="w"> </span>the<span class="w"> </span>electricity
+
+<span class="c1"># Rebase dd341c1572..64c2cbbd76 onto dd34dc1572 (4 commands)</span>
+</code></pre></div>
+
+<p>On the third line, change the word, <code>pick</code> to <code>edit</code>. It should now look like this:</p>
+<div class="codehilite"><pre><span></span><code>pick<span class="w"> </span>ec0fb5e0333c<span class="w"> </span>Configure<span class="w"> </span>omnitron<span class="w"> </span>galactic<span class="w"> </span>retroverter
+pick<span class="w"> </span>6e7f323681f1<span class="w"> </span>Activate<span class="w"> </span>the<span class="w"> </span>anvil<span class="w"> </span>generator
+edit<span class="w"> </span>0001757cea8f<span class="w"> </span>Wind<span class="w"> </span>up<span class="w"> </span>clockwork<span class="w"> </span>battery<span class="w"> </span><span class="c1"># &lt;-- changed line</span>
+pick<span class="w"> </span>849f7c453458<span class="w"> </span>Solidify<span class="w"> </span>the<span class="w"> </span>electricity
+
+<span class="c1"># Rebase dd341c1572..64c2cbbd76 onto dd34dc1572 (4 commands)</span>
+</code></pre></div>
+
+<p>Save and close the file. </p>
+<h1 id="make-changes">Make changes</h1>
+<p>Now make changes to code files and save them. </p>
+<h1 id="commit-and-rebase">Commit and rebase</h1>
+<p>Run these commands to have git recognize the changes:</p>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--all<span class="w"> </span>--amend<span class="w"> </span>--no-edit
+git<span class="w"> </span>rebase<span class="w"> </span>--continue
+</code></pre></div>
+
+<p>If you have a remote repo (aka github or gitlab) you will need to run <code>git push --force</code> .</p>
+<h1 id="about-the-warning">About the warning</h1>
+<p>Before you do this understand this rewrites the SHA-1s from the point of change forward. Any old SHA-1 representatives of those commits are gone. Hence this should happen on a branch away from master, preferably in a pull request.</p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://stackoverflow.com/a/1186549">stackoverflow.com/a/1186549</a> - If for nothing else the instructions on how the tilde (~) works is really nice to know.</li>
+</ul>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit"/>
+    <summary>How to change an older git commit rather than the most recent one.</summary>
+    <category term="howto"/>
+    <category term="git"/>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2023-12-18T15:30:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes</id>
+    <title>TIL: Writing decorators for classes</title>
+    <updated>2024-11-07T10:38:51.526067+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p>To my surprise writing decorators for classes is easier than for functions. Here's how to do it in annotated fashion with an unnecessary decorator that doesn't accept any additional arguments.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Write a callable that accepts a cls as an argument </span>
+<span class="k">def</span> <span class="nf">tools</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="c1"># Write functions that accept &quot;self: object&quot; as an argument.</span>
+    <span class="k">def</span> <span class="nf">simplistic_attribute_count</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the number of attributes.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">docs</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the docstring for the class.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__doc__</span>
+
+    <span class="c1"># Attach the functions as methods</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="n">simplistic_attribute_count</span> <span class="o">=</span> <span class="n">simplistic_attribute_count</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="n">docs</span> <span class="o">=</span> <span class="n">docs</span>
+
+    <span class="c1"># Return the modified class</span>
+    <span class="k">return</span> <span class="bp">cls</span>
+</code></pre></div>
+
+<p>Let's test it out:</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@tools</span>
+<span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Docstring for testing the tools decorator&quot;&quot;&quot;</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">one</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">simplistic_attribute_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">docs</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Docstring for testing the tools decorator&#39;</span>
+</code></pre></div>
+
+<p>Next up, how to do this while passing in arguments!</p>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes"/>
+    <summary>To my surprise writing decorators for classes is easier than for functions.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-01-19T12:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv</id>
+    <title>TIL: Running UV outside a virtualenv</title>
+    <updated>2024-11-07T10:38:51.524358+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>Breaking the rules to satisfy continuous integration.</em></p>
+<p>A few months ago I blogged about forcing <a href="/posts/til-2023-12-forcing-pip-to-use-virtualenv">pip to require a virtualenv</a>. However, when automating tests and deployments sometimes you work outside of virtualenvs. With <code>pip</code> this isn't a problem, you just don't set what I did in that article. However, what if you are using the rust-based <a href="https://pypi.org/project/uv/">uv</a> where the default is to keep you in a virtualenv?</p>
+<p>The answer is when you install dependencies using <code>uv</code> in this scenario, use the <code>--python</code> flag to specify the interpreter. According to the <a href="https://github.com/astral-sh/uv?tab=readme-ov-file#installing-into-arbitrary-python-environments">uv docs</a>, this flag is intended for use in continuous integration (CI) environments or other automated workflows.</p>
+<p>So without further ado, this is what I did:</p>
+<div class="codehilite"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>uv
+uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-p<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+
+<p>As a bonus, here's the command inside GitHub actions-flavored YAML:</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Dependencies</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">python -m pip install uv</span>
+<span class="w">        </span><span class="no">uv pip install -p 3.12 -r requirements.txt</span>
+</code></pre></div>
+
+<p>Want to know how to handle multiple versions of Python? Here's how use a matrix on GitHub: <a href="github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19">https://github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19</a></p>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv"/>
+    <summary>Breaking the rules to satisfy continuous integration.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="howto"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-05-08T15:22:59.338527+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
+    <title>TIL: Switching to full screen mode in VSCode</title>
+    <updated>2024-11-07T10:38:51.504930+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>For those times when you want to avoid using the mouse to improve your desktop layout.</em></p>
+<p>First, open VS Code:</p>
+<div class="codehilite"><pre><span></span><code>code my-project-dir/
+</code></pre></div>
+
+<p>Then, depending on your operating system, use these hotkeys:</p>
+<h2 id="mac-os-x">Mac OS X</h2>
+<p>Two versions of the same key combination:</p>
+<div class="codehilite"><pre><span></span><code>⌃⌘F
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>control + command + F
+</code></pre></div>
+
+<h2 id="windows-and-linux">Windows and Linux:</h2>
+<div class="codehilite"><pre><span></span><code>F11
+</code></pre></div>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode"/>
+    <summary>For those times when you want to avoid using the mouse to improve your desktop layout.</summary>
+    <category term="TIL"/>
+    <category term="VS Code"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-05-17T10:05:20.126968+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git</id>
+    <title>TIL: Auto setup remote branch for git</title>
+    <updated>2024-11-07T10:38:51.497644+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p><em>For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.</em></p>
+<p>Whenever I create a new branch and try to push the new commit then I start seeing this error:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">git</span><span class="w"> </span><span class="nv">push</span><span class="w"> </span><span class="o">--</span><span class="nv">force</span>
+<span class="nv">fatal</span>:<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">branch</span><span class="w"> </span><span class="nv">new</span><span class="o">-</span><span class="nv">awesome</span><span class="o">-</span><span class="nv">feature</span><span class="w"> </span><span class="nv">has</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span><span class="nv">upstream</span><span class="w"> </span><span class="nv">branch</span>.
+<span class="nv">To</span><span class="w"> </span><span class="nv">push</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">branch</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">set</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">upstream</span>,<span class="w"> </span><span class="nv">use</span>
+
+<span class="w">    </span><span class="nv">git</span><span class="w"> </span><span class="nv">push</span><span class="w"> </span><span class="o">--</span><span class="nv">set</span><span class="o">-</span><span class="nv">upstream</span><span class="w"> </span><span class="nv">origin</span><span class="w"> </span><span class="nv">new</span><span class="o">-</span><span class="nv">awesome</span><span class="o">-</span><span class="nv">feature</span>
+
+<span class="nv">To</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">happen</span><span class="w"> </span><span class="nv">automatically</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">branches</span><span class="w"> </span><span class="nv">without</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">tracking</span>
+<span class="nv">upstream</span>,<span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="s1">&#39;push.autoSetupRemote&#39;</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="s1">&#39;git help config&#39;</span>.
+</code></pre></div>
+
+<p>To fix it so git just auto creates the branch, just enter this magic command:</p>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--add<span class="w"> </span>--bool<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git"/>
+    <summary>For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.</summary>
+    <category term="TIL"/>
+    <category term="git"/>
+    <category term="howto"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-05-21T09:38:05.180325+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches</id>
     <title>TIL: Renaming git branches</title>
-    <updated>2024-08-06T14:44:06.499763+00:00</updated>
+    <updated>2024-11-07T10:38:51.477789+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -35,8 +283,10 @@
 
 <p>To cleanup the old branch:</p>
 <div class="codehilite"><pre><span></span><code>git push origin --delete OLDNAME
-</code></pre></div>]]></content>
-    <link href="til-2024-06-renaming-git-branches"/>
+</code></pre></div>
+
+<p>Note: The source of this is this <a href="https://stackoverflow.com/questions/6591213/how-can-i-rename-a-local-git-branch">Stack Overflow post</a>. I wrote this TIL because I look this up about once a week, so decided to add it to the "bookmark" system that is my blog. Also, the use of <code>&lt;brackets&gt;</code> there for <code>REPLACE_THIS</code> content is unfortunate as it doesn't work well with the options keys.</p>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches"/>
     <summary>Sometimes branches evolve into things that don't match their names.</summary>
     <category term="TIL"/>
     <category term="howto"/>
@@ -48,9 +298,9 @@
     <published>2024-06-04T09:55:47.055467+00:00</published>
   </entry>
   <entry>
-    <id>til-2024-06-passing-exceptions-as-arguments-in-python</id>
+    <id>https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python</id>
     <title>TIL: Passing exceptions as arguments in Python</title>
-    <updated>2024-08-06T14:44:06.495659+00:00</updated>
+    <updated>2024-11-07T10:38:51.476620+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -96,7 +346,7 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
 
 <span class="n">myfunc</span><span class="p">(</span><span class="n">MyException</span><span class="p">)</span>
 </code></pre></div>]]></content>
-    <link href="til-2024-06-passing-exceptions-as-arguments-in-python"/>
+    <link href="https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python"/>
     <summary>Mypy needs an extra identifier to not choke on an exception passed as an argument.</summary>
     <category term="TIL"/>
     <contributor>
@@ -106,9 +356,9 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
     <published>2024-06-07T11:13:05.553336+00:00</published>
   </entry>
   <entry>
-    <id>til-2024-08-parsing-messy-datetimes-strings</id>
+    <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-08-06T14:44:06.456172+00:00</updated>
+    <updated>2024-11-07T10:38:51.475573+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -141,9 +391,8 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
         <span class="n">Raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error parsing date string: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p>Original source code <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31">here</a>.</p>
-<p><em>Note: As of publishing, this article is still on my old blog. The DNS switchover to the <a href="https://danielfeldroycom-production.up.railway.app/">FastHTML version of my blog</a> happens later this week.</em></p>]]></content>
-    <link href="til-2024-08-parsing-messy-datetimes-strings"/>
+<p>Original source code <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31">here</a>.</p>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings"/>
     <summary>How to convert inconsistent datetime strings into datetime objects.</summary>
     <category term="TIL"/>
     <category term="howto"/>
@@ -154,5 +403,81 @@ Found<span class="w"> </span><span class="m">2</span><span class="w"> </span>err
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-08-06T12:00:00.192810+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
+    <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
+    <updated>2024-11-07T10:38:51.475470+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <link href="https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets"/>
+    <summary>A simple websockets example hosted in a Jupyter notebook!</summary>
+    <category term="TIL"/>
+    <category term="FastHTML"/>
+    <category term="python"/>
+    <category term="jupyter"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-09-23T15:13:34.609190+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
+    <title>TIL: Using Python to removing prefixes and suffixes</title>
+    <updated>2024-11-07T10:38:51.474761+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p>Starting in Python 3.9, <code>s.removeprefix()</code> and <code>s.removesuffix()</code> were added as <code>str</code> built-ins. Which easily covers all the versions of Python I currently support.</p>
+<h2 id="usage-for-removeprefix">Usage for <code>removeprefix()</code>:</h2>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s1">&#39;Spam&#39;</span><span class="p">)</span>
+<span class="s1">&#39;, Spam&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s1">&#39;This is not in the prefix&#39;</span><span class="p">)</span>
+<span class="s1">&#39;Spam, Spam&#39;</span>
+</code></pre></div>
+
+<h2 id="usage-for-removesuffix">Usage for <code>removesuffix()</code>:</h2>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removesuffix</span><span class="p">(</span><span class="s1">&#39;Spam&#39;</span><span class="p">)</span>
+<span class="s1">&#39;Spam, &#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removesuffix</span><span class="p">(</span><span class="s1">&#39;This is not in the suffix&#39;</span><span class="p">)</span>
+<span class="s1">&#39;Spam, Spam&#39;</span>
+</code></pre></div>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes"/>
+    <summary>How did I miss these functions getting added to Python?</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-01T12:00:00.235742+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
+    <title>TIL: Autoreload for Jupyter notebooks</title>
+    <updated>2024-11-07T10:38:51.474418+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="CDATA"><![CDATA[<p>Add these commands to the top of a notebook within a Python cell. Thanks to Jeremy Howard for the tip.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
+</code></pre></div>]]></content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks"/>
+    <summary>How to skip having to restart your notebook on code changes.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="jupyter"/>
+    <category term="howto"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-06T18:00:00.928751+00:00</published>
   </entry>
 </feed>

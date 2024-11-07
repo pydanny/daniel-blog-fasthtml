@@ -60,8 +60,12 @@ def add_entry(fg, raw):
     fe.id(linker)
     fe.link(href=linker)
     fe.title(metadata['title'])
-    fe.summary(metadata['description'] or '')    
-    fe.content(content=github_markdown_to_html(content), type='CDATA')  
+    fe.summary(metadata.get('description'))    
+    try:
+        fe.content(content=github_markdown_to_html(content), type='CDATA')  
+    except TypeError:
+        # Probably a Jupyter notebook, so it won't render easily. Just pass it by.
+        pass
     fe.contributor([{'name': 'Daniel Roy Greenfeld', 'email': 'daniel@feldroy.com'}])
     fe.author([{'name': 'Daniel Roy Greenfeld', 'email': 'daniel@feldroy.com'}])
     fe.pubDate(convert_dtstr_to_dt(metadata['date']))
@@ -87,7 +91,7 @@ def build_feed(content_tag: str | None = None):
     if content_tag is not None:
         posts = list(filter_posts_by_tag(posts, content_tag))
 
-    for raw in posts[:3]:
+    for raw in posts[:12]:
         add_entry(fg, raw)
 
 
@@ -99,5 +103,11 @@ def build_feed(content_tag: str | None = None):
 
 if __name__ == '__main__':
     import sys
-    content_tag = sys.argv[1] if len(sys.argv) > 1 else None
-    build_feed(content_tag)
+    if len(sys.argv) == 1:
+        build_feed(None)
+        build_feed('django')
+        build_feed('python')
+        build_feed('til')
+    else:
+        content_tag = sys.argv[1]
+        build_feed(sys.argv[1])

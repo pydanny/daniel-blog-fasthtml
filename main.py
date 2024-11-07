@@ -191,7 +191,7 @@ def Layout(title, socials, *tags):
                 A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), ' | ',        
                 A('Twitter', href='https://twitter.com/pydanny'), ' | ',
                 A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), ' | ',                
-                A('Atom Feed', href='/feeds/atom.xml')
+                'Feeds: ', A('All', href='/feeds/atom.xml'), NotStr(', ') ,A('Python', href='/feeds/python.atom.xml'), NotStr(', ') , A('TIL', href='/feeds/til.atom.xml')
             ),
             P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
         ),
