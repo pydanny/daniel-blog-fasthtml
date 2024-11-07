@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-11-07T10:38:50.888440+00:00</updated>
+  <updated>2024-11-07T11:14:36.604839+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-09-tmux-cheatsheet</id>
     <title>tmux cheatsheet</title>
-    <updated>2024-11-07T10:38:51.353552+00:00</updated>
+    <updated>2024-11-07T11:14:37.050120+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -78,7 +78,7 @@ set -g default-terminal &quot;screen-256color&quot;
   <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-00</id>
     <title>Practical Deep Learning for Coders: Lesson 0</title>
-    <updated>2024-11-07T10:38:51.351281+00:00</updated>
+    <updated>2024-11-07T11:14:37.047851+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -153,7 +153,7 @@ set -g default-terminal &quot;screen-256color&quot;
   <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-01</id>
     <title>Practical Deep Learning for Coders: Lesson 1</title>
-    <updated>2024-11-07T10:38:51.316611+00:00</updated>
+    <updated>2024-11-07T11:14:37.014719+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -387,7 +387,7 @@ set -g default-terminal &quot;screen-256color&quot;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-07T10:38:51.316469+00:00</updated>
+    <updated>2024-11-07T11:14:37.014586+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -407,7 +407,7 @@ set -g default-terminal &quot;screen-256color&quot;
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet</id>
     <title>Python CSV Cheatsheet</title>
-    <updated>2024-11-07T10:38:51.304661+00:00</updated>
+    <updated>2024-11-07T11:14:37.003365+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -464,7 +464,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/mermaid-charts</id>
     <title>Mermaid charts!</title>
-    <updated>2024-11-07T10:38:51.266362+00:00</updated>
+    <updated>2024-11-07T11:14:36.967407+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -490,7 +490,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling</id>
     <title>FastHTML form error handling</title>
-    <updated>2024-11-07T10:38:51.260432+00:00</updated>
+    <updated>2024-11-07T11:14:36.961677+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -717,7 +717,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/file-location-cleanup</id>
     <title>File Location Fixup</title>
-    <updated>2024-11-07T10:38:51.260260+00:00</updated>
+    <updated>2024-11-07T11:14:36.961511+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -735,7 +735,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
     <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-11-07T10:38:51.209090+00:00</updated>
+    <updated>2024-11-07T11:14:36.911170+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -791,7 +791,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-07T10:38:51.208258+00:00</updated>
+    <updated>2024-11-07T11:14:36.910359+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -823,7 +823,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-11-07T10:38:51.203476+00:00</updated>
+    <updated>2024-11-07T11:14:36.905849+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -1030,7 +1030,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-07T10:38:51.183243+00:00</updated>
+    <updated>2024-11-07T11:14:36.885871+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

@@ -78,17 +78,18 @@ def build_feed(content_tag: str | None = None):
 
     fg = FeedGenerator()
     fg.id('https://daniel.feldroy.com')
-    fg.title('Daniel Roy Greenfeld')
     fg.author({'name': 'Daniel Roy Greenfeld', 'email': 'daniel@feldroy.com', 'uri':'https://daniel.feldroy.com'})
     fg.link(href='https://daniel.feldroy.com', rel='alternate')
-    fg.title('Inside the head of Daniel Roy Greenfeld')
     fg.logo('https://daniel.feldroy.com/images/pydanny-cartwheel.png')
     fg.rights(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
     fg.language('en') 
 
     posts = contents.list_posts(published=True)             
 
-    if content_tag is not None:
+    if content_tag is None:
+        fg.title('Inside the head of Daniel Roy Greenfeld')
+    else:
+        fg.title(f'{content_tag.capitalize()} posts by Daniel Roy Greenfeld')
         posts = list(filter_posts_by_tag(posts, content_tag))
 
     for raw in posts[:12]:
