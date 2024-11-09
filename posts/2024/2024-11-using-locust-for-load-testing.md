@@ -19,10 +19,11 @@ title: Using locust for load testing
 ```python
 # locustfile.py
 # For more options read the following
-#   https://docs.locust.io/en/stable/writing-a-locustfile.html
+#   - https://docs.locust.io/en/stable/writing-a-locustfile.html
+#   - https://docs.locust.io/en/stable/tasksets.html
 
 # Import Locust basics
-from locust import HttpUser, task, between
+from locust import HttpUser, SequentialTaskSet, task, between
 
 # Imports for generating content
 from string import ascii_letters
@@ -34,21 +35,16 @@ def namer():
     shuffle(ascii_list)
     return ''.join(ascii_list[:10])
 
-class CatsiteUser(HttpUser):
+class TaskSet(SequentialTaskSet):
     """
-    This class represents simulated users interacting with
-    a website.
+    A class for organizing tasks, inheriting from
+    SequentialTaskSet means the tasks happen in order.
     """
-    # how long between clicks a user should take
-    wait_time = between(2, 5)
-    # The default host of the target client. This can be changed
-    # at any time
-    host = 'http://localhost:5001/'
 
     def on_start(self):
         # Methods with the on_start name will be called for each
         # simulated user when they start. Useful for logins and
-        # other 'do before doing other things'.
+        # other 'do before doing all other things'.
         pass
 
     def on_stop(self):
@@ -72,24 +68,34 @@ class CatsiteUser(HttpUser):
     def create(self):
         # User posts a create form with the fields 'name'
         # and 'age'
-        self.client.post('/create', dict(name=namer(), age=randint(1,35)))
+        with self.client.post('/create', dict(name=namer(), age=randint(1,35))) as resp:
+            self.pk =  resp.text
 
     @task
     def update(self):
         # User posts an update form with the fields 'name'
         # and 'age'"
-        with self.client.get('/random') as resp:
-            pk = resp.text
-            form_data = dict(id=pk, name=namer(), age=randint(1,35))
-            self.client.post(f'/{pk}/update')
+        form_data = dict(id=self.pk, name=namer(), age=randint(1,35))
+        self.client.post(f'/{self.pk}/update', form_data)
 
     @task
     def delete(self):
         # Represents the user getting a random ID and then
         # going to the delete page for it.
-        with self.client.get('/random') as resp:
-            pk = resp.text
-            self.client.get(f'/{pk}/delete')
+        self.client.get(f'/{self.pk}/delete')
+
+class CatsiteUser(HttpUser):
+    """
+    This class represents simulated users interacting with
+    a website.
+    """
+    # What tasks should be done    
+    tasks = [TaskSet]
+    # how long between clicks a user should take
+    wait_time = between(2, 5)
+    # The default host of the target client. This can be changed
+    # at any time
+    host = 'http://localhost:5001/'    
 ```
 
 ## Sample test site
@@ -115,15 +121,15 @@ app, rt = fast_app()
 
 def mk_form(target: str):
     return Form(
-        P(A('Home', href=index)),
-        Fieldset(
-            Input(name='name'),
-            Input(name='age', type='number'),
+            P(A('Home', href=index)),
+            Fieldset(
+                Input(name='name'),
+                Input(name='age', type='number'),
 
-        ),
-        Input(type='submit', value='submit'),
-        hx_post=target, hx_swap="outerHTML"
-    )
+            ),
+            Input(type='submit', value='submit'),
+            method='post'
+        )
 
 def cat_count():
     query = """select count(id) from cat;"""
@@ -133,9 +139,7 @@ def cat_count():
 @rt
 def index():
     return Titled('Cats',
-        P(
-            A('Create cat', href='/create'), NotStr(' '),
-            A('Random ID', href=random)),
+        P(A('Create cat', href='/create'), NotStr(' '), A('Random ID', href=random)),
         P(f'Number of cats: {cat_count()}'),        
         Ol(
             *[Li(A(f'{d.name}:{d.age}', href=f'/{d.id}')) for d in cats()]
@@ -144,7 +148,7 @@ def index():
 
 @rt
 def random():
-    # Small dataset, we can get away with using the RANDOM() function
+    # Small datasets so we can get away with using the RANDOM() function here
     query = """SELECT id FROM cat ORDER BY RANDOM() LIMIT 1;"""
     result = db.execute(query)
     return result.fetchone()[0]
@@ -157,8 +161,14 @@ def get():
 
 @rt('/create')
 def post(cat: Cat):
-    cat = cats.insert(Cat(name=cat.name, age=cat.age))
-    return RedirectResponse(url=f'/{cat.id}')
+    while True:
+        try:
+            cat = cats.insert(Cat(name=cat.name, age=cat.age))
+            break
+        except Exception as e:
+            print(e)
+            raise
+    return cat.id
 
 @rt('/{id}')
 def cat(id: int):
@@ -168,6 +178,7 @@ def cat(id: int):
         P(A('update', href=f'/{id}/update')),
         P(A('delete', href=f'/{id}/delete')),
     )
+
 
 @rt('/{id}/update')
 def get(id: int):
@@ -201,6 +212,7 @@ def cat(id: int):
 serve()
 ```
 
+## Updates
 
-
-
+- 2024-11-08 Use `SequentialTaskSet` as recommended by Audrey Roy Greenfeld
+- 2024-11-08 Fixed a few bugs in cats.py 
