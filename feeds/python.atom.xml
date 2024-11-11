@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2024-11-07T11:14:37.089470+00:00</updated>
+  <updated>2024-11-11T14:48:51.307219+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,118 +13,14 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
-    <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-11-07T11:14:37.168234+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="CDATA"><![CDATA[<p><em>How to convert inconsistent datetime strings into datetime objects.</em></p>
-<p>Recently I've been working on yet another rewrite of my blog, this time to <a href="https://about.fastht.ml/">FastHTML</a>. Thanks to the power and ease of that framework, that took about 45 minutes to replicate all the web pages of my blog. Wahoo!</p>
-<p>Alas, the atom/rss feeds took quite a bit longer. </p>
-<p>For the atom/rss feeds I chose to use the venerable <a href="https://pypi.org/project/feedgen/">Feedgen</a> library. The challenge there is that Feedgen is rightfully particular about the datetime objects it accepts. And over the years as this site has had 650 posts added the timestamps have become rather inconsistent in their format. On that issue I fully blame the author, who unfortunately is me.</p>
-<p>In any case, I wrote a little Python function that handles it in a timezone aware way using the <code>dateutils.parser()</code> functon that I learned.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Python stdlib</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="kn">from</span> <span class="nn">dateutils</span> <span class="kn">import</span> <span class="n">parser</span>
-
-<span class="c1"># You&#39;ll need to install the pytz dependency</span>
-<span class="kn">import</span> <span class="nn">pytz</span>
-
-<span class="k">def</span> <span class="nf">convert_dtstr_to_dt</span><span class="p">(</span><span class="n">date_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Convert a naive or non-naive date/datetime string</span>
-<span class="sd">    to a datetime object. Naive datetime strings are</span>
-<span class="sd">    assumed to be in GMT (UTC) timezone.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">date_str</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">dt</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="c1"># If the datetime object is naive, set it to GMT (UTC)</span>
-            <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">UTC</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">dt</span>
-    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="n">Raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error parsing date string: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<p>Original source code <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31">here</a>.</p>]]></content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings"/>
-    <summary>How to convert inconsistent datetime strings into datetime objects.</summary>
-    <category term="TIL"/>
-    <category term="howto"/>
-    <category term="python"/>
-    <category term="FastHTML"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-08-06T12:00:00.192810+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-00</id>
     <title>Practical Deep Learning for Coders: Lesson 0</title>
-    <updated>2024-11-07T11:14:37.165866+00:00</updated>
+    <updated>2024-11-11T14:48:51.307615+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>I'm going through the <a href="http://course.fast.ai">Practical Deep Learning for Coders</a> course by Jeremy Howard. I’ll be sharing notes here on my site, all tagged with <a href="https://daniel.feldroy.com/tags/fast.ai">fast.ai</a>.</p>
-<h2 id="about-lesson-0">About Lesson 0</h2>
-<p>This lesson is where <a href="https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)">Jeremy Howard</a> explains how to get the most out of his classes. He references <a href="https://rosmulski.gumroad.com/l/learn_machine_learning/blog">Meta-learning</a> by <a href="https://radekosmulski.com/">Radek Osmulski</a> frequently.</p>
-<h2 id="how-to-take-lessons">How to take lessons</h2>
-<p>Follow these steps with each lesson of the <a href="http://course.fast.ai">Practical Deep Learning for Coders</a> course:</p>
-<ol>
-<li><strong>Watch lecture</strong></li>
-<li><strong>Run notebook &amp; experiment with the results</strong></li>
-<li>Play with it. Do different things  </li>
-<li><strong>Reproduce results</strong></li>
-<li>Reproduce from scratch. With a fresh new notebook, can I recreate some of the models?  </li>
-<li><strong>Repeat with a different dataset</strong></li>
-<li>Get own dataset and try it from scratch</li>
-<li><strong>Once you understand a lesson, confirm it</strong></li>
-<li>Go through the <code>clean/</code> version of the notebooks and figure out each cell again, this time without prose or rendered outputs</li>
-<li><strong>Once you confirm your understanding, question it</strong></li>
-<li>Complete the lesson questionnaire</li>
-<li>Use the questions to confirm you know every concept</li>
-<li>If you can't answer a question, go back and learn it </li>
-<li><strong>Share your accomplishments</strong></li>
-<li>When a lesson is 100% complete and you actually understand everyting, go to <a href="https://forums.fast.ai/">forums.fast.ai</a> and announce your efforts in the "share your work" section.</li>
-</ol>
-<p>Some people go through each lesson 2-3 times. It might be hard to do it the first time. That’s okay.</p>
-<h2 id="tips-and-tricks">Tips and Tricks</h2>
-<p>These are from Jeremy Howard and Radek Osmulski.</p>
-<ul>
-<li><strong>The math in Deep Learning is matrix multiplication</strong>. Where you multiply things together, then add them up.   </li>
-<li><strong>To get better at ML, like anything else: Practice!</strong> Theory requires practice, practice provides context for understanding theory. So practice early and practice often. A few years ago I wrote about this concept <a href="https://daniel.feldroy.com/posts/code-code-code">here</a></li>
-<li><strong>The difference between machine learning code compared to other coding is we can generalize.</strong> We can learn how to measure how well our code generalizes. This is in stark contrast to other types of coding where you are generally looking for very specific results.  </li>
-<li><strong>Proving ML code is accurate is really hard.</strong> Jeremy assumes every line of ML code he writes is going to be wrong. Unlike web dev it is harder to determine if code is wrong. Make sure you have a strong baseline so it’s easy to check your work  </li>
-<li><strong>Competing in Kaggle, regardless of place, can be a great way to validate ML skills.</strong> Even if you come in last place, you have to go through all the process of doing work as a ML engineer. Well, maybe not deployment, but everything early.  </li>
-<li><strong>Best path for winning at <a href="https://www.kaggle.com/">Kaggle</a>:</strong>  </li>
-<li>Start a competition early  </li>
-<li>Read forums every day  </li>
-<li>Make improvements to your competition set each day, this iterative process will serve as practice. <a href="https://daniel.feldroy.com/posts/code-code-code">Code, code, code</a>!</li>
-<li>Rinse and repeat: Early losses will serve as practice for when you are able to try to win  </li>
-<li><strong>Document process of learning in blogs, videos, and social media.</strong> Just like any skill, including other types of coding, documenting your learning socially sets up the public footprint that you are skilled in your craft. So when people look you up, they identify you with your skills.</li>
-</ul>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=gGxe2mN3kAg&amp;ab_channel=JeremyHoward">Video lecture</a> - Where these notes are taken from</li>
-<li><a href="http://course.fast.ai">course.fast.ai</a> - Lessons 1 onward</li>
-<li><a href="https://rosmulski.gumroad.com/l/learn_machine_learning/blog">Book: "Meta-learning" by Radek Osmulski</a>  </li>
-<li><a href="https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527?tag=mlinar-20">Book: "Deep Learning for Coders with fastai and PyTorch" by Jeremy Howard and Sylvain Gugger</a></li>
-</ul>
-<h2 id="summary-takeaway">Summary / Takeaway</h2>
-<p>My methodology for learning and teaching is similar, but Jeremy's approach focuses much more on repetition and questioning:</p>
-<ol>
-<li>After you watch the video and the demo, you try it out yourself. </li>
-<li>You experiment, then you start from scratch and try to implement that yourself as well. </li>
-<li>Repeat 2 with less help</li>
-<li>Validate your work several times, including sharing it with others because amongst other things people will point out your mistakes</li>
-</ol>
-<p>Classes I've constructed are different. They focus on repetition, but not on different versions of the lesson. Also they don't cover experimentation and play starting with lesson 1. That typically happens far into the class. </p>
-<p>What I find interesting is that Jeremy's approach closely matches how any decent martial art class with sparring works (Muay Thai, BJJ, fencing, kendo, HEMA, Tae Kwon Do, etc.). Typically in a class you'll learn or polish 1-2 moves, then be given specific drills to use to practice them. Then finally you might have free sparring, where if you can land the move(s) of the class it feels awesome.</p>
-<p>I'm excited to dig into <a href="https://course.fast.ai/Lessons/lesson1.html">lesson 1</a>!</p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/course-fastai-lesson-00"/>
     <link href="https://daniel.feldroy.com/posts/course-fastai-lesson-00"/>
     <summary>I'm going through the fast.ai course by Jeremy Howard. This is the course notes for lesson 0.</summary>
     <category term="python"/>
@@ -139,226 +35,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-01</id>
     <title>Practical Deep Learning for Coders: Lesson 1</title>
-    <updated>2024-11-07T11:14:37.132567+00:00</updated>
+    <updated>2024-11-11T14:48:51.307596+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>I'm going through the <a href="http://course.fast.ai">Practical Deep Learning for Coders</a> course by Jeremy Howard. I’ll be sharing notes here on my site, all tagged with <a href="https://daniel.feldroy.com/tags/fast.ai">fast.ai</a>.</p>
-<p><strong>This is my personal note-taking, not an article.</strong> This won't be fancy prose like what makes up the majority of this site. If you want to see a big batch of notes in this style I took in the early part of my Python career, check out my <a href="https://pydanny-event-notes.readthedocs.io/en/latest/">pydanny-event-notes</a>. </p>
-<h2 id="lesson-1-getting-started">Lesson 1: Getting started</h2>
-<p><a href="https://course.fast.ai/Lessons/lesson1.html">course.fast.ai/Lessons/lesson1.html</a></p>
-<h2 id="deep-learning-has-come-a-long-way">Deep learning has come a long way</h2>
-<p>What was impossible just a few years ago is cheap/easy now  </p>
-<ul>
-<li>Can sometimes be done on modern laptops with GPUs  </li>
-<li>Instead of days or weeks can take minutes or seconds  </li>
-<li>Doesn’t take a lot of code  </li>
-</ul>
-<h2 id="images-are-just-a-bunch-of-numbers">Images are just a bunch of numbers.</h2>
-<p>In the lesson RGB images are:  </p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># (height in pixes)</span>
-<span class="c1"># (width in pixes)</span>
-<span class="c1"># (3 is RGB)</span>
-<span class="n">height</span> <span class="o">*</span> <span class="n">width</span> <span class="o">*</span> <span class="mi">3</span> 
-</code></pre></div>
-
-<p>So an image dimension might be:</p>
-<div class="codehilite"><pre><span></span><code>          <span class="c1"># height   width    RGB</span>
-<span class="mi">6220800</span> <span class="o">=</span> <span class="mi">1920</span>     <span class="o">*</span> <span class="mi">1080</span>   <span class="o">*</span> <span class="mi">3</span>
-</code></pre></div>
-
-<h2 id="random-deep-learning-notes">Random Deep Learning notes</h2>
-<ul>
-<li>You typically can’t search on "not a something"</li>
-<li>You don’t need particularly large images to do deep learning on them</li>
-<li>Datablocks are a tool for creating data learners. Data learners give fastai info it needs to create (or train?) a model  </li>
-<li>Computer vision models are easy to check because you can look at your results  </li>
-</ul>
-<h2 id="top-down-training">Top down training</h2>
-<p>How the instructor teaches, also <a href="https://daniel.feldroy.com/posts/course-fastai-lesson-00">see my notes on lesson 0</a></p>
-<ul>
-<li>We started by showing training of a model  </li>
-<li>People learn better with context in place  </li>
-<li><a href="https://www.amazon.com/Mathematicians-Lament-School-Fascinating-Imaginative/dp/1934137170?taqg=mlinar-20">Mathematician’s Lament</a> by Paul Lockhart  </li>
-<li><a href="https://www.amazon.com/Making-Learning-Whole-Principles-Transform/dp/0470633719?tag=mlinar-20">Making Learning Whole</a> by David Perkins  </li>
-<li>We learn best following the sport method  <ul>
-<li>We first learn a simplified version of the game  </li>
-<li>We then learn the techniques over time, adding more skills and polish as time goes by  </li>
-</ul>
-</li>
-<li>First learn how to build and deploy models before we learn how they work   </li>
-</ul>
-<h2 id="about-the-instructor-jeremy-howard">About the instructor: <a href="https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)">Jeremy Howard</a></h2>
-<ul>
-<li><a href="https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527/?tag=mlinar-20">Deep Learning for Coders with fastai &amp; PyTorch</a>, free version at <a href="http://github.com/fastai/fastbook">github.com/fastai/fastbook</a>  </li>
-<li>Spent 30 years doing machine learning  </li>
-<li>Founded <a href="https://kaggle.com">Kaggle</a>, top ranked competitor on the platform</li>
-<li>First person to do ML for a company  </li>
-<li>His students have beaten Google and other bigtech teams in coding competitions  </li>
-<li>Google started using his methods in their models  </li>
-<li>Inventor of the ULMFiT algorithm, a critical component of the modern LLM   </li>
-<li>Prefers a functional style over class. So we will see a lot of <code>map</code> usage and other FP patterns. See <a href="https://docs.fast.ai/dev/style.html">here</a> for details.</li>
-<li>Likes to do everything in Jupyter notebooks</li>
-</ul>
-<h2 id="why-is-deep-learning-fastereasier-now">Why is Deep Learning faster/easier now?</h2>
-<p>Why can we do a bird recognizer fast now, but couldn’t do it before  </p>
-<ul>
-<li>In 2015 a new way of doing came out that changed everything </li>
-<li>Took a more layered approach</li>
-<li>Where they took patterns and trained the models to recognize said patterns</li>
-<li>They were able to recognize patterns in batches, then composite them</li>
-<li>This is possible to code these pattern recognizers by hand, but neural networks were able to recognize the patterns and assemble them more quickly</li>
-</ul>
-<h2 id="other-image-recognizer-tricks">Other Image Recognizer tricks</h2>
-<p>Image recognizers can be used on a lot of non-image things</p>
-<ul>
-<li>Recognize sound patterns</li>
-<li>Time series</li>
-<li>Computer mouse movements</li>
-<li>What about code?</li>
-</ul>
-<h2 id="myths-about-deep-learning">Myths about Deep learning</h2>
-<table>
-<thead>
-<tr>
-<th>Myth</th>
-<th>Truth</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Need lots of math</td>
-<td>High school math is sufficient</td>
-</tr>
-<tr>
-<td>Need lots of data</td>
-<td>Seen record breaking results with 50 rows of data</td>
-</tr>
-<tr>
-<td>Lots of expensive computers</td>
-<td>We can get state-of-the-art for free/cheap</td>
-</tr>
-</tbody>
-</table>
-<p>Myth of expensive processes is sold by big companies who want to sell expensive products. </p>
-<h2 id="about-pytorch">About pytorch</h2>
-<ul>
-<li>pytorch took over from tensorflow</li>
-<li>Reason is that the technical fundamentals are better</li>
-<li>pytorch is a lower-level library, taking a lot of coding effort to do anything</li>
-<li>fastai is a wrapper around pytorch that makes pytorch more accessible</li>
-</ul>
-<h2 id="what-is-fastai">What is Fastai?</h2>
-<p>Fastai is a Python library: <a href="https://docs.fast.ai/">docs.fast.ai</a></p>
-<ul>
-<li>is a wrapper around pytorch, makes pytorch a lot more accessible</li>
-<li>so instead of spending a lot of time in code, you are doing business. </li>
-<li>Me: Your reqs should be complicated, not your code</li>
-<li>won a best paper award in 2020</li>
-</ul>
-<h2 id="class-given-in-jupyter-notebook">Class given in Jupyter notebook!</h2>
-<ul>
-<li>Slides rendered in Jupyter</li>
-<li>Kaggle is where lesson notebooks can be found</li>
-<li>Jupyter serves as coding environment and calculator</li>
-</ul>
-<h2 id="datablocks-master-them">Datablocks - master them!</h2>
-<p>Intermediate type of system that creates data learners</p>
-<div class="codehilite"><pre><span></span><code><span class="n">dataloaders</span> <span class="o">=</span> <span class="n">DataBlock</span><span class="p">(</span>
-    <span class="n">blocks</span><span class="o">=</span><span class="p">(</span><span class="n">ImageBlock</span><span class="p">,</span> <span class="n">CategoryBlock</span><span class="p">),</span> 
-    <span class="n">get_items</span><span class="o">=</span><span class="n">get_image_files</span><span class="p">,</span> 
-    <span class="n">splitter</span><span class="o">=</span><span class="n">RandomSplitter</span><span class="p">(</span><span class="n">valid_pct</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
-    <span class="n">get_y</span><span class="o">=</span><span class="n">parent_label</span><span class="p">,</span>
-    <span class="n">item_tfms</span><span class="o">=</span><span class="p">[</span><span class="n">Resize</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;squish&#39;</span><span class="p">)]</span>
-<span class="p">)</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">bs</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
-</code></pre></div>
-
-<ul>
-<li><code>blocks</code>: Deep learning community has found a small number of model types work great for most scenarios<ul>
-<li><code>ImageBlock</code> - An image</li>
-<li><code>CategoryBlock</code> - Classify an item as one of something</li>
-</ul>
-</li>
-<li><code>get_items</code> - func for getting items</li>
-<li><code>splitter</code> - sets aside data for validation</li>
-<li><code>get_y</code> - Function for returning the parent folder of a path</li>
-<li><code>items_tfms</code> - "item transforms" runs on every item evaluated and makes sure they end up same size. For example, all images are the same height and width</li>
-</ul>
-<h2 id="dataloaders">DataLoaders</h2>
-<p><code>DataLoaders</code> are what datablocks generate</p>
-<ul>
-<li>Runs slow unless in a GPU</li>
-<li>Runs in big batches on data that is all the same size</li>
-<li>Happens in batches, so <code>show_batch</code> has a specific meaning (Not sure yet what this means)</li>
-</ul>
-<p>Continuing from the example above:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">dataloaders</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-</code></pre></div>
-
-<h2 id="models">Models</h2>
-<ul>
-<li>A few models are all that you need to do most of your work, resnet will probably suffice for most of what we'll do at least in beginning of course</li>
-<li><a href="https://timm.fast.ai/">timm</a> is the largest collection of CV models in the world<ul>
-<li>fastai integrates it</li>
-</ul>
-</li>
-<li>Models are small and fast because someone has trained models and loaded them up to places like download.pytorch.org</li>
-<li><code>fastai.fine_tune</code> is a function that it takes pre-trained weights to just teach the models diffs between our data and what the original data is.<ul>
-<li>Another description: "Fine-tuning" a model means that we're starting with a model someone else has trained using some other dataset (called the pretrained model), and adjusting the weights a little bit so that the model learns to recognise your particular dataset.</li>
-</ul>
-</li>
-<li>To create Dataloaders (DLs) for segmentation, use X (follow-up to find what X is)</li>
-</ul>
-<h2 id="tabular-analysis">Tabular Analysis</h2>
-<p>Tabular Analysis is for column-based data like spreadsheets and databases</p>
-<ul>
-<li>Must identify categorical columns</li>
-<li>Type dispatch figures out the right thing to do depending on the types of data</li>
-<li>Don't fine tune, instead fit a cycle of data (I hear this standard has changed, follow up to find out more)</li>
-<li>Q: What is a cycle?</li>
-</ul>
-<h2 id="collaborative-filtering">Collaborative filtering</h2>
-<p>Collaborative filtering is used to come up with recommendation systems</p>
-<ul>
-<li>Looking at how similar people like similar products</li>
-<li>Get some prefereces and come up with a list of what people like</li>
-<li>We'll find out later why: Go lower than the range and higher than the range</li>
-</ul>
-<h2 id="jupyter-presentation-tip">Jupyter presentation tip</h2>
-<p>Note: Next time I give a technical talk I'm going to use Jupyter so I can have live code examples</p>
-<ul>
-<li>Use <a href="https://rise.readthedocs.io/">rise</a> to make presentations using jupyter</li>
-</ul>
-<h2 id="regular-programming-vs-deep-learning">Regular programming vs Deep Learning</h2>
-<p><em>Note: The code examples below will eventually render to flowcharts powered by <a href="https://mermaid.js.org/">mermaid</a>. For the moment they just display as plaintext.</em></p>
-<p>Normal code</p>
-<div class="codehilite"><pre><span></span><code><span class="n">flowchart</span><span class="w"> </span><span class="n">TD</span>
-<span class="w">    </span><span class="n">inputs</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">results</span>
-</code></pre></div>
-
-<p>Neural network (I'm not sure this is accurate)</p>
-<div class="codehilite"><pre><span></span><code><span class="n">flowchart</span><span class="w"> </span><span class="n">TD</span>
-<span class="w">    </span><span class="n">inputs</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">results</span>
-<span class="w">    </span><span class="n">weights</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">model</span>
-</code></pre></div>
-
-<p>What is a neural network?</p>
-<ol>
-<li>Multiplies weights times inputs</li>
-<li>Takes all the negative numbers and replaces them by zeros</li>
-<li>Loss is how good the results are</li>
-</ol>
-<p>Next step:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">flowchart</span><span class="w"> </span><span class="n">TD</span>
-<span class="w">    </span><span class="n">inputs</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">loss</span>
-<span class="w">    </span><span class="n">weights</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">model</span>
-<span class="w">    </span><span class="n">loss</span><span class="w"> </span><span class="o">--&gt;|</span><span class="n">update</span><span class="o">|</span><span class="w"> </span><span class="n">weights</span>
-</code></pre></div>
-
-<p>We need a way to update the weights depending on the size of the loss. The better we calculate the loss, the better everything will be.</p>
-<p>This algorithm is infinitely flexible as a computable function. If this architecture flow of a neural network can be created, then with enough time and data anything can be done.</p>
-<p>This is awesome: What fastai's <code>learn.predict()</code> function does is turn the neural network into something that uses a typical coding pattern of <code>inputs --&gt; program --&gt; results</code></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/course-fastai-lesson-01"/>
     <link href="https://daniel.feldroy.com/posts/course-fastai-lesson-01"/>
     <summary>I'm going through the fast.ai course by Jeremy Howard. This is the course notes for lesson 1.</summary>
     <category term="python"/>
@@ -373,11 +55,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-07T11:14:37.132449+00:00</updated>
+    <updated>2024-11-11T14:48:51.307577+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
+    <content src="https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets"/>
     <link href="https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets"/>
     <summary>A simple websockets example hosted in a Jupyter notebook!</summary>
     <category term="TIL"/>
@@ -393,49 +76,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet</id>
     <title>Python CSV Cheatsheet</title>
-    <updated>2024-11-07T11:14:37.121640+00:00</updated>
+    <updated>2024-11-11T14:48:51.307556+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>Here's a quick reference guide for Python's csv module. I use it periodicially, but not enough that I memorize the API. </p>
-<h2 id="csvdictwriter">csv.DictWriter</h2>
-<p>Works for when you have an iterable containing a list of dictionaries containing keys that match the values in the <code>fieldnames</code> list.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
-
-<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Roy Greenfeld&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Audrey&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Roy Greenfeld&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Uma&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Roy Greenfeld&#39;</span><span class="p">}</span>
-<span class="p">]</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;family.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
-    <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">]</span>
-    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
-    <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Roy Greenfeld&#39;</span><span class="p">}</span>
-<span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Audrey&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Roy Greenfeld&#39;</span><span class="p">}</span>
-<span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Uma&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Roy Greenfeld&#39;</span><span class="p">}</span>
-</code></pre></div>
-
-<h2 id="csvdictreader">csv.DictReader</h2>
-<p>Reads the first row as column names, then constructs dictionaries that contain values from the row columns.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;family.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
-    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">])</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>Daniel Roy Greenfeld
-Audrey Roy Greenfeld
-Uma Roy Greenfeld
-</code></pre></div>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet"/>
     <link href="https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet"/>
     <summary>Here's a quick reference guide for Python's csv module. I use it periodicially, but not enough that I memorize the API.</summary>
     <category term="howto"/>
@@ -450,17 +96,12 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/mermaid-charts</id>
     <title>Mermaid charts!</title>
-    <updated>2024-11-07T11:14:37.111918+00:00</updated>
+    <updated>2024-11-11T14:48:51.307539+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p><a href="https://mermaid.js.org/">MermaidJS</a> is a JavaScript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically. I've been a fan of tools like it (which includes <a href="">Graphviz</a>) for years. </p>
-<p>Many thanks to <a href="https://github.com/ImtiazKhanDS">Imtiaz Khan</a> for <a href="https://github.com/pydanny/daniel-blog-fasthtml/issues/8">the contribution</a>. </p>
-<div class="codehilite"><pre><span></span><code><span class="n">flowchart</span><span class="w"> </span><span class="n">LR</span>
-<span class="w">    </span><span class="n">A</span><span class="o">[</span><span class="n">Idea</span><span class="o">]</span><span class="w"> </span><span class="o">--&gt;|</span><span class="n">Code</span><span class="o">|</span><span class="w"> </span><span class="n">B</span><span class="p">(</span><span class="n">Deploy</span><span class="p">)</span>
-<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="c1">--&gt;|Share| C[Enjoy]</span>
-</code></pre></div>]]></content>
+    <content src="https://daniel.feldroy.com/posts/mermaid-charts"/>
     <link href="https://daniel.feldroy.com/posts/mermaid-charts"/>
     <summary>My site now has mermaid charts! Many thanks to Imtiaz Khan!</summary>
     <category term="python"/>
@@ -476,219 +117,12 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling</id>
     <title>FastHTML form error handling</title>
-    <updated>2024-11-07T11:14:37.106258+00:00</updated>
+    <updated>2024-11-11T14:48:51.307519+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p><a href="https://fastht.ml/">FastHTML</a> has useful tools for handling forms. Every HTML form input field has a value attribute that we can use tools like <a href="https://docs.fastht.ml/api/components.html#fill_form">fill_form</a> to hang data onto.</p>
-<p>However, form designs are often too different to apply any universals from a framework like FastHTML. For example, one library might place errors in divs, another in paragraphs. The DOM identifiers can't be guaranteed to match.</p>
-<p>I have found this pattern supports reporting form errors in a maintainable way. Let's dig in!</p>
-<h2 id="the-imports">The Imports</h2>
-<p>The pattern relies on Python dataclasses and type hints:</p>
-<ul>
-<li>Dataclasses provide a mechanism to store and later retrieve type hints at runtime. </li>
-<li>Type hints determine whether or not a value can be null</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">fields</span>
-<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">NoneType</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">get_args</span>
-
-<span class="c1"># FastHTML curates what is in common via __all__, </span>
-<span class="c1"># so is safe to use with &#39;*&#39; import</span>
-<span class="kn">from</span> <span class="nn">fasthtml.common</span> <span class="kn">import</span> <span class="o">*</span>
-</code></pre></div>
-
-<h2 id="the-form-dataclass">The Form Dataclass</h2>
-<p>Let's define a <code>Profile</code> <a href="https://docs.python.org/3/library/dataclasses.html">dataclass</a> representing a user's information. The name and email fields are required, age is optional. We make age option by having the type for age be <code>int</code> or <code>None</code>. </p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Profile</span><span class="p">:</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-</code></pre></div>
-
-<h2 id="the-form-builder">The Form Builder</h2>
-<p>Some Fast HTML example apps from the core repo have functions prefixed with <code>mk_</code>. They define forms and other elements. We use the same technique here. It lets us use our form in several places. It also works well with FastHTML's <a href="https://docs.fastht.ml/api/components.html#fill_form">fill_form</a> function.</p>
-<p>We differ in the first few lines of code. They manage the <code>errors</code> dict. If needed, they set errors to be the <code>Small(v, style='font-color: red')</code> FT component, which renders to <code>&lt;small style="font-color: red"&gt;&lt;/small&gt;</code>. This HTML element <a href="https://picocss.com/docs/forms#helper-text">is used by Pico for form helper text elements</a>.</p>
-<p>For projects using other design frameworks, we may need to define a different error element in a different location. Nevertheless, this can serve as an example of how to build a form generator function that can handle blank and errored forms. </p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">mk_profile_form</span><span class="p">(</span><span class="n">errors</span><span class="p">:</span> <span class="nb">dict</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="c1"># If no errors, we default to {}</span>
-    <span class="c1"># Loop through the errors, turning strings into Small(str)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">Small</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;font-color: red&#39;</span><span class="p">)</span>
-         <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="p">(</span><span class="n">errors</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-    <span class="c1"># Set the default value of errors to empty NotStr() objs</span>
-    <span class="n">errors</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">NotStr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="n">d</span><span class="p">)</span>    
-    <span class="c1"># Return the form</span>
-    <span class="k">return</span> <span class="n">Form</span><span class="p">(</span>
-        <span class="n">Fieldset</span><span class="p">(</span>
-            <span class="n">Label</span><span class="p">(</span>
-                <span class="s1">&#39;First name (required)&#39;</span><span class="p">,</span>
-                <span class="n">Input</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">),</span>
-                <span class="c1"># Display name key in error dict</span>
-                <span class="n">errors</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
-            <span class="p">),</span>
-            <span class="n">Label</span><span class="p">(</span>
-                <span class="s1">&#39;Email (required)&#39;</span><span class="p">,</span>
-                <span class="n">Input</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;email&#39;</span><span class="p">),</span>
-                <span class="c1"># Display email key in error dict</span>
-                <span class="n">errors</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span>
-            <span class="p">),</span>
-            <span class="n">Label</span><span class="p">(</span>
-                <span class="s1">&#39;Age&#39;</span><span class="p">,</span>
-                <span class="n">Input</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">),</span>
-                <span class="c1"># Display age key in error dict</span>
-                <span class="n">errors</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
-            <span class="p">)</span>
-        <span class="p">),</span>
-        <span class="n">Input</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;submit&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Subscribe&#39;</span><span class="p">),</span>
-        <span class="c1"># Use HTMX to post the form and upon response update the form</span>
-        <span class="n">hx_post</span><span class="o">=</span><span class="n">update_profile</span><span class="p">,</span> <span class="n">hx_swap</span><span class="o">=</span><span class="s2">&quot;outerHTML&quot;</span>
-    <span class="p">)</span>
-</code></pre></div>
-
-<h2 id="setting-up-the-routes">Setting up the routes</h2>
-<p>It's time to set up the web pages. First, we need to instantiate the route handlers. </p>
-<div class="codehilite"><pre><span></span><code><span class="n">app</span><span class="p">,</span> <span class="n">rt</span> <span class="o">=</span> <span class="n">fast_app</span><span class="p">()</span>
-</code></pre></div>
-
-<p>Then we write our index view. You'll note that we call the <code>mk_profile_form()</code> function without any arguments. This will have it generate a blank form.</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@rt</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Titled</span><span class="p">(</span><span class="s2">&quot;Form error handling&quot;</span><span class="p">,</span>
-        <span class="n">mk_profile_form</span><span class="p">()</span>
-    <span class="p">)</span>
-</code></pre></div>
-
-<p>The next view has less than 10 lines yet is packed with so much functionality that I'm going to comment on every line. The view accepts an instantiated <code>Profile</code> dataclass. We lean on some of the feature of dataclasses and types to check the validity of the user's submission.</p>
-<p>This view uses the <code>NoneType</code> and <code>get_args</code> functions from Python's type hint system to check if a field is required. Yup, we're using runtime type checking to determine whether or not a field can accept a null value.</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@rt</span>
-<span class="k">def</span> <span class="nf">update_profile</span><span class="p">(</span><span class="n">profile</span><span class="p">:</span> <span class="n">Profile</span><span class="p">):</span> 
-    <span class="c1"># Create the errors dict</span>
-    <span class="n">errors</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="c1"># Use dataclasses.fields to iterate through the values</span>
-    <span class="c1"># in our Profile dataclass</span>
-    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">(</span><span class="n">profile</span><span class="p">):</span>
-        <span class="c1"># Get the value from the field, with None if no</span>
-        <span class="c1"># field is found</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">profile</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="c1"># If the value is not Truthy, which is either that no</span>
-        <span class="c1"># value was specified or there was a zero-length string,</span>
-        <span class="c1"># then check if NoneType was in the dataclass field types</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">NoneType</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">get_args</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">type</span><span class="p">):</span>
-            <span class="c1"># Set the error string here</span>
-            <span class="n">errors</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Missing </span><span class="si">{</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
-    <span class="c1"># Make the form using the mk_profile_form function,</span>
-    <span class="c1"># passing in the errors dict </span>
-    <span class="n">form</span> <span class="o">=</span> <span class="n">mk_profile_form</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
-    <span class="c1"># Using FastHTML&#39;s fill_form function to add the data submitted</span>
-    <span class="c1"># by the user then return it back as an HTMX fragment</span>
-    <span class="k">return</span> <span class="n">fill_form</span><span class="p">(</span><span class="n">form</span><span class="p">,</span> <span class="n">profile</span><span class="p">)</span>
-</code></pre></div>
-
-<p>This final line serves the FastHTML app. The <code>serve()</code> function is a wrapper around uvicorn.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">serve</span><span class="p">()</span>
-</code></pre></div>
-
-<h2 id="improvements">Improvements?</h2>
-<p>Some ideas for improvements: </p>
-<ol>
-<li>Moving the error handling from the update view into the <code>mk_profile_form</code> function. This would make the views much smaller and the form even more portable</li>
-<li>Creating a pydantic implementation. This will involve a few extra steps, but pydantic's built-in validation system might reduce complexity in other places</li>
-<li>Include toasts or some other means to notify that the data has been accepted</li>
-<li>Implement the pattern for single form input elements, rather than the whole form. This would apply when a field's value changes. Then, validation and saving would happen without touching the rest of the form.</li>
-</ol>
-<h2 id="all-the-code-at-once">All the code at once</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">fields</span>
-<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">NoneType</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">get_args</span>
-
-<span class="c1"># FastHTML curates what is in common via __all__, </span>
-<span class="c1"># so is safe to use with &#39;*&#39; import</span>
-<span class="kn">from</span> <span class="nn">fasthtml.common</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">app</span><span class="p">,</span> <span class="n">rt</span> <span class="o">=</span> <span class="n">fast_app</span><span class="p">()</span>
-
-<span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Profile</span><span class="p">:</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="o">|</span><span class="kc">None</span>
-
-<span class="k">def</span> <span class="nf">mk_profile_form</span><span class="p">(</span><span class="n">errors</span><span class="p">:</span> <span class="nb">dict</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="c1"># If no errors, we default to {}</span>
-    <span class="c1"># Loop through the errors, turning strings into Small(str)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">Small</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;font-color: red&#39;</span><span class="p">)</span>
-         <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="p">(</span><span class="n">errors</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-    <span class="c1"># Set the default value of errors to empty NotStr() objs</span>
-    <span class="n">errors</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">NotStr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="n">d</span><span class="p">)</span>    
-    <span class="c1"># Return the form</span>
-    <span class="k">return</span> <span class="n">Form</span><span class="p">(</span>
-        <span class="n">Fieldset</span><span class="p">(</span>
-            <span class="n">Label</span><span class="p">(</span>
-                <span class="s1">&#39;First name (required)&#39;</span><span class="p">,</span>
-                <span class="n">Input</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">),</span>
-                <span class="c1"># Display name key in error dict</span>
-                <span class="n">errors</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
-            <span class="p">),</span>
-            <span class="n">Label</span><span class="p">(</span>
-                <span class="s1">&#39;Email (required)&#39;</span><span class="p">,</span>
-                <span class="n">Input</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;email&#39;</span><span class="p">),</span>
-                <span class="c1"># Display email key in error dict</span>
-                <span class="n">errors</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span>
-            <span class="p">),</span>
-            <span class="n">Label</span><span class="p">(</span>
-                <span class="s1">&#39;Age&#39;</span><span class="p">,</span>
-                <span class="n">Input</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">),</span>
-                <span class="c1"># Display age key in error dict</span>
-                <span class="n">errors</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
-            <span class="p">)</span>
-        <span class="p">),</span>
-        <span class="n">Input</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;submit&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Subscribe&#39;</span><span class="p">),</span>
-        <span class="c1"># Use HTMX to post the form and upon response update the form</span>
-        <span class="n">hx_post</span><span class="o">=</span><span class="n">update_profile</span><span class="p">,</span> <span class="n">hx_swap</span><span class="o">=</span><span class="s2">&quot;outerHTML&quot;</span>
-    <span class="p">)</span>        
-
-<span class="nd">@rt</span>
-<span class="k">def</span> <span class="nf">update_profile</span><span class="p">(</span><span class="n">profile</span><span class="p">:</span> <span class="n">Profile</span><span class="p">):</span> 
-    <span class="c1"># Create the errors dict</span>
-    <span class="n">errors</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="c1"># Use dataclasses.fields to iterate through the values</span>
-    <span class="c1"># in our Profile dataclass</span>
-    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">(</span><span class="n">profile</span><span class="p">):</span>
-        <span class="c1"># Get the value from the field, with None if no</span>
-        <span class="c1"># field is found</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">profile</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="c1"># If the value is not Truthy, which is either that no</span>
-        <span class="c1"># value was specified or there was a zero-length string,</span>
-        <span class="c1"># then check if NoneType was in the dataclass field types</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">NoneType</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">get_args</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">type</span><span class="p">):</span>
-            <span class="c1"># Set the error string here</span>
-            <span class="n">errors</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Missing </span><span class="si">{</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
-    <span class="c1"># Make the form using the mk_profile_form function,</span>
-    <span class="c1"># passing in the errors dict </span>
-    <span class="n">form</span> <span class="o">=</span> <span class="n">mk_profile_form</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
-    <span class="c1"># Using FastHTML&#39;s fill_form function to add the data submitted</span>
-    <span class="c1"># by the user then return it back as an HTMX fragment</span>
-    <span class="k">return</span> <span class="n">fill_form</span><span class="p">(</span><span class="n">form</span><span class="p">,</span> <span class="n">profile</span><span class="p">)</span>
-
-<span class="nd">@rt</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Titled</span><span class="p">(</span><span class="s2">&quot;Form error handling&quot;</span><span class="p">,</span>
-        <span class="n">mk_profile_form</span><span class="p">()</span>
-    <span class="p">)</span>
-
-<span class="n">serve</span><span class="p">()</span>
-</code></pre></div>
-
-<h2 id="updates">Updates</h2>
-<ul>
-<li>2024-10-17 78wesley: Added <code>hx_swap="outerHTML"</code></li>
-<li>2024-10-16 Philip Nuzhnyi: Typo fix</li>
-<li>2024-10-16 Jeremy Howard: Use of defaultdict for cleaner UI</li>
-</ul>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling"/>
     <link href="https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling"/>
     <summary>A pattern I have been exploring for handling form errors in FastHTML.</summary>
     <category term="FastHTML"/>
@@ -703,11 +137,12 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/file-location-cleanup</id>
     <title>File Location Fixup</title>
-    <updated>2024-11-07T11:14:37.106127+00:00</updated>
+    <updated>2024-11-11T14:48:51.307497+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
+    <content src="https://daniel.feldroy.com/posts/file-location-cleanup"/>
     <link href="https://daniel.feldroy.com/posts/file-location-cleanup"/>
     <summary>Writing a Jupyter notebook to clean up my blog's article locations</summary>
     <category term="python"/>
@@ -721,48 +156,12 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
     <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-11-07T11:14:37.095185+00:00</updated>
+    <updated>2024-11-11T14:48:51.307478+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<h2 id="the-code">The code</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
-
-<span class="k">def</span> <span class="nf">mm</span><span class="p">(</span><span class="n">graph</span><span class="p">):</span>
-    <span class="n">graphbytes</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
-    <span class="n">base64_bytes</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">graphbytes</span><span class="p">)</span>
-    <span class="n">base64_string</span> <span class="o">=</span> <span class="n">base64_bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://mermaid.ink/img/&quot;</span> <span class="o">+</span> <span class="n">base64_string</span><span class="p">))</span>
-</code></pre></div>
-
-<h2 id="usage-example">Usage Example</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">mm</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">graph LR;</span>
-<span class="s2">    A--&gt; B &amp; C &amp; D;</span>
-<span class="s2">    B--&gt; A &amp; E;</span>
-<span class="s2">    C--&gt; A &amp; E;</span>
-<span class="s2">    D--&gt; A &amp; E;</span>
-<span class="s2">    E--&gt; B &amp; C &amp; D;</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">LR</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">D</span><span class="p">;</span>
-<span class="w">    </span><span class="n">B</span><span class="o">--&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E</span><span class="p">;</span>
-<span class="w">    </span><span class="n">C</span><span class="o">--&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E</span><span class="p">;</span>
-<span class="w">    </span><span class="n">D</span><span class="o">--&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E</span><span class="p">;</span>
-<span class="w">    </span><span class="n">E</span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">D</span><span class="p">;</span>
-</code></pre></div>
-
-<h2 id="notes">Notes</h2>
-<ul>
-<li>This is actually covered in the mermaid docs <a href="https://mermaid.js.org/ecosystem/tutorials.html?#jupyter-integration-with-mermaid-js">here</a>, albeit with an unnecessary import from matplotlib that I removed in this example</li>
-<li>I discovered this trick back in 2023 while working on the <a href="https://github.com/pydanny/dj-notebook">dj-notebook</a> library</li>
-<li><a href="https://mermaid.js.org/">Mermaid</a> is a JavaScript-powered diagramming and charting tool that's friendly for browsers</li>
-<li>Amusingly enough, <a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/main/posts/2024/using-mermaidjs-in-jupyter-notebooks.md">this article is written in pure markdown</a> because as of October 24th, 2024 I haven't yet gotten the function to work yet with nb2fasthtml.</li>
-</ul>]]></content>
+    <content src="https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks"/>
     <link href="https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks"/>
     <summary>Useful for adding Mermaid charts of various types to Jupyter notebooks.</summary>
     <category term="jupyter"/>
@@ -777,25 +176,12 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-07T11:14:37.094379+00:00</updated>
+    <updated>2024-11-11T14:48:51.307457+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>Starting in Python 3.9, <code>s.removeprefix()</code> and <code>s.removesuffix()</code> were added as <code>str</code> built-ins. Which easily covers all the versions of Python I currently support.</p>
-<h2 id="usage-for-removeprefix">Usage for <code>removeprefix()</code>:</h2>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s1">&#39;Spam&#39;</span><span class="p">)</span>
-<span class="s1">&#39;, Spam&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s1">&#39;This is not in the prefix&#39;</span><span class="p">)</span>
-<span class="s1">&#39;Spam, Spam&#39;</span>
-</code></pre></div>
-
-<h2 id="usage-for-removesuffix">Usage for <code>removesuffix()</code>:</h2>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removesuffix</span><span class="p">(</span><span class="s1">&#39;Spam&#39;</span><span class="p">)</span>
-<span class="s1">&#39;Spam, &#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Spam, Spam&#39;</span><span class="o">.</span><span class="n">removesuffix</span><span class="p">(</span><span class="s1">&#39;This is not in the suffix&#39;</span><span class="p">)</span>
-<span class="s1">&#39;Spam, Spam&#39;</span>
-</code></pre></div>]]></content>
+    <content src="https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes"/>
     <link href="https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes"/>
     <summary>How did I miss these functions getting added to Python?</summary>
     <category term="TIL"/>
@@ -809,199 +195,12 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-11-07T11:14:37.090010+00:00</updated>
+    <updated>2024-11-11T14:48:51.307435+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p><a href="https://locust.io/">Locust</a> is a Python library that makes it relatively straightforward to write Python tests. This heavily commented code example explains each section of code. To use locust:</p>
-<ol>
-<li>Install locust: <code>pip install locust</code></li>
-<li>Copy the file below into the directory where you want to run locust</li>
-<li>In that directory, at the command-line, type: <code>locust</code></li>
-<li>Open <a href="localhost:8089">http://localhost:8089/</a></li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="c1"># locustfile.py</span>
-<span class="c1"># For more options read the following</span>
-<span class="c1">#   https://docs.locust.io/en/stable/writing-a-locustfile.html</span>
-
-<span class="c1"># Import Locust basics</span>
-<span class="kn">from</span> <span class="nn">locust</span> <span class="kn">import</span> <span class="n">HttpUser</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">between</span>
-
-<span class="c1"># Imports for generating content</span>
-<span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">ascii_letters</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">shuffle</span>
-
-<span class="k">def</span> <span class="nf">namer</span><span class="p">():</span>
-    <span class="s2">&quot;Create a random string of letters under 10 characters long&quot;</span>
-    <span class="n">ascii_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ascii_letters</span><span class="p">)</span>
-    <span class="n">shuffle</span><span class="p">(</span><span class="n">ascii_list</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ascii_list</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
-
-<span class="k">class</span> <span class="nc">CatsiteUser</span><span class="p">(</span><span class="n">HttpUser</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This class represents simulated users interacting with</span>
-<span class="sd">    a website.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># how long between clicks a user should take</span>
-    <span class="n">wait_time</span> <span class="o">=</span> <span class="n">between</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-    <span class="c1"># The default host of the target client. This can be changed</span>
-    <span class="c1"># at any time</span>
-    <span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:5001/&#39;</span>
-
-    <span class="k">def</span> <span class="nf">on_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Methods with the on_start name will be called for each</span>
-        <span class="c1"># simulated user when they start. Useful for logins and</span>
-        <span class="c1"># other &#39;do before doing other things&#39;.</span>
-        <span class="k">pass</span>
-
-    <span class="k">def</span> <span class="nf">on_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Methods with the on_stop name will be called for each</span>
-        <span class="c1"># simulated user when they stop. Useful for logouts and</span>
-        <span class="c1"># possibly data cleanup.</span>
-        <span class="k">pass</span>    
-
-    <span class="c1"># TASKS!</span>
-    <span class="c1"># Methods marked with the `@task` decorator is an action</span>
-    <span class="c1"># taken by a user This example focuses on changes to a </span>
-    <span class="c1"># database, but provides a foundation for creating tests on</span>
-    <span class="c1"># a more read-focused site</span>
-
-    <span class="nd">@task</span>
-    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># User goes to the root of the project</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-
-    <span class="nd">@task</span>
-    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># User posts a create form with the fields &#39;name&#39;</span>
-        <span class="c1"># and &#39;age&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/create&#39;</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">namer</span><span class="p">(),</span> <span class="n">age</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">35</span><span class="p">)))</span>
-
-    <span class="nd">@task</span>
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># User posts an update form with the fields &#39;name&#39;</span>
-        <span class="c1"># and &#39;age&#39;&quot;</span>
-        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/random&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-            <span class="n">pk</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span>
-            <span class="n">form_data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">namer</span><span class="p">(),</span> <span class="n">age</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">35</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">pk</span><span class="si">}</span><span class="s1">/update&#39;</span><span class="p">)</span>
-
-    <span class="nd">@task</span>
-    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Represents the user getting a random ID and then</span>
-        <span class="c1"># going to the delete page for it.</span>
-        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/random&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-            <span class="n">pk</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">pk</span><span class="si">}</span><span class="s1">/delete&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<h2 id="sample-test-site">Sample test site</h2>
-<p>For reference, this is the test site used to create the above locustfile. I'll admit that the above test is incomplete, a lot more tasks could be added to hit web routes. To use it:</p>
-<ol>
-<li>Install FastHTML: <code>pip install python-fasthtml</code></li>
-<li>Copy the file into the directory you want to run it</li>
-<li>In that directory, at the command-line, type: <code>python cats.py</code></li>
-<li>Open <a href="localhost:5001">http://localhost:5001/</a></li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="c1"># cats.py</span>
-<span class="kn">from</span> <span class="nn">fasthtml.common</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="c1"># Set up the database and table</span>
-<span class="n">db</span> <span class="o">=</span> <span class="n">database</span><span class="p">(</span><span class="s1">&#39;cats.db&#39;</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span> <span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">;</span> <span class="n">age</span><span class="p">:</span><span class="nb">int</span><span class="p">;</span> <span class="nb">id</span><span class="p">:</span><span class="nb">int</span>
-<span class="n">cats</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">Cat</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Instantiate FastHTML app and route handler</span>
-<span class="n">app</span><span class="p">,</span> <span class="n">rt</span> <span class="o">=</span> <span class="n">fast_app</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">mk_form</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Form</span><span class="p">(</span>
-        <span class="n">P</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="s1">&#39;Home&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="n">index</span><span class="p">)),</span>
-        <span class="n">Fieldset</span><span class="p">(</span>
-            <span class="n">Input</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">),</span>
-            <span class="n">Input</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">),</span>
-
-        <span class="p">),</span>
-        <span class="n">Input</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;submit&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;submit&#39;</span><span class="p">),</span>
-        <span class="n">hx_post</span><span class="o">=</span><span class="n">target</span><span class="p">,</span> <span class="n">hx_swap</span><span class="o">=</span><span class="s2">&quot;outerHTML&quot;</span>
-    <span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">cat_count</span><span class="p">():</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;select count(id) from cat;&quot;&quot;&quot;</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="nd">@rt</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Titled</span><span class="p">(</span><span class="s1">&#39;Cats&#39;</span><span class="p">,</span>
-        <span class="n">P</span><span class="p">(</span>
-            <span class="n">A</span><span class="p">(</span><span class="s1">&#39;Create cat&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;/create&#39;</span><span class="p">),</span> <span class="n">NotStr</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span>
-            <span class="n">A</span><span class="p">(</span><span class="s1">&#39;Random ID&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="n">random</span><span class="p">)),</span>
-        <span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of cats: </span><span class="si">{</span><span class="n">cat_count</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">),</span>        
-        <span class="n">Ol</span><span class="p">(</span>
-            <span class="o">*</span><span class="p">[</span><span class="n">Li</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">()]</span>
-        <span class="p">)</span>
-    <span class="p">)</span>
-
-<span class="nd">@rt</span>
-<span class="k">def</span> <span class="nf">random</span><span class="p">():</span>
-    <span class="c1"># Small dataset, we can get away with using the RANDOM() function</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT id FROM cat ORDER BY RANDOM() LIMIT 1;&quot;&quot;&quot;</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="nd">@rt</span><span class="p">(</span><span class="s1">&#39;/create&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">get</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Titled</span><span class="p">(</span><span class="s1">&#39;Create Cat&#39;</span><span class="p">,</span> 
-        <span class="n">mk_form</span><span class="p">(</span><span class="s1">&#39;/create&#39;</span><span class="p">)</span>
-    <span class="p">)</span>
-
-<span class="nd">@rt</span><span class="p">(</span><span class="s1">&#39;/create&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="n">cat</span><span class="p">:</span> <span class="n">Cat</span><span class="p">):</span>
-    <span class="n">cat</span> <span class="o">=</span> <span class="n">cats</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">Cat</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">cat</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="n">cat</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">RedirectResponse</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">cat</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="nd">@rt</span><span class="p">(</span><span class="s1">&#39;/</span><span class="si">{id}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">cat</span> <span class="o">=</span> <span class="n">cats</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">Titled</span><span class="p">(</span><span class="n">cat</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> 
-        <span class="n">P</span><span class="p">(</span><span class="n">cat</span><span class="o">.</span><span class="n">age</span><span class="p">),</span>
-        <span class="n">P</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s1">/update&#39;</span><span class="p">)),</span>
-        <span class="n">P</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s1">/delete&#39;</span><span class="p">)),</span>
-    <span class="p">)</span>
-
-<span class="nd">@rt</span><span class="p">(</span><span class="s1">&#39;/</span><span class="si">{id}</span><span class="s1">/update&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">cat</span> <span class="o">=</span> <span class="n">cats</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">Titled</span><span class="p">(</span><span class="s1">&#39;Edit Cat&#39;</span><span class="p">,</span>
-        <span class="n">fill_form</span><span class="p">(</span><span class="n">mk_form</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">cat</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">/update&#39;</span><span class="p">),</span> <span class="n">cat</span><span class="p">)</span>
-    <span class="p">)</span>
-
-<span class="nd">@rt</span><span class="p">(</span><span class="s1">&#39;/</span><span class="si">{id}</span><span class="s1">/update&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="n">cat</span><span class="p">:</span> <span class="n">Cat</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">RedirectResponse</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
-    <span class="n">cat</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
-    <span class="n">db</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">cats</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>
-        <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>        
-    <span class="k">except</span><span class="p">:</span>
-        <span class="n">db</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">RedirectResponse</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">cat</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="nd">@rt</span><span class="p">(</span><span class="s1">&#39;/</span><span class="si">{id}</span><span class="s1">/delete&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">:</span>
-        <span class="n">RedirectResponse</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
-    <span class="c1"># db.begin()</span>
-    <span class="n">cats</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
-    <span class="c1"># db.commit()</span>
-    <span class="k">return</span> <span class="n">RedirectResponse</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
-
-<span class="n">serve</span><span class="p">()</span>
-</code></pre></div>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing"/>
     <link href="https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing"/>
     <summary>Quickstart guide for doing web application load testing with the Python powered locust library.</summary>
     <category term="python"/>
@@ -1016,15 +215,12 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-07T11:14:37.089652+00:00</updated>
+    <updated>2024-11-11T14:48:51.307411+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>Add these commands to the top of a notebook within a Python cell. Thanks to Jeremy Howard for the tip.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
-<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
-</code></pre></div>]]></content>
+    <content src="https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks"/>
     <link href="https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks"/>
     <summary>How to skip having to restart your notebook on code changes.</summary>
     <category term="TIL"/>
@@ -1036,5 +232,25 @@ Uma Roy Greenfeld
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-06T18:00:00.928751+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
+    <title>TIL: SequentialTaskSet for Locust</title>
+    <updated>2024-11-11T14:48:51.307382+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content src="https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust"/>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust"/>
+    <summary>How to get Locust to not bash your server like a robot.</summary>
+    <category term="TIL"/>
+    <category term="Python"/>
+    <category term="load testing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-09T00:00:00.429101+00:00</published>
   </entry>
 </feed>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Django posts by Daniel Roy Greenfeld</title>
-  <updated>2024-11-07T11:14:37.057622+00:00</updated>
+  <updated>2024-11-11T14:48:51.306135+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,18 +15,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/august-2020-courses</id>
     <title>August 2020 Courses</title>
-    <updated>2024-11-07T11:14:37.088479+00:00</updated>
+    <updated>2024-11-11T14:48:51.306652+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<h1 id="live-interactive-online-courses">Live, Interactive, Online Courses</h1>
-<p>For years Audrey and I have travelled giving in-person training sessions. With current events being what they are, I've switched to giving live, online, interactive trainings using Zoom meeting software. This has involved some major refactoring of content.</p>
-<p>Here are the upcoming courses on my calendar:</p>
-<p><a href="https://events.eventzilla.net/e/django-best-practices-the-two-scoops-way-2138797976"><img alt="" src="https://cdn.shopify.com/s/files/1/0304/6901/files/Django_Best_Practices_the_Two_Scoops_Way.png?v=1595531845" /></a></p>
-<p><a href="https://events.eventzilla.net/e/django-best-practices-the-two-scoops-way-2138797976">August 14: Django Best Practices the Two Scoops Way</a></p>
-<p><a href="https://events.eventzilla.net/e/django-crash-course-online--august-2138797784"><img alt="" src="https://cdn.shopify.com/s/files/1/0304/6901/files/DCC_Banner_Logo_2.png?v=1595531869" /></a></p>
-<p><a href="https://events.eventzilla.net/e/django-crash-course-online--august-2138797784">August 21, 22, 23: Django Crash Course Live</a></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/august-2020-courses"/>
     <link href="https://daniel.feldroy.com/posts/august-2020-courses"/>
     <summary>All the live, online, interactive courses I'm teaching in the month of August 2020.</summary>
     <category term="python"/>
@@ -42,55 +36,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/recap-2020-resolutions-2021</id>
     <title>Recap of 2020 and Resolutions for 2021</title>
-    <updated>2024-11-07T11:14:37.086600+00:00</updated>
+    <updated>2024-11-11T14:48:51.306624+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<h1 id="recap-of-2020">Recap of 2020</h1>
-<h2 id="i-got-a-job-saving-the-planet">I got a job saving the planet</h2>
-<p>For years I've been worried about climate change. I've tried to live a mostly ecologically friendly life, and this year I dived in with making compost for the garden. However, seeing the lack of consistent political will to correct the problem has had me worried.</p>
-<p>So I was delighted that when I started to look for jobs in the autumn I was contacted by several firms attempting to address the problem. I've always thought that finance is a great motivator, albeit all-too-often the results are negative (the petroleum and coal industries are examples).</p>
-<p>Ultimately I went with <a href="https://octopus.energy/">Octopus Energy</a>, a company that is to borrow a phrase, disrupting the legacy power industry in areas with free-er energy markets (UK, Australia, Germany, Texas, Japan). They have embraced renewable energies as a source of power, which is good because it is cheaper than fossil fuels. Even if customers don't believe in global climate change they won't be able to ignore the fact renewables are a cheaper source of energy.</p>
-<p><a href="https://jobs.lever.co/octoenergy"><img alt="Octopus Logo 2019" src="/public/images/octologo.png" /></a></p>
-<p>In any case, I can't begin to say how wonderful it is being part of a company whose mission is to address climate change. It's like all my skills and talents are now superpowers being used to save the world.</p>
-<p>If you live in the US, UK, Germany, Australia, or Japan and want to join me using our various skills and talents to help save the world, <a href="https://jobs.lever.co/octoenergy">here's your chance</a>. We've got lots of <a href="https://jobs.lever.co/octoenergy">openings</a>, including for those who know <a href="https://jobs.lever.co/octoenergy">Python and Django</a>.</p>
-<h2 id="my-daughter-grew">My daughter grew</h2>
-<p>Uma grew in size and intellect. The photo below demonstrates the changes in her over just 8 months. Seeing her expand in awareness and understanding is a journey I never imagined. The challenges in raising her have been met with happiness by myself and Audrey. Her presence also drove me toward the new job at Octopus Energy I took on in the autumn.</p>
-<p><img alt="Uma growing" src="/public/images/uma-2020.png" /></p>
-<h2 id="i-learned-to-garden">I learned to garden</h2>
-<p>Audrey and I once again tried our hand at gardening. In the past, our efforts were stymied by travel and work. Now, being home 99.9% of the year we finally managed to garner some success besides growing flowers.</p>
-<p><img alt="Bounty for 2020" src="/public/images/bounty-2020.png" /></p>
-<p>I got into <a href="https://en.wikipedia.org/wiki/Compost">composting</a>. The science of it is fascinating, you mix kitchen scraps and yard waste, add water, and depending on the method in anywhere from days to weeks to months you have soil that plants love.</p>
-<h2 id="i-quarantined">I quarantined</h2>
-<p>Rather than risk me, family, and friends members, I entered quarantine until the COVID-19 pandemic was under control. It's not been easy, there are times I am restless. I've missed events, the worst of which are funerals of those who died. Nevertheless, I refused to become a statistic or cause others harm.</p>
-<h2 id="i-voted">I voted</h2>
-<p>I voted on November 3rd. I believe voting should be mail-in or by the internet. I also believe the United States should get rid of gerrymandering and the electoral college.</p>
-<p><strong>Popular vote all the way!</strong></p>
-<h2 id="i-wrote-books">I wrote books</h2>
-<p>More on this in a different blog post, but here's what I got out the door:</p>
-<ul>
-<li><a href="https://www.feldroy.com/books/two-scoops-of-django-3-x">Two Scoops of Django 3.x</a> - Latest edition of our Two Scoops of Django series</li>
-<li><a href="https://www.feldroy.com/books/a-wedge-of-django">A Wedge of Django</a> - Basic Django tutorial</li>
-<li><a href="https://www.feldroy.com/books/necronaut">Necronaut</a> - Horror science fiction novelette</li>
-</ul>
-<h1 id="resolutions-for-2021">Resolutions for 2021</h1>
-<h2 id="be-the-best-father-i-can-be">Be the best father I can be</h2>
-<p>My daughter is part of my legacy, what will exist on this planet after I am gone. She motivates me to do my best at work and to take care of myself better so I can be stronger for her.</p>
-<p>I will help her grow into the person she wants to be. That means teaching her new things, keeping her safe, and being there for her. I will treasure the time I have with her at this age and never take her presence for granted.</p>
-<h2 id="lose-my-covid-19">Lose my COVID-19</h2>
-<p>Yeah, I put on weight. Working to get it off. Steps I've taken:</p>
-<ul>
-<li>Eating less</li>
-<li>Ramping up my home exercise program</li>
-<li>Working at a standing desk</li>
-</ul>
-<p>Once the pandemic is over I plan to restart my journey into Brazilian Jiu-Jitsu.</p>
-<h2 id="i-will-quarantine">I will quarantine</h2>
-<p>I don't need to travel to do my job. I can get by without sitting in a restaurant to eat. I can talk to family, friends, and co-workers via any number of communication methods.</p>
-<p>Even after I'm vaccinated, until the pandemic is under control, I'll keep up this behavior.</p>
-<p>Yes, I know some of you reading this disagree with me. You may think that I'm being too cautious. However, right now in Los Angeles huge numbers of people I know or are in my neighborhood ignored all the quarantine rules. The result is that the hospitals are overwhelmed, the staff are exhausted, and the ambulances impossible to get because they can't offload patients. Non-COVID emergency issues go untreated, meaning surviving treatable allergic reactions or heart attacks is no longer so certain.</p>
-<p>Yeah, I'm staying in quarantine and not doing anything stupid with me or my family's safety until things die down.</p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/recap-2020-resolutions-2021"/>
     <link href="https://daniel.feldroy.com/posts/recap-2020-resolutions-2021"/>
     <category term="python"/>
     <category term="django"/>
@@ -109,33 +60,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1</id>
     <title>What's the Best Thing about Working for Octopus Energy?</title>
-    <updated>2024-11-07T11:14:37.085502+00:00</updated>
+    <updated>2024-11-11T14:48:51.306599+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>On November 16, 2020, I started my first day of employment at <a href="https://octopusenergy.com/">Octopus Energy</a>. Here's why I love working there.</p>
-<h2 id="the-tech-stack">The Tech Stack</h2>
-<p>The entire tech stack is built on things I know. Python, Django, AWS, and modern JavaScript frameworks. It's been implemented in a very solid way, managing to be both conservative in approach yet innovative in design. While my previous experience has proven useful, I've had the chance to learn new and exciting things. Examples of things I've learned:</p>
-<ul>
-<li>Hashistack on AWS</li>
-<li>React &amp; Next.js</li>
-</ul>
-<p>Yet when I think about it, the tech stack isn't the best thing about working for Octopus. I can find the same tech stack in a thousand other organizations.</p>
-<h2 id="the-people">The People</h2>
-<p>It's always a delight to work with bright, positive-minded people who share your excitement for a job or cause. I like being around people who know things I do not, for no other reason than I can learn by osmosis. I enjoy being around them, and can't wait to meet them as the pandemic fades away.</p>
-<p>I also am amazed by the same treatment across different groups within the organization. No group or division is looked down on, be they software engineering, customer support, marketing, or executive leadership. We're all considered humans, not resources to be expended.</p>
-<p>Yet when I think about it, while I appreciate my co-workers beyond what words can describe, the people aren't the best thing of working for Octopus. I can and have found good people in other places.</p>
-<h2 id="the-diversity">The Diversity</h2>
-<p>Speaking of people, Octopus Energy is a diversity-minded company. In my team alone, we have people from four different continents with five different native languages. We can admittedly do better on the gender front, and are striving to do better. For many reasons, this is important to me, for I believe it's not only the right thing to do, but it also increases a team's strength to have a broader set of viewpoints.</p>
-<p>Yet when I think about it, the focus on diversity isn't the best thing of working for Octopus. Diversity-focused companies are becoming more common, and some even have better numbers than Octopus.</p>
-<h2 id="the-business">The Business</h2>
-<p>Octopus Energy is a fast-growing company spreading its tentacles to new markets and nations. In the months and years to come, we're going to disrupt the energy business. In the meantime, in the brief 8 months I've been with the firm the valuation has doubled up to 3 billion dollars. It's exciting to be part of something growing explosively.</p>
-<p>Yet when I think about it, the business isn't the best thing of working for Octopus. I can think of other companies with similar explosive growth, some of whom I interviewed when Octopus reached out to me.</p>
-<h2 id="what-is-the-best-thing-about-working-for-octopus-energy">What is the best thing about working for Octopus Energy?</h2>
-<p>If you want to know the the ultimate reason I work for Octopus Energy, <a href="https://daniel.feldroy.com/posts/whats-the-ultimate-reason-for-working-at-octopus-energy-part-2">read what I wrote here</a>.</p>
-<p><a href="https://octopusenergy.com"><img alt="Image used with permission by Octopus Energy" src="/public/images/constantine-curious.png" /></a></p>
-<p><em>Image used with permission by Octopus Energy</em></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1"/>
     <link href="https://daniel.feldroy.com/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1"/>
     <summary>An in-depth discussion about my employment at Octopus Energy.</summary>
     <category term="python"/>
@@ -153,31 +83,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/whats-the-ultimate-reason-for-working-at-octopus-energy-part-2</id>
     <title>What's the Ultimate Reason for Working at Octopus Energy?</title>
-    <updated>2024-11-07T11:14:37.084484+00:00</updated>
+    <updated>2024-11-11T14:48:51.306570+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>On November 16, 2020, I started my first day of employment at <a href="https://octopusenergy.com/">Octopus Energy</a>. A few days ago <a href="/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1/">I discussed reasons why I enjoy my work and colleagues</a>. In this article, I explain the ultimate reason I work for Octopus Energy.</p>
-<h2 id="a-realization">A Realization</h2>
-<p>One day in autumn of 2020, while considering new employment, I was talking to many potential employers. Several organizations stood out above all others.</p>
-<p>They stood out because they both had a mission to address <a href="https://en.wikipedia.org/wiki/Climate_change">global climate change</a>.</p>
-<p>I realized I could use all my talents and skills to make the planet a better place.</p>
-<h2 id="concerns-about-climate-change">Concerns About Climate Change</h2>
-<p>For years I've been concerned about the <a href="https://en.wikipedia.org/wiki/Climate_change">changing climate</a>. I had been reducing my carbon footprint for years, composting, reducing unnecessary travel, and more. I preferred to vote for eco-friendly political candidates. In many other ways, I did what I could, yet always I wanted to do more.</p>
-<h2 id="the-ultimate-reason-i-work-for-octopus">The Ultimate Reason I Work for Octopus</h2>
-<p>It's all about this little girl.</p>
-<p><img alt="Uma and me playing in the spring sunshine" src="/public/images/uma-daniel-sun.jpg" /></p>
-<p>I want to give my daughter a better planet. She and her generation deserve to live in the same kind of world I had growing up.</p>
-<h2 id="enter-octopus-energy">Enter Octopus Energy</h2>
-<p>Octopus Energy is giving me the chance to use everything I've learned in my 24+ years of professional software development to build out <a href="https://octopusenergy.group/kraken-technologies">Kraken</a>, our customer-focused retail energy platform. They have allowed me to help save the planet for my daughter and all the other kids.</p>
-<h2 id="octopus-energy-empowers-me-to-make-a-difference">Octopus Energy Empowers Me to Make a Difference</h2>
-<p>By selling huge volumes of renewable electricity, providing services that encourage people to reduce their carbon footprint and general energy usage, Octopus is making a direct impact on the issue of climate change. Furthermore, the size and income of the company mean it can have a similar outsized impact on politics as do the armies of lobbyists acting on behalf of the fossil fuels industry.</p>
-<p>To put it as simply as possible, Octopus Energy has turned me into a superhero. How awesome is that?</p>
-<p><img alt="/images/super_octo.png" src="/public/images/super_octo.png" /></p>
-<h2 id="links">Links</h2>
-<p>To learn more about what Octopus is doing to save the world, <a href="https://octopusenergy.group/">check out Octopus Energy Group</a>.</p>
-<p>Want to join me at Octopus and use your skills and talents to help save the world? Then please visit our <a href="https://octopus.energy/careers/join-us/#/">careers list</a>.</p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/whats-the-ultimate-reason-for-working-at-octopus-energy-part-2"/>
     <link href="https://daniel.feldroy.com/posts/whats-the-ultimate-reason-for-working-at-octopus-energy-part-2"/>
     <summary>Wherin I conclude my discussion about why I work at Octopus Energy.</summary>
     <category term="python"/>
@@ -196,25 +107,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2022-02-speaking-at-python-web-conf</id>
     <title>Speaking at Python Web Conf</title>
-    <updated>2024-11-07T11:14:37.083591+00:00</updated>
+    <updated>2024-11-11T14:48:51.306546+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>During the week of March 21-25 at <a href="https://2022.pythonwebconf.com">Python Web Conf</a> I'm giving my first public conference talk in three years.  I'm both excited and apprehensive about returning to the speaker's podium.</p>
-<p>To me, public speaking is like a roller coaster ride. The climb up the first hill (or minute when it comes to speaking) is absolutely terrifying. Then as soon as the car accelerates (or I begin to speak), endorphins kick in. I go from struggling not to visibly tremble from fear to shaking with excitement.</p>
-<p><a href="https://2022.pythonwebconf.com/presentations/confessions-of-joe-developer"><img alt="" src="/public/images/PWC2022-daniel-roy-greenfeld.png" /></a></p>
-<p><em>Hint: Use code </em><em>Speaker15@PWC2022</em><em> to get 15% off your ticket costs.</em></p>
-<p>The talk I'm going to give is titled, "Confessions of Joe Developer". Here's the synoposis: </p>
-<blockquote>
-<p>Over the course of 17 years of professional Python development at Octopus Energy, NASA, and various agencies, Daniel Roy Greenfeld has picked up a lot of easy tricks stolen from the best and brightest in the software community that make him look good in front of his peers and colleagues. And now, at great risk to his career and reputation, he is going to show you how he does it.</p>
-</blockquote>
-<p>What that description doesn't tell you is that I came up with the core concepts of that talk in the middle of my interviews to work at <a href="https://www.nasa.gov/">NASA</a> at the end of 2004. I didn't think it was at all possible to get hired by the agency, so went in with the assumption I wouldn't get the job. Since a job wasn't on the line that meant the interviews were stress fee. And in the middle of it all I decided to try a few unusual tactics. </p>
-<p>Those tactics worked and I got hired. Not only that, but one <a href="https://www.vocabulary.com/dictionary/pithy">pithy phrase</a> in particular I uttered during the interview became the backbone of my coding and working style.</p>
-<p>It was at NASA that I learned Python and started with Django. All because of that phrase. How cool is that?</p>
-<p><a href="https://2022.pythonwebconf.com/presentations/confessions-of-joe-developer">My talk</a> is about what I said, what it means, how I applied it, and how you can use it.</p>
-<p>See you at <a href="https://2022.pythonwebconf.com">Python Web Conf</a>! </p>
-<p><a href="https://2022.pythonwebconf.com"><img alt="" src="/public/images/2022.pythonwebconf.png" /></a></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2022-02-speaking-at-python-web-conf"/>
     <link href="https://daniel.feldroy.com/posts/2022-02-speaking-at-python-web-conf"/>
     <summary>My first public conference talk in three years</summary>
     <category term="python"/>
@@ -229,24 +127,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2022-04-26-live-discussion-with-tiangolo</id>
     <title>Live Discussion with Sebastián Ramírez (Tiangolo)</title>
-    <updated>2024-11-07T11:14:37.082889+00:00</updated>
+    <updated>2024-11-11T14:48:51.306522+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>On April 26th I had a live discussion with <a href="https://tiangolo.com/">Sebastián Ramírez</a>, creator of FastAPI, Typer, SQL Model, and more.</p>
-<p>To watch the video click <a href="https://www.youtube.com/watch?v=8IJkSs9Dvjo">here</a> or on the image below.</p>
-<p><a href="https://www.youtube.com/watch?v=8IJkSs9Dvjo"><img alt="Live Discussion with Sebastián Ramírez (Tiangolo)" src="/public/images/code-code-code-02.png" /></a></p>
-<p>LINKS:</p>
-<ul>
-<li><a href="https://tiangolo.com">tiangolo.com</a></li>
-<li><a href="https://fastapi.tiangolo.com">fastapi.tiangolo.com</a></li>
-<li><a href="https://typer.tiangolo.com">typer.tiangolo.com</a></li>
-<li><a href="https://sqlmodel.tiangolo.com">sqlmodel.tiangolo.com</a></li>
-<li><a href="https://forethought.ai/">forethought.ai/</a></li>
-<li><a href="https://forethought.ai/careers/">forethought.ai/careers/</a></li>
-<li><a href="https://octopusenergy.com/careers">octopusenergy.com/careers</a></li>
-</ul>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2022-04-26-live-discussion-with-tiangolo"/>
     <link href="https://daniel.feldroy.com/posts/2022-04-26-live-discussion-with-tiangolo"/>
     <summary>I have a friendly live discussion with Sebastián Ramírez, creator of FastAPI, Typer, SQL Model, and more.</summary>
     <category term="python"/>
@@ -262,72 +148,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects</id>
     <title>Practice Python Web Projects</title>
-    <updated>2024-11-07T11:14:37.080835+00:00</updated>
+    <updated>2024-11-11T14:48:51.306494+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>I firmly believe that substantial improvement in any skill can only be achieved through <a href="https://daniel.feldroy.com/posts/code-code-code">practice</a>. With that in mind, I have compiled a list of projects I have built over the years to practice my skills with web frameworks. I hope that these projects, which have proven effective for me in learning frameworks, will also assist you in your growth.</p>
-<p>These projects are framework-agnostic and can be implemented using <a href="https://fastht.ml">FastHTML</a>, <a href="https://djangoproject.com">Django</a>, <a href="https://flask.palletsprojects.com/">Flask</a>, <a href="https://fastapi.tiangolo.com/">FastAPI</a>, or any other framework of your choice. While some projects may be better suited for certain frameworks, all of them provide valuable practice. All of these projects can be completed using either the default frontend templating system or a frontend framework like React or Vue.</p>
-<h1 id="the-projects">The Projects</h1>
-<h2 id="1-api-to-data">1. API to Data</h2>
-<p>Creating a web application to present data can be a lot of work. An alternative option is to build an API that returns the data in a well-structured format. This project is a great opportunity to practice using FastHTML, Django REST Framework, Flask, or FastAPI. In fact, it is my understanding that FastAPI was specifically designed for this purpose. Nevertheless, this project can be implemented using any framework and is a valuable practice.</p>
-<p>Bonus points: Don't create the data that you are working with. Instead, request for data from someone else. This will not only give you practice in creating an API but also in working with data provided by others, which is an important skill to have.</p>
-<h2 id="2-show-me-the-charts">2. Show me the charts</h2>
-<p>Graphviz is a powerful command-line tool for generating graphical representations of data. This project involves creating a simple API that takes a Graphviz file as input, and returns a PNG image of the generated graph. The API can be built using HTML form that accepts Graphviz dot format, saves it as a file on the server, and renders the resulting image for the user to view.</p>
-<p>I have built this project several times in the past, with my first implementation in 2006 using web.py. It is a great project to practice file handling and working with command-line tools in a web environment.</p>
-<p>Bonus points: Saving changes to files over time so the user can go back and see what they've created in the past.</p>
-<h2 id="3-wiki">3. Wiki</h2>
-<p>Build a wiki with the following requirements:</p>
-<ul>
-<li>Users can create pages, edit pages, and delete pages</li>
-<li>Content is stored as Markdown and served as HTML</li>
-<li>Persistence can be a database or a set of markdown files</li>
-<li>Slugs for pages are automatically generated from the title</li>
-<li>If someone tries to create a page with a slug that already exists, they are redirected to the existing page</li>
-<li>Any and all changes to content pages have to be tracked in an audit log viewable by any user</li>
-<li>Include search functionality</li>
-</ul>
-<p>Bonus points: Add the ability to report pages as spam, and have a moderation queue for pages that have been reported.</p>
-<h2 id="4-social-network">4. Social Network</h2>
-<p>Build a social network with the following features:</p>
-<ul>
-<li>User registration</li>
-<li>Event stream like Twitter, Facebook, or Mastodon</li>
-<li>Ability to become friends with other users, friendship comes with an approval process. Friendship allows DMs</li>
-<li>Ability to follow other users' stream, no permission needed</li>
-<li>Direct messaging system</li>
-</ul>
-<p>Historical note: My first professional Django Project was this project, it was a great way to learn the framework. It resulted in the creation of what is now known as <a href="https://pypi.org/project/django-crispy-forms/">django-crispy-forms</a>. Alas, the social network we built, "Spacebook", hasn't been online for over a decade.</p>
-<p>Bonus points: Add public and private groups for people who share a similar interest.</p>
-<h2 id="5-turn-based-game">5. Turn-based game</h2>
-<p>Build a turn-based game that uses a web interface. It can be as simple as tic-tac-toe or something more sophisticated with multiple players.</p>
-<p>Bonus points: Use websockets to notify players when it's their turn.</p>
-<h2 id="6-advert-free-story-lite-recipe-site">6. Advert-free story-lite recipe site</h2>
-<p>Searching for recipes can be frustrating, often requiring one to sift through lengthy personal anecdotes and ads before finding the desired information. Build a website that allows users to easily search for recipes and presents only the recipe without any additional distractions such as ads or personal stories. Requirements:</p>
-<ul>
-<li>Visitors can search for recipes</li>
-<li>Users can create their own accounts</li>
-<li>Users can create their own recipes</li>
-<li>The description/history of a recipe has to be limited to 500 characters</li>
-<li>Provide an API for searching, listing, and examining recipes</li>
-</ul>
-<p>Bonus points: Provide ability for users to upload images for recipes. These images need to be stored in a CDN and not on the server.</p>
-<h2 id="7-third-party-package">7. Third-party Package</h2>
-<blockquote>
-<p><em>You don't really know a framework or its configuration until you build an installable package deployed to PyPI.</em></p>
-<p><em>-- Someone at the 2009 PyCon US sprint</em></p>
-</blockquote>
-<p>Requirements:</p>
-<ul>
-<li>Must be installable via pip</li>
-<li>Must be usable with FastHTML, Django, Flask, or FastAPI</li>
-<li>Includes extensive documentation</li>
-<li>Docs hosted on Read the Docs or other documentation hosting service</li>
-</ul>
-<p>This is a great project to practice with FastHTML, Django, Flask, or FastAPI.</p>
-<p>Bonus points: Package can be used with all four web frameworks: FastHTML, Django, Flask, and FastAPI.</p>
-<p><img alt="https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects" src="/public/images/Practice-Python-Web-Projects.png" /></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects"/>
     <link href="https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects"/>
     <summary>Python web projects taken from my personal history to practice on to improve your skills.</summary>
     <category term="python"/>
@@ -344,71 +170,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2023-01-configuring-sphinx-auto-doc-with-django</id>
     <title>Configuring Sphinx Auto-Doc with projects having Django dependencies</title>
-    <updated>2024-11-07T11:14:37.068181+00:00</updated>
+    <updated>2024-11-11T14:48:51.306470+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>How to make it so projects with Django as a dependency benefit from Sphinx's auto-documentation features.</p>
-<h1 id="the-problem">The Problem</h1>
-<p>I want to be able to document open source packages with Sphinx (ex. <a href="https://github.com/octoenergy/xocto">xocto</a>) and have Sphinx automatically document the Django helpers. This isn't quite the same as documenting a Django project, so I wasn't sure if the otherwise awesome <a href="https://sphinxcontrib-django.readthedocs.io/">sphinxcontrib-django</a> would be the right tool. Fortunately, there's a solution that doesn't require any additional packages.</p>
-<h1 id="the-solution">The Solution</h1>
-<h2 id="configuration">Configuration</h2>
-<p>First, in the Sphinx docs folder, create a file called <code>django_settings.py</code> and add the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Minimal file so Sphinx can work with Django for autodocumenting.</span>
-
-<span class="sd">Location: /docs/django_settings.py</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="c1"># INSTALLED_APPS with these apps is necessary for Sphinx to build</span>
-<span class="c1"># without warnings &amp; errors</span>
-<span class="c1"># Depending on your package, the list of apps may be different</span>
-<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;django.contrib.auth&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;django.contrib.contenttypes&quot;</span><span class="p">,</span>
-<span class="p">]</span>
-</code></pre></div>
-
-<p>Next, at the top of Sphinx's <code>conf.py</code>, add the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># docs/conf.py</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="kn">import</span> <span class="nn">django</span>
-
-<span class="c1"># Note: You may need to change the path to match</span>
-<span class="c1"># your project&#39;s structure</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">))</span>  <span class="c1"># For discovery of Python modules</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">))</span>  <span class="c1"># For finding the django_settings.py file</span>
-
-<span class="c1"># This tells Django where to find the settings file</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DJANGO_SETTINGS_MODULE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;django_settings&quot;</span>
-<span class="c1"># This activates Django and makes it possible for Sphinx to</span>
-<span class="c1"># autodoc your project</span>
-<span class="n">django</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
-</code></pre></div>
-
-<h2 id="usage">Usage</h2>
-<p>In one of your documentation files, perhaps <code>docs/localtime.rst</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> xocto.localtime
-   <span class="nc">:members:</span>
-   <span class="nc">:undoc-members:</span>
-   <span class="nc">:show-inheritance:</span>
-</code></pre></div>
-
-<p>Or if you are using <a href="https://myst-parser.readthedocs.io/">myst-parser</a> to use Markdown with Sphinx. In this case, the file would be at <code>docs/localtime.md</code>:</p>
-<div class="codehilite"><pre><span></span><code>```{eval-rst}
-.. automodule:: xocto.localtime
-  :members:
-  :undoc-members:
-  :show-inheritance:
-```
-</code></pre></div>
-
-<h1 id="come-and-work-with-me">Come and work with me</h1>
-<p>My employer is hiring! We've got dozens of roles and hundreds of positions open across multiple fields in several countries (USA, UK, Germany, France, Australia, Japan, Italy, Spain, and more). Our mission is to address climate change through decarbonization, electrification, and being good citizens. We're a growing group of companies with a big mission, and we're looking for people who want to make a difference. Check out our <a href="https://octopus.energy/careers/">careers page</a> to see if what we do excites you and our <a href="https://octopus.energy/careers/join-us/">open roles page</a> to discover if there's a role that you find interesting.</p>
-<p><a href="https://octopus.energy/careers/"><img alt="" src="/public/images/cute-octo-plushie-200x200.png" /></a></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2023-01-configuring-sphinx-auto-doc-with-django"/>
     <link href="https://daniel.feldroy.com/posts/2023-01-configuring-sphinx-auto-doc-with-django"/>
     <summary>How to make it so projects with Django as a dependency benefit from Sphinx's auto-documentation features.</summary>
     <category term="octopus"/>
@@ -425,54 +192,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech</id>
     <title>Three Years at Kraken Tech</title>
-    <updated>2024-11-07T11:14:37.061116+00:00</updated>
+    <updated>2024-11-11T14:48:51.306443+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p><em>Note: As I write this I'm recovering from a sprained shoulder I received in a bicycle accident that makes it hard to type. I'm mostly using voice-to-text, so the text might not be in my normal "writing voice".</em></p>
-<h1 id="i-changed-roles">I changed roles</h1>
-<p>I transitioned from leading the tech team for Kraken Tech USA to being an individual contributor for the global team. I do this periodically, cycling between writing code to leading teams, and  back again. </p>
-<p>It is never easy to transition between roles but this time was particularly hard. The US Kraken Tech team is a group of talented, diverse, and passionate people. I'm so honored I had the chance to work with them. I'm constantly amazed by what they have accomplished and what they continue to do. </p>
-<p>In my new role I'm on the "Developer Foundations" team, exploring ways to improve the coding experience at the company. I've enjoyed writing code full-time again, there's a clarity of purpose that's been fun to embrace. Mostly I'm coding in Python with a bit of Django, with short detours into HCL, Rust, and Golang.</p>
-<p>One more thing: For the moment I still have the old management-sounding title, but expect to get something more accurate in the next few months.</p>
-<h1 id="i-blogged-more">I blogged more</h1>
-<p>As I'm coding full-time again, in 2023 I wrote more than double the number of posts I wrote in 2022.</p>
-<h1 id="i-worked-in-the-london-uk-office">I worked in the London, UK Office</h1>
-<p>Audrey and Uma joined me on a move to London, which I documented <a href="https://daniel.feldroy.com/posts/2023-10-we-moved-to-london">here</a>.</p>
-<p>It has been a delight being able to work in-person with my peers, or at least close in timezone. I'm usually in the office about three out of every five days. I would make it five-out-of-five but I do better with deep thinking outside normal office commotion.</p>
-<h1 id="i-attended-large-in-person-tech-events">I attended large in-person tech events</h1>
-<p>After a break of four years I managed to attend the following in chronological order, with transit mode specified:</p>
-<ul>
-<li>Django London (walk or train)</li>
-<li>PyCon Italy (airplane)</li>
-<li>PyCon UK (train)</li>
-<li>Django Paris (train)</li>
-</ul>
-<p>I very much enjoyed meeting old friends and making new ones. Plus, exploring the cities of London, Cardiff, and Paris were adventures of their own.</p>
-<h1 id="helped-scale-up-kraken-tech-to-address-climate-change">Helped scale up Kraken Tech to address climate change</h1>
-<p>As an individual concerned about global climate change I do my part:</p>
-<ul>
-<li>I compost about 80% of my family's food waste</li>
-<li>Do our best to recyle all the family's cardboard and paper products</li>
-<li>We live in a tiny flat with an electric stove</li>
-<li>Am experimenting with using a portable electric heater instead of the methane gas boiler </li>
-<li>Have reduced unnecessary air travel as much as possible (which is hard - I love airplanes and airports)</li>
-</ul>
-<p>That's great, but I have managed to scale that up tens of thousands of times over by working for Kraken Tech.</p>
-<p>As one employee of nine hundred and thirty seven (937) at Kraken Tech, I take payment from a collective of companies whose products are all designed with the purpose of saving the planet. Kraken Tech in particular is responsible for about 55 million people getting onto renewable energy or using non-renewable resources more efficiently.</p>
-<p>Let's math that out, using conservative numbers:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">58</span><span class="p">,</span><span class="mf">697.97</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">55</span><span class="p">,</span><span class="mf">000</span><span class="p">,</span><span class="mf">000</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">937</span>
-</code></pre></div>
-
-<p><strong>Summary: Each employee of Kraken Tech is responsible for 58,698 people contributing significantly less to global climate change.</strong></p>
-<p>So if you are in tech in any capacity (coding, management, etc), consider using your skills to help us in our mission of making a healthier planet.</p>
-<h1 id="come-and-help-me-save-the-planet">Come and help me save the planet</h1>
-<p>I'll be upfront that if you want to make the biggest salary possible in tech, travel a lot, and fly in first place seats, go seek employment with a <a href="https://en.wikipedia.org/wiki/Big_Tech">Big Tech Company</a> or a fintech. Personally, I would rather work toward making the planet better for our descendants. That to me is much more important than helping a billionaire score another billion.</p>
-<p>I invite anyone who is reading this to join me on my mission of saving the planet. Our careers page is <a href="https://octopus.energy/careers">here</a>.</p>
-<p><em>Please understand that Kraken Tech only hires in countries in which we have a legal entity. So if a role isn't listed for the country in which you can legally work, we probably can't hire you.</em></p>
-<p>If for whatever reason you can't get a job working with me, <a href="https://climatebase.org/">apply to work at somewhere else into decarbonization</a>. Let me know where you go and I'll celebrate your joining our shared mission.</p>
-<p><a href="https://kraken.tech"><img alt="Kraken Tech Logo" src="/public/logos/kraken-logo-dark.png" /></a></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech"/>
     <link href="https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech"/>
     <summary>A summary of the past year as I finish my third year working for Kraken Tech, an Octopus Energy Group subsidiary.</summary>
     <category term="octopus"/>
@@ -489,15 +214,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-pycon-lithuania</id>
     <title>Keynote at PyCon Lithuania 2024</title>
-    <updated>2024-11-07T11:14:37.060630+00:00</updated>
+    <updated>2024-11-11T14:48:51.306413+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>From April 2nd to April 6th I'll be at <a href="https://pycon.lt/2024">PyCon Lithuania 2024</a> in Vilnius to present a keynote about 25 years of glorious coding mistakes (mostly in Python). Audrey and Uma will be accompanying me, making us the first members of the Lithuanian side of my family to return there in over 100 years! </p>
-<p>At the conference I'll be joined by my old friend Tom Christie, author of <a href="">HTTPX</a>, <a href="https://www.starlette.io">Starlette</a>, and <a href="https://www.django-rest-framework.org/">Django REST Framework</a>. I hope to meet many new friends, specifically everyone there. At the sprints I'll be joined by my awesome wife, Audrey, author of <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a>. </p>
-<p>Come and join us!</p>
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171868639774556161" height="686" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2024-pycon-lithuania"/>
     <link href="https://daniel.feldroy.com/posts/2024-pycon-lithuania"/>
     <summary>My keynote and the first return to the homeland of Lithuania in over 100 years.</summary>
     <category term="family"/>
@@ -514,59 +236,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views</id>
     <title>Rapidly creating smoke tests for Django views</title>
-    <updated>2024-11-07T11:14:37.058597+00:00</updated>
+    <updated>2024-11-11T14:48:51.306386+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p><em>A management command for quickly generating tests based off Django's URL routing mechanism.</em></p>
-<p>Recently <a href="https://lincolnloop.com/about/peter-baumgartner/">Peter Baumgartner</a> of <a href="https://lincolnloop.com/">Lincoln Loop</a> wrote a <a href="https://www.linkedin.com/posts/pbaumgartner_ever-pick-up-a-legacy-project-that-has-activity-7186794287362183168-Bpcw">fantastic article</a> about the technique of writing smoke tests for Django views. Go read it, Peter provides really good justification for these smoke tests, especially for taking on legacy project without tests. Heck, the reason why I'm writing this post is so I have it in the bookmark service that is my blog.</p>
-<p>Inspired as I was by Peter's article, I wrote a little management command to help build out smoke tests quickly. It's not perfect, and chances are you'll need to modify the results for the tests to be accurate. Certainly you'll need to add filtering like what I did with the <code>admin</code> to account for third-party packages that already have tests. Nevertheless, I've found it a useful tool for writing out smoke tests quickly.</p>
-<p>In this example, it generates smoke tests to be called by <code>pytest</code> via <a href="https://pypi.org/project/pytest-django/">pytest-django</a>. It can be modified to work with standard Django unit tests.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># myapp/management/commands/make_smoke_tests.py</span>
-<span class="kn">from</span> <span class="nn">django.core.management.base</span> <span class="kn">import</span> <span class="n">BaseCommand</span>
-<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">get_resolver</span>
-
-
-<span class="k">class</span> <span class="nc">Command</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span>
-    <span class="n">help</span> <span class="o">=</span> <span class="s1">&#39;Generates smoke tests for projects.&#39;</span>
-
-    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span>
-        <span class="n">urlconf</span> <span class="o">=</span> <span class="n">get_resolver</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">generate_smoke_tests</span><span class="p">(</span><span class="n">urlconf</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">generate_smoke_tests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlconf</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-        <span class="n">views</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">urlconf</span><span class="o">.</span><span class="n">url_patterns</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;app_name&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">pattern</span><span class="o">.</span><span class="n">app_name</span> <span class="o">==</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
-                <span class="k">continue</span>
-            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;def test_</span><span class="si">{</span><span class="n">pattern</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">(client):&quot;</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    response = client.get(&quot;/</span><span class="si">{</span><span class="n">pattern</span><span class="o">.</span><span class="n">pattern</span><span class="si">}</span><span class="s1">/&quot;)&#39;</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;    assert response.status_code == 200&#39;</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;url_patterns&#39;</span><span class="p">):</span>
-                <span class="n">more_views</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_smoke_tests</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">pattern</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">regex</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span>
-                <span class="n">views</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">more_views</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">views</span>
-</code></pre></div>
-
-<p>Writing output to the terminal:</p>
-<div class="codehilite"><pre><span></span><code>./manage.py<span class="w"> </span>make_smoke_tests
-</code></pre></div>
-
-<p>Writing output to a file on OSX and Linux:</p>
-<div class="codehilite"><pre><span></span><code>./manage.py<span class="w"> </span>make_smoke_tests<span class="w"> </span>&gt;<span class="w"> </span>tests/test_smoke.py
-</code></pre></div>
-
-<p>Try it and tell me what you think!</p>
-<h1 id="update-may-25-2024">Update May 25, 2024</h1>
-<p><a href="https://github.com/aitoehigie">Ejay Aito</a> aka <a href="https://x.com/pystar">pystar</a> made improvements which you can see <a href="https://gist.github.com/aitoehigie/5bff431082b67f52e993465334422e6d">here</a>. He added the features listed below. Check out his work!</p>
-<ol>
-<li>added an argument for the output file path. If no output file is specified, it defaults to <code>smoke_tests.py</code>. </li>
-<li>The script now properly handles URL parameters by extracting them with a regex and replacing them with sample values.</li>
-<li>Tests can also be generated for POST, PUT, and DELETE methods.</li>
-</ol>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views"/>
     <link href="https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views"/>
     <summary>A management command for quickly generating tests based off Django's URL routing mechanism.</summary>
     <category term="Django"/>
@@ -582,35 +257,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-11-07T11:14:37.057847+00:00</updated>
+    <updated>2024-11-11T14:48:51.306351+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="CDATA"><![CDATA[<p>Taking place in the <a href="https://thevinylfactory.com/venue/">Vinyl Factory in Soho</a>, for two days developers, designers, and others will hack out MVPs of solutions to resolve real-life sustainability and climate problems. APIs and guidance will be provided, and contestants can build out software or hardware solutions. Individuals are welcome to attend and companies are invited to send teams. There will be prizes besides bragging rights - including a £20k mini grant to develop the winning idea.</p>
-<p><em>I'll be there to help! As an employee of the hosts, I can't build your projects for you but I can provide assistance. :-)</em></p>
-<p>The event will provide:</p>
-<ul>
-<li>APIs</li>
-<li><a href="https://thevinylfactory.com/venue/">Venue</a></li>
-<li>Food and drink</li>
-<li>Fast internet and power</li>
-<li>Changes to network and socialize</li>
-<li>Speech by <a href="https://www.linkedin.com/in/gregsjackson/">Greg</a> <a href="https://en.wikipedia.org/wiki/Greg_Jackson_(businessman)">Jackson</a>, CEO of Octopus Energy</li>
-<li>Lots of prizes, first place is a £20K grant to help build out your project</li>
-</ul>
-<p>Contests provide:</p>
-<ul>
-<li>Skills</li>
-<li>Enthusiasm</li>
-<li>Laptop and other hardware</li>
-</ul>
-<p>Schedule:</p>
-<ul>
-<li>July 1: Event begins at 10am, venue closes at 10pm</li>
-<li>July 2: Judging at 3pm</li>
-</ul>
-<p><img alt="London Tech Zero Hackathon" src="/public/images/tech-zero-hackathon-square.png" /></p>]]></content>
+    <content src="https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2"/>
     <link href="https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2"/>
     <summary>On the 1st and 2nd of July is the first-ever London Tech Zero Hackathon, supported by Kraken Tech.</summary>
     <category term="python"/>

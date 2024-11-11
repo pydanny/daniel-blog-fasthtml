@@ -62,7 +62,7 @@ def add_entry(fg, raw):
     fe.title(metadata['title'])
     fe.summary(metadata.get('description'))    
     try:
-        fe.content(content=github_markdown_to_html(content), type='CDATA')  
+        fe.content(src=linker)  
     except TypeError:
         # Probably a Jupyter notebook, so it won't render easily. Just pass it by.
         pass
