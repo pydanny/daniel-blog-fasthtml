@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-11-11T14:48:50.950364+00:00</updated>
+  <updated>2024-11-13T14:53:48.613517+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,29 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/course-fastai-lesson-00</id>
-    <title>Practical Deep Learning for Coders: Lesson 0</title>
-    <updated>2024-11-11T14:48:51.305635+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content src="https://daniel.feldroy.com/posts/course-fastai-lesson-00"/>
-    <link href="https://daniel.feldroy.com/posts/course-fastai-lesson-00"/>
-    <summary>I'm going through the fast.ai course by Jeremy Howard. This is the course notes for lesson 0.</summary>
-    <category term="python"/>
-    <category term="fast.ai"/>
-    <category term="courses"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-09-18T16:30:00.926680+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-01</id>
     <title>Practical Deep Learning for Coders: Lesson 1</title>
-    <updated>2024-11-11T14:48:51.305613+00:00</updated>
+    <updated>2024-11-13T14:53:48.959611+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -55,7 +35,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-11T14:48:51.305591+00:00</updated>
+    <updated>2024-11-13T14:53:48.959588+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -76,7 +56,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet</id>
     <title>Python CSV Cheatsheet</title>
-    <updated>2024-11-11T14:48:51.305569+00:00</updated>
+    <updated>2024-11-13T14:53:48.959566+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -96,7 +76,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/mermaid-charts</id>
     <title>Mermaid charts!</title>
-    <updated>2024-11-11T14:48:51.305551+00:00</updated>
+    <updated>2024-11-13T14:53:48.959547+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -117,7 +97,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling</id>
     <title>FastHTML form error handling</title>
-    <updated>2024-11-11T14:48:51.305527+00:00</updated>
+    <updated>2024-11-13T14:53:48.959523+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -137,7 +117,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/file-location-cleanup</id>
     <title>File Location Fixup</title>
-    <updated>2024-11-11T14:48:51.305499+00:00</updated>
+    <updated>2024-11-13T14:53:48.959495+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -156,7 +136,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
     <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-11-11T14:48:51.305476+00:00</updated>
+    <updated>2024-11-13T14:53:48.959472+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -176,7 +156,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-11T14:48:51.305451+00:00</updated>
+    <updated>2024-11-13T14:53:48.959448+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -195,7 +175,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-11-11T14:48:51.305419+00:00</updated>
+    <updated>2024-11-13T14:53:48.959422+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -215,7 +195,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-11T14:48:51.305373+00:00</updated>
+    <updated>2024-11-13T14:53:48.959389+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -236,7 +216,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-11T14:48:51.305268+00:00</updated>
+    <updated>2024-11-13T14:53:48.959343+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -252,5 +232,24 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-09T00:00:00.429101+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
+    <title>TIL: Making pytest use Ipython's PDB</title>
+    <updated>2024-11-13T14:53:48.959243+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content src="https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb"/>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb"/>
+    <summary>Once I've isolated a test failure to a very small set of failures I use this instead of running pytest directly. What it does on exception is start the IPython pdb interface.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-13T12:50:14.753658+00:00</published>
   </entry>
 </feed>

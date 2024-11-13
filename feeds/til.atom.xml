@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2024-11-11T14:48:51.307971+00:00</updated>
+  <updated>2024-11-13T14:53:48.964252+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,29 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit</id>
-    <title>TIL: Change older git commit</title>
-    <updated>2024-11-11T14:48:51.308338+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content src="https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit"/>
-    <link href="https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit"/>
-    <summary>How to change an older git commit rather than the most recent one.</summary>
-    <category term="howto"/>
-    <category term="git"/>
-    <category term="TIL"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2023-12-18T15:30:00+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes</id>
     <title>TIL: Writing decorators for classes</title>
-    <updated>2024-11-11T14:48:51.308320+00:00</updated>
+    <updated>2024-11-13T14:53:48.964620+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -54,7 +34,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv</id>
     <title>TIL: Running UV outside a virtualenv</title>
-    <updated>2024-11-11T14:48:51.308299+00:00</updated>
+    <updated>2024-11-13T14:53:48.964599+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -74,7 +54,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
     <title>TIL: Switching to full screen mode in VSCode</title>
-    <updated>2024-11-11T14:48:51.308280+00:00</updated>
+    <updated>2024-11-13T14:53:48.964580+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -93,7 +73,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git</id>
     <title>TIL: Auto setup remote branch for git</title>
-    <updated>2024-11-11T14:48:51.308259+00:00</updated>
+    <updated>2024-11-13T14:53:48.964559+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -113,7 +93,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches</id>
     <title>TIL: Renaming git branches</title>
-    <updated>2024-11-11T14:48:51.308238+00:00</updated>
+    <updated>2024-11-13T14:53:48.964537+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -133,7 +113,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python</id>
     <title>TIL: Passing exceptions as arguments in Python</title>
-    <updated>2024-11-11T14:48:51.308218+00:00</updated>
+    <updated>2024-11-13T14:53:48.964517+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -151,7 +131,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-11-11T14:48:51.308197+00:00</updated>
+    <updated>2024-11-13T14:53:48.964496+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -172,7 +152,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-11T14:48:51.308176+00:00</updated>
+    <updated>2024-11-13T14:53:48.964474+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -193,7 +173,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-11T14:48:51.308155+00:00</updated>
+    <updated>2024-11-13T14:53:48.964456+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -212,7 +192,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-11T14:48:51.308132+00:00</updated>
+    <updated>2024-11-13T14:53:48.964433+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -233,7 +213,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-11T14:48:51.308105+00:00</updated>
+    <updated>2024-11-13T14:53:48.964410+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -249,5 +229,24 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-09T00:00:00.429101+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
+    <title>TIL: Making pytest use Ipython's PDB</title>
+    <updated>2024-11-13T14:53:48.964383+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content src="https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb"/>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb"/>
+    <summary>Once I've isolated a test failure to a very small set of failures I use this instead of running pytest directly. What it does on exception is start the IPython pdb interface.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-13T12:50:14.753658+00:00</published>
   </entry>
 </feed>
