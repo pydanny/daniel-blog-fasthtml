@@ -10,6 +10,20 @@ title: 'TIL: LiteCLI, Improved SQLite CLI'
 twitter_image: /public/logos/til-1.png
 ---
 
-Really useful shell for sqlite, I can't imagine going back to the native shell. If you are interested [go here to learn more about LiteCLI](https://litecli.com/).
+Really useful shell for sqlite, I can't imagine going back to the native shell. 
+
+Can be installed via:
+
+```sh
+pip install litecli
+```
+
+Usage:
+
+```sh
+litecli mydata.db
+```
+
+Enjoy the highlighting, text compleition, and more. If you are interested [go here to learn more about LiteCLI](https://litecli.com/).
 
 Attribution goes to Audrey Roy Greenfeld.
