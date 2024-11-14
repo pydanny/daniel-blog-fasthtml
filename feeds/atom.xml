@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-11-13T14:55:20.041337+00:00</updated>
+  <updated>2024-11-14T21:52:15.039535+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,29 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/course-fastai-lesson-01</id>
-    <title>Practical Deep Learning for Coders: Lesson 1</title>
-    <updated>2024-11-13T14:55:20.317543+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content src="https://daniel.feldroy.com/posts/course-fastai-lesson-01"/>
-    <link href="https://daniel.feldroy.com/posts/course-fastai-lesson-01"/>
-    <summary>I'm going through the fast.ai course by Jeremy Howard. This is the course notes for lesson 1.</summary>
-    <category term="python"/>
-    <category term="fast.ai"/>
-    <category term="courses"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-09-21T11:30:00.926680+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-13T14:55:20.317521+00:00</updated>
+    <updated>2024-11-14T21:52:15.316503+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -56,7 +36,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet</id>
     <title>Python CSV Cheatsheet</title>
-    <updated>2024-11-13T14:55:20.317499+00:00</updated>
+    <updated>2024-11-14T21:52:15.316480+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -76,7 +56,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/mermaid-charts</id>
     <title>Mermaid charts!</title>
-    <updated>2024-11-13T14:55:20.317480+00:00</updated>
+    <updated>2024-11-14T21:52:15.316460+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -97,7 +77,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling</id>
     <title>FastHTML form error handling</title>
-    <updated>2024-11-13T14:55:20.317456+00:00</updated>
+    <updated>2024-11-14T21:52:15.316436+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -117,7 +97,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/file-location-cleanup</id>
     <title>File Location Fixup</title>
-    <updated>2024-11-13T14:55:20.317427+00:00</updated>
+    <updated>2024-11-14T21:52:15.316409+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -136,7 +116,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
     <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-11-13T14:55:20.317403+00:00</updated>
+    <updated>2024-11-14T21:52:15.316386+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -156,7 +136,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-13T14:55:20.317378+00:00</updated>
+    <updated>2024-11-14T21:52:15.316364+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -175,7 +155,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-11-13T14:55:20.317351+00:00</updated>
+    <updated>2024-11-14T21:52:15.316336+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -195,7 +175,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-13T14:55:20.317317+00:00</updated>
+    <updated>2024-11-14T21:52:15.316309+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -216,7 +196,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-13T14:55:20.317272+00:00</updated>
+    <updated>2024-11-14T21:52:15.316275+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -236,7 +216,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-11-13T14:55:20.317171+00:00</updated>
+    <updated>2024-11-14T21:52:15.316226+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -252,5 +232,23 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-13T15:00:14.753658+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli</id>
+    <title>TIL: LiteCLI, Improved SQLite CLI</title>
+    <updated>2024-11-14T21:52:15.316108+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content src="https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli"/>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli"/>
+    <summary>LiteCLI is a  command line interface for SQLite with auto-completion and syntax highlighting.</summary>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-14T22:00:48.492674+00:00</published>
   </entry>
 </feed>

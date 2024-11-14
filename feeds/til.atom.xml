@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2024-11-13T14:55:20.319567+00:00</updated>
+  <updated>2024-11-14T21:52:15.318468+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,28 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes</id>
-    <title>TIL: Writing decorators for classes</title>
-    <updated>2024-11-13T14:55:20.319946+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content src="https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes"/>
-    <link href="https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes"/>
-    <summary>To my surprise writing decorators for classes is easier than for functions.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-01-19T12:00:00+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv</id>
     <title>TIL: Running UV outside a virtualenv</title>
-    <updated>2024-11-13T14:55:20.319927+00:00</updated>
+    <updated>2024-11-14T21:52:15.318848+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -54,7 +35,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
     <title>TIL: Switching to full screen mode in VSCode</title>
-    <updated>2024-11-13T14:55:20.319907+00:00</updated>
+    <updated>2024-11-14T21:52:15.318828+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -73,7 +54,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git</id>
     <title>TIL: Auto setup remote branch for git</title>
-    <updated>2024-11-13T14:55:20.319886+00:00</updated>
+    <updated>2024-11-14T21:52:15.318808+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -93,7 +74,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches</id>
     <title>TIL: Renaming git branches</title>
-    <updated>2024-11-13T14:55:20.319865+00:00</updated>
+    <updated>2024-11-14T21:52:15.318787+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -113,7 +94,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python</id>
     <title>TIL: Passing exceptions as arguments in Python</title>
-    <updated>2024-11-13T14:55:20.319845+00:00</updated>
+    <updated>2024-11-14T21:52:15.318768+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -131,7 +112,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-11-13T14:55:20.319821+00:00</updated>
+    <updated>2024-11-14T21:52:15.318745+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -152,7 +133,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-13T14:55:20.319800+00:00</updated>
+    <updated>2024-11-14T21:52:15.318723+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -173,7 +154,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-13T14:55:20.319780+00:00</updated>
+    <updated>2024-11-14T21:52:15.318703+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -192,7 +173,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-13T14:55:20.319758+00:00</updated>
+    <updated>2024-11-14T21:52:15.318682+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -213,7 +194,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-13T14:55:20.319734+00:00</updated>
+    <updated>2024-11-14T21:52:15.318659+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -233,7 +214,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-11-13T14:55:20.319705+00:00</updated>
+    <updated>2024-11-14T21:52:15.318636+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -249,5 +230,23 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-13T15:00:14.753658+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli</id>
+    <title>TIL: LiteCLI, Improved SQLite CLI</title>
+    <updated>2024-11-14T21:52:15.318610+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content src="https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli"/>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli"/>
+    <summary>LiteCLI is a  command line interface for SQLite with auto-completion and syntax highlighting.</summary>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-14T22:00:48.492674+00:00</published>
   </entry>
 </feed>

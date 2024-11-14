@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2024-11-13T14:55:20.318862+00:00</updated>
+  <updated>2024-11-14T21:52:15.317795+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/course-fastai-lesson-01</id>
     <title>Practical Deep Learning for Coders: Lesson 1</title>
-    <updated>2024-11-13T14:55:20.319254+00:00</updated>
+    <updated>2024-11-14T21:52:15.318193+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -35,7 +35,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-13T14:55:20.319235+00:00</updated>
+    <updated>2024-11-14T21:52:15.318172+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -56,7 +56,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet</id>
     <title>Python CSV Cheatsheet</title>
-    <updated>2024-11-13T14:55:20.319214+00:00</updated>
+    <updated>2024-11-14T21:52:15.318151+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -76,7 +76,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/mermaid-charts</id>
     <title>Mermaid charts!</title>
-    <updated>2024-11-13T14:55:20.319199+00:00</updated>
+    <updated>2024-11-14T21:52:15.318135+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -97,7 +97,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling</id>
     <title>FastHTML form error handling</title>
-    <updated>2024-11-13T14:55:20.319178+00:00</updated>
+    <updated>2024-11-14T21:52:15.318114+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -117,7 +117,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/file-location-cleanup</id>
     <title>File Location Fixup</title>
-    <updated>2024-11-13T14:55:20.319156+00:00</updated>
+    <updated>2024-11-14T21:52:15.318091+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -136,7 +136,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
     <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-11-13T14:55:20.319135+00:00</updated>
+    <updated>2024-11-14T21:52:15.318071+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -156,7 +156,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-13T14:55:20.319113+00:00</updated>
+    <updated>2024-11-14T21:52:15.318050+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -175,7 +175,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-11-13T14:55:20.319092+00:00</updated>
+    <updated>2024-11-14T21:52:15.318029+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -195,7 +195,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-13T14:55:20.319068+00:00</updated>
+    <updated>2024-11-14T21:52:15.318004+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -216,7 +216,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-13T14:55:20.319043+00:00</updated>
+    <updated>2024-11-14T21:52:15.317979+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -236,7 +236,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-11-13T14:55:20.319013+00:00</updated>
+    <updated>2024-11-14T21:52:15.317949+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
