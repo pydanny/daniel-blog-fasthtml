@@ -60,9 +60,10 @@ def add_entry(fg, raw):
     fe.id(linker)
     fe.link(href=linker)
     fe.title(metadata['title'])
-    fe.summary(metadata.get('description'))    
+    fe.summary(metadata.get('description'))
     try:
-        fe.content(src=linker)  
+        fe.content(github_markdown_to_html(content),type='html')
+        # fe.content(src=linker)  
     except TypeError:
         # Probably a Jupyter notebook, so it won't render easily. Just pass it by.
         pass
@@ -77,7 +78,7 @@ def add_entry(fg, raw):
 def build_feed(content_tag: str | None = None):
 
     fg = FeedGenerator()
-    fg.id('https://daniel.feldroy.com')
+    fg.id('https://daniel.feldroy.com/')
     fg.author({'name': 'Daniel Roy Greenfeld', 'email': 'daniel@feldroy.com', 'uri':'https://daniel.feldroy.com'})
     fg.link(href='https://daniel.feldroy.com', rel='alternate')
     fg.logo('https://daniel.feldroy.com/images/pydanny-cartwheel.png')
