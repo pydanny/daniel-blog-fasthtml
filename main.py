@@ -288,8 +288,10 @@ app, rt = fast_app(hdrs=hdrs, pico=False, debug=True, exception_handlers=excepti
 
 @rt
 def index():
-    posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
-    popular = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
+    all_posts = list_posts()
+    posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if 'TIL' not in x.get('tags')]
+    tils = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if 'TIL' in x.get('tags')]
+    popular = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if x.get("popular", False)]    
     return Layout(
         Title("Daniel Roy Greenfeld"),        
         Socials(site_name="https://daniel.feldroy.com",
@@ -306,7 +308,12 @@ def index():
         Section(
                 H1('Popular Writings'),
                 *popular
-        ),
+        ),            
+        Hr(),
+        Section(
+                H1('TIL', Small(' (Today I learned)')),
+                *tils[:3]
+            ),
     )
 
 @rt("/posts")
