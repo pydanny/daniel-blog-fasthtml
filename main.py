@@ -203,8 +203,14 @@ def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
     """
     return Span(
                 H2(A(title, href=f"/posts/{slug}")),
-                P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp))))),
+                P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp)))))
         )
+
+def TILPreview(title: str, slug: str, timestamp: str, description: str):
+    return Span(
+                H3(A(title[4:], href=f"/posts/{slug}")),
+                P(Small(Time(format_datetime(convert_dtstr_to_dt(timestamp)))))
+        )        
 
 def TagLink(slug: str):
     return Span(A(slug, href=f"/tags/{slug}"), " ")
@@ -262,8 +268,8 @@ app, rt = fast_app(hdrs=hdrs, debug=True, exception_handlers=exception_handlers)
 def index():
     all_posts = list_posts()
     posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if 'TIL' not in x.get('tags')]
-    tils = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if 'TIL' in x.get('tags')]
     popular = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if x.get("popular", False)]    
+    tils = [TILPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description='') for x in all_posts if 'TIL' in x.get('tags')]    
     return Layout(
         Title("Daniel Roy Greenfeld"),        
         Socials(site_name="https://daniel.feldroy.com",
@@ -272,20 +278,20 @@ def index():
                     url="https://daniel.feldroy.com",
                     image="https://daniel.feldroy.com/public/images/profile.jpg",
                     ),
-        Section(
-                H1('Recent Writings'),
-                *posts[:3]
-            ),
-        Hr(),
-        Section(
-                H1('Popular Writings'),
-                *popular
-        ),            
-        Hr(),
-        Section(
-                H1('TIL', Small(' (Today I learned)')),
-                *tils[:3]
-            ),
+        Div(cls='grid')(
+            Section(
+                    H1('Recent Writings'),
+                    *posts[:3]
+                ),
+            Section(
+                    H1('Popular Writings'),
+                    *popular
+            ),            
+            Section(
+                    H1('TIL', Small(' (Today I learned)')),
+                    *tils[:5]
+                ),
+        )
     )
 
 @rt("/posts")

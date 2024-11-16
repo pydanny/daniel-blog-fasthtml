@@ -1,7 +1,6 @@
 ---
 date: "2021-06-08T23:59:50.52Z"
 published: true
-popular: true
 slug: whats-the-best-thing-about-working-for-octopus-energy-part-1
 image: /public/images/constantine-curious.png
 tags:
