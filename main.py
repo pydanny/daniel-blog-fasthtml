@@ -21,31 +21,6 @@ default_social_image = '/public/images/profile.jpg'
 # and more to the new locations.
 redirects = json.loads(pathlib.Path(f"redirects.json").read_text()) 
 
-search_modal_css = Style("""
-.modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-}
-.modal-content {
-  background-color: #f9f9f9;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-}
-#search-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-""")
-
 def MermaidJS(
         sel='.language-mermaid',  # CSS selector for mermaid elements
         theme='base',  # Mermaid theme to use
@@ -57,10 +32,7 @@ def MermaidJS(
 hdrs = (
     MarkdownJS(),
     HighlightJS(langs=['python', 'javascript', 'html', 'css',]),
-    Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
-    Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),    
-    Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
-    search_modal_css,
+    Link(rel='stylesheet', href='/public/style.css', type='text/css'),
     MermaidJS()
 )
 
@@ -139,7 +111,6 @@ def list_tags() -> dict[str, int]:
     tags: dict = collections.OrderedDict(
             sorted(unsorted_tags.items(), key=lambda x: x[1], reverse=True)
         )      
-
     return tags
 
 # The next block of code is several date utilities
@@ -186,14 +157,15 @@ def Layout(title, socials, *tags):
                 A('Search', href='/search')
             ), style="text-align: center;"
         ),
-    Main(*tags),
+    Main(*tags, cls='container'),
     Footer(Hr(), P(
                 A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), ' | ',        
                 A('Twitter', href='https://twitter.com/pydanny'), ' | ',
                 A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), ' | ',                
                 'Feeds: ', A('All', href='/feeds/atom.xml'), NotStr(', ') ,A('Python', href='/feeds/python.atom.xml'), NotStr(', ') , A('TIL', href='/feeds/til.atom.xml')
             ),
-            P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
+            P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld'),
+            cls='container'
         ),
     Div(
         Div(
@@ -284,7 +256,7 @@ exception_handlers = {
     404: not_found
 }
 
-app, rt = fast_app(hdrs=hdrs, pico=False, debug=True, exception_handlers=exception_handlers)
+app, rt = fast_app(hdrs=hdrs, debug=True, exception_handlers=exception_handlers)
 
 @rt
 def index():
