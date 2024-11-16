@@ -21,31 +21,6 @@ default_social_image = '/public/images/profile.jpg'
 # and more to the new locations.
 redirects = json.loads(pathlib.Path(f"redirects.json").read_text()) 
 
-search_modal_css = Style("""
-.modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-}
-.modal-content {
-  background-color: #f9f9f9;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-}
-#search-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-""")
-
 def MermaidJS(
         sel='.language-mermaid',  # CSS selector for mermaid elements
         theme='base',  # Mermaid theme to use
@@ -57,8 +32,7 @@ def MermaidJS(
 hdrs = (
     MarkdownJS(),
     HighlightJS(langs=['python', 'javascript', 'html', 'css',]),
-    Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
-    search_modal_css,
+    Link(rel='stylesheet', href='/public/style.css', type='text/css'),
     MermaidJS()
 )
 
