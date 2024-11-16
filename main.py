@@ -57,8 +57,6 @@ def MermaidJS(
 hdrs = (
     MarkdownJS(),
     HighlightJS(langs=['python', 'javascript', 'html', 'css',]),
-    Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
-    Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css', type='text/css'),    
     Link(rel='stylesheet', href='/public/style.css', type='text/css'),        
     search_modal_css,
     MermaidJS()
@@ -139,7 +137,6 @@ def list_tags() -> dict[str, int]:
     tags: dict = collections.OrderedDict(
             sorted(unsorted_tags.items(), key=lambda x: x[1], reverse=True)
         )      
-
     return tags
 
 # The next block of code is several date utilities
@@ -186,14 +183,15 @@ def Layout(title, socials, *tags):
                 A('Search', href='/search')
             ), style="text-align: center;"
         ),
-    Main(*tags),
+    Main(*tags, cls='container'),
     Footer(Hr(), P(
                 A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), ' | ',        
                 A('Twitter', href='https://twitter.com/pydanny'), ' | ',
                 A('Mastodon', href='https://fosstodon.org/@danielfeldroy'), ' | ',                
                 'Feeds: ', A('All', href='/feeds/atom.xml'), NotStr(', ') ,A('Python', href='/feeds/python.atom.xml'), NotStr(', ') , A('TIL', href='/feeds/til.atom.xml')
             ),
-            P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld')
+            P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld'),
+            cls='container'
         ),
     Div(
         Div(
@@ -284,7 +282,7 @@ exception_handlers = {
     404: not_found
 }
 
-app, rt = fast_app(hdrs=hdrs, pico=False, debug=True, exception_handlers=exception_handlers)
+app, rt = fast_app(hdrs=hdrs, debug=True, exception_handlers=exception_handlers)
 
 @rt
 def index():
