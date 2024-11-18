@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2024-11-15T10:15:04.894755+00:00</updated>
+  <updated>2024-11-18T17:34:13.511280+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,243 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/course-fastai-lesson-01</id>
-    <title>Practical Deep Learning for Coders: Lesson 1</title>
-    <updated>2024-11-15T10:15:04.940168+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;I'm going through the &lt;a href="http://course.fast.ai"&gt;Practical Deep Learning for Coders&lt;/a&gt; course by Jeremy Howard. I’ll be sharing notes here on my site, all tagged with &lt;a href="https://daniel.feldroy.com/tags/fast.ai"&gt;fast.ai&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;This is my personal note-taking, not an article.&lt;/strong&gt; This won't be fancy prose like what makes up the majority of this site. If you want to see a big batch of notes in this style I took in the early part of my Python career, check out my &lt;a href="https://pydanny-event-notes.readthedocs.io/en/latest/"&gt;pydanny-event-notes&lt;/a&gt;. &lt;/p&gt;
-&lt;h2 id="lesson-1-getting-started"&gt;Lesson 1: Getting started&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://course.fast.ai/Lessons/lesson1.html"&gt;course.fast.ai/Lessons/lesson1.html&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="deep-learning-has-come-a-long-way"&gt;Deep learning has come a long way&lt;/h2&gt;
-&lt;p&gt;What was impossible just a few years ago is cheap/easy now  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Can sometimes be done on modern laptops with GPUs  &lt;/li&gt;
-&lt;li&gt;Instead of days or weeks can take minutes or seconds  &lt;/li&gt;
-&lt;li&gt;Doesn’t take a lot of code  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="images-are-just-a-bunch-of-numbers"&gt;Images are just a bunch of numbers.&lt;/h2&gt;
-&lt;p&gt;In the lesson RGB images are:  &lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# (height in pixes)&lt;/span&gt;
-&lt;span class="c1"&gt;# (width in pixes)&lt;/span&gt;
-&lt;span class="c1"&gt;# (3 is RGB)&lt;/span&gt;
-&lt;span class="n"&gt;height&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;So an image dimension might be:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;          &lt;span class="c1"&gt;# height   width    RGB&lt;/span&gt;
-&lt;span class="mi"&gt;6220800&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1920&lt;/span&gt;     &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;1080&lt;/span&gt;   &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="random-deep-learning-notes"&gt;Random Deep Learning notes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;You typically can’t search on "not a something"&lt;/li&gt;
-&lt;li&gt;You don’t need particularly large images to do deep learning on them&lt;/li&gt;
-&lt;li&gt;Datablocks are a tool for creating data learners. Data learners give fastai info it needs to create (or train?) a model  &lt;/li&gt;
-&lt;li&gt;Computer vision models are easy to check because you can look at your results  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="top-down-training"&gt;Top down training&lt;/h2&gt;
-&lt;p&gt;How the instructor teaches, also &lt;a href="https://daniel.feldroy.com/posts/course-fastai-lesson-00"&gt;see my notes on lesson 0&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;We started by showing training of a model  &lt;/li&gt;
-&lt;li&gt;People learn better with context in place  &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.amazon.com/Mathematicians-Lament-School-Fascinating-Imaginative/dp/1934137170?taqg=mlinar-20"&gt;Mathematician’s Lament&lt;/a&gt; by Paul Lockhart  &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.amazon.com/Making-Learning-Whole-Principles-Transform/dp/0470633719?tag=mlinar-20"&gt;Making Learning Whole&lt;/a&gt; by David Perkins  &lt;/li&gt;
-&lt;li&gt;We learn best following the sport method  &lt;ul&gt;
-&lt;li&gt;We first learn a simplified version of the game  &lt;/li&gt;
-&lt;li&gt;We then learn the techniques over time, adding more skills and polish as time goes by  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;First learn how to build and deploy models before we learn how they work   &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="about-the-instructor-jeremy-howard"&gt;About the instructor: &lt;a href="https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)"&gt;Jeremy Howard&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527/?tag=mlinar-20"&gt;Deep Learning for Coders with fastai &amp;amp; PyTorch&lt;/a&gt;, free version at &lt;a href="http://github.com/fastai/fastbook"&gt;github.com/fastai/fastbook&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;Spent 30 years doing machine learning  &lt;/li&gt;
-&lt;li&gt;Founded &lt;a href="https://kaggle.com"&gt;Kaggle&lt;/a&gt;, top ranked competitor on the platform&lt;/li&gt;
-&lt;li&gt;First person to do ML for a company  &lt;/li&gt;
-&lt;li&gt;His students have beaten Google and other bigtech teams in coding competitions  &lt;/li&gt;
-&lt;li&gt;Google started using his methods in their models  &lt;/li&gt;
-&lt;li&gt;Inventor of the ULMFiT algorithm, a critical component of the modern LLM   &lt;/li&gt;
-&lt;li&gt;Prefers a functional style over class. So we will see a lot of &lt;code&gt;map&lt;/code&gt; usage and other FP patterns. See &lt;a href="https://docs.fast.ai/dev/style.html"&gt;here&lt;/a&gt; for details.&lt;/li&gt;
-&lt;li&gt;Likes to do everything in Jupyter notebooks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="why-is-deep-learning-fastereasier-now"&gt;Why is Deep Learning faster/easier now?&lt;/h2&gt;
-&lt;p&gt;Why can we do a bird recognizer fast now, but couldn’t do it before  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In 2015 a new way of doing came out that changed everything &lt;/li&gt;
-&lt;li&gt;Took a more layered approach&lt;/li&gt;
-&lt;li&gt;Where they took patterns and trained the models to recognize said patterns&lt;/li&gt;
-&lt;li&gt;They were able to recognize patterns in batches, then composite them&lt;/li&gt;
-&lt;li&gt;This is possible to code these pattern recognizers by hand, but neural networks were able to recognize the patterns and assemble them more quickly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="other-image-recognizer-tricks"&gt;Other Image Recognizer tricks&lt;/h2&gt;
-&lt;p&gt;Image recognizers can be used on a lot of non-image things&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Recognize sound patterns&lt;/li&gt;
-&lt;li&gt;Time series&lt;/li&gt;
-&lt;li&gt;Computer mouse movements&lt;/li&gt;
-&lt;li&gt;What about code?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="myths-about-deep-learning"&gt;Myths about Deep learning&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Myth&lt;/th&gt;
-&lt;th&gt;Truth&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Need lots of math&lt;/td&gt;
-&lt;td&gt;High school math is sufficient&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Need lots of data&lt;/td&gt;
-&lt;td&gt;Seen record breaking results with 50 rows of data&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Lots of expensive computers&lt;/td&gt;
-&lt;td&gt;We can get state-of-the-art for free/cheap&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Myth of expensive processes is sold by big companies who want to sell expensive products. &lt;/p&gt;
-&lt;h2 id="about-pytorch"&gt;About pytorch&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;pytorch took over from tensorflow&lt;/li&gt;
-&lt;li&gt;Reason is that the technical fundamentals are better&lt;/li&gt;
-&lt;li&gt;pytorch is a lower-level library, taking a lot of coding effort to do anything&lt;/li&gt;
-&lt;li&gt;fastai is a wrapper around pytorch that makes pytorch more accessible&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="what-is-fastai"&gt;What is Fastai?&lt;/h2&gt;
-&lt;p&gt;Fastai is a Python library: &lt;a href="https://docs.fast.ai/"&gt;docs.fast.ai&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;is a wrapper around pytorch, makes pytorch a lot more accessible&lt;/li&gt;
-&lt;li&gt;so instead of spending a lot of time in code, you are doing business. &lt;/li&gt;
-&lt;li&gt;Me: Your reqs should be complicated, not your code&lt;/li&gt;
-&lt;li&gt;won a best paper award in 2020&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="class-given-in-jupyter-notebook"&gt;Class given in Jupyter notebook!&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Slides rendered in Jupyter&lt;/li&gt;
-&lt;li&gt;Kaggle is where lesson notebooks can be found&lt;/li&gt;
-&lt;li&gt;Jupyter serves as coding environment and calculator&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="datablocks-master-them"&gt;Datablocks - master them!&lt;/h2&gt;
-&lt;p&gt;Intermediate type of system that creates data learners&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dataloaders&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DataBlock&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="n"&gt;blocks&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ImageBlock&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CategoryBlock&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
-    &lt;span class="n"&gt;get_items&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;get_image_files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
-    &lt;span class="n"&gt;splitter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;RandomSplitter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;valid_pct&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;42&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="n"&gt;get_y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;parent_label&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;item_tfms&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Resize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;192&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;squish&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
-&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataloaders&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;blocks&lt;/code&gt;: Deep learning community has found a small number of model types work great for most scenarios&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ImageBlock&lt;/code&gt; - An image&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;CategoryBlock&lt;/code&gt; - Classify an item as one of something&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;get_items&lt;/code&gt; - func for getting items&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;splitter&lt;/code&gt; - sets aside data for validation&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;get_y&lt;/code&gt; - Function for returning the parent folder of a path&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;items_tfms&lt;/code&gt; - "item transforms" runs on every item evaluated and makes sure they end up same size. For example, all images are the same height and width&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="dataloaders"&gt;DataLoaders&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;DataLoaders&lt;/code&gt; are what datablocks generate&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Runs slow unless in a GPU&lt;/li&gt;
-&lt;li&gt;Runs in big batches on data that is all the same size&lt;/li&gt;
-&lt;li&gt;Happens in batches, so &lt;code&gt;show_batch&lt;/code&gt; has a specific meaning (Not sure yet what this means)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Continuing from the example above:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dataloaders&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show_batch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="models"&gt;Models&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;A few models are all that you need to do most of your work, resnet will probably suffice for most of what we'll do at least in beginning of course&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://timm.fast.ai/"&gt;timm&lt;/a&gt; is the largest collection of CV models in the world&lt;ul&gt;
-&lt;li&gt;fastai integrates it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Models are small and fast because someone has trained models and loaded them up to places like download.pytorch.org&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fastai.fine_tune&lt;/code&gt; is a function that it takes pre-trained weights to just teach the models diffs between our data and what the original data is.&lt;ul&gt;
-&lt;li&gt;Another description: "Fine-tuning" a model means that we're starting with a model someone else has trained using some other dataset (called the pretrained model), and adjusting the weights a little bit so that the model learns to recognise your particular dataset.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;To create Dataloaders (DLs) for segmentation, use X (follow-up to find what X is)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="tabular-analysis"&gt;Tabular Analysis&lt;/h2&gt;
-&lt;p&gt;Tabular Analysis is for column-based data like spreadsheets and databases&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Must identify categorical columns&lt;/li&gt;
-&lt;li&gt;Type dispatch figures out the right thing to do depending on the types of data&lt;/li&gt;
-&lt;li&gt;Don't fine tune, instead fit a cycle of data (I hear this standard has changed, follow up to find out more)&lt;/li&gt;
-&lt;li&gt;Q: What is a cycle?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="collaborative-filtering"&gt;Collaborative filtering&lt;/h2&gt;
-&lt;p&gt;Collaborative filtering is used to come up with recommendation systems&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Looking at how similar people like similar products&lt;/li&gt;
-&lt;li&gt;Get some prefereces and come up with a list of what people like&lt;/li&gt;
-&lt;li&gt;We'll find out later why: Go lower than the range and higher than the range&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="jupyter-presentation-tip"&gt;Jupyter presentation tip&lt;/h2&gt;
-&lt;p&gt;Note: Next time I give a technical talk I'm going to use Jupyter so I can have live code examples&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use &lt;a href="https://rise.readthedocs.io/"&gt;rise&lt;/a&gt; to make presentations using jupyter&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="regular-programming-vs-deep-learning"&gt;Regular programming vs Deep Learning&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Note: The code examples below will eventually render to flowcharts powered by &lt;a href="https://mermaid.js.org/"&gt;mermaid&lt;/a&gt;. For the moment they just display as plaintext.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Normal code&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;flowchart&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TD&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;inputs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Neural network (I'm not sure this is accurate)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;flowchart&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TD&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;inputs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;weights&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;What is a neural network?&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Multiplies weights times inputs&lt;/li&gt;
-&lt;li&gt;Takes all the negative numbers and replaces them by zeros&lt;/li&gt;
-&lt;li&gt;Loss is how good the results are&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Next step:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;flowchart&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TD&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;inputs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;loss&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;weights&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;|&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;weights&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We need a way to update the weights depending on the size of the loss. The better we calculate the loss, the better everything will be.&lt;/p&gt;
-&lt;p&gt;This algorithm is infinitely flexible as a computable function. If this architecture flow of a neural network can be created, then with enough time and data anything can be done.&lt;/p&gt;
-&lt;p&gt;This is awesome: What fastai's &lt;code&gt;learn.predict()&lt;/code&gt; function does is turn the neural network into something that uses a typical coding pattern of &lt;code&gt;inputs --&amp;gt; program --&amp;gt; results&lt;/code&gt;&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/course-fastai-lesson-01"/>
-    <summary>I'm going through the fast.ai course by Jeremy Howard. This is the course notes for lesson 1.</summary>
-    <category term="python"/>
-    <category term="fast.ai"/>
-    <category term="courses"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-09-21T11:30:00.926680+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-15T10:15:04.940050+00:00</updated>
+    <updated>2024-11-18T17:34:13.557921+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -269,7 +35,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet</id>
     <title>Python CSV Cheatsheet</title>
-    <updated>2024-11-15T10:15:04.928770+00:00</updated>
+    <updated>2024-11-18T17:34:13.546047+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -326,7 +92,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/mermaid-charts</id>
     <title>Mermaid charts!</title>
-    <updated>2024-11-15T10:15:04.918252+00:00</updated>
+    <updated>2024-11-18T17:34:13.535178+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -352,7 +118,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling</id>
     <title>FastHTML form error handling</title>
-    <updated>2024-11-15T10:15:04.912577+00:00</updated>
+    <updated>2024-11-18T17:34:13.529347+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -579,7 +345,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/file-location-cleanup</id>
     <title>File Location Fixup</title>
-    <updated>2024-11-15T10:15:04.912462+00:00</updated>
+    <updated>2024-11-18T17:34:13.529219+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -597,7 +363,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
     <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-11-15T10:15:04.901417+00:00</updated>
+    <updated>2024-11-18T17:34:13.518208+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -653,7 +419,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-15T10:15:04.900643+00:00</updated>
+    <updated>2024-11-18T17:34:13.517498+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -685,7 +451,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-11-15T10:15:04.896038+00:00</updated>
+    <updated>2024-11-18T17:34:13.513063+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -909,7 +675,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-15T10:15:04.895696+00:00</updated>
+    <updated>2024-11-18T17:34:13.512711+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -933,7 +699,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-15T10:15:04.895350+00:00</updated>
+    <updated>2024-11-18T17:34:13.512429+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -954,7 +720,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-11-15T10:15:04.894943+00:00</updated>
+    <updated>2024-11-18T17:34:13.511905+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -975,5 +741,33 @@ Uma Roy Greenfeld
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-13T15:00:14.753658+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
+    <title>TIL: Fractional Indexing</title>
+    <updated>2024-11-18T17:34:13.511482+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;In the past when I've done this for web pages and various other interfaces it has been a mess. I've built ungainly sort order in numeric or alphanumeric batches. Inevitably there is a conflict, often sooner rather than later. So sorting a list of things often means updating all the elements to preserve the order in the datastore. I've learned to mark each element with a big value, but it's ugly and ungainly&lt;/p&gt;
+&lt;p&gt;Fortunately for me, going forward, I now know about Fractional Indexing. &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://www.figma.com/blog/realtime-editing-of-ordered-sequences/&lt;/li&gt;
+&lt;li&gt;https://observablehq.com/@dgreensp/implementing-fractional-indexing&lt;/li&gt;
+&lt;li&gt;https://github.com/httpie/fractional-indexing-python&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing"/>
+    <summary>How to keep order of records without having to update all the records</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="javascript"/>
+    <category term="nodejs"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-18T17:27:21.938091+00:00</published>
   </entry>
 </feed>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2024-11-15T10:15:04.976479+00:00</updated>
+  <updated>2024-11-18T17:34:13.559571+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,44 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv</id>
-    <title>TIL: Running UV outside a virtualenv</title>
-    <updated>2024-11-15T10:15:05.031325+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;&lt;em&gt;Breaking the rules to satisfy continuous integration.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;A few months ago I blogged about forcing &lt;a href="/posts/til-2023-12-forcing-pip-to-use-virtualenv"&gt;pip to require a virtualenv&lt;/a&gt;. However, when automating tests and deployments sometimes you work outside of virtualenvs. With &lt;code&gt;pip&lt;/code&gt; this isn't a problem, you just don't set what I did in that article. However, what if you are using the rust-based &lt;a href="https://pypi.org/project/uv/"&gt;uv&lt;/a&gt; where the default is to keep you in a virtualenv?&lt;/p&gt;
-&lt;p&gt;The answer is when you install dependencies using &lt;code&gt;uv&lt;/code&gt; in this scenario, use the &lt;code&gt;--python&lt;/code&gt; flag to specify the interpreter. According to the &lt;a href="https://github.com/astral-sh/uv?tab=readme-ov-file#installing-into-arbitrary-python-environments"&gt;uv docs&lt;/a&gt;, this flag is intended for use in continuous integration (CI) environments or other automated workflows.&lt;/p&gt;
-&lt;p&gt;So without further ado, this is what I did:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;uv
-uv&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.12&lt;span class="w"&gt; &lt;/span&gt;-r&lt;span class="w"&gt; &lt;/span&gt;requirements.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;As a bonus, here's the command inside GitHub actions-flavored YAML:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install Dependencies&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="no"&gt;python -m pip install uv&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="no"&gt;uv pip install -p 3.12 -r requirements.txt&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Want to know how to handle multiple versions of Python? Here's how use a matrix on GitHub: &lt;a href="github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19"&gt;https://github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19&lt;/a&gt;&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv"/>
-    <summary>Breaking the rules to satisfy continuous integration.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <category term="howto"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-05-08T15:22:59.338527+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
     <title>TIL: Switching to full screen mode in VSCode</title>
-    <updated>2024-11-15T10:15:05.010455+00:00</updated>
+    <updated>2024-11-18T17:34:13.594387+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -85,7 +50,7 @@ uv&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;ins
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git</id>
     <title>TIL: Auto setup remote branch for git</title>
-    <updated>2024-11-15T10:15:05.002698+00:00</updated>
+    <updated>2024-11-18T17:34:13.586428+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -119,7 +84,7 @@ uv&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;ins
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches</id>
     <title>TIL: Renaming git branches</title>
-    <updated>2024-11-15T10:15:04.981565+00:00</updated>
+    <updated>2024-11-18T17:34:13.565134+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -156,7 +121,7 @@ uv&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;ins
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-06-passing-exceptions-as-arguments-in-python</id>
     <title>TIL: Passing exceptions as arguments in Python</title>
-    <updated>2024-11-15T10:15:04.980387+00:00</updated>
+    <updated>2024-11-18T17:34:13.563933+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -214,7 +179,7 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-08-parsing-messy-datetimes-strings</id>
     <title>TIL: Parsing messy datetimes strings</title>
-    <updated>2024-11-15T10:15:04.979294+00:00</updated>
+    <updated>2024-11-18T17:34:13.562834+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -263,7 +228,7 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
     <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-15T10:15:04.979182+00:00</updated>
+    <updated>2024-11-18T17:34:13.562723+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -283,7 +248,7 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-15T10:15:04.978451+00:00</updated>
+    <updated>2024-11-18T17:34:13.561978+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -315,7 +280,7 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-15T10:15:04.978079+00:00</updated>
+    <updated>2024-11-18T17:34:13.561624+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -339,7 +304,7 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-15T10:15:04.977704+00:00</updated>
+    <updated>2024-11-18T17:34:13.561236+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -360,7 +325,7 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-11-15T10:15:04.977291+00:00</updated>
+    <updated>2024-11-18T17:34:13.560814+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -385,7 +350,7 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli</id>
     <title>TIL: LiteCLI, Improved SQLite CLI</title>
-    <updated>2024-11-15T10:15:04.976690+00:00</updated>
+    <updated>2024-11-18T17:34:13.560233+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -409,5 +374,33 @@ Found&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-14T22:00:48.492674+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
+    <title>TIL: Fractional Indexing</title>
+    <updated>2024-11-18T17:34:13.559793+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;In the past when I've done this for web pages and various other interfaces it has been a mess. I've built ungainly sort order in numeric or alphanumeric batches. Inevitably there is a conflict, often sooner rather than later. So sorting a list of things often means updating all the elements to preserve the order in the datastore. I've learned to mark each element with a big value, but it's ugly and ungainly&lt;/p&gt;
+&lt;p&gt;Fortunately for me, going forward, I now know about Fractional Indexing. &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://www.figma.com/blog/realtime-editing-of-ordered-sequences/&lt;/li&gt;
+&lt;li&gt;https://observablehq.com/@dgreensp/implementing-fractional-indexing&lt;/li&gt;
+&lt;li&gt;https://github.com/httpie/fractional-indexing-python&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing"/>
+    <summary>How to keep order of records without having to update all the records</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="javascript"/>
+    <category term="nodejs"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-18T17:27:21.938091+00:00</published>
   </entry>
 </feed>

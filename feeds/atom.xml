@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-11-15T10:15:04.445276+00:00</updated>
+  <updated>2024-11-18T17:34:12.949613+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,29 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets</id>
-    <title>TIL: Using FastHTML in Jupyter notebooks plus websockets</title>
-    <updated>2024-11-15T10:15:04.861603+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <link href="https://daniel.feldroy.com/posts/til-2024-09-using-fasthtml-in-jupyter-plus-websockets"/>
-    <summary>A simple websockets example hosted in a Jupyter notebook!</summary>
-    <category term="TIL"/>
-    <category term="FastHTML"/>
-    <category term="python"/>
-    <category term="jupyter"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-09-23T15:13:34.609190+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-csv-cheatsheet</id>
     <title>Python CSV Cheatsheet</title>
-    <updated>2024-11-15T10:15:04.850014+00:00</updated>
+    <updated>2024-11-18T17:34:13.464608+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -92,7 +72,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/mermaid-charts</id>
     <title>Mermaid charts!</title>
-    <updated>2024-11-15T10:15:04.813320+00:00</updated>
+    <updated>2024-11-18T17:34:13.425009+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -118,7 +98,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-10-fasthtml-form-error-handling</id>
     <title>FastHTML form error handling</title>
-    <updated>2024-11-15T10:15:04.807606+00:00</updated>
+    <updated>2024-11-18T17:34:13.419085+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -345,7 +325,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/file-location-cleanup</id>
     <title>File Location Fixup</title>
-    <updated>2024-11-15T10:15:04.807448+00:00</updated>
+    <updated>2024-11-18T17:34:13.418915+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -363,7 +343,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
     <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-11-15T10:15:04.757667+00:00</updated>
+    <updated>2024-11-18T17:34:13.339709+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -419,7 +399,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-11-15T10:15:04.756954+00:00</updated>
+    <updated>2024-11-18T17:34:13.338958+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -451,7 +431,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-11-15T10:15:04.752353+00:00</updated>
+    <updated>2024-11-18T17:34:13.333988+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -675,7 +655,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-11-15T10:15:04.741872+00:00</updated>
+    <updated>2024-11-18T17:34:13.323219+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -699,7 +679,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-11-15T10:15:04.741575+00:00</updated>
+    <updated>2024-11-18T17:34:13.322874+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -720,7 +700,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-11-15T10:15:04.741065+00:00</updated>
+    <updated>2024-11-18T17:34:13.322428+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -745,7 +725,7 @@ Uma Roy Greenfeld
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli</id>
     <title>TIL: LiteCLI, Improved SQLite CLI</title>
-    <updated>2024-11-15T10:15:04.729124+00:00</updated>
+    <updated>2024-11-18T17:34:13.319709+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -769,5 +749,33 @@ Uma Roy Greenfeld
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-11-14T22:00:48.492674+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
+    <title>TIL: Fractional Indexing</title>
+    <updated>2024-11-18T17:34:13.282026+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;In the past when I've done this for web pages and various other interfaces it has been a mess. I've built ungainly sort order in numeric or alphanumeric batches. Inevitably there is a conflict, often sooner rather than later. So sorting a list of things often means updating all the elements to preserve the order in the datastore. I've learned to mark each element with a big value, but it's ugly and ungainly&lt;/p&gt;
+&lt;p&gt;Fortunately for me, going forward, I now know about Fractional Indexing. &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://www.figma.com/blog/realtime-editing-of-ordered-sequences/&lt;/li&gt;
+&lt;li&gt;https://observablehq.com/@dgreensp/implementing-fractional-indexing&lt;/li&gt;
+&lt;li&gt;https://github.com/httpie/fractional-indexing-python&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing"/>
+    <summary>How to keep order of records without having to update all the records</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="javascript"/>
+    <category term="nodejs"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-11-18T17:27:21.938091+00:00</published>
   </entry>
 </feed>
