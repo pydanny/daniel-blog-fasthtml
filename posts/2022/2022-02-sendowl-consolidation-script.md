@@ -5,6 +5,7 @@ tags:
   - python
   - book
   - self-publishing
+  - typer  
 time_to_read: 2
 title: Sendowl Consolidation Script
 description: Unifying our sendowl accounts into one

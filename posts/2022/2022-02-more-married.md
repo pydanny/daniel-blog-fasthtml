@@ -5,6 +5,7 @@ tags:
   - audrey
   - holidays
   - python
+  - typer  
 time_to_read: 2
 title: More Married
 description: In honor of Valentine's Day, this script calculates how long you've been married (or other types of relationships) in relation to how long you've known each other

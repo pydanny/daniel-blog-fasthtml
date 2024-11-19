@@ -5,6 +5,7 @@ tags:
   - python
   - django
   - talk
+  - conference
 time_to_read: 2
 title: Speaking at Python Web Conf
 description: My first public conference talk in three years

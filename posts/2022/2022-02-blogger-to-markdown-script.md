@@ -4,6 +4,7 @@ published: true
 tags:
   - blog
   - python
+  - typer
 time_to_read: 2
 title: Blogger to Markdown Script
 description: Converting hundreds of posts from blogger to markdown

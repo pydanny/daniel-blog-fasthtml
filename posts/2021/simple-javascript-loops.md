@@ -5,7 +5,6 @@ slug: javascript-loops-are-fun
 tags:
   - javascript
   - cheatsheet
-  - tutorial
 time_to_read: 5
 title: "JavaScript Loops Are Fun!"
 description: This tutorial is a cookbook of my favorite JavaScript looping techniques.

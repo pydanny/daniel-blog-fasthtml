@@ -5,7 +5,6 @@ slug: intensive-django-training-us-air-force
 tags:
 - django
 - python
-- Cartwheel Web
 time_to_read: 3
 title: Intensive Django Training with the US Air Force
 image: /public/images/two-scoops-academy-91cos-django-training.png

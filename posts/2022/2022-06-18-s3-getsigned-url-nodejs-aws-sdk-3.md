@@ -4,7 +4,7 @@ published: true
 tags:
   - nodejs
   - javascript
-  - reference
+  - references
   - howto
   - TIL
 time_to_read: 10

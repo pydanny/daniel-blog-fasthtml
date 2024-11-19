@@ -3,8 +3,8 @@ date: '2024-05-25T12:42:48.161069'
 description: A management command for quickly generating tests based off Django's URL routing mechanism.
 published: true
 tags:
-  - Django
-  - Python
+  - django
+  - python
   - howto
   - testing
 title: Rapidly creating smoke tests for Django views
