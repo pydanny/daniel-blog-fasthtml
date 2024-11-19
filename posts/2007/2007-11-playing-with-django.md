@@ -1,6 +1,6 @@
 ---
 date: "2007-11-23T04:49:00.000-08:00"
-description: ""
+description: "About the 3rd time I went through the Django tutorial, at the time I was so jealous of its simplicity compared to Zope."
 published: true
 slug: 2007-11-playing-with-django
 tags:

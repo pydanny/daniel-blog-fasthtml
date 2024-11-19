@@ -1,6 +1,6 @@
 ---
 date: "2007-11-22T06:05:00.002-08:00"
-description: ""
+description: "Giving thanks on Thanksgiving 2007, what a riveting year."
 published: true
 slug: 2007-11-happy-thanksgiving
 tags:
@@ -22,7 +22,6 @@ I'm thankful for:
 - Everyone who helped out when my bike got stolen
 - Only two minor injuries this year
 - My friends
-- My family
 - My crazy coworkers
 - The trip to Italy
 - My NASA customer
