@@ -1,6 +1,6 @@
 ---
 date: "2007-11-26T12:44:00.001-08:00"
-description: "In where I think about converting from one overcomplicated framework to an abstraction over it that was still too complicated for easy use."
+description: "In where I think about converting from one overcomplicated framework to an abstraction of the framework that was still too complicated for easy use."
 published: true
 slug: 2007-11-how-fast-can-i-convert-zope-3-app-to
 tags:
