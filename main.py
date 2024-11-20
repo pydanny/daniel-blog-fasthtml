@@ -263,7 +263,7 @@ exception_handlers = {
     404: not_found
 }
 
-app, rt = fast_app(hdrs=hdrs, debug=False, exception_handlers=exception_handlers)
+app, rt = fast_app(hdrs=hdrs, debug=True, exception_handlers=exception_handlers)
 
 @rt
 def index():
