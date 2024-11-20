@@ -420,13 +420,14 @@ def get(q: str|None = None):
                         description='',
                         url="https://daniel.feldroy.com/search",
                         image="https://daniel.feldroy.com/public/images/profile.jpg",
-                        ),                    
-        Form(style="text-align: center;")(
+                        ),          
+        Form(cls='center', role='group')(
             Input(name="q", id='q', value=q, type="search", autofocus=True),
             Button("Search", hx_get="/search-results", hx_target='#search-results', hx_include='#q', onclick="updateQinURL()")
         ),
         Section(
             Div(id='search-results')(*result),
+            P(Small('Hint: On other pages you can use the "/" shortcut to search.')),            
             A("← Back home", href="/"),
         ),
         Script("""function updateQinURL() {
