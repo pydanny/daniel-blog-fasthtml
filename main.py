@@ -169,9 +169,9 @@ def Layout(title, socials, *tags):
         ),
     Div(
         Div(
-            H2('Search'),
-            Input(name='q', type='text', id='search-input', hx_trigger="keyup", placeholder='Enter your search query...', hx_get='/search-results', hx_target='#search-results'),
-            Div(id='search-results'),
+            H2('Search'),            
+            Input(name='q', type='text', id='search-input', hx_trigger="keyup", placeholder='Enter your search query...', hx_get='/search-results', hx_target='.search-results'),
+            Div(cls='search-results'),
             cls='modal-content'
         ),
         id='search-modal',
@@ -181,7 +181,7 @@ def Layout(title, socials, *tags):
     Div(hx_trigger="keyup[key=='/'] from:body"),
     Script("""
     document.body.addEventListener('keydown', e => {
-    if (e.key === '/' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+    if (e.key === '/') {
         e.preventDefault();
         document.getElementById('search-modal').style.display = 'block';
         document.getElementById('search-input').focus();
@@ -192,7 +192,7 @@ def Layout(title, socials, *tags):
     });
 
     document.getElementById('search-input').addEventListener('input', e => {
-    htmx.trigger('#search-results', 'htmx:trigger', {value: e.target.value});
+    htmx.trigger('.search-results', 'htmx:trigger', {value: e.target.value});
     });
     """)
 )
@@ -423,11 +423,11 @@ def get(q: str|None = None):
                         ),          
         Form(cls='center', role='group')(
             Input(name="q", id='q', value=q, type="search", autofocus=True),
-            Button("Search", hx_get="/search-results", hx_target='#search-results', hx_include='#q', onclick="updateQinURL()")
+            Button("Search", hx_get="/search-results", hx_target='.search-results', hx_include='#q', onclick="updateQinURL()")
         ),
         Section(
-            Div(id='search-results')(*result),
-            P(Small('Hint: On other pages you can use the "/" shortcut to search.')),            
+            Div(cls='search-results')(*result),
+            P(Small('Hint: Use the "/" shortcut to search from any page.')),            
             A("← Back home", href="/"),
         ),
         Script("""function updateQinURL() {
@@ -435,7 +435,8 @@ def get(q: str|None = None):
             const value = document.getElementById('q').value
             url.searchParams.set('q', value);
             window.history.pushState({}, '', url);            
-        }"""),           
+        };
+        """),           
     )
 
 @rt('/search-results')
