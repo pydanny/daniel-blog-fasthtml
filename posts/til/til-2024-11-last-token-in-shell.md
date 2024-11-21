@@ -1,6 +1,6 @@
 ---
 date: '2024-11-21T15:12:54.669148'
-description: How to get the last element in a shell command.
+description: How to get the last element in a shell command. Guest starring Atuin!
 image: /public/logos/til-1.png
 published: true
 tags:
