@@ -1,10 +1,6 @@
-
-import collections
+import collections, functools, pathlib, json, csv
 from datetime import datetime
 from dateutil import parser
-import functools
-import pathlib
-import json
 
 import pytz
 import yaml
@@ -443,6 +439,57 @@ def get(q: str|None = None):
 @rt('/search-results')
 def get(q: str):
     return _search(q)
+
+
+@rt
+def fitness():
+    with open('public/weight-2024.csv') as f:
+        weights = [o for o in csv.DictReader(f)]
+    weight = [{
+        'type': 'bar',
+        'x': [o['Date'] for o in weights],
+        'y': [o['Weight'] for o in weights],
+        'text': [o['Weight'] for o in weights],
+        'textposition': 'auto',
+        'hoverinfo': 'none',        
+        'marker': {
+            'color': '#C8A2C8',
+            'line': {
+                'width': 2.5
+            }
+        }
+    }]
+    weight = json.dumps(weight)
+
+    layout = {
+        'title': {
+            'text': 'Responsive to window\'s size!'
+        },
+        'font': {'size': 18},
+        'barcornerradius': 15,
+    }
+    layout = json.dumps(layout)
+    config = {'responsive': True}
+    config = json.dumps(config)
+
+
+    return Layout(
+        Title('Fitness Tracking'),
+        Socials(site_name="https://daniel.feldroy.com",
+                        title=f"Fitness Tracking",
+                        description='My fitness progress',
+                        url=f"https://daniel.feldroy.com/fitness",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
+                        ),         
+        Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
+        Section(
+            H1(f'Fitness Tracking'),
+            Div(id='weightChart'),
+            Script(f"Plotly.newPlot('weightChart', {weight}, {layout}, {config});"),
+            A("← Back home", href="/"),
+        )
+    )
+  
 
 @rt("/feeds/{fname:path}.{ext}")
 def get(fname:str, ext:str): 
