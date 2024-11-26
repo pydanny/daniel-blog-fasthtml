@@ -443,27 +443,45 @@ def get(q: str):
 
 @rt
 def fitness():
-    with open('public/weight-2024.csv') as f:
-        weights = [o for o in csv.DictReader(f)]
-    weight = [{
+    with open('public/fitness-2024.csv') as f:
+        rows = [o for o in csv.DictReader(f)]
+    fitness = [{
         'type': 'bar',
-        'x': [o['Date'] for o in weights],
-        'y': [o['Weight'] for o in weights],
-        'text': [o['Weight'] for o in weights],
+        'x': [o['Date'] for o in rows],
+        'y': [o['Weight'] for o in rows],
+        'text': [o['Weight'] for o in rows],
         'textposition': 'auto',
         'hoverinfo': 'none',        
-        'marker': {
-            'color': '#C8A2C8',
-            'line': {
-                'width': 2.5
-            }
-        }
-    }]
-    weight = json.dumps(weight)
+        'marker': {'color': 'blue',},
+        'name': 'Weight'
+    },
+    {
+            'type': 'bar',
+            'x': [o['Date'] for o in rows],
+            'y': [o['BJJ'] for o in rows],
+            'text': [o['BJJ'] for o in rows],
+            'textposition': 'auto',
+            'hoverinfo': 'none',        
+            'marker': {'color': 'green',},
+            'name': 'BJJ minutes'
+    },
+    {
+            'type': 'bar',
+            'x': [o['Date'] for o in rows],
+            'y': [o['Other'] for o in rows],
+            'text': [o['Other'] for o in rows],
+            'textposition': 'auto',
+            'hoverinfo': 'none',        
+            'marker': {'color': 'red',},
+            'name': 'Strength minutes'
+    }   
+    
+    ]
+    weight = json.dumps(fitness)
 
     layout = {
         'title': {
-            'text': 'Responsive to window\'s size!'
+            'text': 'Weight and excercise'
         },
         'font': {'size': 18},
         'barcornerradius': 15,
@@ -477,7 +495,7 @@ def fitness():
         Title('Fitness Tracking'),
         Socials(site_name="https://daniel.feldroy.com",
                         title=f"Fitness Tracking",
-                        description='My fitness progress',
+                        description='Just weight right now',
                         url=f"https://daniel.feldroy.com/fitness",
                         image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),         
