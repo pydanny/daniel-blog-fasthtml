@@ -481,7 +481,7 @@ def fitness():
 
     layout = {
         'title': {
-            'text': 'Weight and excercise'
+            'text': 'Weight and exercise'
         },
         'font': {'size': 18},
         'barcornerradius': 15,
