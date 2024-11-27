@@ -453,7 +453,7 @@ def fitness():
         'textposition': 'auto',
         'hoverinfo': 'none',        
         'marker': {'color': 'blue',},
-        'name': 'Weight in pounds'
+        'name': 'Weight lbs'
     },
     {
             'type': 'bar',
@@ -463,7 +463,7 @@ def fitness():
             'textposition': 'auto',
             'hoverinfo': 'none',        
             'marker': {'color': 'green',},
-            'name': 'BJJ minutes'
+            'name': 'BJJ'
     },
     {
             'type': 'bar',
@@ -473,7 +473,7 @@ def fitness():
             'textposition': 'auto',
             'hoverinfo': 'none',        
             'marker': {'color': 'red',},
-            'name': 'Strength minutes'
+            'name': 'Strength'
     }   
     
     ]
@@ -503,6 +503,10 @@ def fitness():
         Section(
             H1(f'Fitness Tracking'),
             Div(id='weightChart'),
+            Ol(
+                Li('BJJ is how many minutes of Brazilian Jiu-Jitsu in a day.'),
+                Li('Strength is how many minutes of strength training in day, most often weights or HIIT, somes alternative exercise like Yoga or Pilates.'),
+            ),
             Script(f"Plotly.newPlot('weightChart', {weight}, {layout}, {config});"),
             A("← Back home", href="/"),
         )
