@@ -453,7 +453,7 @@ def fitness():
         'textposition': 'auto',
         'hoverinfo': 'none',        
         'marker': {'color': 'blue',},
-        'name': 'Weight'
+        'name': 'Weight in pounds'
     },
     {
             'type': 'bar',
