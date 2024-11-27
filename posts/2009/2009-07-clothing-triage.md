@@ -5,7 +5,6 @@ published: true
 slug: 2009-07-clothing-triage
 tags:
 - house
-- fashion
 - legacy-dannygreenfeld
 time_to_read: 5
 title: Clothing triage

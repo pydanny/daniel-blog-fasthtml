@@ -6,7 +6,6 @@ slug: 2009-09-all-set-to-go-to-portland-oregon
 tags:
 - work
 - django
-- portland
 - legacy-dannygreenfeld
 time_to_read: 5
 title: All set to go to Portland, Oregon!
