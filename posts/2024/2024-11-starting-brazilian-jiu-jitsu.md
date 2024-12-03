@@ -1,6 +1,6 @@
 ---
 date: '2024-12-03T19:00:00.945358'
-description: A guide to getting started in Brazilian Jiu-Jitsu. Age 
+description: A guide to getting started in Brazilian Jiu-Jitsu for ages 5 to 100.
 published: true
 tags: 
 - bjj
