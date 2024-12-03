@@ -1,6 +1,6 @@
 ---
 date: '2024-12-03T19:00:00.945358'
-description: How to safely get started at Brazilian Jiu-Jitsu.
+description: How to safely get started at Brazilian Jiu-Jitsu regardless of age.
 published: true
 tags: 
 - bjj
