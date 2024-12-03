@@ -320,10 +320,9 @@ def get(slug: str):
     tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
     specials = ()
     if 'TIL' in metadata['tags']:
-        specials = (
-            A(href="/tags/TIL")(
+        specials = (A(
                 Img(src="/public/logos/til-1.png", alt="Today I Learned", width="200", height="200", cls="center"),
-            )
+                href="/tags/TIL")
         )
     return Layout(
         Title(metadata['title']),
@@ -445,50 +444,58 @@ def get(q: str):
 def fitness():
     with open('public/fitness-2024.csv') as f:
         rows = [o for o in csv.DictReader(f)]
-    fitness = [{
-        'type': 'bar',
-        'x': [o['Date'] for o in rows],
-        'y': [o['Weight'] for o in rows],
-        'text': [o['Weight'] for o in rows],
-        'textposition': 'auto',
-        'hoverinfo': 'none',        
-        'marker': {'color': 'blue',},
-        'name': 'Weight lbs'
-    },
-    {
-            'type': 'bar',
-            'x': [o['Date'] for o in rows],
-            'y': [o['BJJ'] for o in rows],
-            'text': [o['BJJ'] for o in rows],
-            'textposition': 'auto',
-            'hoverinfo': 'none',        
-            'marker': {'color': 'green',},
-            'name': 'BJJ'
-    },
-    {
-            'type': 'bar',
-            'x': [o['Date'] for o in rows],
-            'y': [o['Other'] for o in rows],
-            'text': [o['Other'] for o in rows],
-            'textposition': 'auto',
-            'hoverinfo': 'none',        
-            'marker': {'color': 'red',},
-            'name': 'Strength'
-    }   
-    
-    ]
-    weight = json.dumps(fitness)
 
-    layout = {
-        'title': {
-            'text': 'Weight and exercise'
-        },
-        'font': {'size': 18},
-        'barcornerradius': 15,
-    }
-    layout = json.dumps(layout)
+    dates = collections.defaultdict(list)
+    for row in rows: dates[row['Date'][:7]].append(row)
+
     config = {'responsive': True}
     config = json.dumps(config)
+
+    charts = []
+    for month, rows in dates.items():
+        fitness = [{
+            'type': 'bar',
+            'x': [o['Date'] for o in rows],
+            'y': [o['Weight'] for o in rows],
+            'text': [o['Weight'] for o in rows],
+            'textposition': 'auto',
+            'hoverinfo': 'none',        
+            'marker': {'color': 'blue',},
+            'name': 'Weight kg'
+        },
+        {
+                'type': 'bar',
+                'x': [o['Date'] for o in rows],
+                'y': [o['BJJ'] for o in rows],
+                'text': [o['BJJ'] for o in rows],
+                'textposition': 'auto',
+                'hoverinfo': 'none',        
+                'marker': {'color': 'green',},
+                'name': 'BJJ'
+        },
+        {
+                'type': 'bar',
+                'x': [o['Date'] for o in rows],
+                'y': [o['Other'] for o in rows],
+                'text': [o['Other'] for o in rows],
+                'textposition': 'auto',
+                'hoverinfo': 'none',        
+                'marker': {'color': 'red',},
+                'name': 'Strength'
+        }   
+        ]
+        layout = {
+            'title': {
+                'text': month
+            },
+            'font': {'size': 18},
+            'barcornerradius': 15,
+        }
+        layout = json.dumps(layout)        
+        chart_name = f'weightChart-{month}'
+        charts.append(Div(id=chart_name))
+        charts.append(Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});")),       
+
 
 
     return Layout(
@@ -502,12 +509,12 @@ def fitness():
         Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
         Section(
             H1(f'Fitness Tracking'),
-            Div(id='weightChart'),
             Ol(
+                Li('Weight kg is how much I weight in kilograms.'),
                 Li('BJJ is how many minutes of Brazilian Jiu-Jitsu in a day.'),
                 Li('Strength is how many minutes of strength training in day, most often weights or HIIT, somes alternative exercise like Yoga or Pilates.'),
             ),
-            Script(f"Plotly.newPlot('weightChart', {weight}, {layout}, {config});"),
+            *charts,
             A("← Back home", href="/"),
         )
     )
