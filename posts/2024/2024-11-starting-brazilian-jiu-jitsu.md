@@ -10,6 +10,12 @@ title: Starting Brazilian Jiu-Jitsu
 
 I meet new people just starting BJJ all the time. And these are some helpful tips I can give to people who want to try out the martial art and sport of Brazilian Jiu-Jitsu.
 
+## About my experience
+
+I've been doing Brazilian Jiu-Jitsu (BJJ) for over five years now, the last two years intensely, and just got my blue belt. Blue belts normally happen in 1-2 years but I took my time. I'm all about the journey, not the destination.
+
+I'm not a black belt or coach, but that means I'm closer to being a beginner.
+
 ## Who shouldn't do BJJ?
 
 Don't start if you are:
@@ -96,10 +102,6 @@ To summarize:
 >  -- Old martial arts saying
 
 From many years of doing other martial arts I can tell you that the ultimate secret of mastery is to show up. To find joy in learning something new and improving ourselves. BJJ is no different. 
-
-## About my experience
-
-I've been doing Brazilian Jiu-Jitsu (BJJ) for over five years now, the last two years intensely, and just got my blue belt. Blue belts normally happen in 1-2 years but I took my time. I'm all about the journey, not the destination.
 
 
 ## Good luck!
