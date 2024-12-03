@@ -63,7 +63,7 @@ Here are my four golden rules for staying safe on the mat:
 3. Switch partners if you are uncomfortable with them
 4. **If you aren't allowed to switch partners with someone who makes you uncomfortable, leave and go to another school**
 
-Rule number four is really, really important to follow. **No school or coach is worth risking your health.** There's enough BJJ schools around that you should be able to find a place that doesn't make people (especially beginners) train with dangerous opponents.
+Rule number four is really, really important to follow. **No school or coach is worth risking your health.** There's enough BJJ schools around that you should be able to find a place that doesn't force beginners to train with dangerous opponents.
 
 ### Recovery
 
