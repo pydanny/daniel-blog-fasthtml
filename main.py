@@ -493,9 +493,8 @@ def fitness():
         }
         layout = json.dumps(layout)        
         chart_name = f'weightChart-{month}'
-        charts.append(Div(id=chart_name))
-        charts.append(Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});")),       
-
+        charts.insert(0, Div(id=chart_name))        
+        charts.insert(1, Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});"))
 
 
     return Layout(
@@ -512,7 +511,7 @@ def fitness():
             Ol(
                 Li('Weight kg is how much I weight in kilograms.'),
                 Li('BJJ is how many minutes of Brazilian Jiu-Jitsu in a day.'),
-                Li('Strength is how many minutes of strength training in day, most often weights or HIIT, somes alternative exercise like Yoga or Pilates.'),
+                Li('Strength is how many minutes of strength training in a day, most often weights or HIIT, somes alternative exercise like Yoga or Pilates.'),
             ),
             *charts,
             A("← Back home", href="/"),
