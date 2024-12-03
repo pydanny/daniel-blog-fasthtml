@@ -56,14 +56,15 @@ In any case, good manners are appreciated in BJJ, especially by upper belts and 
 
 Brazilian Jiu-Jitsu has a surprisingly low injury rate compared to full-contact striking sports such as Muay Thai, Boxing, MMA, and even Tae Kwon Do. The reason for this is because in BJJ you aren't getting punched or kicked (which usually lands before you can react). In fact, while doing BJJ you can usually tap (quit) before something happens that will hurt you. 
 
-Here are my four golden rules for staying safe on the mat:
+Here are my five golden rules for staying safe on the mat:
 
-1. Stay safe: tap early and tap often
-2. Stay safe: If you don't understand what's happening to you, tap
-3. Switch partners if you are uncomfortable with them
-4. **If you aren't allowed to switch partners with someone who makes you uncomfortable, leave and go to another school**
+1. If a warmup exercise hurts or feels dangerous, ask for an easier version or skip it
+2. Tap early and tap often
+3. If you don't understand what's happening to you, tap
+4. Switch partners if you are uncomfortable with them
+5. **If you aren't allowed to switch partners with someone who makes you uncomfortable, leave and go to another school**
 
-Rule number four is really, really important to follow. **No school or coach is worth risking your health.** There's enough BJJ schools around that you should be able to find a place that doesn't force beginners to train with dangerous opponents.
+Rule number five is really, really important. **No school or coach is worth risking your health.** There's enough BJJ schools around that you should be able to find a place that doesn't force beginners to train with dangerous opponents.
 
 ### Recovery
 
