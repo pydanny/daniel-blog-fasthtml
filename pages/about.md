@@ -6,7 +6,7 @@ author: "Daniel Roy Greenfeld"
 
 # About Me
 
-I am a [coder](https://github.com/pydanny), [author](/books), and [speaker](/speaking).
+I am a [coder](https://github.com/pydanny), [author](/books), and speaker.
 
 I'm probably best known as "[pydanny](https://www.google.com/search?q=pydanny)", one of the authors of [Two Scoops of Django](/books/tech). 
 
@@ -16,9 +16,9 @@ Professionally, I do research and development at [Answer.AI](https://www.answer.
 
 I am on sabbatical from [Kraken Tech](https://kraken.tech/), part of the sustainable global energy  [Octopus Energy Group](https://octopusenergy.group/). There I worked toward the mission of addressing [global climate change](/tags/climate-change).
 
-- [Twitter](https://twitter.com/pydanny)
 - [LinkedIn](https://www.linkedin.com/in/danielfeldroy/)
-- [Mastodon](https://fosstodon.org/@danielfeldroy)
+- [Bluesky](https://bsky.app/profile/pydanny.bsky.social)
+- [Twitter](https://twitter.com/pydanny)
 
 ## About this site
 
