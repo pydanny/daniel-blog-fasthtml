@@ -14,9 +14,11 @@ I frequently talk to people who want to try Brazilian Jiu-Jitsu (BJJ). When aske
 
 I've been doing BJJ for over five years now, the last two years intensely. I just got my blue belt. Blue belts normally happen in 1-2 years but I took my time. I have a long, long to black belt, which in BJJ often takes a decade or long. I'm okay with that - I'm all about the journey, not the destination.
 
-## Who shouldn't do BJJ?
+## Can you do BJJ?
 
-Don't start if you are:
+Probably. BJJ can be learned and practiced by anyone who can get up and down off the floor under their own power. Even if you struggle with getting to the floor and back up again, it's still something you can learn.
+
+However, there are people who shouldn't do BJJ. Don't start if you are:
 
 1. Pregnant. Brazilian Jiu Jitsu involves a lot of pressure on different body parts. I can't imagine any coach allowing a pregnant woman to start. Please wait until you have finished with the pregnancy and then get on the mat (maybe as part of recovery). 
 2. Are recovering from major injury like broken bones or surgery. These injuries are going to make it impossible for a beginner to make any progress. A good coach will ask you to wait until you are recovered before beginning.
