@@ -486,7 +486,7 @@ def fitness():
         ]
         layout = {
             'title': {
-                'text': month
+                'text': datetime.strptime(month, '%Y-%m').strftime("%B %Y")
             },
             'font': {'size': 18},
             'barcornerradius': 15,
