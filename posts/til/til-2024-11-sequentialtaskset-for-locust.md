@@ -5,7 +5,7 @@ image: /public/logos/til-1.png
 published: true
 tags:
 - TIL
-- Python
+- python
 - load testing
 title: 'TIL: SequentialTaskSet for Locust'
 twitter_image: /public/logos/til-1.png
