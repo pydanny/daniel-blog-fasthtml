@@ -278,7 +278,8 @@ def index():
         Div(cls='grid')(
             Section(
                     H1('Recent Writings'),
-                    *posts[:3]
+                    *posts[:4],
+                    P(A('Read all articles', href=posts))
                 ),
             Section(
                     H1('Popular Writings'),
@@ -286,13 +287,14 @@ def index():
             ),            
             Section(
                     H1('TIL', Small(' (Today I learned)')),
-                    *tils[:5]
+                    *tils[:7],
+                    P(A('Read more TIL articles', href='/tags/til'))
                 ),
         )
     )
 
-@rt("/posts")
-def get():
+@rt
+def posts():
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
     description = f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'
     posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
