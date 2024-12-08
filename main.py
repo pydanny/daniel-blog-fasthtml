@@ -511,7 +511,7 @@ def fitness():
         Section(
             P(
                 'Wt Goal: ', Strong('77 kg / 169 lbs'), Br(),
-                f'Current: {current_weight} kg / {float(current_weight) * 2} lb'  
+                f'Current: {current_weight} kg / {float(current_weight) * 2.2} lb'  
             ),            
             H2(f'Fitness Tracking'),
             Ol(
