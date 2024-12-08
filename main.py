@@ -497,7 +497,7 @@ def fitness():
         chart_name = f'weightChart-{month}'
         charts.insert(0, Div(id=chart_name))        
         charts.insert(1, Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});"))
-
+        current_weight = rows[-1]['Weight']
 
     return Layout(
         Title('Fitness Tracking'),
@@ -509,7 +509,11 @@ def fitness():
                         ),         
         Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
         Section(
-            H1(f'Fitness Tracking'),
+            P(
+                'Wt Goal: ', Strong('77 kg / 169 lbs'), Br(),
+                f'Current: {current_weight} kg / {float(current_weight) * 2} lb'  
+            ),            
+            H2(f'Fitness Tracking'),
             Ol(
                 Li('Weight kg is how much I weight in kilograms.'),
                 Li('BJJ is how many minutes of Brazilian Jiu-Jitsu in a day.'),
