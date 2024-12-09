@@ -5,6 +5,8 @@ published: true
 tags:
  - cheatsheet
  - howto
+ - terminal
+ - tools
 title: tmux cheatsheet
 image: /public/images/tmux-logo-medium.png
 twitter_image: /public/images/tmux-logo-medium.png
