@@ -10,7 +10,7 @@ title: Top Terminal Tools
 
 Links in the headers!
 
-# [atuin](https://atuin.sh/)
+# [Atuin](https://atuin.sh/)
 
 The site explains perfectly what it does:
 
@@ -40,9 +40,9 @@ brew install tmux
 
 > "ShellSage saves sysadmins' sanity by solving shell script snafus super swiftly"
 >
-> -- Nathan Cooper
+> -- Isaac Flath
 
-Once you get past Nathan's tongue twister of an introduction you can enjoy this TMUX-powered AI tool. To help answer your questions Shell Sage uses your shell's context based on your current terminal state. For me this is really nice because I can't remember all the esoteric flags and quirks of the CLI world and for RSI reasons don't like to take my hands away from the keyboard.
+Once you get past the tongue twister of an introduction you can enjoy this TMUX-powered AI tool. To help answer your questions Shell Sage uses your shell's context based on your current terminal state. For me this is really nice because I can't remember all the esoteric flags and quirks of the CLI world and for RSI reasons don't like to take my hands away from the keyboard.
 
 The [Answer.AI blog entry](https://www.answer.ai/posts/2024-12-05-introducing-shell-sage.html) introducing Shell Sage is a nice dive into the history, philosophy, and usage of the tool.
 
