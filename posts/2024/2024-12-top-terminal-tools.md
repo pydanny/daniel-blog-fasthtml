@@ -5,7 +5,7 @@ published: true
 tags:
 - terminal
 - tools
-title: Favorite Terminal Tools
+title: Top Terminal Tools
 ---
 
 Links in the headers!
