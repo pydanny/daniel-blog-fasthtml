@@ -1,6 +1,6 @@
 ---
 date: '2024-12-09T11:10:39.032418'
-description: "Some incredible tools I use to improve my experience in the terminal."
+description: "A few incredible tools for making the terminal more useful and fun."
 published: true
 tags:
 - terminal
