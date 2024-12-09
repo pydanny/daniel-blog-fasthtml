@@ -30,8 +30,6 @@ def main() -> None:
         prefix = 'til'
     path = Path(f"posts/{prefix}/{slug}.md")
     text = f"---\n{safe_dump(data)}---\n"
-    if description:
-        text += f"\n\n_{description}_"
     path.write_text(text)
 
 if __name__ == '__main__':

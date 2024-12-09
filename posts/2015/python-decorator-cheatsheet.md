@@ -8,13 +8,8 @@ tags:
   - cheatsheet
 time_to_read: 2
 title: Python Decorator Cheatsheet
+description: "I can never remember the syntax for writing decorators. I always have to look it up. Worse, I always have to remember where to look to find references. Hence the reason for this article. I'll never lose this reference: It's on my laptop and the internet."
 ---
-
-I can never remember the syntax for writing
-[decorators](https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators).
-I always have to look it up. Worse, I always have to remember where to
-look to find references. Hence the reason for this article. I'll never
-lose this reference: It's on my laptop and the internet.
 
 Each type will include a basic version, a `functools.wraps` version, and
 a [wrapt](https://github.com/GrahamDumpleton/wrapt) version.
