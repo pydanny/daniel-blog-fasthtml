@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-12-12T15:26:43.307780+00:00</updated>
+  <updated>2024-12-12T17:45:18.078742+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,30 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
-    <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-12-12T15:26:43.758819+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;&lt;code&gt;SequentialTaskSet&lt;/code&gt; makes it so Locust tasks happen in a particular order, which ensures your simulated users are clicking around in a more human manner at a more human pace. Attribution goes to Audrey Roy Greenfeld.&lt;/p&gt;
-&lt;p&gt;You can see it in action in the now updated &lt;a href="https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing"&gt;previous entry on the topic of Locust for load testing&lt;/a&gt;.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust"/>
-    <summary>How to get Locust to not bash your server like a robot.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <category term="load testing"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-11-09T00:00:00.429101+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-12-12T15:26:43.758423+00:00</updated>
+    <updated>2024-12-12T17:45:18.503307+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -61,7 +40,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli</id>
     <title>TIL: LiteCLI, Improved SQLite CLI</title>
-    <updated>2024-12-12T15:26:43.757924+00:00</updated>
+    <updated>2024-12-12T17:45:18.502805+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -89,7 +68,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
     <title>TIL: Fractional Indexing</title>
-    <updated>2024-12-12T15:26:43.757508+00:00</updated>
+    <updated>2024-12-12T17:45:18.502390+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -117,7 +96,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-last-token-in-shell</id>
     <title>TIL: Last Token in Shell</title>
-    <updated>2024-12-12T15:26:43.756627+00:00</updated>
+    <updated>2024-12-12T17:45:18.501517+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -159,7 +138,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-12T15:26:43.755465+00:00</updated>
+    <updated>2024-12-12T17:45:18.500353+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -200,7 +179,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-12T15:26:43.744785+00:00</updated>
+    <updated>2024-12-12T17:45:18.489826+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -236,6 +215,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
     <link href="https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function"/>
     <summary>Create a dictionary-like object that takes a factory function so you have lots of control over what the default value can be.</summary>
     <category term="TIL"/>
+    <category term="python"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -245,7 +225,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-starting-brazilian-jiu-jitsu</id>
     <title>Starting Brazilian Jiu-Jitsu</title>
-    <updated>2024-12-12T15:26:43.742382+00:00</updated>
+    <updated>2024-12-12T17:45:18.487495+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -333,7 +313,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-github-admonitions</id>
     <title>GitHub Admonitions</title>
-    <updated>2024-12-12T15:26:43.734767+00:00</updated>
+    <updated>2024-12-12T17:45:18.479821+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -369,7 +349,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-12T15:26:43.734376+00:00</updated>
+    <updated>2024-12-12T17:45:18.479503+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -391,7 +371,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-top-terminal-tools</id>
     <title>Top Terminal Tools</title>
-    <updated>2024-12-12T15:26:43.730766+00:00</updated>
+    <updated>2024-12-12T17:45:18.475976+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -433,21 +413,80 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
     <published>2024-12-09T11:10:39.032418+00:00</published>
   </entry>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-12-simple-name-space</id>
-    <title>types.SimpleNamespace for making exploratory code easier to read</title>
-    <updated>2024-12-12T15:26:43.663815+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/2024-12-takedown-notes</id>
+    <title>Takedown notes 2024-12-12</title>
+    <updated>2024-12-12T17:45:18.475133+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <link href="https://daniel.feldroy.com/posts/til-2024-12-simple-name-space"/>
-    <summary>Bunch classes are fun for quick coding but come with some long term maintainability baggage. The types.SimpleNamespace class provides an easily searchable implementation useful during the discovery phase of a project.</summary>
-    <category term="python"/>
-    <category term="blog"/>
+    <content type="html">&lt;h2 id="stance"&gt;Stance&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Inline like kendo stance, legs mnot too wide&lt;/li&gt;
+&lt;li&gt;Lower like a coiled spring&lt;/li&gt;
+&lt;li&gt;lead hand waist-height with palm up, back hand shoulder height&lt;/li&gt;
+&lt;li&gt;Keep elbows in&lt;/li&gt;
+&lt;li&gt;Move in shuffles, including pivots&lt;/li&gt;
+&lt;li&gt;Not dissimilar to wrestling stance and move&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="a-takedown-defense"&gt;A takedown defense&lt;/h2&gt;
+&lt;p&gt;One method of many&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When someone does a level change get in the habit of checking with lead hip&lt;/li&gt;
+&lt;li&gt;Only works if stance is correct &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="concepts"&gt;Concepts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Sticky foot is analogous to sticky hands&lt;/li&gt;
+&lt;li&gt;Elbows in to maintain grips and defende counters&lt;/li&gt;
+&lt;li&gt;Russian tie should use minimal movement, arm bar if possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="handfighting-set"&gt;Handfighting set&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Opponent goes for collar tie&lt;/li&gt;
+&lt;li&gt;Up block to wrist grab&lt;/li&gt;
+&lt;li&gt;Inward arm bar on their elbow&lt;/li&gt;
+&lt;li&gt;Keep one hand on wrist&lt;/li&gt;
+&lt;li&gt;grab opposite hip&lt;/li&gt;
+&lt;li&gt;Lock both elbows in&lt;/li&gt;
+&lt;li&gt;If opponent resists by circling, let go hip and with other hand catch side of neck in cupped hand&lt;/li&gt;
+&lt;li&gt;Place foot outide theirs, use sticky foot 
+to sweep&lt;/li&gt;
+&lt;/ol&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2024-12-takedown-notes"/>
+    <summary>Tricks and tips for takedowns and defenses as provided by Mohammed Yusuf.</summary>
+    <category term="bjj"/>
+    <category term="martial arts"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2024-12-09T16:00:00+00:00</published>
+    <published>2024-12-12T15:31:18.962774+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
+    <title>TIL: Arity</title>
+    <updated>2024-12-12T17:45:18.419302+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;I'm excited to have learned there's a word for the count of arguments to a function/method/class: &lt;a href="https://en.wikipedia.org/wiki/Arity"&gt;arity&lt;/a&gt;. Throughout my career I would have called this any of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;number_of_args&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;param_count&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;numargs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;intNumberArguments&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks to &lt;a href="https://simonwillison.net/"&gt;Simon Willison&lt;/a&gt; for using it in a library or two and making me look up the word.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-12-arity"/>
+    <summary>In logic, mathematics, and computer science, arity is the number of arguments or operands taken by a function, operation or relation.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-12-12T17:10:12.333293+00:00</published>
   </entry>
 </feed>

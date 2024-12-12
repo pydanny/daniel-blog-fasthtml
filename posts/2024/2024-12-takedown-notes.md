@@ -42,13 +42,3 @@ One method of many
 8. Place foot outide theirs, use sticky foot 
 to sweep
 
-<!-- 
-```mermaid
-flowchart TD
-    Opponent_collar_tie([Opponent attempts collar tie])
-    grab_opposite_hip["`Grab opposite hip,
-    elbows in`"]
-    Opponent_collar_tie -->|Up block| wrist_grab
-    wrist_grab -->|Opposite hand on elbow| inward_armbar -->|pull| grab_opposite_hip
-
-``` -->
