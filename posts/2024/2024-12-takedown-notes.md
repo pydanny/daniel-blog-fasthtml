@@ -10,10 +10,10 @@ title: Takedown notes 2024-12-12
 
 ## Stance
 
-* Inline like kendo stance, legs mnot too wide
-* Lower like a coiled spring
+* Inline like kendo stance, legs not too wide
+* Not a high stance, lower like a coiled spring
 * lead hand waist-height with palm up, back hand shoulder height
-- Keep elbows in
+* Keep elbows in
 * Move in shuffles, including pivots
 * Not dissimilar to wrestling stance and move
 
