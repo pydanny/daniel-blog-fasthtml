@@ -6,6 +6,7 @@ image: /public/logos/til-1.png
 published: true
 tags:
 - TIL
+- python
 title: "TIL: Python's defaultdict takes a factory function"
 twitter_image: /public/logos/til-1.png
 ---
