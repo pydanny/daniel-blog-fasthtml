@@ -15,6 +15,6 @@ I'm excited to have learned there's a word for the count of arguments to a funct
 - `number_of_args`
 - `param_count`
 - `numargs`
-- `intNumberArguments`
+- `intArgumentCount`
 
 Thanks to [Simon Willison](https://simonwillison.net/) for using it in a library or two and making me look up the word.
