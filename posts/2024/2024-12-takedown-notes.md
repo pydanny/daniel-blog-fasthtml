@@ -5,7 +5,7 @@ published: true
 tags: 
 - bjj
 - martial arts
-title: Takedown notes 2024-12-12
+title: Notes on takedowns
 ---
 
 ## Stance
