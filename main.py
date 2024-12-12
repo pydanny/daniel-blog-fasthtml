@@ -280,16 +280,16 @@ def index():
                     H1('Recent Writings'),
                     *posts[:4],
                     P(A('Read all articles', href=posts))
-                ),
-            Section(
-                    H1('Popular Writings'),
-                    *popular
-            ),            
+                ),          
             Section(
                     H1('TIL', Small(' (Today I learned)')),
                     *tils[:7],
                     P(A('Read more TIL articles', href='/tags/til'))
                 ),
+            Section(
+                    H1('Popular Writings'),
+                    *popular
+            ),                  
         )
     )
 
