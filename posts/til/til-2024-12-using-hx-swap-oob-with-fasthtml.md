@@ -51,7 +51,7 @@ def index():
                 hx_post="/contacts",
                 # Don't swap out the contact form
                 hx_swap='none',
-                # Reset the form and put the focus onto the name field
+                # Reset the form and put focus onto the name field
                 hx_on__after_request="this.reset();this.name.focus();"
             )
         )
