@@ -6,6 +6,8 @@ image: /public/logos/til-1.png
 published: true
 tags:
 - TIL
+- python
+- FastHTML
 title: 'TIL: Using hx-swap-oob with FastHTML'
 twitter_image: /public/logos/til-1.png
 ---
@@ -47,7 +49,9 @@ def index():
                 Label("Email", Input(name="email", type="email")),
                 Button("Save"),
                 hx_post="/contacts",
+                # Don't swap out the contact form
                 hx_swap='none',
+                # Reset the form and put the focus onto the name field
                 hx_on__after_request="this.reset();this.name.focus();"
             )
         )

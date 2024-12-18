@@ -4,7 +4,7 @@ published: true
 slug: mermaid-charts
 tags:
   - python
-  - fasthtml
+  - FastHTML
   - javascript 
   - nodejs 
 time_to_read: 1
