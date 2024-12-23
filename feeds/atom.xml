@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-12-23T17:15:07.557375+00:00</updated>
+  <updated>2024-12-23T19:03:50.734308+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,37 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
-    <title>TIL: Fractional Indexing</title>
-    <updated>2024-12-23T17:15:07.936140+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;In the past when I've done this for web pages and various other interfaces it has been a mess. I've built ungainly sort order in numeric or alphanumeric batches. Inevitably there is a conflict, often sooner rather than later. So sorting a list of things often means updating all the elements to preserve the order in the datastore. I've learned to mark each element with a big value, but it's ugly and ungainly&lt;/p&gt;
-&lt;p&gt;Fortunately for me, going forward, I now know about Fractional Indexing. &lt;/p&gt;
-&lt;p&gt;References:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;https://www.figma.com/blog/realtime-editing-of-ordered-sequences/&lt;/li&gt;
-&lt;li&gt;https://observablehq.com/@dgreensp/implementing-fractional-indexing&lt;/li&gt;
-&lt;li&gt;https://github.com/httpie/fractional-indexing-python&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing"/>
-    <summary>How to keep order of records without having to update all the records</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <category term="javascript"/>
-    <category term="nodejs"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-11-18T18:27:21.938091+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-last-token-in-shell</id>
     <title>TIL: Last Token in Shell</title>
-    <updated>2024-12-23T17:15:07.935148+00:00</updated>
+    <updated>2024-12-23T19:03:51.075650+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -85,7 +57,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-23T17:15:07.933888+00:00</updated>
+    <updated>2024-12-23T19:03:51.074476+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -126,7 +98,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-23T17:15:07.932507+00:00</updated>
+    <updated>2024-12-23T19:03:51.073137+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -172,7 +144,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-starting-brazilian-jiu-jitsu</id>
     <title>Starting Brazilian Jiu-Jitsu</title>
-    <updated>2024-12-23T17:15:07.930137+00:00</updated>
+    <updated>2024-12-23T19:03:51.070740+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -260,7 +232,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-github-admonitions</id>
     <title>GitHub Admonitions</title>
-    <updated>2024-12-23T17:15:07.909931+00:00</updated>
+    <updated>2024-12-23T19:03:51.053525+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -296,7 +268,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-23T17:15:07.909617+00:00</updated>
+    <updated>2024-12-23T19:03:51.053241+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -318,7 +290,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-top-terminal-tools</id>
     <title>Top Terminal Tools</title>
-    <updated>2024-12-23T17:15:07.908304+00:00</updated>
+    <updated>2024-12-23T19:03:51.052021+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -362,7 +334,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-takedown-notes</id>
     <title>Notes on takedowns</title>
-    <updated>2024-12-23T17:15:07.907515+00:00</updated>
+    <updated>2024-12-23T19:03:51.051301+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -413,7 +385,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-23T17:15:07.907076+00:00</updated>
+    <updated>2024-12-23T19:03:51.050900+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -439,7 +411,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-23T17:15:07.895912+00:00</updated>
+    <updated>2024-12-23T19:03:51.039691+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -509,7 +481,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
     <title>TIL: run vs source</title>
-    <updated>2024-12-23T17:15:07.858241+00:00</updated>
+    <updated>2024-12-23T19:03:51.037500+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -532,5 +504,71 @@ to sweep&lt;/li&gt;
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-12-23T17:05:43.817074+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2024-12-my-fitness-journey</id>
+    <title>My 2024 Fitness Journey</title>
+    <updated>2024-12-23T19:03:51.024583+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;I had my daughter late in life and want to be there for her as long as possible. I'm driven to live the healthiest life I can.&lt;/p&gt;
+&lt;h2 id="starting-2024-injured"&gt;Starting 2024 injured&lt;/h2&gt;
+&lt;p&gt;In November of 2023 I was in a bicycle accident and broke my shoulder in two places. Recovery was complicated by a substandard  physical therapist who allowed complications to set in. When you hit your middle years certain conditions can cause &lt;a href="https://en.wikipedia.org/wiki/Adhesive_capsulitis_of_the_shoulder"&gt;frozen shoulder&lt;/a&gt;. In my case those conditions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inactivity and following through on correct exercises due to not being told what could happen if I didn't follow the regimin. I lifted weights, but didn't do the right movements&lt;/li&gt;
+&lt;li&gt;A diabetic genetic pre-disposition on both sides&lt;/li&gt;
+&lt;li&gt;I'm in my fifties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So the frozen shoulder got really bad. For the first few months of the year the pain and immobility was intense. I got better thanks to a mix of Acupuncture, Tai Chi, and Brazilian Jiu-Jitsu. My recovery pace was unusual, in that I had most of my mobility back within five months of the onset of the frozen shoulder.&lt;/p&gt;
+&lt;h2 id="taking-up-tai-chi-once-more"&gt;Taking up Tai Chi Once more&lt;/h2&gt;
+&lt;p&gt;In university, I had taken Tai Chi and really liked the graceful movements and postures. However, at the same time I found other martial arts like Muay Thai and Filipino martial arts to be things that I enjoyed more. After my injury one of the exercises was recommended to me to help unlock the frozen shoulder was Tai Chi. Fortunately, London has a number of places that you can train. &lt;/p&gt;
+&lt;p&gt;For a few months, I did Tai Chi under &lt;a href="https://taiji-ap.co.uk/"&gt;James Drew&lt;/a&gt;, and I found it both challenging and a lot of fun. However, time with family is my most precious commodity, and I had to choose between family and the evening Tai Chi classes. And family always wins.&lt;/p&gt;
+&lt;h2 id="brazilian-jiu-jitsu"&gt;Brazilian Jiu-Jitsu&lt;/h2&gt;
+&lt;p&gt;My wife suggested I attempt to return to Brazilian Jiu-Jitsu, which had classes available in the early morning and lunchtimes. We agreed that if I could find a good coach, they might be able to assist me with managing my recovery. The reason is that as a combat sport, coaches need to know how to assist athletes with getting over injury in a safe way. To my great fortune, Mohammed Yusuf, the coach that I was able to train under while healing had a lot of experience in this regard.&lt;/p&gt;
+&lt;p&gt;As I got better, I trained more and more vigorously. By the month of May, I was able to free spar (fight) once more. &lt;/p&gt;
+&lt;p&gt;Because my arms were capable of doing less, I had to focus on skill, core, and legs over straining arms. At first it was really hard but eventually I found a relaxed, slippery style that suited me.&lt;/p&gt;
+&lt;p&gt;In late November my effort saw the reward of my blue belt. I have mixed emotions, the belt is a nice milestone but it means I have a proverbial target around my waist. Since I often spar with people with whom I have 2x or 3x as many years, it means my game has to be correspondingly better.&lt;/p&gt;
+&lt;h2 id="cross-training-with-audrey"&gt;Cross-training with Audrey&lt;/h2&gt;
+&lt;p&gt;One of the things I love about my wife Audrey is she likes to try out new things, including workout regimens. So, thanks to her, I got the chance to try many new exercise forms. In addition to the sense of exploration, new exercise patterns are always really hard, so it gave me a chance to really push myself and explore what I can do.  In no particular order we did:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reformer pilates&lt;/li&gt;
+&lt;li&gt;Mat pilates&lt;/li&gt;
+&lt;li&gt;Vinyasa yoga&lt;/li&gt;
+&lt;li&gt;Yin yoga&lt;/li&gt;
+&lt;li&gt;Hatha yoga&lt;/li&gt;
+&lt;li&gt;Dance warmup exercise (they take all the dance warmup routines and make that a class)&lt;/li&gt;
+&lt;li&gt;HIIT&lt;/li&gt;
+&lt;li&gt;Various stationary bike classes&lt;/li&gt;
+&lt;li&gt;General weightlifting classes to ensure technique is solid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="weights"&gt;Weights&lt;/h2&gt;
+&lt;p&gt;For the last few months of the year I've gotten into having two weight-training-to-failure sessions a week, with a focus on upper body. I'm enjoying having my strength back. However...&lt;/p&gt;
+&lt;p&gt;Amusingly, once I started getting my strength back for a few weeks my Brazilian Jiu-Jitsu sparring really suffered. That's because I started to rely on my strength rather than my knowledge and skills. So, I would do things like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Attempt to out-strength my opponent, and they would just let me tire myself out on their defense&lt;/li&gt;
+&lt;li&gt;Overpower one limb with my newfound strength, while they focused on position (would often take my back)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The fix for this is now right before I spar, I say this mantra: "play weak, play weak, play weak". &lt;/p&gt;
+&lt;h2 id="goals-for-2025"&gt;Goals for 2025&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Continue with Brazilian Jiu-Jitsu&lt;/li&gt;
+&lt;li&gt;Continue lifting weights&lt;/li&gt;
+&lt;li&gt;Do 10 consecutive pullups&lt;/li&gt;
+&lt;li&gt;Weight down to 77kg / 169.lbs&lt;/li&gt;
+&lt;li&gt;Continue cross training with Audrey&lt;/li&gt;
+&lt;li&gt;Find an exercise form I can do with Uma&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2024-12-my-fitness-journey"/>
+    <summary>Recovery from injury then moving upwards and onwards.</summary>
+    <category term="fitness"/>
+    <category term="bjj"/>
+    <category term="martial arts"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-12-23T19:05:41.758449+00:00</published>
   </entry>
 </feed>
