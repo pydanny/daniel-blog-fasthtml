@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2024-12-18T17:47:03.036764+00:00</updated>
+  <updated>2024-12-23T17:15:08.195177+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,65 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks</id>
-    <title>Using Mermaid JS in Jupyter notebook</title>
-    <updated>2024-12-18T17:47:03.048445+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;h2 id="the-code"&gt;The code&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;base64&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.display&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;display&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;mm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;graphbytes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;utf8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;base64_bytes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base64&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlsafe_b64encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphbytes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;base64_string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base64_bytes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ascii&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;https://mermaid.ink/img/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;base64_string&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="usage-example"&gt;Usage Example&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;mm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="s2"&gt;graph LR;&lt;/span&gt;
-&lt;span class="s2"&gt;    A--&amp;gt; B &amp;amp; C &amp;amp; D;&lt;/span&gt;
-&lt;span class="s2"&gt;    B--&amp;gt; A &amp;amp; E;&lt;/span&gt;
-&lt;span class="s2"&gt;    C--&amp;gt; A &amp;amp; E;&lt;/span&gt;
-&lt;span class="s2"&gt;    D--&amp;gt; A &amp;amp; E;&lt;/span&gt;
-&lt;span class="s2"&gt;    E--&amp;gt; B &amp;amp; C &amp;amp; D;&lt;/span&gt;
-&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nf"&gt;graph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;LR&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="notes"&gt;Notes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;This is actually covered in the mermaid docs &lt;a href="https://mermaid.js.org/ecosystem/tutorials.html?#jupyter-integration-with-mermaid-js"&gt;here&lt;/a&gt;, albeit with an unnecessary import from matplotlib that I removed in this example&lt;/li&gt;
-&lt;li&gt;I discovered this trick back in 2023 while working on the &lt;a href="https://github.com/pydanny/dj-notebook"&gt;dj-notebook&lt;/a&gt; library&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://mermaid.js.org/"&gt;Mermaid&lt;/a&gt; is a JavaScript-powered diagramming and charting tool that's friendly for browsers&lt;/li&gt;
-&lt;li&gt;Amusingly enough, &lt;a href="https://github.com/pydanny/daniel-blog-fasthtml/blob/main/posts/2024/using-mermaidjs-in-jupyter-notebooks.md"&gt;this article is written in pure markdown&lt;/a&gt; because as of October 24th, 2024 I haven't yet gotten the function to work yet with nb2fasthtml.&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/using-mermaidjs-in-jupyter-notebooks"/>
-    <summary>Useful for adding Mermaid charts of various types to Jupyter notebooks.</summary>
-    <category term="jupyter"/>
-    <category term="python"/>
-    <category term="howto"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-10-24T16:15:16.836698+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
     <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-12-18T17:47:03.047680+00:00</updated>
+    <updated>2024-12-23T17:15:08.207150+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -103,7 +47,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-12-18T17:47:03.043291+00:00</updated>
+    <updated>2024-12-23T17:15:08.202520+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -327,7 +271,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-12-18T17:47:03.042961+00:00</updated>
+    <updated>2024-12-23T17:15:08.202105+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -351,7 +295,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-12-18T17:47:03.042697+00:00</updated>
+    <updated>2024-12-23T17:15:08.201830+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -372,7 +316,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-12-18T17:47:03.042243+00:00</updated>
+    <updated>2024-12-23T17:15:08.201422+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -397,7 +341,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
     <title>TIL: Fractional Indexing</title>
-    <updated>2024-12-18T17:47:03.041887+00:00</updated>
+    <updated>2024-12-23T17:15:08.201050+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -425,7 +369,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-18T17:47:03.040732+00:00</updated>
+    <updated>2024-12-23T17:15:08.199610+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -466,7 +410,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-18T17:47:03.039450+00:00</updated>
+    <updated>2024-12-23T17:15:08.198270+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -512,7 +456,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-18T17:47:03.038861+00:00</updated>
+    <updated>2024-12-23T17:15:08.197969+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -534,7 +478,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-18T17:47:03.038466+00:00</updated>
+    <updated>2024-12-23T17:15:08.197585+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -560,7 +504,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-18T17:47:03.037005+00:00</updated>
+    <updated>2024-12-23T17:15:08.196014+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -600,7 +544,9 @@
                 &lt;span class="n"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Email&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
                 &lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Save&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
                 &lt;span class="n"&gt;hx_post&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/contacts&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="c1"&gt;# Don&amp;#39;t swap out the contact form&lt;/span&gt;
                 &lt;span class="n"&gt;hx_swap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="c1"&gt;# Reset the form and put focus onto the name field&lt;/span&gt;
                 &lt;span class="n"&gt;hx_on__after_request&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;this.reset();this.name.focus();&amp;quot;&lt;/span&gt;
             &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="p"&gt;)&lt;/span&gt;
@@ -624,5 +570,32 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-12-18T17:04:06.575404+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
+    <title>TIL: run vs source</title>
+    <updated>2024-12-23T17:15:08.195422+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;h2 id="run"&gt;Run&lt;/h2&gt;
+&lt;p&gt;A &lt;code&gt;run&lt;/code&gt; launches a child process in a new bash within bash, so variables last only the lifetime of the command. This is why launching Python environments doesn't use &lt;code&gt;run&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./list-things.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="source"&gt;Source&lt;/h2&gt;
+&lt;p&gt;A &lt;code&gt;source&lt;/code&gt; is the current bash, so variables last beyond the running of a script. This is why launching Python environments use &lt;code&gt;source&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;~/.venv/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source"/>
+    <summary>Different ways to run bash commands that explains part of my frustration with bash over the years.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-12-23T17:05:43.817074+00:00</published>
   </entry>
 </feed>

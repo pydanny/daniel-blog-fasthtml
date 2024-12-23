@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2024-12-18T17:47:03.064434+00:00</updated>
+  <updated>2024-12-23T17:15:08.208400+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,41 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
-    <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-12-18T17:47:03.071984+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Starting in Python 3.9, &lt;code&gt;s.removeprefix()&lt;/code&gt; and &lt;code&gt;s.removesuffix()&lt;/code&gt; were added as &lt;code&gt;str&lt;/code&gt; built-ins. Which easily covers all the versions of Python I currently support.&lt;/p&gt;
-&lt;h2 id="usage-for-removeprefix"&gt;Usage for &lt;code&gt;removeprefix()&lt;/code&gt;:&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removeprefix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Spam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;, Spam&amp;#39;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removeprefix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;This is not in the prefix&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="usage-for-removesuffix"&gt;Usage for &lt;code&gt;removesuffix()&lt;/code&gt;:&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removesuffix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Spam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;Spam, &amp;#39;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removesuffix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;This is not in the suffix&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes"/>
-    <summary>How did I miss these functions getting added to Python?</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-11-01T12:00:00.235742+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-12-18T17:47:03.071659+00:00</updated>
+    <updated>2024-12-23T17:15:08.216503+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -71,7 +39,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-12-18T17:47:03.071403+00:00</updated>
+    <updated>2024-12-23T17:15:08.216234+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -92,7 +60,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-12-18T17:47:03.071032+00:00</updated>
+    <updated>2024-12-23T17:15:08.215771+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -117,7 +85,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli</id>
     <title>TIL: LiteCLI, Improved SQLite CLI</title>
-    <updated>2024-12-18T17:47:03.070462+00:00</updated>
+    <updated>2024-12-23T17:15:08.215248+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -145,7 +113,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
     <title>TIL: Fractional Indexing</title>
-    <updated>2024-12-18T17:47:03.070109+00:00</updated>
+    <updated>2024-12-23T17:15:08.214879+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -173,7 +141,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-last-token-in-shell</id>
     <title>TIL: Last Token in Shell</title>
-    <updated>2024-12-18T17:47:03.069250+00:00</updated>
+    <updated>2024-12-23T17:15:08.213896+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -215,7 +183,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-18T17:47:03.068087+00:00</updated>
+    <updated>2024-12-23T17:15:08.212687+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -256,7 +224,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-18T17:47:03.066732+00:00</updated>
+    <updated>2024-12-23T17:15:08.211372+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -302,7 +270,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-18T17:47:03.066445+00:00</updated>
+    <updated>2024-12-23T17:15:08.211081+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -324,7 +292,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-18T17:47:03.066084+00:00</updated>
+    <updated>2024-12-23T17:15:08.210607+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -350,7 +318,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-18T17:47:03.064665+00:00</updated>
+    <updated>2024-12-23T17:15:08.209162+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -390,7 +358,9 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
                 &lt;span class="n"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Email&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
                 &lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Save&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
                 &lt;span class="n"&gt;hx_post&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/contacts&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="c1"&gt;# Don&amp;#39;t swap out the contact form&lt;/span&gt;
                 &lt;span class="n"&gt;hx_swap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="c1"&gt;# Reset the form and put focus onto the name field&lt;/span&gt;
                 &lt;span class="n"&gt;hx_on__after_request&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;this.reset();this.name.focus();&amp;quot;&lt;/span&gt;
             &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="p"&gt;)&lt;/span&gt;
@@ -414,5 +384,32 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-12-18T17:04:06.575404+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
+    <title>TIL: run vs source</title>
+    <updated>2024-12-23T17:15:08.208596+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;h2 id="run"&gt;Run&lt;/h2&gt;
+&lt;p&gt;A &lt;code&gt;run&lt;/code&gt; launches a child process in a new bash within bash, so variables last only the lifetime of the command. This is why launching Python environments doesn't use &lt;code&gt;run&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./list-things.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="source"&gt;Source&lt;/h2&gt;
+&lt;p&gt;A &lt;code&gt;source&lt;/code&gt; is the current bash, so variables last beyond the running of a script. This is why launching Python environments use &lt;code&gt;source&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;~/.venv/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source"/>
+    <summary>Different ways to run bash commands that explains part of my frustration with bash over the years.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-12-23T17:05:43.817074+00:00</published>
   </entry>
 </feed>
