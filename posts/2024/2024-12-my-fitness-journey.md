@@ -62,6 +62,12 @@ Amusingly, once I started getting my strength back for a few weeks my Brazilian 
 
 The fix for this is now right before I spar, I say this mantra: "play weak, play weak, play weak". 
 
+## Diet
+
+In general I eat meat, dairy, eggs, vegetables and a little citrus fuit. I avoid simple carbohydrates like breads, potato, rice, and sugars. Periodically I'll taste those things, as I've found completely denying myself of simple carbohydrates causes me to binge.
+
+I supplement this vitamins, collagen, and creatine. The latter two help with my recovery. In addition to the muscular benefits I'm one of those people who get a cognitive boost from creatine. 
+
 ## Goals for 2025
 
 - Continue with Brazilian Jiu-Jitsu
