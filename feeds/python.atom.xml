@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2024-12-23T19:03:51.143705+00:00</updated>
+  <updated>2024-12-25T02:37:37.445842+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,41 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes</id>
-    <title>TIL: Using Python to removing prefixes and suffixes</title>
-    <updated>2024-12-23T19:03:51.155197+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Starting in Python 3.9, &lt;code&gt;s.removeprefix()&lt;/code&gt; and &lt;code&gt;s.removesuffix()&lt;/code&gt; were added as &lt;code&gt;str&lt;/code&gt; built-ins. Which easily covers all the versions of Python I currently support.&lt;/p&gt;
-&lt;h2 id="usage-for-removeprefix"&gt;Usage for &lt;code&gt;removeprefix()&lt;/code&gt;:&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removeprefix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Spam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;, Spam&amp;#39;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removeprefix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;This is not in the prefix&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="usage-for-removesuffix"&gt;Usage for &lt;code&gt;removesuffix()&lt;/code&gt;:&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removesuffix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Spam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;Spam, &amp;#39;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;removesuffix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;This is not in the suffix&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;Spam, Spam&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-10-removing-prefixes-and-suffixes"/>
-    <summary>How did I miss these functions getting added to Python?</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-11-01T12:00:00.235742+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-using-locust-for-load-testing</id>
     <title>Using locust for load testing</title>
-    <updated>2024-12-23T19:03:51.150639+00:00</updated>
+    <updated>2024-12-25T02:37:37.452608+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -271,7 +239,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-autoreload-for-jupyter-notebooks</id>
     <title>TIL: Autoreload for Jupyter notebooks</title>
-    <updated>2024-12-23T19:03:51.150260+00:00</updated>
+    <updated>2024-12-25T02:37:37.452288+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -295,7 +263,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-12-23T19:03:51.149995+00:00</updated>
+    <updated>2024-12-25T02:37:37.452036+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -316,7 +284,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-12-23T19:03:51.149593+00:00</updated>
+    <updated>2024-12-25T02:37:37.451592+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -341,7 +309,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
     <title>TIL: Fractional Indexing</title>
-    <updated>2024-12-23T19:03:51.149223+00:00</updated>
+    <updated>2024-12-25T02:37:37.451249+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -369,7 +337,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-23T19:03:51.147933+00:00</updated>
+    <updated>2024-12-25T02:37:37.450117+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -410,7 +378,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-23T19:03:51.146616+00:00</updated>
+    <updated>2024-12-25T02:37:37.448809+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -456,7 +424,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-23T19:03:51.146325+00:00</updated>
+    <updated>2024-12-25T02:37:37.448525+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -478,7 +446,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-23T19:03:51.145963+00:00</updated>
+    <updated>2024-12-25T02:37:37.448175+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -504,7 +472,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-23T19:03:51.144471+00:00</updated>
+    <updated>2024-12-25T02:37:37.446768+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -574,7 +542,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
     <title>TIL: run vs source</title>
-    <updated>2024-12-23T19:03:51.143917+00:00</updated>
+    <updated>2024-12-25T02:37:37.446156+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -597,5 +565,24 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-12-23T17:05:43.817074+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-12-types-simplenamespace-is-a-bunch-class</id>
+    <title>TIL: types.SimpleNamespace is a Bunch class</title>
+    <updated>2024-12-25T02:37:37.446043+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <link href="https://daniel.feldroy.com/posts/til-2024-12-types-simplenamespace-is-a-bunch-class"/>
+    <summary>Did you know that Python's types library has a bunch class implementation? How did I not see this before?!</summary>
+    <category term="python"/>
+    <category term="TIL"/>
+    <category term="bunch"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-12-25T02:00:00+00:00</published>
   </entry>
 </feed>

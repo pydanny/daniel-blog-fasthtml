@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-12-23T19:03:50.734308+00:00</updated>
+  <updated>2024-12-25T02:37:37.022943+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,51 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-11-last-token-in-shell</id>
-    <title>TIL: Last Token in Shell</title>
-    <updated>2024-12-23T19:03:51.075650+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;To get the last element in a shell command, do this:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;!$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To demonstrate usage, let's do a directory list on this website's posts directory:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;-l&lt;span class="w"&gt; &lt;/span&gt;posts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I can get the last token, which is &lt;code&gt;posts&lt;/code&gt;, by typing:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;!$
-posts
-zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;not&lt;span class="w"&gt; &lt;/span&gt;found:&lt;span class="w"&gt; &lt;/span&gt;posts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The shell will try to run that token, which as you can see often fails. What's awesome about that is it is now in the shell history, meaning I can easily compose new commands by using the shell history. As I use the rocket-powered &lt;a href="https://atuin.sh/"&gt;Atuin&lt;/a&gt; shell history tool, this means I now have that token easily found at my command line forever. Here's atuin in action - on the line with GLOBAL I've typed in the word 'posts':&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sh
- │ 4 3ms    6d ago mv posts/til-*.md posts/til/
- │ 3 18ms   2d ago git add posts/                                                                                  │
- │ 2 6ms   10m ago ls -l posts                                                                                     │
- │ 1 2ms   10m ago posts                                                                                           │
- │ &amp;gt; 2ms    9m ago ls -asl posts                                                                                   │
- │─────────────────────────────────────────────────────────────────────────────────────────────────────────────────│
- │[    GLOBAL    ] posts&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Using Atuin, I can fetch the last token to my shell without running it, which is a superpower. I can now compose all kinds of stuff off the saved token. Yeah!&lt;/p&gt;
-&lt;p&gt;Attribution for this command goes to Jeremy Howard.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-11-last-token-in-shell"/>
-    <summary>How to get the last element in a shell command. Guest starring Atuin!</summary>
-    <category term="TIL"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-11-21T15:12:54.669148+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-23T19:03:51.074476+00:00</updated>
+    <updated>2024-12-25T02:37:37.360171+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -98,7 +56,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-23T19:03:51.073137+00:00</updated>
+    <updated>2024-12-25T02:37:37.358859+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -144,7 +102,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-starting-brazilian-jiu-jitsu</id>
     <title>Starting Brazilian Jiu-Jitsu</title>
-    <updated>2024-12-23T19:03:51.070740+00:00</updated>
+    <updated>2024-12-25T02:37:37.356518+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -232,7 +190,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-github-admonitions</id>
     <title>GitHub Admonitions</title>
-    <updated>2024-12-23T19:03:51.053525+00:00</updated>
+    <updated>2024-12-25T02:37:37.339202+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -268,7 +226,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-23T19:03:51.053241+00:00</updated>
+    <updated>2024-12-25T02:37:37.338912+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -290,7 +248,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-top-terminal-tools</id>
     <title>Top Terminal Tools</title>
-    <updated>2024-12-23T19:03:51.052021+00:00</updated>
+    <updated>2024-12-25T02:37:37.337705+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -334,7 +292,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-takedown-notes</id>
     <title>Notes on takedowns</title>
-    <updated>2024-12-23T19:03:51.051301+00:00</updated>
+    <updated>2024-12-25T02:37:37.336980+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -385,7 +343,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-23T19:03:51.050900+00:00</updated>
+    <updated>2024-12-25T02:37:37.336589+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -411,7 +369,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-23T19:03:51.039691+00:00</updated>
+    <updated>2024-12-25T02:37:37.325890+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -481,7 +439,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
     <title>TIL: run vs source</title>
-    <updated>2024-12-23T19:03:51.037500+00:00</updated>
+    <updated>2024-12-25T02:37:37.323679+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -508,7 +466,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-my-fitness-journey</id>
     <title>My 2024 Fitness Journey</title>
-    <updated>2024-12-23T19:03:51.024583+00:00</updated>
+    <updated>2024-12-25T02:37:37.321751+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -551,6 +509,9 @@ to sweep&lt;/li&gt;
 &lt;li&gt;Overpower one limb with my newfound strength, while they focused on position (would often take my back)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The fix for this is now right before I spar, I say this mantra: "play weak, play weak, play weak". &lt;/p&gt;
+&lt;h2 id="diet"&gt;Diet&lt;/h2&gt;
+&lt;p&gt;In general I eat meat, dairy, eggs, vegetables and a little citrus fuit. I avoid simple carbohydrates like breads, potato, rice, and sugars. Periodically I'll taste those things, as I've found completely denying myself of simple carbohydrates causes me to binge.&lt;/p&gt;
+&lt;p&gt;I supplement this vitamins, collagen, and creatine. The latter two help with my recovery. In addition to the muscular benefits I'm one of those people who get a cognitive boost from creatine. &lt;/p&gt;
 &lt;h2 id="goals-for-2025"&gt;Goals for 2025&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Continue with Brazilian Jiu-Jitsu&lt;/li&gt;
@@ -570,5 +531,24 @@ to sweep&lt;/li&gt;
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-12-23T19:05:41.758449+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-12-types-simplenamespace-is-a-bunch-class</id>
+    <title>TIL: types.SimpleNamespace is a Bunch class</title>
+    <updated>2024-12-25T02:37:37.307704+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <link href="https://daniel.feldroy.com/posts/til-2024-12-types-simplenamespace-is-a-bunch-class"/>
+    <summary>Did you know that Python's types library has a bunch class implementation? How did I not see this before?!</summary>
+    <category term="python"/>
+    <category term="TIL"/>
+    <category term="bunch"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-12-25T02:00:00+00:00</published>
   </entry>
 </feed>

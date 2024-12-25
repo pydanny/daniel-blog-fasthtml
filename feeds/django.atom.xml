@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Django posts by Daniel Roy Greenfeld</title>
-  <updated>2024-12-23T19:03:51.077162+00:00</updated>
+  <updated>2024-12-25T02:37:37.363569+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/august-2020-courses</id>
     <title>August 2020 Courses</title>
-    <updated>2024-12-23T19:03:51.142557+00:00</updated>
+    <updated>2024-12-25T02:37:37.444798+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -42,7 +42,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/recap-2020-resolutions-2021</id>
     <title>Recap of 2020 and Resolutions for 2021</title>
-    <updated>2024-12-23T19:03:51.140743+00:00</updated>
+    <updated>2024-12-25T02:37:37.443066+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -109,7 +109,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1</id>
     <title>What's the Best Thing about Working for Octopus Energy?</title>
-    <updated>2024-12-23T19:03:51.139616+00:00</updated>
+    <updated>2024-12-25T02:37:37.442009+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -153,7 +153,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/whats-the-ultimate-reason-for-working-at-octopus-energy-part-2</id>
     <title>What's the Ultimate Reason for Working at Octopus Energy?</title>
-    <updated>2024-12-23T19:03:51.138528+00:00</updated>
+    <updated>2024-12-25T02:37:37.441010+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -196,7 +196,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2022-02-speaking-at-python-web-conf</id>
     <title>Speaking at Python Web Conf</title>
-    <updated>2024-12-23T19:03:51.137619+00:00</updated>
+    <updated>2024-12-25T02:37:37.440162+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -230,7 +230,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2022-04-26-live-discussion-with-tiangolo</id>
     <title>Live Discussion with Sebastián Ramírez (Tiangolo)</title>
-    <updated>2024-12-23T19:03:51.136983+00:00</updated>
+    <updated>2024-12-25T02:37:37.439530+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -263,7 +263,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects</id>
     <title>Practice Python Web Projects</title>
-    <updated>2024-12-23T19:03:51.135001+00:00</updated>
+    <updated>2024-12-25T02:37:37.437575+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -345,7 +345,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2023-01-configuring-sphinx-auto-doc-with-django</id>
     <title>Configuring Sphinx Auto-Doc with projects having Django dependencies</title>
-    <updated>2024-12-23T19:03:51.119870+00:00</updated>
+    <updated>2024-12-25T02:37:37.423072+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -426,7 +426,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech</id>
     <title>Three Years at Kraken Tech</title>
-    <updated>2024-12-23T19:03:51.080600+00:00</updated>
+    <updated>2024-12-25T02:37:37.367079+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -490,7 +490,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-pycon-lithuania</id>
     <title>Keynote at PyCon Lithuania 2024</title>
-    <updated>2024-12-23T19:03:51.080128+00:00</updated>
+    <updated>2024-12-25T02:37:37.366603+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -515,7 +515,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views</id>
     <title>Rapidly creating smoke tests for Django views</title>
-    <updated>2024-12-23T19:03:51.078111+00:00</updated>
+    <updated>2024-12-25T02:37:37.364594+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -583,7 +583,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2024-12-23T19:03:51.077378+00:00</updated>
+    <updated>2024-12-25T02:37:37.363832+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
