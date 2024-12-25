@@ -7,6 +7,7 @@ tags:
   - geek celebrities
   - python
   - legacy-blogger
+  - bunch  
 time_to_read: 5
 title: Loving the bunch class
 ---

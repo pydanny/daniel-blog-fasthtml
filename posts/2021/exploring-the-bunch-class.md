@@ -5,6 +5,7 @@ published: true
 slug: exploring-the-bunch-class
 tags:
   - python
+  - bunch  
 title: Exploring the Bunch Class
 type: post
 ---
