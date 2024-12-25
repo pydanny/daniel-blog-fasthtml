@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2024-12-25T02:39:06.812378+00:00</updated>
+  <updated>2024-12-25T03:14:52.926713+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-sequentialtaskset-for-locust</id>
     <title>TIL: SequentialTaskSet for Locust</title>
-    <updated>2024-12-25T02:39:06.819862+00:00</updated>
+    <updated>2024-12-25T03:14:52.934215+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -36,7 +36,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-making-pytest-use-ipython's-pdb</id>
     <title>TIL: Making pytest use Ipython's PDB</title>
-    <updated>2024-12-25T02:39:06.819479+00:00</updated>
+    <updated>2024-12-25T03:14:52.933846+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -61,7 +61,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-litecli-improved-sqlite-cli</id>
     <title>TIL: LiteCLI, Improved SQLite CLI</title>
-    <updated>2024-12-25T02:39:06.818916+00:00</updated>
+    <updated>2024-12-25T03:14:52.933280+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -89,7 +89,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-fractional-indexing</id>
     <title>TIL: Fractional Indexing</title>
-    <updated>2024-12-25T02:39:06.818569+00:00</updated>
+    <updated>2024-12-25T03:14:52.932926+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -117,7 +117,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-last-token-in-shell</id>
     <title>TIL: Last Token in Shell</title>
-    <updated>2024-12-25T02:39:06.817712+00:00</updated>
+    <updated>2024-12-25T03:14:52.932077+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -159,7 +159,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-25T02:39:06.816585+00:00</updated>
+    <updated>2024-12-25T03:14:52.930962+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -200,7 +200,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-25T02:39:06.815281+00:00</updated>
+    <updated>2024-12-25T03:14:52.929653+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -246,7 +246,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-25T02:39:06.815007+00:00</updated>
+    <updated>2024-12-25T03:14:52.929375+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -268,7 +268,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-25T02:39:06.814650+00:00</updated>
+    <updated>2024-12-25T03:14:52.929024+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -294,7 +294,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-25T02:39:06.813275+00:00</updated>
+    <updated>2024-12-25T03:14:52.927659+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -364,7 +364,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
     <title>TIL: run vs source</title>
-    <updated>2024-12-25T02:39:06.812658+00:00</updated>
+    <updated>2024-12-25T03:14:52.927022+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -391,7 +391,7 @@ zsh:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-types-simplenamespace-is-a-bunch-class</id>
     <title>TIL: types.SimpleNamespace is a Bunch class</title>
-    <updated>2024-12-25T02:39:06.812547+00:00</updated>
+    <updated>2024-12-25T03:14:52.926914+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

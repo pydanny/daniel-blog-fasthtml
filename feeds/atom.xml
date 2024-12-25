@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-12-25T02:39:06.402993+00:00</updated>
+  <updated>2024-12-25T03:14:52.405339+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
     <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-25T02:39:06.732915+00:00</updated>
+    <updated>2024-12-25T03:14:52.829467+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -56,7 +56,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-25T02:39:06.731600+00:00</updated>
+    <updated>2024-12-25T03:14:52.828139+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -102,7 +102,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-starting-brazilian-jiu-jitsu</id>
     <title>Starting Brazilian Jiu-Jitsu</title>
-    <updated>2024-12-25T02:39:06.729235+00:00</updated>
+    <updated>2024-12-25T03:14:52.825707+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -190,7 +190,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-github-admonitions</id>
     <title>GitHub Admonitions</title>
-    <updated>2024-12-25T02:39:06.712403+00:00</updated>
+    <updated>2024-12-25T03:14:52.805767+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -226,7 +226,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-25T02:39:06.712115+00:00</updated>
+    <updated>2024-12-25T03:14:52.805474+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -248,7 +248,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-top-terminal-tools</id>
     <title>Top Terminal Tools</title>
-    <updated>2024-12-25T02:39:06.710907+00:00</updated>
+    <updated>2024-12-25T03:14:52.804253+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -292,7 +292,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-takedown-notes</id>
     <title>Notes on takedowns</title>
-    <updated>2024-12-25T02:39:06.710185+00:00</updated>
+    <updated>2024-12-25T03:14:52.803527+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -343,7 +343,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-25T02:39:06.709796+00:00</updated>
+    <updated>2024-12-25T03:14:52.803134+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -369,7 +369,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-25T02:39:06.698924+00:00</updated>
+    <updated>2024-12-25T03:14:52.792162+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -439,7 +439,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
     <title>TIL: run vs source</title>
-    <updated>2024-12-25T02:39:06.696760+00:00</updated>
+    <updated>2024-12-25T03:14:52.789379+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -466,7 +466,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-my-fitness-journey</id>
     <title>My 2024 Fitness Journey</title>
-    <updated>2024-12-25T02:39:06.694881+00:00</updated>
+    <updated>2024-12-25T03:14:52.787487+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -535,7 +535,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-types-simplenamespace-is-a-bunch-class</id>
     <title>TIL: types.SimpleNamespace is a Bunch class</title>
-    <updated>2024-12-25T02:39:06.683662+00:00</updated>
+    <updated>2024-12-25T03:14:52.757321+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
