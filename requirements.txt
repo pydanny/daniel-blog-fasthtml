@@ -1,4 +1,5 @@
-python-fasthtml==0.10.1
+python-fasthtml==0.10.2
+sqlite-minutils
 pyyaml
 pytz
 feedgen
