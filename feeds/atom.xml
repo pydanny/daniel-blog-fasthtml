@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2024-12-25T03:14:52.405339+00:00</updated>
+  <updated>2024-12-27T23:05:43.292639+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,50 +13,9 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator</id>
-    <title>TIL: Python Dictonary Merge Operator</title>
-    <updated>2024-12-25T03:14:52.829467+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;h2 id="the-function-way"&gt;The function way&lt;/h2&gt;
-&lt;p&gt;Until today I did this:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Make first dict&lt;/span&gt;
-&lt;span class="n"&gt;num_map&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;one&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;two&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;three&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;four&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;4&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;five&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;5&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;six&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;6&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;seven&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;7&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eight&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;nine&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="c1"&gt;# Add second dict&lt;/span&gt;
-&lt;span class="n"&gt;num_map&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)})&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num_map&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="the-operator-way"&gt;The operator way&lt;/h2&gt;
-&lt;p&gt;Now thanks to Audrey Roy Greenfeld now I know I can do this:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Make first dict while adding second dict&lt;/span&gt;
-&lt;span class="n"&gt;num_map&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;one&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;two&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;three&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;four&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;4&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;five&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;5&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;six&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;6&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;seven&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;7&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eight&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;nine&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)}&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num_map&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2024-11-python-dictonary-merge-operator"/>
-    <summary>Did you know there's a merge operator for Python dictionaries? I didn't until today!</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2024-11-29T14:18:22.222177+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-defaultdict-takes-a-factory-function</id>
     <title>TIL: Python's defaultdict takes a factory function</title>
-    <updated>2024-12-25T03:14:52.828139+00:00</updated>
+    <updated>2024-12-27T23:05:43.719601+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -102,7 +61,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-11-starting-brazilian-jiu-jitsu</id>
     <title>Starting Brazilian Jiu-Jitsu</title>
-    <updated>2024-12-25T03:14:52.825707+00:00</updated>
+    <updated>2024-12-27T23:05:43.717185+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -190,7 +149,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-github-admonitions</id>
     <title>GitHub Admonitions</title>
-    <updated>2024-12-25T03:14:52.805767+00:00</updated>
+    <updated>2024-12-27T23:05:43.696908+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -226,7 +185,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-how-to-reset-jupyter-notebook-passwords</id>
     <title>TIL: How to reset Jupyter notebook passwords</title>
-    <updated>2024-12-25T03:14:52.805474+00:00</updated>
+    <updated>2024-12-27T23:05:43.696620+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -248,7 +207,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-top-terminal-tools</id>
     <title>Top Terminal Tools</title>
-    <updated>2024-12-25T03:14:52.804253+00:00</updated>
+    <updated>2024-12-27T23:05:43.695388+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -292,7 +251,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-takedown-notes</id>
     <title>Notes on takedowns</title>
-    <updated>2024-12-25T03:14:52.803527+00:00</updated>
+    <updated>2024-12-27T23:05:43.694668+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -343,7 +302,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-arity</id>
     <title>TIL: Arity</title>
-    <updated>2024-12-25T03:14:52.803134+00:00</updated>
+    <updated>2024-12-27T23:05:43.694288+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -369,7 +328,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-using-hx-swap-oob-with-fasthtml</id>
     <title>TIL: Using hx-swap-oob with FastHTML</title>
-    <updated>2024-12-25T03:14:52.792162+00:00</updated>
+    <updated>2024-12-27T23:05:43.683506+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -439,7 +398,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-difference-between-run-and-source</id>
     <title>TIL: run vs source</title>
-    <updated>2024-12-25T03:14:52.789379+00:00</updated>
+    <updated>2024-12-27T23:05:43.680756+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -466,7 +425,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-12-my-fitness-journey</id>
     <title>My 2024 Fitness Journey</title>
-    <updated>2024-12-25T03:14:52.787487+00:00</updated>
+    <updated>2024-12-27T23:05:43.678894+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -535,7 +494,7 @@ to sweep&lt;/li&gt;
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2024-12-types-simplenamespace-is-a-bunch-class</id>
     <title>TIL: types.SimpleNamespace is a Bunch class</title>
-    <updated>2024-12-25T03:14:52.757321+00:00</updated>
+    <updated>2024-12-27T23:05:43.678744+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -550,5 +509,23 @@ to sweep&lt;/li&gt;
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2024-12-25T02:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2024-12-yield-from</id>
+    <title>til: yield from</title>
+    <updated>2024-12-27T23:05:43.645819+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <link href="https://daniel.feldroy.com/posts/til-2024-12-yield-from"/>
+    <summary>A variant of the yield statement that can result in more concise code.</summary>
+    <category term="python"/>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-12-27T23:15:00+00:00</published>
   </entry>
 </feed>
