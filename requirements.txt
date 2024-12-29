@@ -1,5 +1,4 @@
 python-fasthtml
-sqlite-minutils
 pyyaml
 pytz
 feedgen
