@@ -1,6 +1,7 @@
 import collections, functools, pathlib, json, csv
 from datetime import datetime
 from dateutil import parser
+from importlib.metadata import distributions
 
 import pytz
 import yaml
@@ -561,6 +562,22 @@ def writing_stats():
         Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),
         # P(f'{years}'),
         # P(f'{data}')     
+    )
+
+@rt
+def versions():
+    dists = L([NS(name=dist.metadata['Name'], version=dist.version) for dist in distributions()])
+    dists = sorted(dists, key=lambda x: x.name.lower())
+    dists = [Li(f'{d.name}: {d.version}') for d in dists]
+    return Layout(
+        Title('Package Versions'),
+        Socials(site_name="https://daniel.feldroy.com",
+                        title=f"Package Versions",
+                        description='Getting Python versions',
+                        url=f"https://daniel.feldroy.com/fitness",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
+                        ), 
+        Ul(*dists)          
     )
   
 
