@@ -284,7 +284,7 @@ def index():
             Section(
                     H1('TIL', Small(' (Today I learned)')),
                     *tils[:7],
-                    P(A('Read more TIL articles', href='/tags/til'))
+                    P(A('Read more TIL articles', href='/tags/TIL'))
                 ),
             Section(
                     H1('Popular Writings'),
@@ -503,7 +503,7 @@ def fitness():
         Title('Fitness Tracking'),
         Socials(site_name="https://daniel.feldroy.com",
                         title=f"Fitness Tracking",
-                        description='Just weight right now',
+                        description='My fitness journey over time.',
                         url=f"https://daniel.feldroy.com/fitness",
                         image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),         
@@ -522,6 +522,22 @@ def fitness():
             *charts,
             A("← Back home", href="/"),
         )
+    )
+
+@rt('/writing-stats')
+def writing_stats():
+    years = collections.defaultdict(int)
+    for post in list_posts():
+        years[post['date'][:4]] += 1
+    return Layout(
+        Title('Writing Stats'),
+        Socials(site_name="https://daniel.feldroy.com",
+                        title=f"Writing Stats",
+                        description='Numbers about my writing patterns',
+                        url=f"https://daniel.feldroy.com/fitness",
+                        image="https://daniel.feldroy.com/public/images/profile.jpg",
+                        ),    
+        P(f'{years}')     
     )
   
 
