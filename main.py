@@ -527,8 +527,27 @@ def fitness():
 @rt('/writing-stats')
 def writing_stats():
     years = collections.defaultdict(int)
-    for post in list_posts():
-        years[post['date'][:4]] += 1
+    for post in list_posts(): years[post['date'][:4]] += 1
+    data = [
+        {
+            'x': list(map(int, years.keys())),
+            'y': list(map(int, years.values())),
+            'type': 'scatter'
+        }
+    ]
+    # data = json.dumps(data)
+
+    config = {'responsive': True}
+    config = json.dumps(config)    
+    layout = {
+        'title': {
+            'text': 'Writing stats'
+        },
+        'font': {'size': 18},
+        'barcornerradius': 15,
+    }
+    layout = json.dumps(layout)     
+
     return Layout(
         Title('Writing Stats'),
         Socials(site_name="https://daniel.feldroy.com",
@@ -537,7 +556,11 @@ def writing_stats():
                         url=f"https://daniel.feldroy.com/fitness",
                         image="https://daniel.feldroy.com/public/images/profile.jpg",
                         ),    
-        P(f'{years}')     
+        Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
+        Div(id='post-counts'),
+        Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),
+        # P(f'{years}'),
+        # P(f'{data}')     
     )
   
 
