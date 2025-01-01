@@ -41,7 +41,7 @@ title: Recap of 2024 and Resolutions for 2025
 - Visited Paris in the autumn
 - Visited many new places in England, including Birmingham, Oxford, Cambridge, Brighton, Liverpool, Luton, Alton, and more
 - Went to an unbelievable number of museams and children's attractions in five countries. Seeing my daughter's wonder at learning new things is truly wonderful
-- Begun the bittersweet move away from London, England to a town near Brisbane, Australia. Once again we are drawn as a family to be in a place where our co-workers are in the same timezone. We leave on a high note but our sad, we have truly enjoyed our time here.
+- Begun the bittersweet move away from London, England to a town near Brisbane, Australia. Once again we are drawn as a family to be in a place where our co-workers are in the same timezone. We leave on a high note but are sad, we have truly enjoyed our time in London.
 
 ## 2024 Recap vs 2024 Resolutions
 
@@ -82,7 +82,7 @@ What I plan to do in the coming year
 - Beat last year's number of blog posts
 - Continue my fitness journey with [BJJ](/tags/bjj), weights, cycling, walking, and other healthy activities
 - Write fiction again, maybe publish it
-- Continue to have a health work/life balance
+- Continue to have a healthy work/life balance
 - Travel to yet more new places, preferably by train or other carbon-efficient methods
 - Be a speaker in at least one conference
 - Change my career from being a backend developer to that of an ML/AI specialist
