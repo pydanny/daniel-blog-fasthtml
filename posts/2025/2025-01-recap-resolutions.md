@@ -29,7 +29,8 @@ title: Recap of 2024 and Resolutions for 2025
     - Many thanks to the awesome Aidis Stukas
 - Presented a keynote at PyCon Italy in Florence, my third time speaking in the same venue
 - Went to Milan for the first time, seeing my cousin Rose and her lovely family
-- Learned a new web framework, FastHTML, and began to contribute to it and the surrounding ecosystem
+- Learned a new web framework, [FastHTML](https://fastht.ml/), and began to contribute to it and the surrounding ecosystem
+- Rewrote this blog in FastHTML. For the first time in 12 years it isn't mostly static HTML because it no longer needs to be
 - Went to Brisbane and Redcliffe Australia. My first visits there and first time back to Down Under in 12 years
 - In September I began a year-long sabbatical from [Kraken](https://kraken.tech/), to begin my machine learning & artificial intelligence journey at [answer.ai](https://www.answer.ai/)
 - Rebooted my sysadmin knowledge, relearning how to do things without cloud services. Not quite bare metal, but not far off either!
