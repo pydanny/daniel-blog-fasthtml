@@ -34,7 +34,7 @@ title: Recap of 2024 and Resolutions for 2025
 - Went to Brisbane and Redcliffe Australia. My first visits there and first time back to Down Under in 12 years
 - In September I began a year-long sabbatical from [Kraken](https://kraken.tech/), to begin my machine learning & artificial intelligence journey at [answer.ai](https://www.answer.ai/)
 - Rebooted my sysadmin knowledge, relearning how to do things without cloud services. Not quite bare metal, but not far off either!
-- Refocused my career to be that of learning and discovery, many thanks to Jeremy Howard and Eric Reis
+- Refocused my career to be that of learning and discovery, many thanks to Jeremy Howard, Eric Reis, and everyone at Answer.ai
 - Blogged significantly more than in 2023, writing 42 articles which was 62% improvement. Most of those in the last four months of the year
 - Kept my working schedule sane
 - Met in person with Anthony Dale, an old high school friend
