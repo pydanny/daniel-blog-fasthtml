@@ -2,6 +2,7 @@ import collections, functools, pathlib, json, csv
 from datetime import datetime
 from dateutil import parser
 from importlib.metadata import distributions
+from os import getenv
 
 import pytz
 import yaml
@@ -585,9 +586,10 @@ def versions():
 def get(fname:str, ext:str): 
     return FileResponse(f'feeds/{fname}.{ext}')
 
-@rt('/.well-known/{fname}')
-def wellknown(fname: str):
-    return pathlib.Path(f'.{fname}').read_text()
+@rt('/.well-known/atproto-did')
+def wellknown_atproto_did():
+    # for bluesky
+    return getenv('BLUESKY_ATPROTO', 'Nothing here!')
 
 reg_re_param("static", "ico|gif|jpg|jpeg|webm|css|js|woff|png|svg|mp4|webp|ttf|otf|eot|woff2|txt")
 
