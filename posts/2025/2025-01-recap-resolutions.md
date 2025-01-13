@@ -11,7 +11,7 @@ tags:
 - kraken
 - climate-change
 - answerdotai
-- fasthtml
+- FastHTML
 title: Recap of 2024 and Resolutions for 2025
 ---
 

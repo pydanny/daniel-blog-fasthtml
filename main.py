@@ -597,7 +597,7 @@ reg_re_param("static", "ico|gif|jpg|jpeg|webm|css|js|woff|png|svg|mp4|webp|ttf|o
 def get(slug: str):
     url = redirects.get(slug, None) or redirects.get(slug + ".html", None)
     if url is not None:
-        return RedirectResponse(url=url)
+        return Redirect(loc=url)
     return Page404()
 
 @rt("/{slug}.ipynb")
@@ -622,7 +622,7 @@ def get(slug: str):
 def get(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
-        return RedirectResponse(url=redirects_url)
+        return Redirect(loc=redirects_url)
     try:
         return Layout(*MarkdownPage(slug))
     except TypeError:
