@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-01-01T19:25:30.957718+00:00</updated>
+  <updated>2025-01-14T14:52:31.984181+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,22 +13,21 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/2024-12-fastcore-bunch-classes</id>
-    <title>Exploring fastcore bunch classes</title>
-    <updated>2025-01-01T19:25:30.957905+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect</id>
+    <title>TIL: Using inspect and timeit together</title>
+    <updated>2025-01-14T14:52:31.984344+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <link href="https://daniel.feldroy.com/posts/2024-12-fastcore-bunch-classes"/>
-    <summary>For the past six months or so I've been using fastcore. It provides two handy bunch-class style that I've leveraged into projects.</summary>
+    <link href="https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect"/>
+    <summary>Two modules in Python's standard library that are useful for keeping load testing code all in one module.</summary>
     <category term="python"/>
-    <category term="fastcore"/>
-    <category term="bunch"/>
+    <category term="TIL"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-01-01T19:30:00+00:00</published>
+    <published>2025-01-14T23:15:00+00:00</published>
   </entry>
 </feed>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-01-01T19:25:30.958124+00:00</updated>
+  <updated>2025-01-14T14:52:31.984557+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,21 +13,21 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2024-12-yield-from</id>
-    <title>TIL: yield from</title>
-    <updated>2025-01-01T19:25:30.958276+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect</id>
+    <title>TIL: Using inspect and timeit together</title>
+    <updated>2025-01-14T14:52:31.984701+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <link href="https://daniel.feldroy.com/posts/til-2024-12-yield-from"/>
-    <summary>A variant of the yield statement that can result in more concise code.</summary>
+    <link href="https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect"/>
+    <summary>Two modules in Python's standard library that are useful for keeping load testing code all in one module.</summary>
     <category term="python"/>
     <category term="TIL"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2024-12-27T23:15:00+00:00</published>
+    <published>2025-01-14T23:15:00+00:00</published>
   </entry>
 </feed>
