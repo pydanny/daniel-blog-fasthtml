@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-01-14T14:52:31.984557+00:00</updated>
+  <updated>2025-01-14T15:04:18.700427+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,15 +15,16 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect</id>
     <title>TIL: Using inspect and timeit together</title>
-    <updated>2025-01-14T14:52:31.984701+00:00</updated>
+    <updated>2025-01-14T15:04:18.700580+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
     <link href="https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect"/>
-    <summary>Two modules in Python's standard library that are useful for keeping load testing code all in one module.</summary>
+    <summary>Two libraries in Python's standard library that are useful for keeping load testing code all in one module.</summary>
     <category term="python"/>
     <category term="TIL"/>
+    <category term="load testing"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
