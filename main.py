@@ -617,6 +617,26 @@ def get(slug: str):
         nb
     ) 
 
+@rt
+def stories():
+    stories = Path('pages/stories/').glob('*.md')
+    links = []
+    for story in stories:
+        story = str(story)[5:-3]
+        links.append(
+            Li(A(href=story)(story))
+        )
+    return Layout(
+        Title('Stories'),
+        Socials(site_name="https://daniel.feldroy.com",
+                        title="Stories",
+                        description='Stories',
+                        url=f"https://daniel.feldroy.com/stories",
+                        image=default_social_image,
+                        ), 
+        *Ul(*links)
+    )
+
 
 @rt("/{slug}")
 def get(slug: str):
