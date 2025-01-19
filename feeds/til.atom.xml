@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-01-14T15:30:49.478747+00:00</updated>
+  <updated>2025-01-19T14:11:15.523500+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect</id>
     <title>TIL: Using inspect and timeit together</title>
-    <updated>2025-01-14T15:30:49.478894+00:00</updated>
+    <updated>2025-01-19T14:11:15.523640+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

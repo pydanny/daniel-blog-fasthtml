@@ -2,9 +2,7 @@
 date: "2021-05-23"
 tags:
   - blog
-  - nextjs
   - react
-  - vercel
   - TIL
 published: true
 title: Blog Revamp 2021

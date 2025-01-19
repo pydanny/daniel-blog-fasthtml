@@ -6,9 +6,6 @@ slug: improving-audio-recording-with-streamlabs
 tags:
   - audio
   - video
-  - twitch
-  - streamlabs
-  - youtube
 time_to_read: 1
 title: Improving Audio Recording with Streamlabs
 type: post

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-01-14T15:30:49.478350+00:00</updated>
+  <updated>2025-01-19T14:11:15.523106+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,22 +13,22 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect</id>
-    <title>TIL: Using inspect and timeit together</title>
-    <updated>2025-01-14T15:30:49.478524+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/2025-01-fastcore-l</id>
+    <title>Fastcore L</title>
+    <updated>2025-01-19T14:11:15.523286+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <link href="https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect"/>
-    <summary>Two libraries in Python's standard library that are useful for keeping load testing code all in one module.</summary>
+    <link href="https://daniel.feldroy.com/posts/2025-01-fastcore-l"/>
+    <summary>An exploration of Fastcore's enhanced list-like structure</summary>
     <category term="python"/>
-    <category term="TIL"/>
-    <category term="load testing"/>
+    <category term="fastcore"/>
+    <category term="howto"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-01-14T15:30:00+00:00</published>
+    <published>2025-01-19T14:30:00+00:00</published>
   </entry>
 </feed>
