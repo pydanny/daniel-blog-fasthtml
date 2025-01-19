@@ -9,8 +9,8 @@ co-authored with my wife, Audrey.
 
 ## [Technical](/books/tech)
 
-With Audrey, I co-write dairy-themed technical books....
+With Audrey, I co-wrote dairy-themed technical books, the most popular being the Two Scoops of Django series.
 
-## [Fiction](/books/fiction)
+## Fiction
 
-I also write fiction, also mostly with Audrey. Dairy isn't mentioned in any of them.
+Coming soon!
