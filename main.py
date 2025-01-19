@@ -158,7 +158,7 @@ def Layout(title, socials, *tags):
     Main(*tags, cls='container'),
     Footer(Hr(), P(
                 A('LinkedIn', href='https://www.linkedin.com/in/danielfeldroy/'), ' | ',    
-                A('Bluesky', href='https://bsky.app/profile/pydanny.bsky.social'), ' | ',
+                A('Bluesky', href='https://bsky.app/profile/daniel.feldroy.com'), ' | ',
                 A('Twitter', href='https://twitter.com/pydanny'), ' | ',             
                 'Feeds: ', A('All', href='/feeds/atom.xml'), NotStr(', ') ,A('Python', href='/feeds/python.atom.xml'), NotStr(', ') , A('TIL', href='/feeds/til.atom.xml')
             ),
