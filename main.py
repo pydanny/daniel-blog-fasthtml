@@ -130,6 +130,7 @@ def convert_dtstr_to_dt(date_str: str) -> datetime:
     
 def format_datetime(dt: datetime) -> str:
     """Format the datetime object"""
+    if dt is None: return ''
     formatted_date = dt.strftime("%B %d, %Y")
     formatted_time = dt.strftime("%I:%M%p").lstrip('0').lower()
     return f"{formatted_date} at {formatted_time}"
@@ -225,6 +226,7 @@ def MarkdownPage(slug: str):
         return Page404()
     content = ''.join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
+    date = metadata.get('date', '')
     return (Title(metadata.get('title', slug)),
         Socials(site_name="https://daniel.feldroy.com",
                         title=metadata.get('title', slug),
@@ -232,8 +234,9 @@ def MarkdownPage(slug: str):
                         url=f"https://daniel.feldroy.com/{slug}",
                         image=metadata.get("image", default_social_image),
                         ),                
-        A("← Back to home", href="/"),
         Section(
+            H1(metadata.get('title', '')),
+            P(metadata.get('author', ''), Br(), Small(Time(format_datetime(convert_dtstr_to_dt(date))))),
             Div(content,cls="marked")
         )
     )
