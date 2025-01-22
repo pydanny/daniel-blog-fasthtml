@@ -4,7 +4,6 @@ description: ""
 published: true
 slug: 2007-05-dark-side-begins-its-seduction
 tags:
-  - silverlight
   - python
   - microsoft
   - legacy-blogger

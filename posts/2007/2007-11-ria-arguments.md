@@ -4,7 +4,6 @@ description: ""
 published: true
 slug: 2007-11-ria-arguments
 tags:
-  - silverlight
   - legacy-blogger
 time_to_read: 5
 title: RIA arguments
