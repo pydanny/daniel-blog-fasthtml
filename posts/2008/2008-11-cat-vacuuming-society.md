@@ -1,7 +1,7 @@
 ---
 date: '2008-11-07T06:09:00.000-08:00'
 description: ''
-published: true
+published: false
 slug: 2008-11-cat-vacuuming-society
 tags:
 - ex
