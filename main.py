@@ -38,18 +38,20 @@ class ContentNotFound(Exception): pass
 
 def render_code_output(cell,lang='python', render_md=render_md):
     res = []
+    def _join_strip_list(lst): return ''.join(strip_list(lst))
     if len(cell['outputs'])==0: ''
     for output in cell['outputs']:
-        print(output['output_type'])
-        if output['output_type'] == 'execute_result':
+        if output['output_type'] in ('execute_result', 'display_data'):
             data = output['data']
-            if 'text/markdown' in data.keys(): 
-                res.append(NotStr(''.join(strip_list(data['text/markdown'][1:-1]))))
+            if 'text/html' in data.keys(): 
+                res.append(NotStr(_join_strip_list(data['text/html'])))
+            elif 'text/markdown' in data.keys(): 
+                res.append(NotStr(render_md(_join_strip_list(data['text/markdown'][1:-1]))))
             elif 'text/plain' in data.keys(): 
-                res.append(''.join(strip_list(data['text/plain'])))
+                res.append(_join_strip_list(data['text/plain']))
         if output['output_type'] == 'stream':
-            res.append(''.join(strip_list(output['text'])))
-    if res: return render_md(*res, container=Pre)
+            res.append(_join_strip_list(output['text']))
+    if res: return Div(*res, container=Pre)
 
 # The following functions are three content loading. They are cached in
 # memory to boost the speed of the site. In production at a minumum the
