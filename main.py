@@ -271,7 +271,7 @@ app, rt = fast_app(hdrs=hdrs, debug=False, exception_handlers=exception_handlers
 @rt
 def index():
     all_posts = list_posts()
-    posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if 'TIL' not in x.get('tags')]
+    most_posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if 'TIL' not in x.get('tags')]
     popular = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if x.get("popular", False)]    
     tils = [TILPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description='') for x in all_posts if 'TIL' in x.get('tags')]    
     return Layout(
@@ -285,7 +285,7 @@ def index():
         Div(cls='grid')(
             Section(
                     H1('Recent Writings'),
-                    *posts[:4],
+                    *most_posts[:4],
                     P(A('Read all articles', href=posts))
                 ),          
             Section(
