@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-02-07T00:50:12.008925+00:00</updated>
+  <updated>2025-02-14T09:50:04.089296+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-02-typer-commands-defaulting-to-help</id>
     <title>TIL: Typer commands defaulting to help</title>
-    <updated>2025-02-07T00:50:12.009116+00:00</updated>
+    <updated>2025-02-14T09:50:04.089432+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

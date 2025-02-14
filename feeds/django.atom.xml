@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Django posts by Daniel Roy Greenfeld</title>
-  <updated>2025-02-07T00:50:11.976129+00:00</updated>
+  <updated>2025-02-14T09:50:04.087384+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2</id>
     <title>London Tech Zero Hackathon on July 1 and 2!</title>
-    <updated>2025-02-07T00:50:11.976403+00:00</updated>
+    <updated>2025-02-14T09:50:04.087619+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
