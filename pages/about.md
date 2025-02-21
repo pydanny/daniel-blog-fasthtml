@@ -10,7 +10,7 @@ I am a [coder](https://github.com/pydanny), [author](/books), and speaker.
 
 I'm probably best known as "[pydanny](https://www.google.com/search?q=pydanny)", one of the authors of [Two Scoops of Django](/books/tech). 
 
-I live in London, love to hang out with my [wife](https://audrey.feldroy.com/), play with my [daughter](/tags/uma), do [Brazilian Jiu-Jitsu](https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu), write [books](/books), and read books. I track my fitness [here](/fitness) and my writing [here](/writing-stats).
+I live in London, love to hang out with my [wife](https://audrey.feldroy.com/), play with my [daughter](/tags/uma), do [Brazilian Jiu-Jitsu](https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu), write [books](/books), and read books. I track my fitness [here](/fitness) and my writing [here](/writing-stats{}).
 
 Professionally, I do research and development at [Answer.AI](https://www.answer.ai/). We strive to democratize AI away from large corporate entities, empowering people to use smaller, more energy efficient models.
 
