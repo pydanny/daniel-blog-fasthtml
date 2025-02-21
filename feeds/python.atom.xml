@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-02-14T09:50:04.088908+00:00</updated>
+  <updated>2025-02-21T17:23:26.167010+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,22 +13,21 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/2025-02-deck-of-cards</id>
-    <title>Building a playing card deck</title>
-    <updated>2025-02-14T09:50:04.089079+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function</id>
+    <title>TIL: Undecorating a functools.wrapped decorated function</title>
+    <updated>2025-02-21T17:23:26.167177+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <link href="https://daniel.feldroy.com/posts/2025-02-deck-of-cards"/>
-    <summary>Today is Valentine's Day. That makes it the perfect day to write a blog post about showing how to not just build a deck of cards, but show off cards from the heart suite.</summary>
+    <link href="https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function"/>
+    <summary>Another reason to use functools.wraps!</summary>
+    <category term="TIL"/>
     <category term="python"/>
-    <category term="fastcore"/>
-    <category term="howto"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-02-14T10:00:00+00:00</published>
+    <published>2025-02-21T18:00:00+00:00</published>
   </entry>
 </feed>
