@@ -13,8 +13,8 @@ title: Places I have lived
 - Canoga Park, CA, USA
 - Columbia, MD, USA
 - Corona, CA, USA
-- Falls Church, VA, USA
 - Fairfax, VA, USA
+- Falls Church, VA, USA
 - Florence, Italy
 - Joshua Tree, CA, USA
 - Kraków, Poland
