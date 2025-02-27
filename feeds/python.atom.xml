@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-02-21T17:24:54.935428+00:00</updated>
+  <updated>2025-02-27T08:25:43.357964+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function</id>
     <title>TIL: Undecorating a functools.wraps decorated function</title>
-    <updated>2025-02-21T17:24:54.935614+00:00</updated>
+    <updated>2025-02-27T08:25:43.358148+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

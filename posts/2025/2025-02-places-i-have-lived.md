@@ -10,12 +10,12 @@ title: Places I have lived
 ---
 
 - Arlington, VA, USA
-- Falls Church, VA, USA
-- Fairfax, VA, USA
-- Florence, Italy
 - Canoga Park, CA, USA
 - Columbia, MD, USA
 - Corona, CA, USA
+- Falls Church, VA, USA
+- Fairfax, VA, USA
+- Florence, Italy
 - Joshua Tree, CA, USA
 - Kraków, Poland
 - Laurel, MD, USA

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-02-21T17:24:54.592926+00:00</updated>
+  <updated>2025-02-27T08:25:42.968275+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,21 +13,46 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function</id>
-    <title>TIL: Undecorating a functools.wraps decorated function</title>
-    <updated>2025-02-21T17:24:54.920143+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/2025-02-places-i-have-lived</id>
+    <title>Places I have lived</title>
+    <updated>2025-02-27T08:25:43.317041+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <link href="https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function"/>
-    <summary>Another reason to use functools.wraps!</summary>
-    <category term="TIL"/>
-    <category term="python"/>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Arlington, VA, USA&lt;/li&gt;
+&lt;li&gt;Canoga Park, CA, USA&lt;/li&gt;
+&lt;li&gt;Columbia, MD, USA&lt;/li&gt;
+&lt;li&gt;Corona, CA, USA&lt;/li&gt;
+&lt;li&gt;Falls Church, VA, USA&lt;/li&gt;
+&lt;li&gt;Fairfax, VA, USA&lt;/li&gt;
+&lt;li&gt;Florence, Italy&lt;/li&gt;
+&lt;li&gt;Joshua Tree, CA, USA&lt;/li&gt;
+&lt;li&gt;Kraków, Poland&lt;/li&gt;
+&lt;li&gt;Laurel, MD, USA&lt;/li&gt;
+&lt;li&gt;Lawrence, KS, USA&lt;/li&gt;
+&lt;li&gt;London, UK&lt;/li&gt;
+&lt;li&gt;Los Angeles, CA, USA&lt;/li&gt;
+&lt;li&gt;New Bruinswick, NJ, USA&lt;/li&gt;
+&lt;li&gt;Medellin, Colombia&lt;/li&gt;
+&lt;li&gt;San Francisco, CA, USA&lt;/li&gt;
+&lt;li&gt;Silver Spring, MD, USA&lt;/li&gt;
+&lt;li&gt;Split, Croatia&lt;/li&gt;
+&lt;li&gt;Topanga, CA, USA&lt;/li&gt;
+&lt;li&gt;Townson, MD, USA&lt;/li&gt;
+&lt;li&gt;Washington, DC, USA&lt;/li&gt;
+&lt;li&gt;Zagreb, Croatia&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2025-02-places-i-have-lived"/>
+    <summary>In alphabetical order, a list of the cities in which I have dwelled in for over a month.</summary>
+    <category term="travel"/>
+    <category term="family"/>
+    <category term="friends"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-02-21T18:00:00+00:00</published>
+    <published>2025-02-27T08:45:21.669064+00:00</published>
   </entry>
 </feed>
