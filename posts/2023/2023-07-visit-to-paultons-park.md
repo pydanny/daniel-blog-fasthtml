@@ -7,6 +7,7 @@ tags:
   - england
   - family
   - review
+  - travel
 time_to_read: 3
 title: Review of Paultons Park
 description: A quick review of Paultons Park Amusement World near Southhamption from the vantage point of a parent of a four year old child.
