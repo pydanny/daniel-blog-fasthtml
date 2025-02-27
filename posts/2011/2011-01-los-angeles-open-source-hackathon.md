@@ -9,6 +9,7 @@ tags:
 - pinax
 - cartwheel
 - legacy-blogger
+- Los Angeles
 time_to_read: 5
 title: Los Angeles Open Source Hackathon
 ---

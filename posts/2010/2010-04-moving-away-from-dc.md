@@ -11,6 +11,7 @@ tags:
 - family
 - python
 - legacy-blogger
+- Los Angeles
 time_to_read: 5
 title: Moving away from DC
 ---

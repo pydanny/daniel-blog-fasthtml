@@ -10,6 +10,7 @@ tags:
 - classes
 - training
 - legacy-blogger
+- Los Angeles
 time_to_read: 5
 title: We won first place at Startup Camp LA!
 ---

@@ -7,6 +7,7 @@ tags:
 - friends
 - capoeira
 - legacy-blogger
+- Los Angeles
 time_to_read: 5
 title: Why I like Capoeira
 ---
