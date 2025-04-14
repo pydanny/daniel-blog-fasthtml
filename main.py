@@ -661,4 +661,5 @@ def get(slug_1: str, slug_2: str):
     except TypeError:
         return Page404()
 
-serve(reload_includes="*.md,*.ipynb,*.css")
+if __name__ == '__main__':
+    serve(reload_includes="*.md,*.ipynb,*.css")

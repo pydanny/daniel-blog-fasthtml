@@ -5,3 +5,4 @@ feedgen
 markdown
 rich
 nb2fasthtml @ git+https://github.com/answerdotai/nb2fasthtml
+sentence-transformers
