@@ -3,7 +3,7 @@ from datetime import datetime
 from dateutil import parser
 from importlib.metadata import distributions
 from os import getenv
-from sentence_transformers import CrossEncoder
+# from sentence_transformers import CrossEncoder
 
 import pytz
 import yaml
@@ -14,7 +14,7 @@ from nb2fasthtml.core import (
 )
 
 # Get the search model
-search_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
+# search_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
 
 default_social_image = '/public/images/profile.jpg'
 
