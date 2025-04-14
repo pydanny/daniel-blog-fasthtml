@@ -3,6 +3,7 @@ from datetime import datetime
 from dateutil import parser
 from importlib.metadata import distributions
 from os import getenv
+from sentence_transformers import CrossEncoder
 
 import pytz
 import yaml
@@ -11,6 +12,9 @@ from nb2fasthtml.core import (
     render_nb, read_nb, get_frontmatter_raw,render_md,
     strip_list
 )
+
+# Get the search model
+search_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
 
 default_social_image = '/public/images/profile.jpg'
 
@@ -388,7 +392,7 @@ def get(slug: str):
         )
     )    
 
-
+@functools.cache
 def _search(q: str=''):
     def _s(obj: dict, name: str, q: str):
         content =  obj.get(name, "")
@@ -396,11 +400,20 @@ def _search(q: str=''):
             content = " ".join(content)
         return q.lower().strip() in content.lower().strip()    
     messages = []
+    articles = []
     posts = []
     description = f"No results found for '{q}'"
     if q.strip():
-        posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if
-                    any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
+        posts = list_posts()
+        # Search engine is list comprehension of a list of dicts
+        ranks = search_model.rank(q, L(posts).map(json.dumps), return_documents=True)
+        ranks = ranks[:10]
+        articles = L(ranks).attrgot('text').map(json.loads)
+        # old engine
+        # articles = [x for x in posts if any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
+    if articles:
+        # Build the posts for display
+        posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in articles]
     if posts:
         messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
         description = f"Search results on '{q}'"
@@ -414,8 +427,8 @@ def _search(q: str=''):
         *posts
     )
 
-@rt("/search")
-def get(q: str|None = None):
+@rt
+def search(q: str|None = None):
     result = []
     if q is not None:
         result.append(_search(q))
