@@ -1,5 +1,5 @@
 ---
-title: BJJ Schedule Makati
+title: BJJ Schedule
 ---
 
 - Sunday: None
