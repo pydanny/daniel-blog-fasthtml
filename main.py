@@ -406,11 +406,11 @@ def _search(q: str=''):
     if q.strip():
         posts = list_posts()
         # Search engine is list comprehension of a list of dicts
-        ranks = search_model.rank(q, L(posts).map(json.dumps), return_documents=True)
-        ranks = ranks[:10]
-        articles = L(ranks).attrgot('text').map(json.loads)
+        # ranks = search_model.rank(q, L(posts).map(json.dumps), return_documents=True)
+        # ranks = ranks[:10]
+        # articles = L(ranks).attrgot('text').map(json.loads)
         # old engine
-        # articles = [x for x in posts if any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
+        articles = [x for x in posts if any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
     if articles:
         # Build the posts for display
         posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in articles]
