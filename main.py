@@ -3,7 +3,7 @@ from datetime import datetime
 from dateutil import parser
 from importlib.metadata import distributions
 from os import getenv
-# from sentence_transformers import CrossEncoder
+from sentence_transformers import CrossEncoder, SentenceTransformer
 
 import pytz
 import yaml
@@ -14,7 +14,8 @@ from nb2fasthtml.core import (
 )
 
 # Get the search model
-# search_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
+search_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
+bienc_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 default_social_image = '/public/images/profile.jpg'
 
@@ -392,30 +393,36 @@ def get(slug: str):
         )
     )    
 
+
+
 @functools.cache
 def _search(q: str=''):
     def _s(obj: dict, name: str, q: str):
         content =  obj.get(name, "")
         if isinstance(content, list):
             content = " ".join(content)
-        return q.lower().strip() in content.lower().strip()    
+        return q.lower().strip() in str(content).lower().strip()    
     messages = []
     articles = []
-    posts = []
+    results = []
+    posts = list_posts()
     description = f"No results found for '{q}'"
     if q.strip():
-        posts = list_posts()
         # Search engine is list comprehension of a list of dicts
-        # ranks = search_model.rank(q, L(posts).map(json.dumps), return_documents=True)
-        # ranks = ranks[:10]
-        # articles = L(ranks).attrgot('text').map(json.loads)
-        # old engine
-        articles = [x for x in posts if any(_s(x, name, q) for name in ["title", "description", "content", "tags"])]
+        # Use Python string matching to grab most recent 20 entries
+        articles = [x for x in posts if any(_s(x, name, q) for name in ["title", "description", "content", "tags"])][:20]
+        q_emb = bienc_model.encode(q)
+        content_embeds = bienc_model.encode(posts)
+        
     if articles:
+        # Do a search ranking on the 20 articles using cross encoding
+        ranks = search_model.rank(q, L(articles).map(json.dumps), return_documents=True)
+        # Prep for display
+        articles = L(ranks).attrgot('text').map(json.loads)
         # Build the posts for display
-        posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in articles]
-    if posts:
-        messages = [H2(f"Search results on '{q}'"), P(f"Found {len(posts)} entries")]
+        results = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in articles]
+    if results:
+        messages = [H2(f"Search results on '{q}'"), P(f"Found {len(results)} entries")]
         description = f"Search results on '{q}'"
     elif q.strip():
         messages = [P(f"No results found for '{q}'")]
@@ -424,7 +431,7 @@ def _search(q: str=''):
         Meta(property='og:description', content=description),        
         Meta(name='twitter:description', content=description),
         *messages,
-        *posts
+        *results
     )
 
 @rt
