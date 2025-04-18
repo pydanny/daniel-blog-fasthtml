@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-03-21T12:02:53.547097+00:00</updated>
+  <updated>2025-04-18T02:17:01.103283+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-03-using-pyinstrument-to-profile-fasthtml-apps</id>
     <title>Using pyinstrument to profile FastHTML apps</title>
-    <updated>2025-03-21T12:02:53.547265+00:00</updated>
+    <updated>2025-04-18T02:17:01.103967+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -62,5 +62,28 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-03-21T19:45:39.845420+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library</id>
+    <title>TIL: webbrowser library</title>
+    <updated>2025-04-18T02:17:01.103466+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Python comes with &lt;a href="https://docs.python.org/3/library/webbrowser.html"&gt;webbrowser&lt;/a&gt;, a library for opening webbrowsers to specific pages such as this one. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;webbrowser&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://daniel.feldroy.com/&amp;#39;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;webbrowser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library"/>
+    <summary>Python's built-in library for controlling browsers from Python</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-04-15T12:30:43.170061+00:00</published>
   </entry>
 </feed>

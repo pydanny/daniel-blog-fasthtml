@@ -59,7 +59,7 @@ def add_entry(fg, raw):
     linker = f'https://daniel.feldroy.com/posts/{raw["slug"]}'
     fe.id(linker)
     fe.link(href=linker)
-    fe.title(metadata['title'])
+    fe.title(str(metadata['title']))
     fe.summary(metadata.get('description'))
     try:
         fe.content(github_markdown_to_html(content),type='html')
@@ -90,10 +90,11 @@ def build_feed(content_tag: str | None = None):
     if content_tag is None:
         fg.title('Inside the head of Daniel Roy Greenfeld')
     else:
+        content_tag = str(content_tag)
         fg.title(f'{content_tag.capitalize()} posts by Daniel Roy Greenfeld')
         posts = list(filter_posts_by_tag(posts, content_tag))
 
-    for raw in posts[:1]:
+    for raw in posts[:2]:
         add_entry(fg, raw)
 
 

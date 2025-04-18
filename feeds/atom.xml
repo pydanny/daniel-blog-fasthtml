@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-03-21T12:02:53.110780+00:00</updated>
+  <updated>2025-04-18T02:17:00.700803+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,54 +13,48 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/2025-03-using-pyinstrument-to-profile-fasthtml-apps</id>
-    <title>Using pyinstrument to profile FastHTML apps</title>
-    <updated>2025-03-21T12:02:53.481006+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/700</id>
+    <title>700</title>
+    <updated>2025-04-18T02:17:01.093992+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;FastHTML is built on Starlette, so we use Starlette's middleware tooling and then pass in the result. Just make sure you install pyinstrument. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;WARNING: NOT FOR PRODUCTION ENVIRONMENTS&lt;/strong&gt; Including a profiler like this in a production environment is dangerous. As it exposes infrastructure it is highly risky to include in any location where end users can access it.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;WARNING: NOT FOR PRODUCTION ENVIRONMENTS&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;fasthtml.common&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;starlette.middleware.base&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BaseHTTPMiddleware&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;starlette.middleware&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Middleware&lt;/span&gt;
-&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;pyinstrument&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Profiler&lt;/span&gt;
-&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Please install pyinstrument&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;ProfileMiddleware&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseHTTPMiddleware&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;call_next&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;profiling&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;query_params&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;profile&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;profiling&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;profiler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Profiler&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-            &lt;span class="n"&gt;profiler&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-            &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;call_next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;            
-            &lt;span class="n"&gt;profiler&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;        
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;HTMLResponse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;profiler&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output_html&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;call_next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fast_app&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;middleware&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Middleware&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ProfileMiddleware&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-
-&lt;span class="nd"&gt;@rt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;get&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Titled&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;FastHTML&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-
-&lt;span class="n"&gt;serve&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To invoke, make any request to your application with the GET parameter
-&lt;code&gt;profile=1&lt;/code&gt; and it will print the HTML result from pyinstrument.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-03-using-pyinstrument-to-profile-fasthtml-apps"/>
-    <summary>Quick instructions for a drop-in FastHTML middleware for identifying performance bottlenecks in FastHTML apps</summary>
-    <category term="python"/>
-    <category term="fasthtml"/>
+    <content type="html">&lt;p&gt;This is the seven hundredth sequential article on this site.&lt;/p&gt;
+&lt;p&gt;What do you write when you hit &lt;a href="/posts"&gt;700 posts/articles&lt;/a&gt; over 20 years? Do you recap all the big events around your &lt;a href="/tags/audrey"&gt;wife&lt;/a&gt; and &lt;a href="/tags/uma"&gt;daughter&lt;/a&gt;? Cover the &lt;a href="/writing-stats"&gt;writing stats&lt;/a&gt;? Go over the various engines used to write over the years?&lt;/p&gt;
+&lt;p&gt;Or do you avoid the navel gazing and keep it short because this is the umpteenth time you've tried to write this out and it is blocking you from writing about other things?&lt;/p&gt;
+&lt;p&gt;I think I'll go with short. &lt;/p&gt;
+&lt;p&gt;Here's to hundreds of more posts in the days/weeks/months/years/decades/centures to come.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/700"/>
+    <summary>Thoughts at article 700 on writing hundreds of articles over the years.</summary>
+    <category term="blog"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-03-21T19:45:39.845420+00:00</published>
+    <published>2025-04-14T21:58:00.362268+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library</id>
+    <title>TIL: webbrowser library</title>
+    <updated>2025-04-18T02:17:01.064479+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Python comes with &lt;a href="https://docs.python.org/3/library/webbrowser.html"&gt;webbrowser&lt;/a&gt;, a library for opening webbrowsers to specific pages such as this one. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;webbrowser&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://daniel.feldroy.com/&amp;#39;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;webbrowser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library"/>
+    <summary>Python's built-in library for controlling browsers from Python</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-04-15T12:30:43.170061+00:00</published>
   </entry>
 </feed>

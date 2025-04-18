@@ -398,7 +398,7 @@ def _search(q: str=''):
         content =  obj.get(name, "")
         if isinstance(content, list):
             content = " ".join(content)
-        return q.lower().strip() in content.lower().strip()    
+        return q.lower().strip() in str(content).lower().strip()    
     messages = []
     articles = []
     posts = []
