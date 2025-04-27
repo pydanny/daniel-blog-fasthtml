@@ -18,13 +18,13 @@
   width: 100%;
   height: 100%;
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.75);
+  
 }
 .modal-content {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
   max-width: 600px;
 }
 #search-input {
@@ -32,52 +32,3 @@
   padding: 10px;
   margin-bottom: 10px;
 }
-/* @media (prefers-color-scheme: dark) {
-  .modal {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-  .modal-content {
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-  }
-  #search-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-} */
-/* 
-@media (prefers-color-scheme: light) {
-  .modal {
-    position: fixed;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background-color: #b1b0b0;
-  }
-  .modal-content {
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-  }
-  #search-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-} */

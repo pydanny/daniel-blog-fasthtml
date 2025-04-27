@@ -172,8 +172,8 @@ def Layout(title, socials, *tags):
             P(f'All rights reserved {datetime.now().year}, Daniel Roy Greenfeld'),
             cls='container'
         ),
-    Div(
-        Div(
+    Dialog(
+        Header(
             H2('Search'),            
             Input(name='q', type='text', id='search-input', hx_trigger="keyup", placeholder='Enter your search query...', hx_get='/search-results', hx_target='.search-results-modal'),
             Div(cls='search-results-modal'),
@@ -185,7 +185,6 @@ def Layout(title, socials, *tags):
     ),
     Div(hx_trigger="keyup[key=='/'] from:body"),
     Script("""
-    //document.documentElement.setAttribute('data-theme', 'light');
     document.body.addEventListener('keydown', e => {
     if (e.key === '/') {
         e.preventDefault();
