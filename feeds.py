@@ -94,7 +94,7 @@ def build_feed(content_tag: str | None = None):
         fg.title(f'{content_tag.capitalize()} posts by Daniel Roy Greenfeld')
         posts = list(filter_posts_by_tag(posts, content_tag))
 
-    for raw in posts[:2]:
+    for raw in posts[:1]:
         add_entry(fg, raw)
 
 

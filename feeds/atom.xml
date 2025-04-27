@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-04-18T02:17:00.700803+00:00</updated>
+  <updated>2025-04-27T09:23:39.580529+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,48 +13,21 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/700</id>
-    <title>700</title>
-    <updated>2025-04-18T02:17:01.093992+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/til-2025-04-Pipe-operator-for-merging-dictionaries</id>
+    <title>TIL: Pipe operator for merging dictionaries</title>
+    <updated>2025-04-27T09:23:39.896610+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;This is the seven hundredth sequential article on this site.&lt;/p&gt;
-&lt;p&gt;What do you write when you hit &lt;a href="/posts"&gt;700 posts/articles&lt;/a&gt; over 20 years? Do you recap all the big events around your &lt;a href="/tags/audrey"&gt;wife&lt;/a&gt; and &lt;a href="/tags/uma"&gt;daughter&lt;/a&gt;? Cover the &lt;a href="/writing-stats"&gt;writing stats&lt;/a&gt;? Go over the various engines used to write over the years?&lt;/p&gt;
-&lt;p&gt;Or do you avoid the navel gazing and keep it short because this is the umpteenth time you've tried to write this out and it is blocking you from writing about other things?&lt;/p&gt;
-&lt;p&gt;I think I'll go with short. &lt;/p&gt;
-&lt;p&gt;Here's to hundreds of more posts in the days/weeks/months/years/decades/centures to come.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/700"/>
-    <summary>Thoughts at article 700 on writing hundreds of articles over the years.</summary>
-    <category term="blog"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-04-14T21:58:00.362268+00:00</published>
-  </entry>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library</id>
-    <title>TIL: webbrowser library</title>
-    <updated>2025-04-18T02:17:01.064479+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Python comes with &lt;a href="https://docs.python.org/3/library/webbrowser.html"&gt;webbrowser&lt;/a&gt;, a library for opening webbrowsers to specific pages such as this one. &lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;webbrowser&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://daniel.feldroy.com/&amp;#39;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;webbrowser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library"/>
-    <summary>Python's built-in library for controlling browsers from Python</summary>
+    <link href="https://daniel.feldroy.com/posts/til-2025-04-Pipe-operator-for-merging-dictionaries"/>
+    <summary>In Python 3.9 and later, the pipe operator | can be used to merge dictionaries.</summary>
     <category term="TIL"/>
     <category term="python"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-04-15T12:30:43.170061+00:00</published>
+    <published>2025-04-27T17:05:35.433062+00:00</published>
   </entry>
 </feed>
