@@ -39,7 +39,7 @@ I've improved my family relationships. Even when we're clashing I can tell them 
 
 I lost many of my old friends and made new ones. Losing friends hurt, especially when I know I'm at least partially responsible. I can be a jerk at times and there were years of lingering bitterness from the days before May 5th, 2009. I've been reaching out to old friends, but it's not easy. On the other hand, I have wonderful new friends.
 
-Professionally my career has gone well. I've freelanced, worked for startups, and some big firms. My current job at [Octopus Energy](https://octopusenergy.com) is exactly where I want to be.
+Professionally my career has gone well. I've freelanced, worked for startups, and some big firms. I wrote books together with Audrey, one of them became a bestseller. I've had the chance to work with some of the best people in the world. I've been able to travel to many countries and meet amazing people. I've been able to give back to family, friends, and the technical community that helped me so much.
 
 # Lessons Learned
 
