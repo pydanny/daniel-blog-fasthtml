@@ -534,7 +534,7 @@ def fitness():
             ),            
             H2(f'Fitness Tracking'),
             Ol(
-                Li('Weight kg is how much I weight in kilograms.'),
+                Li('Weight kg is how much I weigh in kilograms.'),
                 Li('BJJ is how many minutes of Brazilian Jiu-Jitsu in a day.'),
                 Li('Strength is how many minutes of strength training in a day, most often weights or HIIT, somes alternative exercise like Yoga or Pilates.'),
             ),
