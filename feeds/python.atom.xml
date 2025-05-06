@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-04-27T09:23:39.939734+00:00</updated>
+  <updated>2025-05-06T07:53:36.895443+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-04-Pipe-operator-for-merging-dictionaries</id>
     <title>TIL: Pipe operator for merging dictionaries</title>
-    <updated>2025-04-27T09:23:39.939888+00:00</updated>
+    <updated>2025-05-06T07:53:36.895605+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -28,6 +28,6 @@
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-04-27T17:05:35.433062+00:00</published>
+    <published>2025-04-27T19:05:35.433062+00:00</published>
   </entry>
 </feed>

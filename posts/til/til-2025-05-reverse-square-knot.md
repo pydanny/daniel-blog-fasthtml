@@ -1,6 +1,6 @@
 ---
 date: '2025-05-06T15:50:48.417058'
-description: A "reverse square knot," also known as a right square knot or reverse reef knot, is essentially a square knot tied in the opposite order. Instead of the first working cord going over the other cords, it goes under them first.
+description: Useful for martial arts with belts, a "reverse square knot," also known as a right square knot or reverse reef knot, is essentially a square knot tied in the opposite order. Instead of the first working cord going over the other cords, it goes under them first.
 image: /public/logos/til-1.png
 published: true
 tags:
