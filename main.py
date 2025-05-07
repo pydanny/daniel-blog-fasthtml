@@ -461,6 +461,12 @@ def get(q: str):
     return _search(q)
 
 
+def convert_minutes(total_minutes):
+  hours = total_minutes // 60
+  remaining_minutes = total_minutes % 60
+  return hours, remaining_minutes
+
+
 @rt
 def fitness():
     with open('public/fitness-2024.csv') as f:
@@ -474,6 +480,7 @@ def fitness():
 
     charts = []
     for month, rows in dates.items():
+        month_str = datetime.strptime(month, '%Y-%m').strftime("%B %Y")
         fitness = [{
             'type': 'bar',
             'x': [o['Date'] for o in rows],
@@ -507,14 +514,25 @@ def fitness():
         ]
         layout = {
             'title': {
-                'text': datetime.strptime(month, '%Y-%m').strftime("%B %Y")
+                'text': month_str
             },
             'font': {'size': 18},
             'barcornerradius': 15,
         }
+
         layout = json.dumps(layout)        
         chart_name = f'weightChart-{month}'
-        charts.insert(0, Div(id=chart_name))        
+        charts.insert(0, Div(id=chart_name))
+        bjj_hours, bjj_minutes = convert_minutes(sum([int(o['BJJ']) for o in rows]))
+        other_hours, other_minutes = convert_minutes(sum([int(o['Other']) for o in rows]))
+        charts.insert(1, Div(
+            H3(f'{month_str} Summary'),
+            P(
+    
+                Strong('Weight: '), f"{rows[-1]['Weight']} kg", Br(),
+                Strong('Total BJJ:'), f' {bjj_hours} hours, {bjj_minutes} minutes', Br(),
+                Strong('Total Other:'), f' {other_hours} hours, {other_minutes} minutes')
+        ))
         charts.insert(1, Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});"))
         current_weight = rows[-1]['Weight']
 
