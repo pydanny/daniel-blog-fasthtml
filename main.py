@@ -509,7 +509,7 @@ def fitness():
                 'textposition': 'auto',
                 'hoverinfo': 'none',        
                 'marker': {'color': 'red',},
-                'name': 'Strength'
+                'name': 'Other'
         }   
         ]
         layout = {
@@ -554,7 +554,7 @@ def fitness():
             Ol(
                 Li('Weight kg is how much I weigh in kilograms.'),
                 Li('BJJ is how many minutes of Brazilian Jiu-Jitsu in a day.'),
-                Li('Strength is how many minutes of strength training in a day, most often weights or HIIT, somes alternative exercise like Yoga or Pilates.'),
+                Li('Other is how many minutes of other training done in a day, most often weights, ATG, walking at speed, sometimes alternative exercise like Yoga or Pilates.'),
             ),
             *charts,
             A("← Back home", href="/"),
