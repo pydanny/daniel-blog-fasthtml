@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-05-07T03:21:45.974226+00:00</updated>
+  <updated>2025-05-09T07:54:59.342789+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-05-bitwise-xor</id>
     <title>TIL: ^ bitwise XOR</title>
-    <updated>2025-05-07T03:21:45.974364+00:00</updated>
+    <updated>2025-05-09T07:54:59.342949+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
