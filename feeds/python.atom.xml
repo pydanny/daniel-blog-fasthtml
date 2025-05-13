@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-05-09T07:54:59.342204+00:00</updated>
+  <updated>2025-05-13T13:35:10.565398+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-05-flexicache</id>
     <title>Exploring flexicache</title>
-    <updated>2025-05-09T07:54:59.342383+00:00</updated>
+    <updated>2025-05-13T13:35:10.565586+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
