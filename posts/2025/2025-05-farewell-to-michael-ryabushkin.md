@@ -7,8 +7,8 @@ tags:
 - obituary
 - friends
 title: Farewell to Michael Ryabushkin
-image: /public/images/goodwill-social.jpg
-twitter_image: /public/images/goodwill-social.jpg
+image: /public/images/goodwill.jpg
+twitter_image: /public/images/goodwill.jpg
 ---
 
 Michael Ryabushkin and I met around 2011-2012 through Python community work. I don't remember how we met, instead I remember his presence suddenly there, helping and aiding others.
@@ -23,6 +23,6 @@ In early 2020 Audrey and I got last minute approval to use a large conference sp
 
 Between the pandemic and us moving from the Los Angeles area I didn't get the chance to see Michael again. I'll miss our rants, our silly Tai Chi dance, and his sudden appearances. 
 
-![Michael Ryabushkin](/public/images/goodwill-social.jpg)
+[![Michael Ryabushkin](/public/images/goodwill-social.jpg)](/public/images/goodwill.jpg)
 
 SoCal Python has created a [memorial page in Michael's honor](https://socalpython.org/in-memoriam-michael).
