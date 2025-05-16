@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-05-13T13:35:10.566147+00:00</updated>
+  <updated>2025-05-16T03:33:07.292433+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-05-exception-add_note</id>
     <title>TIL: Exception.add_note</title>
-    <updated>2025-05-13T13:35:10.566304+00:00</updated>
+    <updated>2025-05-16T03:33:07.292585+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -51,6 +51,7 @@ All notes must be strings
     <link href="https://daniel.feldroy.com/posts/til-2025-05-exception-add_note"/>
     <summary>Adding extra info to exceptions the easy way.</summary>
     <category term="TIL"/>
+    <category term="python"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
