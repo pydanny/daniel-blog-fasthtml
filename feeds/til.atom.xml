@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-05-16T06:08:50.516207+00:00</updated>
+  <updated>2025-05-16T06:11:36.590926+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-05-exception-add_note</id>
     <title>TIL: Exception.add_note</title>
-    <updated>2025-05-16T06:08:50.516372+00:00</updated>
+    <updated>2025-05-16T06:11:36.591084+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
