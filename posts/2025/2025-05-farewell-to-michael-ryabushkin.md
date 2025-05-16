@@ -25,4 +25,4 @@ Between the pandemic and us moving from the Los Angeles area I didn’t get the 
 
 ![Michael Ryabushkin](/public/images/goodwill-social.jpg)
 
-SoCal Python has created a memorial page in Michael’s honor: https://socalpython.org/michael-ryabushkin/.
+SoCal Python has created a memorial page in Michael’s honor: https://socalpython.org/in-memoriam-michael.
