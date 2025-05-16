@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-05-16T03:35:03.403234+00:00</updated>
+  <updated>2025-05-16T06:08:50.515374+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-05-farewell-to-michael-ryabushkin</id>
     <title>Farewell to Michael Ryabushkin</title>
-    <updated>2025-05-16T03:35:03.403421+00:00</updated>
+    <updated>2025-05-16T06:08:50.515549+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -27,7 +27,7 @@
 &lt;p&gt;In early 2020 Audrey and I got last minute approval to use a large conference space to organize an event called PyBeach. Michael heard about it and as always, suddenly his presence was there. He was not just a volunteer at large, but leading the conference with us. Michael and I had our shared code rants, did our silly Tai Chi dance, and he met our baby daughter.&lt;/p&gt;
 &lt;p&gt;Between the pandemic and us moving from the Los Angeles area I didn’t get the chance to see Michael again. I’ll miss our rants, our silly Tai Chi dance, and his sudden appearances. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Michael Ryabushkin" src="/public/images/goodwill-social.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;SoCal Python has created a memorial page in Michael’s honor: https://socalpython.org/michael-ryabushkin/.&lt;/p&gt;</content>
+&lt;p&gt;SoCal Python has created a memorial page in Michael’s honor: https://socalpython.org/in-memoriam-michael.&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2025-05-farewell-to-michael-ryabushkin"/>
     <summary>In early May of 2025 Michael Ryabushkin (aka Goodwill) passed away. He was a great friend and an even better person. I will miss him dearly.</summary>
     <category term="python"/>
