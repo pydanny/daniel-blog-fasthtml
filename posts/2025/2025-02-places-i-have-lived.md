@@ -22,6 +22,7 @@ title: Places I have lived
 - Lawrence, KS, USA
 - London, UK
 - Los Angeles, CA, USA
+- Makati, Metro Manila, PH
 - New Bruinswick, NJ, USA
 - Medellin, Colombia
 - San Francisco, CA, USA
