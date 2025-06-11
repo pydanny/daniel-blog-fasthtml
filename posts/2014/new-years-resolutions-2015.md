@@ -55,9 +55,9 @@ grid.
 - Participated in organizing the first Django Bar Camp.
 - Played in 2 Capoeira Rodas in Brazil.
 - Participated in the successful effort to reboot [LA
-  Django](www.meetup.com/ladjango).
+  Django](https://www.meetup.com/ladjango).
 - Ate dinner below the waterline inside [fake island in the San
-  Francisco Bay](www.forbesisland.com).
+  Francisco Bay](https://www.forbesisland.com).
 
 ## Resolutions for 2015
 
