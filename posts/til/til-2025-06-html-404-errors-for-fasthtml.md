@@ -12,6 +12,8 @@ title: 'TIL: HTML 404 errors for FastHTML'
 twitter_image: /public/logos/til-1.png
 ---
 
+I had a TIL about custom responses in FastAPI but there's enough nuance that it deserves a full blog post. In the meantime, here's a TIL about custom HTTP responses. 
+
 
 ```python
 from fastapi import FastAPI
