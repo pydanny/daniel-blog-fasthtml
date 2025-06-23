@@ -8,7 +8,7 @@ tags:
 - python
 - fastapi
 - TIL
-title: 'TIL: HTML 404 errors for FastHTML'
+title: 'TIL: HTML 404 errors for FastAPI'
 twitter_image: /public/logos/til-1.png
 ---
 
