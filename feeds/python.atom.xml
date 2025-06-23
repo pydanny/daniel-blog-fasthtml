@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-06-23T12:53:23.402285+00:00</updated>
+  <updated>2025-06-23T13:00:35.347840+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-06-html-404-errors-for-fastapi</id>
     <title>TIL: HTML 404 errors for FastAPI</title>
-    <updated>2025-06-23T12:53:23.402469+00:00</updated>
+    <updated>2025-06-23T13:00:35.348009+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
