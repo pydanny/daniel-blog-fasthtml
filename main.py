@@ -324,10 +324,13 @@ def posts():
         ))
 
 @rt("/posts/{slug}")
-def get(slug: str):
+def get(slug: str):    
     try:
         content, metadata = get_post(slug)
     except ContentNotFound:
+        redirects_url = redirects.get("posts/" + slug, None)
+        if redirects_url is not None:
+            return Redirect(loc=redirects_url)           
         return Page404()
     tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
     specials = ()
@@ -674,7 +677,7 @@ def stories():
 
 
 @rt("/{slug}")
-def get(slug: str):
+def get(slug: str):    
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
         return Redirect(loc=redirects_url)
@@ -686,6 +689,9 @@ def get(slug: str):
     
 @rt("/{slug_1}/{slug_2}")
 def get(slug_1: str, slug_2: str):
+    redirects_url = redirects.get(slug_1 + "/" + slug_2, None)
+    if redirects_url is not None:
+        return Redirect(loc=redirects_url)    
     try:
         return Layout(*MarkdownPage(slug_1 + "/" + slug_2))
     except TypeError:
