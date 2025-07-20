@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-06-23T13:00:35.347840+00:00</updated>
+  <updated>2025-07-20T05:17:21.304587+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,44 +13,40 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-06-html-404-errors-for-fastapi</id>
-    <title>TIL: HTML 404 errors for FastAPI</title>
-    <updated>2025-06-23T13:00:35.348009+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions</id>
+    <title>uv run for running tests on versions of Python</title>
+    <updated>2025-07-20T05:17:21.304757+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;I had a TIL about custom responses in FastAPI but there's enough nuance that it deserves a full blog post. In the meantime, here's a TIL about custom HTTP responses. &lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;fastapi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;fastapi.responses&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTMLResponse&lt;/span&gt;
-
-
-&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;custom_404_exception_handler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;exc&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;HTMLResponse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-        &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;lt;p&amp;gt;404 Not Found at &amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;&amp;quot;&amp;lt;/p&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;status_code&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;
-    &lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Add more HTTP exceptions as needed&lt;/span&gt;
-&lt;span class="n"&gt;HTTP_EXCEPTIONS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;custom_404_exception_handler&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;exception_handlers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;HTTP_EXCEPTIONS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-
-&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;read_root&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;World&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+    <content type="html">&lt;p&gt;The &lt;a href="https://pypi.org/project/uv/"&gt;uv&lt;/a&gt; library is not just useful for dependency management, it also comes with a &lt;code&gt;run&lt;/code&gt; subcommand that doesn't just run Python scripts, it allows for specific Python versions and setting of dependencies within that run. Between runs it caches everything so it runs fast.&lt;/p&gt;
+&lt;p&gt;For example, if I have a FastAPI project I could run tests on it using this command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Try it out by running the app and going to a non-existent path, like &lt;code&gt;/not-found&lt;/code&gt;. You should see a simple HTML page with a 404 message.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-06-html-404-errors-for-fastapi"/>
-    <summary>For those times when FastAPI is serving web pages and users go to the wrong place.</summary>
+&lt;p&gt;But what if I want to test a particular version of Python? Then I simple specify the version of Python to run the test:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here's where it gets fun. I can use a &lt;code&gt;Makefile&lt;/code&gt; (or a &lt;a href="https://github.com/casey/just"&gt;justfile&lt;/a&gt;) to test on multiple Python versions.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nf"&gt;testall&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c"&gt;## Run all the tests for all the supported Python versions&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.10&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.12&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And there you have it, a simple replacement for Nox or Tox. Of course those tools have lots more features that some users may care about. However, for my needs this works great and eliminates a dependency+configuration from a number of my projects.&lt;/p&gt;
+&lt;p&gt;Thanks to Audrey Roy Greenfeld for pairing with me on getting this to work.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions"/>
+    <summary>Using uv run with make to replace tox or nox for testing multiple versions of Python locally.</summary>
     <category term="python"/>
-    <category term="fastapi"/>
-    <category term="TIL"/>
+    <category term="testing"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-06-13T04:23:23.230032+00:00</published>
+    <published>2025-07-20T10:08:49.687342+00:00</published>
   </entry>
 </feed>

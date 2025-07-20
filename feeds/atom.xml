@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-06-23T13:00:34.994242+00:00</updated>
+  <updated>2025-07-20T05:17:20.940623+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,24 +13,40 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media</id>
-    <title>TIL: Removing exif geodata from media</title>
-    <updated>2025-06-23T13:00:35.332612+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions</id>
+    <title>uv run for running tests on versions of Python</title>
+    <updated>2025-07-20T05:17:21.274688+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;To do this you'll need &lt;a href="https://exiftool.org/"&gt;exiftool&lt;/a&gt;. On Mac it can be installed with &lt;code&gt;brew install exiftool&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;How to remove the geodata:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;exiftool&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-gps*=&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;beach-video.mp4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media"/>
-    <summary>How to remove revealing data from your images and videos</summary>
-    <category term="TIL"/>
+    <content type="html">&lt;p&gt;The &lt;a href="https://pypi.org/project/uv/"&gt;uv&lt;/a&gt; library is not just useful for dependency management, it also comes with a &lt;code&gt;run&lt;/code&gt; subcommand that doesn't just run Python scripts, it allows for specific Python versions and setting of dependencies within that run. Between runs it caches everything so it runs fast.&lt;/p&gt;
+&lt;p&gt;For example, if I have a FastAPI project I could run tests on it using this command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But what if I want to test a particular version of Python? Then I simple specify the version of Python to run the test:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here's where it gets fun. I can use a &lt;code&gt;Makefile&lt;/code&gt; (or a &lt;a href="https://github.com/casey/just"&gt;justfile&lt;/a&gt;) to test on multiple Python versions.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nf"&gt;testall&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c"&gt;## Run all the tests for all the supported Python versions&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.10&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.12&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And there you have it, a simple replacement for Nox or Tox. Of course those tools have lots more features that some users may care about. However, for my needs this works great and eliminates a dependency+configuration from a number of my projects.&lt;/p&gt;
+&lt;p&gt;Thanks to Audrey Roy Greenfeld for pairing with me on getting this to work.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions"/>
+    <summary>Using uv run with make to replace tox or nox for testing multiple versions of Python locally.</summary>
+    <category term="python"/>
+    <category term="testing"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-06-23T20:56:49.362878+00:00</published>
+    <published>2025-07-20T10:08:49.687342+00:00</published>
   </entry>
 </feed>

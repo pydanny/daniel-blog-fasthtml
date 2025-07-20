@@ -6,7 +6,7 @@ published: true
 tags: 
 - python
 - testing
-title: Testing python versions with uv run
+title: uv run for running tests on versions of Python
 ---
 
 The [uv](https://pypi.org/project/uv/) library is not just useful for dependency management, it also comes with a `run` subcommand that doesn't just run Python scripts, it allows for specific Python versions and setting of dependencies within that run. Between runs it caches everything so it runs fast.

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-06-23T13:00:35.360089+00:00</updated>
+  <updated>2025-07-20T05:17:21.306581+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media</id>
     <title>TIL: Removing exif geodata from media</title>
-    <updated>2025-06-23T13:00:35.360268+00:00</updated>
+    <updated>2025-07-20T05:17:21.306748+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
