@@ -7,7 +7,7 @@ tags:
   - django
   - cookiecutter
   - course
-  - tests
+  - testing
   - django-crash-course
 time_to_read: 3
 title: I'm Teaching A Live Online Django Crash Course

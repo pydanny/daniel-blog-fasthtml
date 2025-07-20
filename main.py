@@ -699,3 +699,6 @@ def get(slug_1: str, slug_2: str):
 
 if __name__ == '__main__':
     serve(reload_includes="*.md,*.ipynb,*.css")
+
+
+A()

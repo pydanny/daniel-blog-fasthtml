@@ -6,7 +6,7 @@ published: true
 tags:
 - TIL
 - python
-- tests
+- testing
 title: "TIL: Making pytest use Ipython's PDB"
 twitter_image: /public/logos/til-1.png
 ---
