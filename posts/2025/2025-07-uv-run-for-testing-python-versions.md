@@ -33,6 +33,28 @@ testall:  ## Run all the tests for all the supported Python versions
 	uv run --python=3.13 --with pytest --with httpx pytest
 ```
 
+If you want to use `pyproject.toml` dependency groups, switch from the `--with` flag to the `-extra` flag. For example, if your testing dependencies are in a `test` group:
+
+```toml
+[project.optional-dependencies]
+dev = [
+    # For the test client
+    "httpx>=0.28.1",   
+    # Test runner
+    "pytest>=8.4.0",
+]
+```
+
+You could then run tests across multiple versions of Python thus:
+
+```python
+testall:  ## Run all the tests for all the supported Python versions
+	uv run --python=3.10 --extra test pytest
+	uv run --python=3.11 --extra test pytest
+	uv run --python=3.12 --extra test pytest
+	uv run --python=3.13 --extra test pytest
+```
+
 And there you have it, a simple replacement for Nox or Tox. Of course those tools have lots more features that some users may care about. However, for my needs this works great and eliminates a dependency+configuration from a number of my projects.
 
 ---
