@@ -37,7 +37,7 @@ If you want to use `pyproject.toml` dependency groups, switch from the `--with` 
 
 ```toml
 [project.optional-dependencies]
-dev = [
+test = [
     # For the test client
     "httpx>=0.28.1",   
     # Test runner
